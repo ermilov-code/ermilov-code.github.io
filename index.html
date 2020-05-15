@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>e-c_Paint</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="shortcut icon" href="img/site-icon.png" type="image/png" />
+</head>
+
+<body>
+  <!-- =================== HTML =================== -->
+
+  <header class="header"></header>
+
+  <main class="main">
+    <div id="app" class="canvas-container">
+      <div class="tools">
+        <!-- три кнопки -->
+        <!-- мы сделаем одну кнопку -->
+        <button name="tool-button" data-name='brush'>Brush</button>
+        <!-- рисование круглой кистью -->
+        <button name="tool-button" data-name='round-brush'>Round-brush</button>
+        <!-- кнопка очистки нарисованного содержимого  -->
+        <button id="clear">Clear</button>
+        <!-- <a id="save" download="myImage.jpg" href="">Download to myImage.jpg</a> -->
+        <a id="download" download="myImage.jpg" href="" onclick="download_img(this);">Download to myImage.jpg</a>
+        <!-- <button id="save">Save</button> -->
+        <!-- для размеров -->
+        <div class="slidecontainer">
+          <input name="input-obj" data-name="size" type="range" min="1" max="100" value="5" class="range-slider"
+            id="myRange">
+        </div>
+        <p id="demo"></p>
+        <select name="input-obj" data-name="font">
+          <option>Arial</option>
+          <option>Couriere</option>
+          <option>Cambira</option>
+          <option>ARIAL BLACK</option>
+        </select>
+        <!-- input, который нужен для выбора цвета -->
+        <!-- выбор цвета, как например в фотошопе - это дополнительная работа -->
+        <!-- можно сделать кнопку, которая вызвает модальное окно для выбора цвета (это достаточно сложная операция) -->
+        <input type="color" name="input-obj" data-name="color">
+      </div>
+      <!-- /.tools -->
+
+      <!-- это наш КАНВАС -->
+      <!-- ширина и высота соответственно те, которые указаны в стилях -->
+      <canvas id="canv" width="1000" height="500"></canvas>
+
+      <!-- отображение координат -->
+      <div class="coordinates">
+        <!-- сюда мы будем передавать цифровое значение -->
+        <p id="x" class="p-coordinates"><b>x: </b> <span id="x-coord"></span></p>
+        <div class="vertical-bar"></div>
+        <p id="y" class="p-coordinates"><b>y: </b> <span id="y-coord"></span></p>
+        <br>
+      </div>
+      <!-- /.coordinates -->
+    </div>
+    <!-- /.canvas-container -->
+  </main>
+
+  <footer class="footer"></footer>
+
+  <!-- =================== HTML =================== -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/* базовый цвет */
+.header {
+  width: 100%;
+  min-height: 50px;
+  background-color: #522c2c;
+}
+.main {
+  width: 100%;
+  padding: 10px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.canvas-container {
+  width: 1000px;
+  height: 580px;
+  border: 1px solid #4d4d4d;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#canv {
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+}
+.canv {
+  box-sizing: border-box;
+}
+.tools {
+  width: 100%;
+  min-height: 40px;
+  background-color: #6f6f6f;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.coordinates {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2b2b;
+  box-sizing: border-box;
+}
+.p-coordinates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 79px;
+  margin: 0;
+  color: #a2a2a2;
+}
+.vertical-bar {
+  width: 1px;
+  min-height: 30px;
+  background-color: #000000;
+  margin: 0 3px 0 3px;
+}
+.footer {
+  width: 100%;
+  min-height: 50px;
+  background-color: #0e0000;
+}
+.slidecontainer {
+  width: 140px;
+  /* Width of the outside container */
+}
+/* The slider itself */
+.range-slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 10px;
+  /* Specified height */
+  background: #744e4e;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+/* Mouse-over effects */
+.range-slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 10px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #2b2b2b;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+.range-slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #2b2b2b;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
