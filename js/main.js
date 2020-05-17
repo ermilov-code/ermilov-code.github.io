@@ -49,7 +49,7 @@ let editor = {
     // текущий цвет
     "current-color": '#000',
     // размер кисти (по умолчанию зададим размер 5)
-    "current-size": 5,
+    "current-size": 15,
     "current-font": 'Arial',
     x: 0,
     y: 0,
@@ -114,10 +114,14 @@ let editor = {
     // осталось разобрать последние два метода - это РИСОВАНИЕ!
     // рисование мы с вами будем делать по принципу карандаша и PAINT
     startDraw() {
-        if (editor.currentTool === 'brush') {
+        if (editor.currentTool === 'pencil') {
             editor._drawPencil()
-        } else if (editor.currentTool === 'round-brush') {
+        } else if (editor.currentTool === 'brush') {
             editor._drawСircle()
+        } else if (editor.currentTool === 'line') {
+            editor._drawLine()
+        } else if (editor.currentTool === 'text') {
+            editor._writeText()
         }
         // если захотим добавить еще какой-то инстумент
         //if...
@@ -140,6 +144,35 @@ let editor = {
             ctx.fill();
             // ctx.stroke(); - Рисует фигуру с внешней обводкой.
         }
+    },
+    _drawLine() {
+        canvas.onmousemove = () => {
+            ctx.beginPath();
+            ctx.moveTo(30, 50);
+            ctx.lineTo(editor.x, editor.y);
+            ctx.stroke();
+        }
+    },
+    // _writeText() - это очень коряво, но прикольно)
+    _writeText() {
+        let text = prompt("Введи текст")
+        alert('Щелкни мышью там, где хочешь его расположить!')
+        canvas.removeEventListener('mousedown', this.startDraw)
+        canvas.addEventListener('mousedown', this.getCoordinates)
+        // canvas.removeEventListener('mousemove', this.getCoordinates)
+        // когда отжимаем мышь...
+        canvas.onmouseup = () => {
+            ctx.font = "48px serif";
+            ctx.fillText(text, editor.x, editor.y);
+            canvas.removeEventListener('mousedown', this.getCoordinates)
+            canvas.addEventListener('mousedown', this.startDraw)
+            text = ""
+        }
+        // canvas.addEventListener('mousemove', this.getCoordinates)
+
+        // canvas.onmouseup = () => {
+        //     canvas.removeEventListener('mousedown', this.startDraw)
+        // }
     }
     // создаем еще какой-нибудь метод - вот здесь вызывая метод контекста (ctx.fillRect(editor.x,)
 }

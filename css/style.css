@@ -9,8 +9,9 @@
   padding: 10px;
   min-height: 700px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .canvas-container {
   width: 1000px;
@@ -66,60 +67,109 @@
   background-color: #000000;
   margin: 0 3px 0 3px;
 }
+.button-tool,
+.a-download {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 7px;
+  background-color: #6f6f6f;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  outline: none;
+  border: none;
+}
+.button-tool:hover {
+  filter: blur(1px);
+}
+.a-download:hover {
+  animation: animDownload 10 0.1s;
+}
+@keyframes animDownload {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.button-tool-pencil {
+  background-image: url(../img/pencil.png);
+}
+.button-tool-brush {
+  background-image: url(../img/brush.png);
+}
+.button-tool-line {
+  background-image: url(../img/line.png);
+}
+.button-tool-clear {
+  background-image: url(../img/clear.png);
+}
+.button-tool-text {
+  background-image: url(../img/text.png);
+}
+.slidecontainer {
+  flex-grow: 2;
+}
+.a-download {
+  text-decoration: none;
+  background-image: url(../img/save.png);
+  margin: 0 50px 0 0;
+}
 .footer {
   width: 100%;
   min-height: 50px;
   background-color: #0e0000;
 }
 .slidecontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 140px;
   /* Width of the outside container */
 }
 /* The slider itself */
 .range-slider {
   -webkit-appearance: none;
-  /* Override default CSS styles */
   appearance: none;
   width: 100%;
-  /* Full-width */
   height: 10px;
-  /* Specified height */
   background: #744e4e;
-  /* Grey background */
   outline: none;
-  /* Remove outline */
   opacity: 0.7;
-  /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: 0.2s;
-  /* 0.2 seconds transition on hover */
   transition: opacity 0.2s;
+  margin-left: 15px;
 }
-/* Mouse-over effects */
 .range-slider:hover {
   opacity: 1;
-  /* Fully shown on mouse-over */
 }
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .range-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* Override default look */
   appearance: none;
   width: 10px;
-  /* Set a specific slider handle width */
   height: 25px;
-  /* Slider handle height */
   background: #2b2b2b;
-  /* Green background */
   cursor: pointer;
-  /* Cursor on hover */
 }
 .range-slider::-moz-range-thumb {
   width: 25px;
-  /* Set a specific slider handle width */
   height: 25px;
-  /* Slider handle height */
   background: #2b2b2b;
-  /* Green background */
   cursor: pointer;
-  /* Cursor on hover */
+}
+#demo {
+  min-width: 30px;
+  text-align: center;
+  font-family: 'Play', sans-serif;
+  color: #090909;
+  margin-right: 15px;
+}
+.p-task {
+  color: #df5617;
+  font-family: 'Press Start 2P', cursive;
 }
