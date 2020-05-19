@@ -1,183 +1,323 @@
-//  <!-- будем все это дело делать в ОБЪЕКТЕ (это удобно, как минимум) -->
+// =================================================================
 
-// берем CANVAS document.querySelector
-let canvas = document.querySelector('#canv')
-// его контекст 
-let ctx = canvas.getContext('2d')
-
-
-// передаем 
-let xCoord = document.querySelector('#x-coord')
-let yCoord = document.querySelector('#y-coord')
-
-// стирает любое ранее нарисованное содержимое.
-document.querySelector('#clear').addEventListener('click', () => {
-    ctx.clearRect(0, 0, 1000, 500);
-})
-
-// // сохранение изображения
-download_img = function (el) {
-    let image = canvas.toDataURL("image/jpg");
-    el.href = image;
-};
-
-let sliderRange = document.getElementById("myRange");
-let outputRange = document.getElementById("demo");
-outputRange.innerHTML = sliderRange.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-sliderRange.oninput = function () {
-    outputRange.innerHTML = this.value;
-}
-
-
-// редактор (на втором курсе будем использовать КЛАСС)
-let editor = {
-    // у него будет несколько СВОЙСТВ и несколько МЕТОДОВ
-    container: '#app',
-    // если надо будет менять длину и ширину, лучше это будет делать здесь
-    // ширина самого CANVAS это не его стилевое отображение - а количесво пикселей <canvas id="canv" width="1000" height="800"></canvas> - поэтому мы делаем через - getAttribute
-    // это если вы будете это КОСТОМИЗИРОВАТЬ
-    // можно например стелать CANVAS скролящимся
-    width: canvas.getAttribute('width'),
-    height: canvas.getAttribute('height'),
-    // текущий инструмент - (у HTML нет нормальных кнопок с залипанием)
-    // мы например включаем инструмент КИСТЬ и у нас должна как бы эта кнопка зарегистрироваться, что она НАЖАТА - пока я не выберу какой-то другой инструмент
-    // выбор инструмента должен осуществляться при нажатии на КНОПКУ той же самой группы!
-    // currentTool - используем в качестве запоминателя, на какую кнопку мы нажали
-    currentTool: null,
-    // текущий цвет
-    "current-color": '#000',
-    // размер кисти (по умолчанию зададим размер 5)
-    "current-size": 15,
-    "current-font": 'Arial',
-    x: 0,
-    y: 0,
-    // это все, что нам сейчас понадобится (их может быть больше - но это такая БАЗОВАЯ КОМПЛЕКТАЦИЯ)
-
-    // у нас будет несколько МЕТОДОВ, которые мы сейчас обговорим (шаг в сторону ООП)
-
-    // _ИНКАПСУЛЯЦИЯ - (инкапсулированные методы служат для связи СВОЙСТВ и МЕТОДОВ внутри какого-то ОБЪЕКТА)
-    // ИНКАПСУЛЯЦИИ - вообще в JS нет! (здесь она чисто условна) (есть такое внутренние слоглашение - если метод с нижним подчеркиванием он является инкарсултрованным)
-    // в ИНИЦИАЛИЗАЦИИ - будем навязывать определенные СОБЫТИЯ через определенные СЛУШАТЕЛИ определенным нашим КНОПОЧКАМ
-    _init() {
-        // на весь документ навесим слушатель событий input 
-        // метод, который будет отрабатывать, если мы где-то внутри нашего APP совершим некоторый input 
-        document.querySelector(this.container).addEventListener('input', this.inputHandler)
-        // повесим на него click 
-        // clickHandler - это такие методы, которые отлавливают какие-то события и решают что с ним собственно делать; handler должен решать какая кнопка нажата - if else (если бы у кнопки было какое-то имя, то он вызвал бы другую функцию, в которой был записан был бы какой-то код)
-        document.querySelector(this.container).addEventListener('click', this.clickHandler)
-
-        // Метод EventTarget.addEventListener() регистрирует определенный обработчик события, вызванного на EventTarget.
-        // нам прийдется шевелить мышками (будет отлавливать координаты)
-        canvas.addEventListener('mousemove', this.getCoordinates)
-        // начало отжимания (когда зажимаем - начинает отрисовку чего-либо)
-        canvas.addEventListener('mousedown', this.startDraw)
-        canvas.addEventListener('mouseup', this.endDraw)
-        // вот такие у нас методы будут отрабатывать - давайте теперь их опишем
-    },
-    // мы должны будем пробрасывать сюда событие, которое у нас будет происходить - evt
-    // когда вы пользуетесь addEventListener - пробрасывается автоматически!!!
-    // там где есть связь с событиями у функций - там автоматически первым/последним атрибутом пробрасывается event 
-    // я даже могу убрать evt и написать event - все БУДЕТ РАБОТАТЬ!
-    // это не так явно - но есть такой ЗАКОН, что если у вас событие отрабатывает в каком-то МЕТОДЕ или ФУНКЦИИ - то значит оно там по любому доступно!
-    // ЭТО НЕ ОЧЕНЬ ЯВНО - к этому просто нужно привыкнуть
-    getCoordinates(evt) {
-        // offsetX - смещение по X координате 
-        editor.x = evt.offsetX
-        editor.y = evt.offsetY
-
-        xCoord.innerText = editor.x
-        yCoord.innerText = editor.y
-    },
-    // самое тяжелое здесь в принципе это clickHandler(evt)
-    // берем data атрибут нашего инструмента (<button name="tool-button" data-name='brush'>Brush</button>) - и записываем его в currentTool: null
-    // (до того, как это все было оформлено в ОБЪЕКТ - была немного большая костыльная реализация - clickHandler(evt) был на основе callback - потом код оптимизировали)
-    clickHandler(evt) {
-        if (evt.target.name === 'tool-button') {
-            editor.currentTool = evt.target.dataset.name
+// функция - создать продукт
+function createProduct(product) {
+    return {
+        product_name: product.product_name,
+        price: product.price,
+        id_product: product.id_product,
+        img: product.img,
+        // идея в том, что в каждом продукте будет хранится его кусочек ВЕРСТКИ
+        createTemplate() {
+            // `` - бэктики это шаблонные строки
+            return `
+                <div class="product-item" data-id="${this.id_product}">
+                    <img width="200" height="300" class="product-image" src="${this.img}" alt="${this.product_name}">
+                    <div class="bottom-product-wrapper">
+                        <h3 class="product-name">${this.product_name}</h3>
+                        <p class="product-price">${this.price} ₽</p>
+                        <button class="buy-button btn-38643"
+                            name="buy-btn"
+                            data-id="${this.id_product}"
+                            data-name="${this.product_name}"
+                            data-img="${this.img}"
+                            data-price="${this.price}">
+                            Купить
+                        </button>
+                    </div>
+                </div>
+            `
         }
-    },
-    // немного больше всего у него здесь будет, потому что мы можем input-ить две вещи: выбирать размер кисти 
-    inputHandler(evt) {
-        // если мы вызвали input на каких-то из этих КЕЙЗОВ
-        // evt.target.name === 'input-obj' - все! 
-        // при такой архитектуре вы сможете добавлять сколько угодно input элементов:
-        if (evt.target.name === 'input-obj') {
-            // здесь можно было бы пройти СВИЧОМ
-            editor[`current-${evt.target.dataset.name}`] = evt.target.value
-            evt.target.dataset.name === 'color' ? ctx.fillStyle = editor['current-color'] : ctx.fillStyle =
-                ctx.fillStyle
-        }
-    },
-
-    // осталось разобрать последние два метода - это РИСОВАНИЕ!
-    // рисование мы с вами будем делать по принципу карандаша и PAINT
-    startDraw() {
-        if (editor.currentTool === 'pencil') {
-            editor._drawPencil()
-        } else if (editor.currentTool === 'brush') {
-            editor._drawСircle()
-        } else if (editor.currentTool === 'line') {
-            editor._drawLine()
-        } else if (editor.currentTool === 'text') {
-            editor._writeText()
-        }
-        // если захотим добавить еще какой-то инстумент
-        //if...
-    },
-    endDraw() {
-        canvas.onmousemove = null
-    },
-    _drawPencil() {
-        canvas.onmousemove = () => {
-            ctx.fillRect(editor.x, editor.y, editor['current-size'], editor['current-size'])
-        }
-    },
-    // Для рисования дуг и окружностей, используем методы arc() и arcTo(). 
-    _drawСircle() {
-        canvas.onmousemove = () => {
-            // ctx.beginPath(); - Создает новый контур. После создания используется в дальнейшем командами рисования при построении контуров.
-            ctx.beginPath();
-            ctx.arc(editor.x, editor.y, editor['current-size'], 0, Math.PI * 2, false);
-            // ctx.fill(); - Рисует фигуру с заливкой внутренней области.
-            ctx.fill();
-            // ctx.stroke(); - Рисует фигуру с внешней обводкой.
-        }
-    },
-    _drawLine() {
-        canvas.onmousemove = () => {
-            ctx.beginPath();
-            ctx.moveTo(30, 50);
-            ctx.lineTo(editor.x, editor.y);
-            ctx.stroke();
-        }
-    },
-    // _writeText() - это очень коряво, но прикольно)
-    _writeText() {
-        let text = prompt("Введи текст")
-        alert('Щелкни мышью там, где хочешь его расположить!')
-        canvas.removeEventListener('mousedown', this.startDraw)
-        canvas.addEventListener('mousedown', this.getCoordinates)
-        // canvas.removeEventListener('mousemove', this.getCoordinates)
-        // когда отжимаем мышь...
-        canvas.onmouseup = () => {
-            ctx.font = "48px serif";
-            ctx.fillText(text, editor.x, editor.y);
-            canvas.removeEventListener('mousedown', this.getCoordinates)
-            canvas.addEventListener('mousedown', this.startDraw)
-            text = ""
-        }
-        // canvas.addEventListener('mousemove', this.getCoordinates)
-
-        // canvas.onmouseup = () => {
-        //     canvas.removeEventListener('mousedown', this.startDraw)
-        // }
     }
-    // создаем еще какой-нибудь метод - вот здесь вызывая метод контекста (ctx.fillRect(editor.x,)
 }
 
-// видите, работа с CANVAS заключалась в настройке самого CANVAS 
 
-// инициализация 
-editor._init()
+// ======= объект catalog =======
+let catalog = {
+    items: [],
+    // контейнер в который пометили селектор в который будем размещать наш каталог
+    // потом сделаем вот так - let container = document.querySelector(this.container)
+    container: '.products',
+    cart: null,
+    catalogUrl: 'https://raw.githubusercontent.com/ermilov-code/json/master/appleProductCatalog.json',
+
+    // у нашего объекта будут следующие МЕТОДЫ:
+
+    init() {
+        // обнуляем массив при каждой инициализации 
+        this.items = []
+        this.cart = cart
+        this.getData(this.catalogUrl)
+            .finally(() => {
+                this._fetchItems()
+                this._render()
+            })
+
+        // событие сработает только в том месте, где я ему сказал (ЗАХВАТ);
+        // когда я кликаю по кнопке, для браузера это выглядит не то, что я кликаю по кнопке
+        // Достаточно одного большого слушателя, но с маленьким определителем!
+        // функция от события evt
+        document.querySelector(this.container).addEventListener('click', evt => {
+            if (evt.target.name === 'buy-btn') {
+                this.cart.addProduct(evt.target.dataset)
+            }
+        })
+    },
+    // get data - получить данные
+    getData(url) {
+        // сделаем запрос на сервер - fetch(url) - функция, которая запрашивает данные с интернета 
+        // fetch - получить
+        return fetch(url)
+            .then(data => data.json())
+            .then((data2) => {
+                this.items = data2
+            })
+    },
+    // fetch items - получить предметы 
+    _fetchItems() {
+        let arr = []
+
+        this.items.forEach(item => {
+            arr.push(createProduct(item))
+        })
+        console.log(arr)
+        this.items = arr
+    },
+    // render - визуализация, отрисовка
+    // удобно ли будет сразу отрисовывать элементы на странице или хранить в памяти, а потом сразу выводить все?! чем меньше отрисовок, тем лучше! нам лучше сразу сделать большой фрагмент и вставить его в верстку! 
+    _render() {
+        let container = document.querySelector(this.container)
+        let domString = ''
+
+        // начинаем бегать по items при помощи forEach - каждый item мы берем и пробрасываем в функцию (СТРЕЛОЧНЫЕ ФУНКЦИИ)
+        // Метод forEach() выполняет указанную функцию один раз для каждого элемента в массиве.
+        this.items.forEach(item => {
+            // к нашему domString мы прибавляем каждый раз item.createTemplate()
+            domString += item.createTemplate()
+        })
+        container.innerHTML = domString
+    }
+}
+
+
+// ======= объект cart =======
+let cart = {
+    items: [],
+    // shown - показанный (при нажатии на кнопку toggle-cart - cart.shown станет true)
+    shown: false,
+    sum: 0,
+    qua: 0,
+    container: '.basket',
+    itemsContainer: '.basket_products',
+
+    init() {
+        document.querySelector('#toggle-cart').addEventListener('click', () => {
+            cart.shown = !cart.shown
+            cart.render()
+            // toggle - Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.
+            document.querySelector('#basket').classList.toggle('invisible')
+        })
+        // слушатель событий для КРЕСТИКА в корзине (чтобы она закрывалась)
+        document.querySelector('.close').addEventListener('click', () => {
+            document.querySelector('#basket').classList.toggle('invisible')
+        })
+
+
+        // delete the item (one at a time) from the basket
+        document.querySelector(this.container).addEventListener('click', evt => {
+            if (evt.target.name === 'del-btn') {
+                this.removeProduct(evt.target.dataset.id)
+            }
+        })
+    },
+    render() {
+        let container = document.querySelector(this.itemsContainer)
+        let domString = ''
+
+        this.items.forEach(item => {
+            domString += item.createTemplate()
+        })
+        container.innerHTML = domString
+
+        document.querySelector('#tot-sum').innerHTML = this.sum
+        document.querySelector('#tot-qua').innerHTML = this.qua
+    },
+    addProduct(product) {
+        // метод find позволяет искать соответствия 
+        let find = this.items.find(item => item.id_product === product.id)
+        if (!find) {
+            this.items.push(createCartItem(product.id, product.name, product.price, product.img)) //потому-что дата-сет
+        } else {
+            find.quantity++
+        }
+        this.checkTotal()
+        this.render()
+    },
+    removeProduct(id) {
+        let find = this.items.find(item => item.id_product === id)
+        if (find.quantity === 1) {
+            this.items.splice(this.items.indexOf(find), 1)
+        } else {
+            find.quantity--
+        }
+        this.checkTotal()
+        this.render()
+    },
+    checkTotal() {
+        let s = 0
+        let q = 0
+
+        this.items.forEach(item => {
+            q += item.quantity
+            s += item.quantity * item.price
+        })
+
+        this.sum = s
+        this.qua = q
+    }
+}
+
+// объект товара для корзины
+// была переменная - заменили на функцию, так как у нас нет КОНСТРУКТОРА
+// функция, возвращающая объект
+function createCartItem(id, name, price, img) {
+    return {
+        id_product: id,
+        price: +price,
+        product_name: name,
+        quantity: 1,
+        img: img,
+        createTemplate() {
+            return `
+                    <div class="product-item product-item-selected" data-id="${this.id_product}">
+                        <img width="200" height="200" class="product-image product-image-selected" src="${this.img}" alt="${this.product_name}">
+                        <div class="bottom-product-wrapper bottom-product-wrapper-selected">
+                            <h3 class="product-name product-name-selected">${this.product_name}</h3>
+                            <p class="product-price product-price-selected">${this.price} ₽</p>
+                            <p class="product-quantity">&times; ${this.quantity}</p>
+                        </div>
+                        <div class="right-block">
+                            <p class="product-price product-price-common">₽ ${this.price * this.quantity}</p>
+                            <button name="del-btn" class="del-btn" data-id="${this.id_product}">&times;</button>
+                        </div>
+                    </div>
+                    `
+        }
+    }
+}
+
+// функция полной очистки корзины - КОСТЫЛИ
+function emptyTrash() {
+    cart.items = [],
+        cart.sum = 0,
+        cart.qua = 0,
+        cart.render()
+
+}
+document.querySelector('.fa-trash-o').addEventListener('click', emptyTrash)
+
+
+
+cart.init()
+catalog.init()
+
+
+//     // нужен метод, который считает общую стоимость товаров в корзине
+//     totalAmount() {
+//         let array = arrayForPrices;
+//         let reducer = (accumulator, currentValue) => accumulator + currentValue;
+//         return array.reduce(reducer)
+//     },
+// }
+
+
+// // создаем функцию для создания продукта отложенного в КОРЗИНУ
+// function productСhosen(index) {
+//     return {
+//         // массив с названием выбранного продукта
+//         product_name: arrayForProducts[index],
+//         // массив с ценами выбранных продуктов
+//         price: arrayForPrices[index],
+//         img: arrayForImages[index],
+//         id_product: arrayForId[index],
+//         createTemplate() {
+//             return `
+//             <div class="product-item product-item-selected" data-id="${this.id_product}">
+//                 <img width="200" height="200" class="product-image product-image-selected" src="${this.img}" alt="${this.product_name}">
+// <div class="bottom-product-wrapper bottom-product-wrapper-selected">
+// <h3 class="product-name product-name-selected">${this.product_name}</h3>
+// <p class="product-price product-price-selected">${this.price} ₽</p>
+// <button name="del-btn" class="del-btn" data-id="${this.id_product}">&times;</button>
+// </div>
+//             </div>
+//             `
+//         }
+//     }
+// }
+
+
+
+// catalog.init()
+// cart.init()
+
+// // хочу, чтобы при нажатии на значок КОРЗИНЫ - появлялась корзина
+// document.querySelector('.button_basket').addEventListener('click', basketVisible)
+// // скрываем КОРЗИНУ
+// document.querySelector('.close').addEventListener('click', basketHide)
+
+// // функция добаления display none НАШЕЙ КОРЗИНЕ <div id="basket" class="basket"></div>
+// function basketVisible() {
+//     let myBacket = document.querySelector("#basket");
+//     myBacket.classList.add("basket-visible");
+// }
+// // убираем корзину
+// function basketHide() {
+//     let myBacket = document.querySelector("#basket");
+//     myBacket.classList.remove("basket-visible");
+// }
+
+// // ======================== корявый вывод в массив 
+// let i = 0
+// // переменная для управления блоком SPAN с ценой - <span class="basket_total_price"></span>
+// let totalPrice = document.querySelector('.basket_total_price');
+// // выводит количество выбранных товаров
+// let totalGoods = document.querySelector('.total-goods');
+// let goodsCounter = document.querySelector('.div-goods-counter');
+// document.querySelector(".products").addEventListener('click', (evt) => {
+//     // contains - содержит!!!
+//     if (evt.target.classList.contains('buy-button')) {
+//         basket.items.push(productСhosen(i))
+//         // отображаем товар в корзине
+//         basket.render()
+//         // изменение суммы товаров в корзине
+//         let amountOfMoneyInTheBasket = basket.totalAmount();
+//         let totalGoodsLength = arrayForPrices.length;
+//         totalPrice.innerHTML = "<b>" + amountOfMoneyInTheBasket + "</b>" + " ₽";
+//         totalGoods.innerHTML = "Товаров в корзине: " + "<b>" + "<u>" + totalGoodsLength + "</u>" + "</b>";
+//         goodsCounter.innerHTML = totalGoodsLength;
+//         i = i + 1;
+//     }
+// })
+
+
+
+
+
+
+
+
+
+
+// ЧТО ВАМ НУЖНО БУДЕТ СДЕЛАТЬ ДАЛЬШЕ?! 
+// - вам нужно будет создать объект корзины (у нее тоже будут свои items);
+// - можно ссылку на объект корзины пробросить сюда;
+// - а в инициализации вы будите писать следующее, что 
+// - и когда вы создадите корзину, вам будет доступно
+// - вы в корзине заведете свои items, container и т д.
+// - а внутри каталога вы сможете добавить метод добавления товара в корзину 
+// - и так как у вас в корзинке каталога будет лежать ссылка на корзину вот эту (изменяя this.cart = cart - вы будите изменять корзину глобально let cart = {}
+// Вы уже сможете добавлять в items нашей корзины при нажатии на кнопки, товары которые вы хотите туда добавить! 
+
+/* Сделать генерацию корзины динамической: верстка корзины не должна находиться в HTML-структуре. Там должен быть только div, в который будет вставляться корзина, сгенерированная на базе JS: Пустая корзина должна выводить строку «Корзина пуста»;Наполненная должна выводить «В корзине: n товаров на сумму m рублей». */
+
+/* 1. Реализовать модуль корзины. Создать блок товаров и блок корзины. У каждого товара есть кнопка «Купить», при нажатии на которую происходит добавление имени и цены товара в блок корзины. Корзина должна уметь считать общую сумму заказа. */

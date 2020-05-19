@@ -1,230 +1,642 @@
-@baseColor: #300a0a;
-@canvasColor: rgb(77, 77, 77);
+// ===========================
+* {
+  box-sizing: border-box;
+}
+
 
 /* базовый цвет */
-// body {
-//   // background-color: @baseColor - #888;
-// }
+@baseColor: #000000;
+// @baseColor: red;
 
-// .container {
-//   margin: 0 auto;
-//   width: 100%;
-// }
+// @buttonColor: #ADFF2F;
+@buttonColor: #00FA9A;
 
-// font-family: 'Play', sans-serif;
-// font-family: 'Press Start 2P', cursive;
+
+body {
+  background-color: @baseColor - #888;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
 
 .header {
   width: 100%;
-  min-height: 50px;
-  background-color: @baseColor + #222;
+  padding: 10px 30px 10px 30px;
+  min-height: 80px;
+  background: linear-gradient(to left, @baseColor, @baseColor - #111);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 10;
 }
+
+.a_logo {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Stalinist One", cursive;
+  color: @buttonColor;
+  font-size: 27px;
+}
+
+.a_gallery {
+  width: 47px;
+  height: 46px;
+  text-decoration: none;
+  font-family: "Stalinist One", cursive;
+  color: @buttonColor;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-image: url(../img/gallery-icon.png);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  margin-right: 2px;
+}
+
+.a_gallery:hover,
+.a_logo:hover,
+.button_basket:hover:before,
+.button_basket:hover .div-goods-counter,
+i.fa-chevron-left:hover,
+i.fa-chevron-right:hover {
+  color: @buttonColor + #777;
+}
+
+.button_basket {}
+
+.fa.fa-picture-o {
+  font-size: 35px;
+}
+
+.h1_gallery {
+  margin: 0 auto;
+}
+
+.containerSearchBasket {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d1 {
+  width: 179px;
+  margin: 0 10px 0 0;
+}
+
+.d1 input {
+  width: 100%;
+  height: 28px;
+  padding-left: 10px;
+  font-size: 16px;
+  border: 2px solid @buttonColor;
+  border-radius: 5px;
+  outline: none;
+  background: #000000;
+}
+
+// ===================== СТИЛИЗАЦИЯ placeholder =====================
+input::placeholder {
+  color: @buttonColor;
+  // font-size: 1.2em;
+}
+
+input[placeholder] {
+  text-overflow: ellipsis;
+  color: @buttonColor;
+  font-family: "Amatic SC", cursive;
+}
+
+input::-moz-placeholder {
+  text-overflow: ellipsis;
+  color: @buttonColor;
+  font-family: "Amatic SC", cursive;
+}
+
+input:-moz-placeholder {
+  text-overflow: ellipsis;
+  color: @buttonColor;
+  font-family: "Amatic SC", cursive;
+}
+
+input:-ms-input-placeholder {
+  text-overflow: ellipsis;
+  color: @buttonColor;
+  font-family: "Amatic SC", cursive;
+}
+
+// ===================== СТИЛИЗАЦИЯ placeholder =====================
+.d1 button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 27px;
+  height: 28px;
+  outline: none;
+  border: none;
+  background: @buttonColor;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.d1 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: @baseColor;
+}
+
+.form-search {
+  position: relative;
+  width: 100%;
+}
+
+// ======= стили для КОРЗИНЫ =======
+
+.button_basket {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 2px 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.button_basket::before {
+  content: "\f07a";
+  font-family: FontAwesome;
+  color: @buttonColor;
+  font-size: 42px;
+}
+
+.div-goods-counter {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  align-items: center;
+  font-size: 15px;
+  min-width: 25px;
+  height: 25px;
+  z-index: 250;
+  position: absolute;
+  right: -5px;
+  top: -6px;
+  background-color: #000000;
+  border-radius: 50%;
+  border: 1px solid #00797c;
+  color: #00CED1;
+  font-family: 'Bellota', cursive;
+}
+
+.basket {
+  // min-width: 410px;
+  width: 410px;
+  min-height: 200px;
+  border: 1px solid @buttonColor;
+  border-radius: 5px;
+  overflow: hidden;
+  background: white;
+  z-index: 400;
+  position: absolute;
+  top: 66px;
+  right: 15px;
+  // visibility: hidden;
+  // // display: none;
+}
+
+.basket-header {
+  display: flex;
+  min-height: 70px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 10px 15px;
+  background-color: @baseColor;
+}
+
+.basket-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.basket-title {
+  margin: 0;
+  font-family: 'Bellota', cursive;
+  font-size: 27px;
+  color: @buttonColor;
+  // text-transform: uppercase;
+}
+
+.total-goods {
+  font-size: 13px;
+}
+
+.hr {
+  margin: 0;
+}
+
+.basket_hr {
+  color: @buttonColor;
+}
+
+.basket_products {
+  min-height: 164px;
+  width: 100%;
+  padding: 3px 3px 0 3px;
+}
+
+.basket_footer {
+  background-color: @baseColor;
+  min-height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 10px 15px;
+}
+
+.basket_title_footer {
+  margin: 0;
+  color: @buttonColor;
+  font-family: 'Bellota', cursive;
+  font-size: 15px;
+}
+
+.basket_total_price {
+  color: @buttonColor;
+  font-size: 44px;
+  font-family: 'Bellota', cursive;
+}
+
+// // класс который будем добавлять с помощью JS для появления корзины;
+// .basket-visible {
+//   // display: block;
+//   visibility: visible;
+// }
+
+.invisible {
+  display: none;
+}
+
+// ===================================== крестик для закрытия корзины
+.close {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: @buttonColor;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.fa-trash-o {
+  color: @buttonColor - #333;
+  align-self: flex-end;
+}
+
+.fa-trash-o:hover {
+  color: @buttonColor;
+}
+
+.fa-trash-o:before {
+  content: "\f014";
+  font-size: 36px;
+}
+
+// стили Серегея
+.buy-btn,
+.del-btn {
+  margin-top: 5px;
+  background-color: #2f2a2d;
+  padding: 1px 7px;
+  border: 1px solid transparent;
+  color: #fafafa;
+  border-radius: 5px;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+}
+
+.buy-btn:hover,
+.del-btn:hover {
+  background-color: #fafafa;
+  color: #2f2a2d;
+  border: 1px solid #2f2a2d;
+}
+
+// стили Серегея
+
+// крестик для закрытия корзины =====================================
+// ======= / стили для КОРЗИНЫ =======
+
 
 .main {
   width: 100%;
-  padding: 10px;
-  min-height: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 600px;
+  background: white;
 }
 
-// ======================== стилизация CANVAS ========================
-
-.canvas-container {
-  width: 1000px;
-  height: 580px;
-  border: 1px solid @canvasColor;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-#canv {
-  box-sizing: border-box;
-  border-radius: 6px;
-  background-color: #FFFFFF;
-}
-
-.canv {
-  box-sizing: border-box;
-}
-
-.tools {
+.footer {
   width: 100%;
-  min-height: 40px;
-  background-color: @canvasColor + #222;
+  min-height: 100px;
+  background: linear-gradient(to left, @baseColor, @baseColor - #333);
+}
+
+// ===================== СТИЛИЗАЦИЯ КНОПКИ btn-38643 =====================
+
+.btn-38643 {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.08);
+  color: @buttonColor - #666;
+  display: block;
+  letter-spacing: 1px;
+  outline: none;
+  text-align: center;
+  // font-family: 'Amatic SC', cursive;
+  font-family: 'Bellota', cursive;
+  font-size: 23px;
+  padding: 8px 16px;
+  margin: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+
+.btn-38643 {
+  background-color: @baseColor;
+  // background: linear-gradient(to left, @baseColor, @baseColor - #111);
+  // background-color: linear-gradient(to left, @baseColor, @baseColor - #111);
+  border: 1px solid rgb(33, 126, 74);
+}
+
+.btn-38643:hover {
+  background-color: @baseColor + #999;
+  // background: linear-gradient(to left, @baseColor, @baseColor + #555);
+}
+
+// ===================== СТИЛИЗАЦИЯ КНОПКИ btn-38643 =====================
+
+// ===== стилизация каталога, загруженного с помощью JS ===== 
+
+.products {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.product-item {
+  border: 1px solid @buttonColor - #555;
+  border-radius: 7px;
+  // Отображается только область внутри элемента, остальное будет скрыто.
+  // свойство, которое помогло решить проблему с поеданием рамки ИЗОБРАЖЕНИЕМ
+  overflow: hidden;
+  width: 200px;
+  margin: 30px;
+  padding: 3px 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-image {
+  border-radius: 24px 24px 0 0;
+  // Свойство object-fit определяет, как содержимое заменяемого элемента, такого как <img> или <video>, должно заполнять контейнер относительно его высоты и ширины.
+  object-fit: contain;
+  // height: 200px;
+  // width: 100%;
+  margin: 0 0 4px 0;
+}
+
+.bottom-product-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.product-name {
+  display: flex;
+  color: @buttonColor - #888;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  min-height: 56px;
+  font-family: 'Bellota', cursive;
+  padding: 3px 3px 3px 7px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.product-price {
+  margin: 0 0 12px 0;
+  color: @buttonColor - #666;
+  align-self: flex-end;
+  font-weight: bold;
+  font-family: 'Bellota', cursive;
+  padding: 3px 3px 3px 7px;
+  font-size: 27px;
+}
+
+.product-price-common {
+  margin: 0 0 2px 0;
+  width: 100%;
+  font-size: 18px;
+  padding: 1px;
+}
+
+.buy-button {
+  // width: 70px;
+  font-size: 20px;
+  padding: 4px 8px;
+  margin: auto;
+}
+
+// ===== стилизация товара отложенного в корзину ===== 
+
+.product-item-selected {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.coordinates {
   width: 100%;
-  min-height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: @canvasColor - #222;
-  box-sizing: border-box;
-}
-
-.p-coordinates {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 79px;
-  margin: 0;
-  color: @canvasColor + #555;
-}
-
-.vertical-bar {
-  width: 1px;
-  min-height: 30px;
-  background-color: @canvasColor - #555;
-  margin: 0 3px 0 3px;
-}
-
-.button-tool,
-.a-download {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+  margin: 0 0 3px 0;
   padding: 0;
-  margin-right: 7px;
-  background-color: @canvasColor + #222;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  outline: none;
-  border: none;
 }
 
-.button-tool:hover {
-  filter: blur(1px);
+.product-image-selected {
+  width: 100px;
+  height: 100px;
+  border-radius: 24px;
+  margin: 0 3px 0 0;
 }
 
-.a-download:hover {
-  animation: animDownload 10 0.1s;
+.bottom-product-wrapper-selected {
+  width: 194px;
 }
 
-@keyframes animDownload {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.product-name-selected {
+  padding: 1px;
 }
 
-.button-tool-pencil {
-  background-image: url(../img/pencil.png);
+.product-price-selected {
+  font-size: 14px;
+  margin: 0 0 3px 0;
+  align-self: flex-start;
+  padding: 1px;
 }
 
-.button-tool-brush {
-  background-image: url(../img/brush.png);
+.product-quantity {
+  margin: 0;
+  font-family: 'Bellota', cursive;
+  padding: 1px;
+  font-size: 13px;
+  color: @buttonColor - #666;
 }
 
-.button-tool-line {
-  background-image: url(../img/line.png);
-}
-
-.button-tool-clear {
-  background-image: url(../img/clear.png);
-}
-
-.button-tool-text {
-  background-image: url(../img/text.png);
-}
-
-.slidecontainer {
-  flex-grow: 2;
-}
-
-.a-download {
-  text-decoration: none;
-  background-image: url(../img/save.png);
-  margin: 0 50px 0 0;
-
+.right-block {
+  padding: 3px;
+  width: 100px;
 }
 
 
 
-// ======================== стилизация CANVAS ========================
+// ================ СТИЛИЗАЦИЯ КНОПКИ gallery ================
 
-.footer {
+
+
+// ================ СТИЛИЗАЦИЯ КНОПКИ gallery ================
+
+.wrapper-gallery {
   width: 100%;
-  min-height: 50px;
-  background-color: @baseColor - #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
 }
 
-// ================ стилизация <div class="slidecontainer"> ================
-
-.slidecontainer {
+.gallery {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 140px;
-  /* Width of the outside container */
-  // margin-right: 10px;
 }
 
-/* The slider itself */
-.range-slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 10px;
-  background: @baseColor + #444;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  margin-left: 15px;
+.containerForTheMainImage {
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.range-slider:hover {
-  opacity: 1;
+i.fa-chevron-left,
+i.fa-chevron-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26px;
+  font-size: 23px;
+  color: @buttonColor;
+  border: 1px solid @buttonColor - #777;
+  border-radius: 30%;
+  width: 20px;
+  height: 40px;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.range-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 25px;
-  background: @canvasColor - #222;
-  cursor: pointer;
+.main-img-gallery {
+  margin: 0;
 }
 
-.range-slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: @canvasColor - #222;
-  cursor: pointer;
+.h1-gallery {
+  font-family: 'Amatic SC', cursive;
+  color: @baseColor;
+  font-size: 73px;
+  margin: 3px;
 }
 
-#demo {
-  min-width: 30px;
-  text-align: center;
-  font-family: 'Play', sans-serif;
-  color: #090909;
-  margin-right: 15px;
+.gallery-img {
+  margin: 10px;
+  padding: 2px;
+  border: 1px solid @buttonColor - #555;
+  border-radius: 5px;
 }
 
-.p-task {
-  color: rgb(223, 86, 23);
-  font-family: 'Press Start 2P', cursive;
+
+
+
+
+
+
+
+@media (max-width: 575.98px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .basket {
+    width: 100%;
+    top: 0px;
+    right: 0px;
+  }
 }
 
-// ================ стилизация <div class="slidecontainer"> ================
+
+
+
+
+
+// .gallery {}
+
+
+
+
+
+// font-family: 'Bellota', cursive;
+// font-family: 'Stalinist One', cursive;
+// font-family: 'Amatic SC', cursive;
