@@ -111,25 +111,26 @@ input::placeholder {
 input[placeholder] {
   text-overflow: ellipsis;
   color: @buttonColor;
-  font-family: "Amatic SC", cursive;
+  // font-family: "Amatic SC", cursive;
+  font-family: 'Bellota', cursive;
 }
 
 input::-moz-placeholder {
   text-overflow: ellipsis;
   color: @buttonColor;
-  font-family: "Amatic SC", cursive;
+  font-family: 'Bellota', cursive;
 }
 
 input:-moz-placeholder {
   text-overflow: ellipsis;
   color: @buttonColor;
-  font-family: "Amatic SC", cursive;
+  font-family: 'Bellota', cursive;
 }
 
 input:-ms-input-placeholder {
   text-overflow: ellipsis;
   color: @buttonColor;
-  font-family: "Amatic SC", cursive;
+  font-family: 'Bellota', cursive;
 }
 
 // ===================== СТИЛИЗАЦИЯ placeholder =====================
@@ -410,7 +411,12 @@ input:-ms-input-placeholder {
 }
 
 .btn-38643:hover {
-  background-color: @baseColor + #999;
+  background-color: #fff;
+  // background: linear-gradient(to left, @baseColor, @baseColor + #555);
+}
+
+.btn-38643:active {
+  background-color: @baseColor + #222;
   // background: linear-gradient(to left, @baseColor, @baseColor + #555);
 }
 

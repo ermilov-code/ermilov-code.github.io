@@ -122,13 +122,13 @@ let cart = {
             document.querySelector('#basket').classList.toggle('invisible')
         })
 
-
         // delete the item (one at a time) from the basket
         document.querySelector(this.container).addEventListener('click', evt => {
             if (evt.target.name === 'del-btn') {
                 this.removeProduct(evt.target.dataset.id)
             }
         })
+
     },
     render() {
         let container = document.querySelector(this.itemsContainer)
@@ -139,8 +139,8 @@ let cart = {
         })
         container.innerHTML = domString
 
-        document.querySelector('#tot-sum').innerHTML = this.sum
-        document.querySelector('#tot-qua').innerHTML = this.qua
+        document.querySelector('#tot-sum').innerHTML = this.sum + " ₽"
+        document.querySelector('#tot-qua').innerHTML = this.qua + " товара (-ов)"
     },
     addProduct(product) {
         // метод find позволяет искать соответствия 
@@ -151,7 +151,9 @@ let cart = {
             find.quantity++
         }
         this.checkTotal()
+        document.querySelector('.div-goods-counter').innerHTML = cart.qua
         this.render()
+
     },
     removeProduct(id) {
         let find = this.items.find(item => item.id_product === id)
@@ -161,6 +163,7 @@ let cart = {
             find.quantity--
         }
         this.checkTotal()
+        document.querySelector('.div-goods-counter').innerHTML = cart.qua
         this.render()
     },
     checkTotal() {
@@ -210,12 +213,11 @@ function createCartItem(id, name, price, img) {
 function emptyTrash() {
     cart.items = [],
         cart.sum = 0,
-        cart.qua = 0,
-        cart.render()
-
+        cart.checkTotal(),
+        document.querySelector('.div-goods-counter').innerHTML = cart.qua
+    cart.render()
 }
 document.querySelector('.fa-trash-o').addEventListener('click', emptyTrash)
-
 
 
 cart.init()

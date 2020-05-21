@@ -82,22 +82,22 @@ input::placeholder {
 input[placeholder] {
   text-overflow: ellipsis;
   color: #00FA9A;
-  font-family: "Amatic SC", cursive;
+  font-family: 'Bellota', cursive;
 }
 input::-moz-placeholder {
   text-overflow: ellipsis;
   color: #00FA9A;
-  font-family: "Amatic SC", cursive;
+  font-family: 'Bellota', cursive;
 }
 input:-moz-placeholder {
   text-overflow: ellipsis;
   color: #00FA9A;
-  font-family: "Amatic SC", cursive;
+  font-family: 'Bellota', cursive;
 }
 input:-ms-input-placeholder {
   text-overflow: ellipsis;
   color: #00FA9A;
-  font-family: "Amatic SC", cursive;
+  font-family: 'Bellota', cursive;
 }
 .d1 button {
   position: absolute;
@@ -316,7 +316,10 @@ input:-ms-input-placeholder {
   border: 1px solid #217e4a;
 }
 .btn-38643:hover {
-  background-color: #999999;
+  background-color: #fff;
+}
+.btn-38643:active {
+  background-color: #222222;
 }
 .products {
   margin: 0 auto;
