@@ -4,6 +4,35 @@
 // 2. Добавьте значения по умолчанию для аргументов функции. Как можно упростить или сократить запись функций?
 // 3. *Сейчас после каждого товара на странице выводится запятая. Из-за чего это происходит? Как это исправить?
 
+// 2 task; 
+// У нас есть массив состощий из объектов товаров; 
+// Попробуем применить ДЕСТРУКТУРИЗАЦИЮ для того, 
+
+
+// 3 task;
+// Вот что выводит .map - (8)["↵        <div class="
+//     product - item ">↵            <i…"
+//     btn buy - btn ">Купить</button>↵        </div>↵    ", "↵        <div class="
+//     product - item ">↵            <i…"
+//     btn buy - btn ">Купить</button>↵        </div>↵    ", "↵        <div class="
+//     product - item ">↵            <i…"
+//     btn buy - btn ">Купить</button>↵        </div>↵    ", "↵        <div class="
+//     product - item ">↵            <i…"
+//     btn buy - btn ">Купить</button>↵        </div>↵    ", "↵        <div class="
+//     product - item ">↵            <i…"
+//     btn buy - btn ">Купить</button>↵        </div>↵    ", "↵        <div class="
+//     product - item ">↵            <i…"
+//     btn buy - btn ">Купить</button>↵        </div>↵    ", "↵        <div class="
+//     product - item ">↵            <i…"
+//     btn buy - btn ">Купить</button>↵        </div>↵    ", "↵        <div class="
+//     product - item ">↵            <i…"
+//     btn buy - btn ">Купить</button>↵        </div>↵    "]
+// И это innerHTML - добавляется в HTML код!
+// КАК ЭТО ИСПРАВИТЬ?! - обойти массив forEach!
+// Сформировать переменную let domString = ''
+// И уже ее document.querySelector('.products').innerHTML = domString
+
+
 const products = [{
         id: 1,
         title: "Apple iPhone 6s 16GB",
@@ -65,10 +94,23 @@ const renderProduct = (title, price, img) => {
         </div>
     `
 };
-const renderPage = list => {
-    const productsList = list.map(item => renderProduct(item.title, item.price, item.img));
+
+// ??? render Page - функция, которая в виде параметра принимает массив объктов товаров и создает из ???
+// Далее Метод map() создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.
+const renderPage = items => {
+    const productsList = items.map(item => renderProduct(item.title, item.price, item.img));
     console.log(productsList);
-    document.querySelector('.products').innerHTML = productsList;
+
+    // domString - variable to form house elements
+    let domString = ''
+    productsList.forEach(item => {
+        domString += item;
+    })
+    console.log(domString);
+    // domString - string
+    console.log(typeof (domString))
+
+    document.querySelector('.products').innerHTML = domString
 };
 
 renderPage(products);
