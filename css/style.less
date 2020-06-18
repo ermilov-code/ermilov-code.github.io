@@ -5,168 +5,116 @@
 
 
 // базовый цвет
-@baseColor: #483D8B;
+@baseColor: #FFFFFF;
+@colorButton: #6A5ACD;
+@colorText: #2F4F4F;
 
-// LightSeaGreen - цвет для кнопок
-@colorButton: rgb(86, 43, 156);
-
-@colorFont: #fff;
-
-
-
-// Эти шрифты подключены
-// font-family: 'Bellota', cursive;
-// font-family: 'Stalinist One', cursive;
-// font-family: 'Amatic SC', cursive;
-
-// добавлять эффект наведения и эффект нажатия всем КНОПКАМ, переключаьелям, логатипам, элементам меню!
+// переменная для основного текста страницы
+@mainFont: 'Montserrat', sans-serif;
+@buttonsOfFont: 'Comfortaa', cursive;
 
 
-
-body {
-  background-color: @baseColor - #888;
+// добавлять эффект наведения и эффект нажатия всем КНОПКАМ, переключателям, логатипам, элементам меню!
+.project-wrapper:hover {
+  color: @colorText + #444;
 }
 
-.container {}
+.project-wrapper:active {
+  color: @colorText - #222;
+}
+
+// font-family: 'Balsamiq Sans', cursive;
+// font-family: 'Comfortaa', cursive; 
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Open Sans Condensed', sans-serif;
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Underdog', cursive;
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
 
 .header {
   width: 100%;
-  padding: 15px;
   min-height: 100px;
-  background-color: @baseColor - #333;
+  background-color: @baseColor;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.a_logo {
-  text-decoration: none;
-  text-transform: uppercase;
+.logo {
+  width: 100%;
   text-align: center;
-  font-family: "Stalinist One", cursive;
+  text-decoration: none;
+  font-family: @buttonsOfFont;
+  font-size: 39px;
   color: @colorButton;
-  font-size: 27px;
-}
-
-.a_logo:hover {
-  color: @colorButton + #333;
-}
-
-.a_logo:active {
-  color: @colorButton - #111;
 }
 
 .main {
   width: 100%;
   min-height: 700px;
-  background-color: #fff;
+  background-color: @baseColor - #111;
+  padding: 30px 15px 30px 15px;
 }
 
-.btn:hover {
-  background-color: #333;
-  color: @colorFont;
-}
-
-.btn:active {
-  background-color: @colorFont;
-  color: @baseColor;
-  border: 1px solid @baseColor;
-}
-
-.products {
-  margin: 0 auto;
-  width: 90%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  align-content: flex-start;
-}
-
-.product-item {
-  border: 1px solid @baseColor;
-  // Отображается только область внутри элемента, остальное будет скрыто.
-  // свойство, которое помогло решить проблему с поеданием рамки ИЗОБРАЖЕНИЕМ
-  overflow: hidden;
-  width: 200px;
-  margin: 30px;
-  padding: 3px 0 10px 0;
+.project-wrapper {
+  width: 100%;
+  border: 1px solid @colorText;
+  padding: 5px;
+  margin: 0 0 10px 0;
+  color: @colorText;
+  font-family: @mainFont;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-}
-
-.product-image {
-  object-fit: contain;
-  margin: 0 0 4px 0;
-}
-
-.product-name {
-  display: flex;
-  color: @baseColor;
-  width: 100%;
+  justify-content: center;
   align-items: center;
-  margin: 0;
-  min-height: 56px;
-  font-family: 'Bellota', cursive;
-  padding: 3px 3px 3px 7px;
-  box-sizing: border-box;
-  font-size: 14px;
 }
 
-.product-price {
-  margin: 0 0 12px 0;
-  color: @baseColor;
-  align-self: flex-end;
-  font-weight: bold;
-  font-family: 'Bellota', cursive;
-  padding: 3px 3px 3px 7px;
-  font-size: 27px;
-}
-
-.btn {
-  border: 1px solid @colorFont;
-  background-color: transparent;
-  outline: none;
-  color: @colorFont;
-  font-family: 'Bellota', cursive;
-  padding: 2px 13px;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn-cart {
-  width: 136px;
-  height: 60px;
-  position: relative;
-}
-
-.btn-cart::before {
-  content: "\f07a";
-  font-family: FontAwesome;
-  color: #562b9c;
-  font-size: 42px;
-  position: absolute;
-  top: 5px;
-  left: 82px;
-}
-
-.buy-btn {
-  background-color: @baseColor;
+.project-title {
+  width: 100%;
+  margin: 0 0 5px 0;
   text-align: center;
-  width: 82px;
-  height: 37px;
-  align-self: center;
+}
+
+.project-description {
+  width: 100%;
+  margin: 0 0 5px 0;
+  text-align: center;
 }
 
 .footer {
   width: 100%;
   min-height: 100px;
-  background-color: @baseColor - #555;
+  background-color: @baseColor;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.security {
+  font-family: @buttonsOfFont;
+  font-size: 14px;
+  color: @colorText;
+  margin: 0 15px 0 15px;
+}
+
+.contacts-container {}
+
+.a-contacts {
+  text-decoration: none;
+}
+
+.whatsapp {}
+
+.svg-contacts {
+  fill: @colorButton;
+  width: 30px;
+  height: 30px;
 }
