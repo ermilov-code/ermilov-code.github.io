@@ -9,11 +9,40 @@
 @baseColor: #FFFFFF;
 @colorButton: #3d3bff;
 @colorText: #000000;
+@colorLogo: #303C42;
 
 // переменная для основного текста страницы
 @mainFont: 'Montserrat', sans-serif;
 @buttonsOfFont: 'Comfortaa', cursive;
 
+// АНИМАЦИИ 
+
+@keyframes logo_animation {
+  0% {
+    // transform: rotate(0deg);
+    // fill: @colorButton;
+  }
+
+  25% {
+    // transform: rotate(180deg);
+    fill: @colorLogo + #111;
+  }
+
+  50% {
+    // transform: rotate(180deg);
+    fill: @colorLogo + #222;
+  }
+
+  75% {
+    // transform: rotate(180deg);
+    fill: @colorLogo + #333;
+  }
+
+  100% {
+    // transform: rotate(360deg);
+    fill: @colorLogo + #444;
+  }
+}
 
 // добавлять эффект наведения и эффект нажатия всем КНОПКАМ, переключателям, логатипам, элементам меню!
 .project-wrapper:hover {
@@ -59,6 +88,27 @@
   font-family: @buttonsOfFont;
   font-size: 39px;
   color: @colorButton;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-developer-programer {
+  width: 76px;
+  height: 71px;
+  margin: 0 5px 0 5px;
+}
+
+.logo-contour-apple {
+  // fill: @colorText;
+  // animation: logo_animation 10 1s;
+  animation: logo_animation infinite 1s;
+  animation-delay: 1s;
+}
+
+.logo-fill-apple {
+  animation: logo_animation infinite 1s;
 }
 
 .main {

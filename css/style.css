@@ -1,6 +1,20 @@
 * {
   box-sizing: border-box;
 }
+@keyframes logo_animation {
+  25% {
+    fill: #414d53;
+  }
+  50% {
+    fill: #525e64;
+  }
+  75% {
+    fill: #636f75;
+  }
+  100% {
+    fill: #748086;
+  }
+}
 .project-wrapper:hover {
   border-radius: 0;
   outline: 1px solid #000000;
@@ -31,6 +45,22 @@
   font-family: 'Comfortaa', cursive;
   font-size: 39px;
   color: #3d3bff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.user-developer-programer {
+  width: 76px;
+  height: 71px;
+  margin: 0 5px 0 5px;
+}
+.logo-contour-apple {
+  animation: logo_animation infinite 1s;
+  animation-delay: 1s;
+}
+.logo-fill-apple {
+  animation: logo_animation infinite 1s;
 }
 .main {
   width: 100%;
