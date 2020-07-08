@@ -599,19 +599,173 @@ body>div>main>section.section-price>div:nth-child(4)>div.price-card-image {
 // ===  <footer class="footer"> ===
 
 
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+
+  .fullscreen__body {
+    padding: 20px 0px 20px 0;
+    justify-content: center;
+  }
+
+  .top-title {
+    font-size: 12px;
+    padding-top: 0px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .text-header {
+    font-size: 14px;
+  }
+
+  .section-service {}
+
+  .container {
+    width: 100% !important;
+  }
+
+  .service {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 200px;
+    align-items: center;
+    margin: 0px 0 70px 0;
+  }
+
+  #box-section-service>div>div:nth-child(3)>div.service-container-for-text {
+    order: 0;
+  }
+
+  .section-service-title {
+    font-size: 30px;
+    margin: 0 0 53px 0;
+  }
+
+  .service-container-for-text {
+    justify-content: flex-start;
+    width: 333px;
+    min-height: 150px;
+    margin: 0;
+  }
+
+  .service-image {
+    width: 335px;
+    height: 362px;
+    margin: 0 0 16px 0;
+  }
+
+  .service-name {
+    margin: 0 0 11px 0;
+    font-size: 22px;
+  }
+
+  .service-description {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  #Capa_1 {
+    width: 12px;
+  }
+
+  .section-slider {
+    min-height: 400px;
+  }
+
+  #carouselExampleIndicators {
+    min-height: 50vh;
+  }
+
+  .carousel-item {
+    width: 100%;
+    height: 239px;
+  }
+
+  .section-price {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
+
+
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
+// // Small devices (landscape phones, less than 768px)
+// @media (max-width: 767.98px) {
+//   .section-service {
+//     display: none;
+//   }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
+//   .section-slider {
+//     display: none;
+//   }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+//   .section-price {
+//     display: none;
+//   }
+
+//   .footer {
+//     display: none;
+//   }
+// }
+
+// // Medium devices (tablets, less than 992px)
+// @media (max-width: 991.98px) {
+//   .section-service {
+//     display: none;
+//   }
+
+//   .section-slider {
+//     display: none;
+//   }
+
+//   .section-price {
+//     display: none;
+//   }
+
+//   .footer {
+//     display: none;
+//   }
+// }
+
+// // Large devices (desktops, less than 1200px)
+// @media (max-width: 1199.98px) {
+//   .section-service {
+//     display: none;
+//   }
+
+//   .section-slider {
+//     display: none;
+//   }
+
+//   .section-price {
+//     display: none;
+//   }
+
+//   .footer {
+//     display: none;
+//   }
+// }

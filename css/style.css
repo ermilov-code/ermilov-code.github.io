@@ -488,3 +488,85 @@ body > div > main > section.section-price > div:nth-child(4) > div.price-card-im
   -ms-transform: skewX(-45deg);
   transform: skewX(-45deg);
 }
+@media (max-width: 575.98px) {
+  .fullscreen__body {
+    padding: 20px 0px 20px 0;
+    justify-content: center;
+  }
+  .top-title {
+    font-size: 12px;
+    padding-top: 0px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .text-header {
+    font-size: 14px;
+  }
+  .container {
+    width: 100% !important;
+  }
+  .service {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 200px;
+    align-items: center;
+    margin: 0px 0 70px 0;
+  }
+  #box-section-service > div > div:nth-child(3) > div.service-container-for-text {
+    order: 0;
+  }
+  .section-service-title {
+    font-size: 30px;
+    margin: 0 0 53px 0;
+  }
+  .service-container-for-text {
+    justify-content: flex-start;
+    width: 333px;
+    min-height: 150px;
+    margin: 0;
+  }
+  .service-image {
+    width: 335px;
+    height: 362px;
+    margin: 0 0 16px 0;
+  }
+  .service-name {
+    margin: 0 0 11px 0;
+    font-size: 22px;
+  }
+  .service-description {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .carousel-control-prev {
+    left: 0;
+  }
+  .carousel-control-next {
+    right: 0;
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 25px;
+    height: 25px;
+  }
+  #Capa_1 {
+    width: 12px;
+  }
+  .section-slider {
+    min-height: 400px;
+  }
+  #carouselExampleIndicators {
+    min-height: 50vh;
+  }
+  .carousel-item {
+    width: 100%;
+    height: 239px;
+  }
+  .section-price {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+}
