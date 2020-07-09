@@ -504,10 +504,10 @@ body > div > main > section.section-price > div:nth-child(5) > div.price-card-im
 }
 @media (max-width: 575.98px) {
   .fullscreen {
-    background-image: url(../img/four_girls_min.jpg);
+    background-image: url(../img/set_1.jpg);
   }
   .fullscreen__body {
-    padding: 120px 0px 20px 0;
+    padding: 20px 0px 20px 0;
   }
   .top-title {
     font-size: 12px;
@@ -598,7 +598,8 @@ body > div > main > section.section-price > div:nth-child(5) > div.price-card-im
   }
   .footer {
     justify-content: flex-start;
-    padding: 44px 15px 188px 15px;
+    padding: 43px 15px 43px 15px;
+    background-image: url(../img/set_1.jpg);
   }
   .footer-text {
     font-size: 16px;
