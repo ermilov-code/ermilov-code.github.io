@@ -63,12 +63,12 @@ body {
   background-color: #000;
   background-repeat: no-repeat;
   background-position: center center;
+  // запрещаю скрол вместе с экраном
+  background-attachment: fixed;
   text-align: center;
   vertical-align: middle;
   position: relative;
-  // запрещаю скрол вместе с экраном
-  background-attachment: fixed;
-  -webkit-background-attachment: fixed;
+  // -webkit-background-attachment: fixed;
   overflow: hidden;
   filter: brightness(92%);
 }
@@ -631,10 +631,7 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
 @media (max-width: 575.98px) {
 
   .fullscreen {
-    -webkit-background-size: center;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: center;
+    background-image: url(../img/dress.jpg);
   }
 
   .fullscreen__body {
