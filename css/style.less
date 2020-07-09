@@ -630,9 +630,16 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
 
+  .fullscreen {
+    -webkit-background-size: center;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: center;
+  }
+
   .fullscreen__body {
     padding: 20px 0px 20px 0;
-    justify-content: center;
+    // justify-content: center;
   }
 
   .top-title {
