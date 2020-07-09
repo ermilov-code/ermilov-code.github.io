@@ -509,6 +509,7 @@ body > div > main > section.section-price > div:nth-child(5) > div.price-card-im
   .fullscreen {
     min-height: 700px;
     background-image: url(../img/four_girls_min.jpg);
+    background-attachment: scroll;
   }
   .fullscreen__body {
     padding: 20px 0px 20px 0;
@@ -602,7 +603,7 @@ body > div > main > section.section-price > div:nth-child(5) > div.price-card-im
   }
   .footer {
     min-height: 700px;
-    background-image: url(../img/four_girls_min.jpg);
+    background-attachment: scroll;
   }
   .footer-text {
     font-size: 16px;
