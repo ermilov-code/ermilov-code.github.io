@@ -117,6 +117,8 @@ body {
   position: absolute;
   left: auto;
   bottom: 30px;
+  fill: #ffffff;
+  enable-background: new 0 0 38.417 18.592;
 }
 .btn,
 .scrolling-service,
@@ -268,7 +270,8 @@ body {
 .carousel-control-next {
   right: -130px;
 }
-#Capa_1 {
+#Capa_1,
+#Capa_2 {
   width: 18px;
 }
 .section-price {
@@ -550,7 +553,8 @@ body > div > main > section.section-price > div:nth-child(4) > div.price-card-im
     width: 25px;
     height: 25px;
   }
-  #Capa_1 {
+  #Capa_1,
+  #Capa_2 {
     width: 12px;
   }
   .section-slider {
