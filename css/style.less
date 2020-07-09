@@ -225,6 +225,12 @@ body {
   background-image: url(../img/boy_with_a_branch.jpg);
 }
 
+.service-image-4 {
+  background-image: url(../img/44.jpg);
+  background-size: contain;
+  background-color: white;
+}
+
 .service-container-for-text {
   display: flex;
   flex-direction: column;
@@ -235,9 +241,12 @@ body {
   margin: 10px;
 }
 
-#box-section-service>div>div:nth-child(3)>div.service-container-for-text {
+#box-section-service>div>div:nth-child(3)>div.service-container-for-text,
+#box-section-service>div>div:nth-child(5)>div.service-container-for-text {
   order: -1;
 }
+
+
 
 .service-name {
   color: #7c7c7c;
@@ -271,6 +280,10 @@ body {
   overflow: hidden;
 }
 
+.h3-section-slider {
+  display: none;
+}
+
 #carouselExampleIndicators {
   position: relative;
   min-height: 100vh;
@@ -291,7 +304,7 @@ body {
 }
 
 #carouselExampleIndicators>div>div:nth-child(1) {
-  background-image: url(../img/two_boys_three_girls.webp);
+  background-image: url(../img/two_boys_three_girls.jpg);
 }
 
 #carouselExampleIndicators>div>div:nth-child(2) {
@@ -370,13 +383,13 @@ body {
 }
 
 .price-card {
-  width: 360px;
+  width: 309px;
   min-height: 410px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 20px 0 20px;
+  margin: 20px;
 }
 
 body>div>main>section.section-price>div:nth-child(2)>div.price-card-image {
@@ -391,8 +404,14 @@ body>div>main>section.section-price>div:nth-child(4)>div.price-card-image {
   background-image: url(../img/set_3.jpg);
 }
 
+body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
+  background-image: url(../img/44.jpg);
+  background-size: contain;
+  background-color: #fff;
+}
+
 .price-card-image {
-  width: 360px;
+  width: 100%;
   height: 252px;
   background-size: cover;
   background-position: center;
@@ -401,15 +420,15 @@ body>div>main>section.section-price>div:nth-child(4)>div.price-card-image {
 
 .price-container-for-text {
   background-color: rgb(224, 208, 179);
-  padding: 30px;
+  padding: 7px 10px 10px 10px;
   width: 100%;
-  height: 158px;
+  min-height: 110px;
 }
 
 .price-service-name {
   color: #222;
-  margin-bottom: 10px;
-  font-size: 24px;
+  margin-bottom: 5px;
+  font-size: 17px;
   line-height: 1.35;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 600;
@@ -642,8 +661,13 @@ body>div>main>section.section-price>div:nth-child(4)>div.price-card-image {
     margin: 0px 0 70px 0;
   }
 
-  #box-section-service>div>div:nth-child(3)>div.service-container-for-text {
+  #box-section-service>div>div:nth-child(3)>div.service-container-for-text,
+  #box-section-service>div>div:nth-child(5)>div.service-container-for-text {
     order: 0;
+  }
+
+  .section-service {
+    padding: 36px 0 0 0;
   }
 
   .section-service-title {
@@ -653,13 +677,13 @@ body>div>main>section.section-price>div:nth-child(4)>div.price-card-image {
 
   .service-container-for-text {
     justify-content: flex-start;
-    width: 333px;
+    width: 100%;
     min-height: 150px;
     margin: 0;
   }
 
   .service-image {
-    width: 335px;
+    width: 100%;
     height: 362px;
     margin: 0 0 16px 0;
   }
@@ -697,10 +721,6 @@ body>div>main>section.section-price>div:nth-child(4)>div.price-card-image {
     min-height: 400px;
   }
 
-  .h3-section-slider {
-    display: none;
-  }
-
   #carouselExampleIndicators {
     min-height: 50vh;
   }
@@ -710,13 +730,38 @@ body>div>main>section.section-price>div:nth-child(4)>div.price-card-image {
     height: 239px;
   }
 
-  .section-price {
-    display: none;
+  .section-service-title {
+    margin: 0 0 148px 0;
+  }
+
+  .price-card {
+    margin: 5px;
+    min-height: 210px;
+    margin-bottom: 26px;
+  }
+
+  .price-container-for-text {
+    min-height: 50px;
+    padding: 17px;
+  }
+
+  .price-service-name {
+    font-size: 20px;
   }
 
   .footer {
-    display: none;
+    justify-content: flex-start;
+    padding: 43px 15px 43px 15px;
+
+
   }
+
+  .footer-text {
+    font-size: 16px;
+    margin: 0 0 124px 0;
+  }
+
+
 
 
 }
