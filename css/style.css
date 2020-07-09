@@ -560,6 +560,9 @@ body > div > main > section.section-price > div:nth-child(4) > div.price-card-im
   .section-slider {
     min-height: 400px;
   }
+  .h3-section-slider {
+    display: none;
+  }
   #carouselExampleIndicators {
     min-height: 50vh;
   }
