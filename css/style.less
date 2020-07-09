@@ -54,17 +54,24 @@ body {
   flex-direction: column;
   padding: 0px 15px 0px 15px;
   // background: rgba(0, 0, 0, .5);
-  background-image: url(../img/four\ girls.jpeg);
-  width: 100%;
+  // background-image: url(../img/four\ girls.jpeg);
+  max-width: 100%;
+
+  background: url(../img/four\ girls.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
   background-color: #000;
-  background-repeat: no-repeat;
-  background-position: center center;
+  // background-repeat: no-repeat;
+  // background-position: center center;
   // запрещаю скрол вместе с экраном
-  background-attachment: fixed;
+  // background-attachment: fixed;
   text-align: center;
   vertical-align: middle;
   position: relative;
@@ -632,7 +639,7 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
 
   .fullscreen {
     background-image: url(../img/four_girls_min.jpg);
-    min-height: 500px;
+    // min-height: 500px;
   }
 
   .fullscreen__body {
