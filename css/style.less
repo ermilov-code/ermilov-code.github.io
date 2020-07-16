@@ -53,20 +53,12 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0px 15px 0px 15px;
-  // background: rgba(0, 0, 0, .5);
   background-image: url(../img/four_girls.jpg);
   max-width: 100%;
-
-  // background: url(../img/four_girls.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
   background-color: #000;
   background-repeat: no-repeat;
   background-position: center center;
@@ -75,7 +67,6 @@ body {
   text-align: center;
   vertical-align: middle;
   position: relative;
-  // -webkit-background-attachment: fixed;
   overflow: hidden;
   filter: brightness(92%);
 }
@@ -631,15 +622,9 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
 
 
 
-
-
-
-// Extra small devices (portrait phones, less than 576px)
+// // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-
   .fullscreen {
-    min-height: 700px;
-    background-image: url(../img/four_girls_min.jpg);
     background-attachment: scroll;
   }
 
@@ -648,19 +633,17 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
   }
 
   .top-title {
-    font-size: 12px;
+    font-size: 16px;
     padding-top: 0px;
   }
 
   .title {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .text-header {
-    font-size: 14px;
+    font-size: 16px;
   }
-
-  // .section-service {}
 
   .container {
     width: 100% !important;
@@ -680,12 +663,12 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
   }
 
   .section-service {
-    padding: 36px 0 0 0;
+    padding: 19px 0 0 0;
   }
 
   .section-service-title {
     font-size: 30px;
-    margin: 0 0 53px 0;
+    margin: 0 0 35px 0;
   }
 
   .service-container-for-text {
@@ -731,11 +714,15 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
   }
 
   .section-slider {
-    min-height: 400px;
+    min-height: 318px;
   }
 
   #carouselExampleIndicators {
     min-height: 50vh;
+  }
+
+  .carousel-indicators {
+    bottom: -16px;
   }
 
   .carousel-item {
@@ -759,7 +746,7 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
   }
 
   .footer {
-    min-height: 700px;
+    // min-height: 700px;
     background-attachment: scroll;
   }
 
@@ -767,65 +754,497 @@ body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
     font-size: 16px;
     margin: 0 0 124px 0;
   }
-
-
-
-
 }
 
-// // Small devices (landscape phones, less than 768px)
-// @media (max-width: 767.98px) {
-//   .section-service {
-//     display: none;
-//   }
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .fullscreen {
+    // min-height: 700px;
+    // background-image: url(../img/four_girls_min.jpg);
+    background-attachment: scroll;
+  }
 
-//   .section-slider {
-//     display: none;
-//   }
+  .fullscreen__body {
+    padding: 20px 0px 20px 0;
+  }
 
-//   .section-price {
-//     display: none;
-//   }
+  .top-title {
+    font-size: 22px;
+    padding-top: 0px;
+  }
 
-//   .footer {
-//     display: none;
-//   }
-// }
+  .title {
+    font-size: 45px;
+  }
 
-// // Medium devices (tablets, less than 992px)
-// @media (max-width: 991.98px) {
-//   .section-service {
-//     display: none;
-//   }
+  .text-header {
+    font-size: 22px;
+  }
 
-//   .section-slider {
-//     display: none;
-//   }
+  // .section-service {}
 
-//   .section-price {
-//     display: none;
-//   }
+  .container {
+    max-width: 570px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
 
-//   .footer {
-//     display: none;
-//   }
-// }
+  .service {
+    width: 48%;
+    min-height: 463px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 
-// // Large devices (desktops, less than 1200px)
-// @media (max-width: 1199.98px) {
-//   .section-service {
-//     display: none;
-//   }
+  #box-section-service>div>div:nth-child(3)>div.service-container-for-text,
+  #box-section-service>div>div:nth-child(5)>div.service-container-for-text {
+    order: 0;
+  }
 
-//   .section-slider {
-//     display: none;
-//   }
+  .section-service {
+    padding: 36px 0 0 0;
+  }
 
-//   .section-price {
-//     display: none;
-//   }
+  .section-service-title {
+    font-size: 30px;
+    margin: 0 0 32px 0;
+  }
 
-//   .footer {
-//     display: none;
-//   }
+  .service-container-for-text {
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 10px;
+    margin: 0;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 253px;
+    margin: 0 0 5px 0;
+  }
+
+  .service-name {
+    margin: 0 0 3px 0;
+    font-size: 17px;
+  }
+
+  .service-description {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  #Capa_1,
+  #Capa_2 {
+    width: 12px;
+  }
+
+  .section-slider {
+    min-height: 430px;
+  }
+
+  #carouselExampleIndicators {
+    min-height: 50vh;
+  }
+
+  .carousel-indicators {
+    bottom: -53px;
+  }
+
+  .carousel-item {
+    width: 100%;
+    height: 362px;
+  }
+
+  .price-card {
+    width: 300px;
+    margin: 5px;
+    min-height: 210px;
+    margin-bottom: 26px;
+  }
+
+  .price-container-for-text {
+    min-height: 86px;
+    padding: 9px;
+  }
+
+  .price-title {
+    margin: 0 0 23px 0;
+  }
+
+  .price-service-name {
+    font-size: 15px;
+  }
+
+  .footer {
+    // min-height: 700px;
+    background-attachment: scroll;
+  }
+
+  .t-btn {
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+
+  .footer-title {
+    font-size: 39px;
+  }
+
+  .footer-text {
+    font-size: 22px;
+    margin: 0 0 83px 0;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fullscreen {
+    background-attachment: scroll;
+  }
+
+  .fullscreen__body {
+    padding: 20px 0px 20px 0;
+  }
+
+  .top-title {
+    font-size: 22px;
+    padding-top: 0px;
+  }
+
+  .title {
+    font-size: 45px;
+  }
+
+  .text-header {
+    font-size: 22px;
+  }
+
+  // .section-service {}
+
+  .container {
+    max-width: 760px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+
+  .service {
+    width: 48%;
+    min-height: 463px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #box-section-service>div>div:nth-child(3)>div.service-container-for-text,
+  #box-section-service>div>div:nth-child(5)>div.service-container-for-text {
+    order: 0;
+  }
+
+  .section-service {
+    padding: 36px 0 0 0;
+  }
+
+  .section-service-title {
+    font-size: 30px;
+    margin: 0 0 32px 0;
+  }
+
+  .service-container-for-text {
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 10px;
+    margin: 0;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 301px;
+    margin: 0 0 3px 0;
+  }
+
+  .service-name {
+    margin: 0 0 4px 0;
+    font-size: 22px;
+  }
+
+  .service-description {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 33px;
+    height: 33px;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 9%;
+  }
+
+  #Capa_1,
+  #Capa_2 {
+    width: 12px;
+  }
+
+  .section-slider {
+    min-height: 430px;
+  }
+
+  #carouselExampleIndicators {
+    min-height: 50vh;
+  }
+
+  .carousel-indicators {
+    bottom: -53px;
+  }
+
+  .carousel-item {
+    width: 100%;
+    height: 362px;
+  }
+
+  .section-price {
+    justify-content: space-around;
+  }
+
+  .price-card {
+    width: 337px;
+    margin: 5px;
+    min-height: 210px;
+    margin-bottom: 26px;
+  }
+
+  .price-container-for-text {
+    min-height: 96px;
+    padding: 9px;
+  }
+
+  .price-title {
+    margin: 0 0 23px 0;
+  }
+
+  .price-service-name {
+    font-size: 17px;
+  }
+
+  .footer {
+    // min-height: 700px;
+    background-attachment: scroll;
+  }
+
+  .t-btn {
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+
+  .footer-title {
+    font-size: 39px;
+  }
+
+  .footer-text {
+    font-size: 22px;
+    margin: 0 0 83px 0;
+  }
+}
+
+// // Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .fullscreen {
+    background-attachment: fixed;
+  }
+
+  .fullscreen__body {
+    padding: 20px 0px 20px 0;
+  }
+
+  .top-title {
+    font-size: 22px;
+    padding-top: 0px;
+  }
+
+  .title {
+    font-size: 45px;
+  }
+
+  .text-header {
+    font-size: 22px;
+  }
+
+  // .section-service {}
+
+  .container {
+    max-width: 990px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding: 15px;
+  }
+
+  .service {
+    width: 48%;
+    min-height: 463px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #box-section-service>div>div:nth-child(3)>div.service-container-for-text,
+  #box-section-service>div>div:nth-child(5)>div.service-container-for-text {
+    order: 0;
+  }
+
+  .section-service {
+    padding: 36px 0 0 0;
+  }
+
+  .section-service-title {
+    font-size: 30px;
+    margin: 0 0 32px 0;
+  }
+
+  .service-container-for-text {
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 10px;
+    margin: 0;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 371px;
+    margin: 0 0 3px 0;
+  }
+
+  .service-name {
+    margin: 0 0 4px 0;
+    font-size: 22px;
+  }
+
+  .service-description {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 33px;
+    height: 33px;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 9%;
+  }
+
+  #Capa_1,
+  #Capa_2 {
+    width: 12px;
+  }
+
+  .section-slider {
+    min-height: 100vh;
+  }
+
+  #carouselExampleIndicators {
+    min-height: 80vh;
+  }
+
+  .carousel-indicators {
+    bottom: -53px;
+  }
+
+  .carousel-item {
+    width: 100%;
+    height: 489px;
+  }
+
+  .section-price {
+    justify-content: space-around;
+  }
+
+  .price-card {
+    width: 349px;
+    margin: 5px;
+    min-height: 370px;
+    margin-bottom: 26px;
+  }
+
+  .price-container-for-text {
+    min-height: 96px;
+    padding: 9px;
+  }
+
+  .price-title {
+    margin: 0 0 23px 0;
+  }
+
+  .price-service-name {
+    font-size: 17px;
+  }
+
+  .footer {
+    background-attachment: fixed;
+  }
+
+  .t-btn {
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+
+  .footer-title {
+    font-size: 39px;
+  }
+
+  .footer-text {
+    font-size: 22px;
+    margin: 0 0 83px 0;
+  }
+}
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   ...
 // }
