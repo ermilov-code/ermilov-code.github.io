@@ -1,1250 +1,323 @@
 // =====================================================
-
-// минимальное обнуление стилей 
-*,
-*:before,
-*:after {
-  padding: 0;
-  margin: 0;
-  border: 0;
+* {
   box-sizing: border-box;
 }
 
-html,
-body {
-  // height: 100%; - обязательно для fullscreen
-  height: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 1160px !important;
-}
 
 // базовый цвет
-@baseColor: #fff;
-// LightSeaGreen - цвет для кнопок
-@colorButton: #20B2AA;
-// font-family: 'Roboto', sans-serif;
+// @baseColor: #FFFFFF;
+@baseColor: #FFFFFF;
+@colorButton: #4c1e87;
+@colorText: #000000;
+@colorLogo: #ffc800;
+
+// ШРИФТЫ
+// переменная для основного текста страницы:
+@mainFont: 'Montserrat', sans-serif;
+@buttonsOfFont: 'Comfortaa', cursive;
+// @logoFont: 'Balsamiq Sans', cursive;
+// @logoFont: 'Open Sans Condensed', sans-serif;
+@logoFont: 'Ubuntu', sans-serif;
+// @logoFont: 'Underdog', cursive;
 
 
-// добавлять эффект наведения и эффект нажатия всем КНОПКАМ, переключателям, логатипам, элементам меню!
-// курсор
-.arrow-svg:hover {
-  cursor: pointer;
-}
-
-body {
-  background-color: @baseColor;
-}
-
-.wrapper {
-  // vh - единица отвечающая за высоту экрана
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.fullscreen {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 15px 0px 15px;
-  background-image: url(../img/four_girls.jpg);
-  max-width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-position: center center;
-  // запрещаю скрол вместе с экраном
-  background-attachment: fixed;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  overflow: hidden;
-  filter: brightness(92%);
-}
+// font-family: 'Balsamiq Sans', cursive;
+// font-family: 'Comfortaa', cursive; 
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Open Sans Condensed', sans-serif;
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Underdog', cursive;
 
 
-.fullscreen__body {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0px 20px 0;
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.top-title {
-  text-transform: uppercase;
-  -webkit-font-smoothing: antialiased;
-  color: #fff;
-  padding-bottom: 55px;
-  padding-top: 20px;
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  letter-spacing: 2.5px;
-  text-align: center;
-  z-index: 50;
-}
-
-.title {
-  font-family: 'Roboto', sans-serif;
-  color: #d2bb98;
-  padding: 24px 0 30px 0;
-  margin: 0;
-  letter-spacing: .5px;
-  font-size: 72px;
-  line-height: 1.17;
-  z-index: 50;
-  -webkit-font-smoothing: antialiased;
-}
-
-.text-header {
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-size: 24px;
-  line-height: 1.5;
-  font-weight: 300;
-  color: #fff;
-  padding: 0 0 20px 0;
-}
-
-.t-cover__filter {
-  // min-height: 100vh;
-  min-height: 100%;
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@keyframes animationArrow {
+// АНИМАЦИИ 
+@keyframes logo_animation {
   0% {
-    transform: translate(0px, 0px);
+    // transform: rotate(0deg);
+    // fill: @colorButton;
+    fill: @colorButton + #111;
+  }
+
+  25% {
+    // transform: rotate(180deg);
+    fill: @colorButton + #111;
   }
 
   50% {
-    transform: translate(0px, 8px);
+    // transform: rotate(180deg);
+    fill: @colorButton + #222;
+  }
+
+  75% {
+    // transform: rotate(180deg);
+    fill: @colorButton + #333;
   }
 
   100% {
-    transform: translate(0px, 0px);
+    // transform: rotate(360deg);
+    fill: @colorButton + #444;
   }
 }
 
-.arrow-svg {
-  animation: animationArrow infinite 2s;
-  position: absolute;
-  left: auto;
-  bottom: 30px;
-  fill: #ffffff;
-  enable-background: new 0 0 38.417 18.592;
+// добавлять эффект наведения и эффект нажатия всем КНОПКАМ, переключателям, логатипам, элементам меню!
+.logo:hover .user-developer-programer {
+  transform: scale(1.1);
+}
+
+.project-wrapper:hover {
+  border-radius: 0;
+  outline: 1px solid @colorText;
+}
+
+.project-wrapper:hover .project-description {
+  color: @colorButton;
+}
+
+.project-wrapper:active {
+  color: @colorText - #222;
+}
+
+.svg-contacts:hover {
+  fill: @colorButton + #222;
+  transform: scale(1.1) rotate(20deg);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  min-height: 100px;
+  background-color: @colorButton + #555;
+  // background-color: @baseColor - #111;
+  border-bottom: 1px solid @colorText;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-family: @logoFont;
+  font-size: 39px;
+  color: @colorButton;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.btn,
-.scrolling-service,
-.arrow-svg,
-.text-header {
-  z-index: 50;
+.span-logo-animation {
+  display: block;
+  font: 9.5em 'Ubuntu';
+  width: 124px;
+  height: 200;
 }
 
-// main ==================================================
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #4D163D;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+  stroke: @colorButton;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: @colorButton;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: @colorButton;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #FDB731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+
+
+.user-developer-programer {
+  width: 76px;
+  height: 71px;
+  margin: 0 5px 0 5px;
+}
+
+.logo-contour-apple {
+  fill: @colorButton;
+  // animation: logo_animation 10 1s;
+  // animation: logo_animation infinite 1s;
+  // animation-delay: 1s;
+  display: none;
+}
+
+.logo-fill-apple {
+  // fill: @colorLogo;
+  // animation: logo_animation infinite 1s;
+  display: none;
+}
 
 .main {
   width: 100%;
   min-height: 700px;
-  background-color: @baseColor;
-}
-
-// === <section id="box-section-service" class="section-service"> ===
-
-.section-service {
-  min-height: 100vh;
-  width: 100%;
-  padding: 75px 0 0 0;
-  background-color: #d4bd96;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.section-service-title {
-  color: #4a4a4a;
-  margin: 0 0 90px 0;
-  font-size: 42px;
-  line-height: 1.23;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 600;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-}
-
-.service {
+  // background-color: @baseColor;
+  padding: 30px 15px 30px 15px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  min-height: 606px;
-  margin: 0 0 120px 0;
-}
-
-.service-image {
-  width: 560px;
-  height: 606px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 10px;
-}
-
-.service-image-1 {
-  background-image: url(../img/two_boys.jpg);
-}
-
-.service-image-2 {
-  background-image: url(../img/three\ girls.jpg);
-}
-
-.service-image-3 {
-  background-image: url(../img/boy_with_a_branch.jpg);
-}
-
-.service-image-4 {
-  background-image: url(../img/44.jpg);
-  background-size: contain;
-  background-color: white;
-}
-
-.service-container-for-text {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 560px;
-  min-height: 606px;
-  margin: 10px;
-}
-
-#box-section-service>div>div:nth-child(3)>div.service-container-for-text,
-#box-section-service>div>div:nth-child(5)>div.service-container-for-text {
-  order: -1;
-}
-
-
-
-.service-name {
-  color: #7c7c7c;
-  margin: 0 0 24px 0;
-  font-size: 26px;
-  line-height: 1.23;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 600;
-  -webkit-font-smoothing: antialiased;
-}
-
-.service-description {
-  font-size: 18px;
-  line-height: 1.55;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 300;
-  color: #000;
-  -webkit-font-smoothing: antialiased;
-}
-
-// === <section id="box-section-service" class="section-service"> ===
-// === <section class="slider"> ===
-
-.section-slider {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.h3-section-slider {
-  display: none;
-}
-
-#carouselExampleIndicators {
-  position: relative;
-  min-height: 100vh;
-  width: 860px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  // overflow: hidden;
-}
-
-.carousel-item {
-  width: 860px;
-  height: 550px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#carouselExampleIndicators>div>div:nth-child(1) {
-  background-image: url(../img/two_boys_three_girls.jpg);
-}
-
-#carouselExampleIndicators>div>div:nth-child(2) {
-  background-image: url(../img/three_girls_hat.jpg);
-}
-
-#carouselExampleIndicators>div>div:nth-child(3) {
-  background-image: url(../img/dress.jpg);
-}
-
-.carousel-indicators {
-  bottom: 21px;
-}
-
-.carousel-indicators li {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #c7c7c7;
-  margin: 10px;
-}
-
-.carousel-indicators .active {
-  background-color: #222;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(232, 232, 232, 1);
-  border-radius: 50%;
-  background-image: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-control-prev {
-  left: -130px;
-}
-
-.carousel-control-next {
-  right: -130px;
-}
-
-#Capa_1,
-#Capa_2 {
-  width: 18px;
-}
-
-
-// === <section class="slider"> ===
-// === <section class="price"> ===
-
-.section-price {
-  min-height: 100vh;
-  background-color: #e3e3e3;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  align-content: center;
-  padding: 20px;
+  align-content: flex-start;
 }
 
-.section-service-title {
-  width: 100%;
-  text-align: center;
+.projects {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap-reverse;
+  align-content: flex-start;
 }
 
-.price-title {
-  margin: 0 0 35px 0;
-}
-
-.price-card {
-  width: 309px;
-  min-height: 410px;
+.project-wrapper {
+  width: 45%;
+  background-color: @baseColor - #111;
+  padding: 5px 0 0 0;
+  // border: 1px solid @colorText;
+  // border-radius: 15px 0 15px 0;
+  // hidden - Отображается только область внутри элемента, остальное будет скрыто.
+  overflow: hidden;
+  margin: 0 15px 15px 0;
+  color: @colorText + #111;
+  font-family: @mainFont;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 20px;
 }
 
-body>div>main>section.section-price>div:nth-child(2)>div.price-card-image {
-  background-image: url(../img/set_1.jpg);
-}
-
-body>div>main>section.section-price>div:nth-child(3)>div.price-card-image {
-  background-image: url(../img/set_2.jpg);
-}
-
-body>div>main>section.section-price>div:nth-child(4)>div.price-card-image {
-  background-image: url(../img/set_3.jpg);
-}
-
-body>div>main>section.section-price>div:nth-child(5)>div.price-card-image {
-  background-image: url(../img/44.jpg);
-  background-size: contain;
-  background-color: #fff;
-}
-
-.price-card-image {
+.screenshot {
   width: 100%;
-  height: 252px;
+  height: 200px;
+  background-color: @colorButton + #555;
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-.price-container-for-text {
-  background-color: rgb(224, 208, 179);
-  padding: 7px 10px 10px 10px;
+.layout-1 {
+  background-image: url(../img/1-GB-HTML5_CSS3-layout-11.10.19.png);
+}
+
+.layout-2 {
+  background-image: url(../img/2-GB-HTML5_CSS3-Waxom_layout-061119.jpg);
+}
+
+.layout-3 {
+  background-image: url(../img/3-GB-JS-lv1-les7-CANVAS.png);
+  background-size: contain;
+}
+
+.layout-4 {
+  background-image: url(../img/4-GB-JS-lv1-les8-shop-my-version.png);
+}
+
+.layout-5 {
+  background-image: url(../img/5-stylist-kids.ru.png);
+}
+
+.project-title {
   width: 100%;
-  min-height: 110px;
+  min-height: 63px;
+  font-size: 27px;
+  margin: 0 0 5px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.price-service-name {
-  color: #222;
-  margin-bottom: 5px;
-  font-size: 17px;
-  line-height: 1.35;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 600;
-  -webkit-font-smoothing: antialiased;
+.project-description {
+  width: 100%;
+  min-height: 43px;
+  margin: 0 0 5px 0;
+  text-align: center;
+  color: @colorText;
 }
-
-.price {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.55;
-  font-family: 'Roboto', Arial, sans-serif;
-  color: #000;
-  -webkit-font-smoothing: antialiased;
-}
-
-// === <section class="price"> ===
-// ===  <footer class="footer"> ===
 
 .footer {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 15px 0px 15px;
-  // background: rgba(0, 0, 0, .5);
-  background-image: url(../img/five_children.jpg);
   width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-position: center center;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  // запрещаю скрол вместе с экраном
-  background-attachment: fixed;
-  overflow: hidden;
-  filter: brightness(92%);
-}
-
-.footer-content {
-  z-index: 200;
+  min-height: 100px;
+  background-color: @colorButton + #555;
+  border-top: 1px solid @colorText;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.footer-title {
-  color: #d2bb98;
-  font-size: 48px;
-  line-height: 1.23;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 600;
-  padding: 10px;
+.security {
+  font-family: @buttonsOfFont;
+  font-size: 14px;
+  color: @colorText;
+  margin: 0 15px 0 15px;
 }
 
-.footer-text {
-  max-width: 600px;
-  color: #fff;
-  text-align: center;
-  font-size: 24px;
-  line-height: 1.5;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  padding: 10px;
-  margin: 0 0 20px 0;
+.contacts-container {
+  width: 130px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-// === t-btn ===
-@keyframes flash-md {
-  30% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-.body>div>footer>div.footer-content>a>table>tbody>tr>td {
-  display: inline-block;
-  font-family: 'Roboto', Arial, sans-serif;
-  height: 60px;
-  border: 0 none;
-  font-size: 16px;
-  padding-left: 60px;
-  padding-right: 60px;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  font-weight: 700;
-  background-image: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
-
-.t-btn {
-  color: #000000;
-  background-color: #ded4ab;
-  position: relative;
+.a-contacts {
   text-decoration: none;
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  color: #000000;
-  background-color: #ded4ab;
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  display: inline-block;
-  font-family: 'Roboto', Arial, sans-serif;
-  height: 60px;
-  border: 0 none;
-  font-size: 16px;
-  padding-left: 60px;
-  padding-right: 60px;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  font-weight: 700;
-  background-image: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
+  margin: 0 5px 0 5px;
 }
 
-.t-btn:hover {
-  text-decoration: none;
+.whatsapp {}
+
+.svg-contacts {
+  fill: @colorButton;
+  width: 30px;
+  height: 30px;
 }
 
-.t-btn_wrap-effects {
-  animation-name: flash-md;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: translateX(-85px);
-  -ms-transform: translateX(-85px);
-  transform: translateX(-85px);
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
+@media (max-width: 767.98px) {
 
-.t-btn_effects {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, .4)));
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, .1), rgba(255, 255, 255, .4));
-  background: -o-linear-gradient(left, rgba(255, 255, 255, .1), rgba(255, 255, 255, .4));
-  background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .4));
-  width: 45px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 30px;
-  -webkit-transform: skewX(-45deg);
-  -ms-transform: skewX(-45deg);
-  transform: skewX(-45deg);
-}
-
-// /=== t-btn ===
-// ===  <footer class="footer"> ===
-
-
-
-
-// // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  .fullscreen {
-    background-attachment: scroll;
-  }
-
-  .fullscreen__body {
-    padding: 20px 0px 20px 0;
-  }
-
-  .top-title {
-    font-size: 16px;
-    padding-top: 0px;
-  }
-
-  .title {
-    font-size: 40px;
-  }
-
-  .text-header {
-    font-size: 16px;
-  }
-
-  .container {
-    width: 100% !important;
-  }
-
-  .service {
+  .main {
     flex-direction: column;
-    justify-content: flex-start;
-    min-height: 200px;
-    align-items: center;
-    margin: 0px 0 38px 0;
   }
 
-  #box-section-service>div>div:nth-child(3)>div.service-container-for-text,
-  #box-section-service>div>div:nth-child(5)>div.service-container-for-text {
-    order: 0;
-  }
-
-  .section-service {
-    padding: 19px 0 0 0;
-  }
-
-  .section-service-title {
-    font-size: 30px;
-    margin: 0 0 35px 0;
-  }
-
-  .service-container-for-text {
-    justify-content: flex-start;
+  .project-wrapper {
     width: 100%;
-    min-height: 10px;
-    margin: 0;
   }
 
-  .service-image {
-    width: 100%;
-    height: 362px;
-    margin: 0 0 16px 0;
-  }
-
-  .service-name {
-    margin: 0 0 11px 0;
-    font-size: 22px;
-  }
-
-  .service-description {
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
-  }
-
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  #Capa_1,
-  #Capa_2 {
-    width: 12px;
-  }
-
-  .section-slider {
-    min-height: 318px;
-  }
-
-  #carouselExampleIndicators {
-    min-height: 50vh;
-  }
-
-  .carousel-indicators {
-    bottom: -16px;
-  }
-
-  .carousel-item {
-    width: 100%;
-    height: 239px;
-  }
-
-  .price-card {
-    margin: 5px;
-    min-height: 210px;
-    margin-bottom: 26px;
-  }
-
-  .price-container-for-text {
-    min-height: 50px;
-    padding: 17px;
-  }
-
-  .price-service-name {
-    font-size: 20px;
-  }
-
-  .footer {
-    // min-height: 700px;
-    background-attachment: scroll;
-  }
-
-  .footer-text {
-    font-size: 16px;
-    margin: 0 0 124px 0;
-  }
 }
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .fullscreen {
-    // min-height: 700px;
-    // background-image: url(../img/four_girls_min.jpg);
-    background-attachment: scroll;
-  }
-
-  .fullscreen__body {
-    padding: 20px 0px 20px 0;
-  }
-
-  .top-title {
-    font-size: 22px;
-    padding-top: 0px;
-  }
-
-  .title {
-    font-size: 45px;
-  }
-
-  .text-header {
-    font-size: 22px;
-  }
-
-  // .section-service {}
-
-  .container {
-    max-width: 570px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    align-content: space-around;
-  }
-
-  .service {
-    width: 48%;
-    min-height: 463px;
-    margin: 0;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  #box-section-service>div>div:nth-child(3)>div.service-container-for-text,
-  #box-section-service>div>div:nth-child(5)>div.service-container-for-text {
-    order: 0;
-  }
-
-  .section-service {
-    padding: 36px 0 0 0;
-  }
-
-  .section-service-title {
-    font-size: 30px;
-    margin: 0 0 32px 0;
-  }
-
-  .service-container-for-text {
-    justify-content: flex-start;
-    width: 100%;
-    min-height: 10px;
-    margin: 0;
-  }
-
-  .service-image {
-    width: 100%;
-    height: 253px;
-    margin: 0 0 5px 0;
-  }
-
-  .service-name {
-    margin: 0 0 3px 0;
-    font-size: 17px;
-  }
-
-  .service-description {
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
-  }
-
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  #Capa_1,
-  #Capa_2 {
-    width: 12px;
-  }
-
-  .section-slider {
-    min-height: 430px;
-  }
-
-  #carouselExampleIndicators {
-    min-height: 50vh;
-  }
-
-  .carousel-indicators {
-    bottom: -53px;
-  }
-
-  .carousel-item {
-    width: 100%;
-    height: 362px;
-  }
-
-  .price-card {
-    width: 300px;
-    margin: 5px;
-    min-height: 210px;
-    margin-bottom: 26px;
-  }
-
-  .price-container-for-text {
-    min-height: 86px;
-    padding: 9px;
-  }
-
-  .price-title {
-    margin: 0 0 23px 0;
-  }
-
-  .price-service-name {
-    font-size: 15px;
-  }
-
-  .footer {
-    // min-height: 700px;
-    background-attachment: scroll;
-  }
-
-  .t-btn {
-    padding-left: 115px;
-    padding-right: 115px;
-  }
-
-  .footer-title {
-    font-size: 39px;
-  }
-
-  .footer-text {
-    font-size: 22px;
-    margin: 0 0 83px 0;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .fullscreen {
-    background-attachment: scroll;
-  }
-
-  .fullscreen__body {
-    padding: 20px 0px 20px 0;
-  }
-
-  .top-title {
-    font-size: 22px;
-    padding-top: 0px;
-  }
-
-  .title {
-    font-size: 45px;
-  }
-
-  .text-header {
-    font-size: 22px;
-  }
-
-  // .section-service {}
-
-  .container {
-    max-width: 760px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    align-content: space-around;
-  }
-
-  .service {
-    width: 48%;
-    min-height: 463px;
-    margin: 0;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  #box-section-service>div>div:nth-child(3)>div.service-container-for-text,
-  #box-section-service>div>div:nth-child(5)>div.service-container-for-text {
-    order: 0;
-  }
-
-  .section-service {
-    padding: 36px 0 0 0;
-  }
-
-  .section-service-title {
-    font-size: 30px;
-    margin: 0 0 32px 0;
-  }
-
-  .service-container-for-text {
-    justify-content: flex-start;
-    width: 100%;
-    min-height: 10px;
-    margin: 0;
-  }
-
-  .service-image {
-    width: 100%;
-    height: 301px;
-    margin: 0 0 3px 0;
-  }
-
-  .service-name {
-    margin: 0 0 4px 0;
-    font-size: 22px;
-  }
-
-  .service-description {
-    font-size: 14px;
-    line-height: 1.45;
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
-  }
-
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    width: 33px;
-    height: 33px;
-  }
-
-  .carousel-control-next,
-  .carousel-control-prev {
-    width: 9%;
-  }
-
-  #Capa_1,
-  #Capa_2 {
-    width: 12px;
-  }
-
-  .section-slider {
-    min-height: 430px;
-  }
-
-  #carouselExampleIndicators {
-    min-height: 50vh;
-  }
-
-  .carousel-indicators {
-    bottom: -53px;
-  }
-
-  .carousel-item {
-    width: 100%;
-    height: 362px;
-  }
-
-  .section-price {
-    justify-content: space-around;
-  }
-
-  .price-card {
-    width: 337px;
-    margin: 5px;
-    min-height: 210px;
-    margin-bottom: 26px;
-  }
-
-  .price-container-for-text {
-    min-height: 96px;
-    padding: 9px;
-  }
-
-  .price-title {
-    margin: 0 0 23px 0;
-  }
-
-  .price-service-name {
-    font-size: 17px;
-  }
-
-  .footer {
-    // min-height: 700px;
-    background-attachment: scroll;
-  }
-
-  .t-btn {
-    padding-left: 115px;
-    padding-right: 115px;
-  }
-
-  .footer-title {
-    font-size: 39px;
-  }
-
-  .footer-text {
-    font-size: 22px;
-    margin: 0 0 83px 0;
-  }
-}
-
-// // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .fullscreen {
-    background-attachment: fixed;
-  }
-
-  .fullscreen__body {
-    padding: 20px 0px 20px 0;
-  }
-
-  .top-title {
-    font-size: 22px;
-    padding-top: 0px;
-  }
-
-  .title {
-    font-size: 45px;
-  }
-
-  .text-header {
-    font-size: 22px;
-  }
-
-  // .section-service {}
-
-  .container {
-    max-width: 990px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    align-content: space-around;
-    padding: 15px;
-  }
-
-  .service {
-    width: 48%;
-    min-height: 463px;
-    margin: 0;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  #box-section-service>div>div:nth-child(3)>div.service-container-for-text,
-  #box-section-service>div>div:nth-child(5)>div.service-container-for-text {
-    order: 0;
-  }
-
-  .section-service {
-    padding: 36px 0 0 0;
-  }
-
-  .section-service-title {
-    font-size: 30px;
-    margin: 0 0 32px 0;
-  }
-
-  .service-container-for-text {
-    justify-content: flex-start;
-    width: 100%;
-    min-height: 10px;
-    margin: 0;
-  }
-
-  .service-image {
-    width: 100%;
-    height: 371px;
-    margin: 0 0 3px 0;
-  }
-
-  .service-name {
-    margin: 0 0 4px 0;
-    font-size: 22px;
-  }
-
-  .service-description {
-    font-size: 15px;
-    line-height: 1.45;
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
-  }
-
-  .carousel-control-next-icon,
-  .carousel-control-prev-icon {
-    width: 33px;
-    height: 33px;
-  }
-
-  .carousel-control-next,
-  .carousel-control-prev {
-    width: 9%;
-  }
-
-  #Capa_1,
-  #Capa_2 {
-    width: 12px;
-  }
-
-  .section-slider {
-    min-height: 100vh;
-  }
-
-  #carouselExampleIndicators {
-    min-height: 80vh;
-  }
-
-  .carousel-indicators {
-    bottom: -53px;
-  }
-
-  .carousel-item {
-    width: 100%;
-    height: 489px;
-  }
-
-  .section-price {
-    justify-content: space-around;
-  }
-
-  .price-card {
-    width: 349px;
-    margin: 5px;
-    min-height: 370px;
-    margin-bottom: 26px;
-  }
-
-  .price-container-for-text {
-    min-height: 96px;
-    padding: 9px;
-  }
-
-  .price-title {
-    margin: 0 0 23px 0;
-  }
-
-  .price-service-name {
-    font-size: 17px;
-  }
-
-  .footer {
-    background-attachment: fixed;
-  }
-
-  .t-btn {
-    padding-left: 115px;
-    padding-right: 115px;
-  }
-
-  .footer-title {
-    font-size: 39px;
-  }
-
-  .footer-text {
-    font-size: 22px;
-    margin: 0 0 83px 0;
-  }
-}
-
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) {
-//   ...
-// }

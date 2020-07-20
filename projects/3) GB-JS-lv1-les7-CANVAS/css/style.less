@@ -1,0 +1,230 @@
+@baseColor: #300a0a;
+@canvasColor: rgb(77, 77, 77);
+
+/* базовый цвет */
+// body {
+//   // background-color: @baseColor - #888;
+// }
+
+// .container {
+//   margin: 0 auto;
+//   width: 100%;
+// }
+
+// font-family: 'Play', sans-serif;
+// font-family: 'Press Start 2P', cursive;
+
+.header {
+  width: 100%;
+  min-height: 50px;
+  background-color: @baseColor + #222;
+}
+
+.main {
+  width: 100%;
+  padding: 10px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// ======================== стилизация CANVAS ========================
+
+.canvas-container {
+  width: 1000px;
+  height: 580px;
+  border: 1px solid @canvasColor;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#canv {
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+}
+
+.canv {
+  box-sizing: border-box;
+}
+
+.tools {
+  width: 100%;
+  min-height: 40px;
+  background-color: @canvasColor + #222;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.coordinates {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: @canvasColor - #222;
+  box-sizing: border-box;
+}
+
+.p-coordinates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 79px;
+  margin: 0;
+  color: @canvasColor + #555;
+}
+
+.vertical-bar {
+  width: 1px;
+  min-height: 30px;
+  background-color: @canvasColor - #555;
+  margin: 0 3px 0 3px;
+}
+
+.button-tool,
+.a-download {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 7px;
+  background-color: @canvasColor + #222;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  outline: none;
+  border: none;
+}
+
+.button-tool:hover {
+  filter: blur(1px);
+}
+
+.a-download:hover {
+  animation: animDownload 10 0.1s;
+}
+
+@keyframes animDownload {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button-tool-pencil {
+  background-image: url(../img/pencil.png);
+}
+
+.button-tool-brush {
+  background-image: url(../img/brush.png);
+}
+
+.button-tool-line {
+  background-image: url(../img/line.png);
+}
+
+.button-tool-clear {
+  background-image: url(../img/clear.png);
+}
+
+.button-tool-text {
+  background-image: url(../img/text.png);
+}
+
+.slidecontainer {
+  flex-grow: 2;
+}
+
+.a-download {
+  text-decoration: none;
+  background-image: url(../img/save.png);
+  margin: 0 50px 0 0;
+
+}
+
+
+
+// ======================== стилизация CANVAS ========================
+
+.footer {
+  width: 100%;
+  min-height: 50px;
+  background-color: @baseColor - #222;
+}
+
+// ================ стилизация <div class="slidecontainer"> ================
+
+.slidecontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  /* Width of the outside container */
+  // margin-right: 10px;
+}
+
+/* The slider itself */
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  background: @baseColor + #444;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-left: 15px;
+}
+
+.range-slider:hover {
+  opacity: 1;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 25px;
+  background: @canvasColor - #222;
+  cursor: pointer;
+}
+
+.range-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: @canvasColor - #222;
+  cursor: pointer;
+}
+
+#demo {
+  min-width: 30px;
+  text-align: center;
+  font-family: 'Play', sans-serif;
+  color: #090909;
+  margin-right: 15px;
+}
+
+.p-task {
+  color: rgb(223, 86, 23);
+  font-family: 'Press Start 2P', cursive;
+}
+
+// ================ стилизация <div class="slidecontainer"> ================
