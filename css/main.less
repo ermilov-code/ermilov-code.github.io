@@ -1,52 +1,19 @@
-// =====================================================
-
-// применение:
-
-.container {
-    margin: 0 auto;
-    width: 100%;
-    .text(column, flex-start, flex-end);
-}
-
-.text-main {
-    width: 80%;
-
-    // & - Амперсанд
-    &-p {
-        color: @colorButton;
-        .txt();
-
-        &:hover {
-            // ФУНКЦИИ // saturate - возвращает цвет на 10% *более* насыщенный, чем @color
-            color: saturate(@colorButton, 50%)
-        }
-
-        &:active {
-            color: @colorButton + #222
-        }
-    }
-}
+// .main ===============================================
 
 
-body {
-    background-color: @baseColor - #888;
-}
+@backgroundColor: #FFFFFF;
+// базовый цвет
+@baseColor: #fff;
+// LightSeaGreen - цвет для кнопок
+@colorButton: #20B2AA;
+// font-family: 'Roboto', sans-serif;
+@colorMain: #AA816D;
+@colorButton: #AA816D;
 
-.container {
-    margin: 0 auto;
-    width: 100%;
-}
 
 .main {
     width: 100%;
-    min-height: 700px;
-    background-color: @baseColor - #444;
+    min-height: 400px;
+    background: @backgroundColor;
+    // border: 1px dotted black;
 }
-
-.footer {
-    width: 100%;
-    min-height: 100px;
-    background-color: @baseColor - #555;
-}
-
-// =====================================================
