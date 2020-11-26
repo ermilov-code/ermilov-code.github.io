@@ -102,6 +102,10 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
+let swiperSlide = document.querySelectorAll('.swiper-slide');
+swiperSlide.style.width = "600px";
+
+
 
 // https://github.com/nolimits4web/Swiper/blob/master/demos/290-dynamic-slides.html
 
