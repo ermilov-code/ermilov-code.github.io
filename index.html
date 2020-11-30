@@ -1,361 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Мария, детский стилист</title>
-  <link rel="shortcut icon" href="img/site-icon.JPG" type="image/png" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@400;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.css" />
-
-</head>
-
-<body>
-  <!-- =================== HTML =================== -->
-  <div class="wrapper">
-    <header class="header fullscreen">
-      <!-- блок, который ограничивает контент по ширине -->
-      <div class="top-header">
-        <a href="https://www.instagram.com/stylist__kids/" class="logo">
-          <div class="logo-img"></div>
-          <div class="logo-txt">
-            <span class="txt-logo-1">Maria</span>
-            <span class="txt-logo-2">Stylist kids</span>
-          </div>
-        </a>
-        <nav class="nav">
-          <!-- <input type="checkbox" class="input_nav" />
-          <span class="span_burgerMenu"></span>
-          <span class="span_burgerMenu"></span>
-          <span class="span_burgerMenu"></span> -->
-          <ul class="nav_list">
-            <li class="nav_item">
-              <a href="#services" class="nav_link">Услуги</a>
-            </li>
-            <li class="nav_item">
-              <a href="#myclients" class="nav_link">Мои клиенты</a>
-            </li>
-            <li class="nav_item">
-              <a href="#reviews" class="nav_link">Отзывы</a>
-            </li>
-            <li class="nav_item">
-              <a href="#consultation" class="nav_link">Консультация</a>
-            </li>
-            <li class="nav_item">
-              <a href="https://www.instagram.com/stylist__kids/" class="nav_link">
-                <svg class="nav_link_instagram" viewBox="0 0 512.00096 512.00096" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="m373.40625 0h-234.8125c-76.421875 0-138.59375 62.171875-138.59375 138.59375v234.816406c0 76.417969 62.171875 138.589844 138.59375 138.589844h234.816406c76.417969 0 138.589844-62.171875 138.589844-138.589844v-234.816406c0-76.421875-62.171875-138.59375-138.59375-138.59375zm108.578125 373.410156c0 59.867188-48.707031 108.574219-108.578125 108.574219h-234.8125c-59.871094 0-108.578125-48.707031-108.578125-108.574219v-234.816406c0-59.871094 48.707031-108.578125 108.578125-108.578125h234.816406c59.867188 0 108.574219 48.707031 108.574219 108.578125zm0 0" />
-                  <path
-                    d="m256 116.003906c-77.195312 0-139.996094 62.800782-139.996094 139.996094s62.800782 139.996094 139.996094 139.996094 139.996094-62.800782 139.996094-139.996094-62.800782-139.996094-139.996094-139.996094zm0 249.976563c-60.640625 0-109.980469-49.335938-109.980469-109.980469 0-60.640625 49.339844-109.980469 109.980469-109.980469 60.644531 0 109.980469 49.339844 109.980469 109.980469 0 60.644531-49.335938 109.980469-109.980469 109.980469zm0 0" />
-                  <path
-                    d="m399.34375 66.285156c-22.8125 0-41.367188 18.558594-41.367188 41.367188 0 22.8125 18.554688 41.371094 41.367188 41.371094s41.371094-18.558594 41.371094-41.371094-18.558594-41.367188-41.371094-41.367188zm0 52.71875c-6.257812 0-11.351562-5.09375-11.351562-11.351562 0-6.261719 5.09375-11.351563 11.351562-11.351563 6.261719 0 11.355469 5.089844 11.355469 11.351563 0 6.257812-5.09375 11.351562-11.355469 11.351562zm0 0" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <!-- /.top-header -->
-      <div class="middle-header">
-        <div class="txt-header">
-          <h1 class="h1-name">Мария — <br>
-            детский стилист</h1>
-          <ul class="services-list">
-            <li class="services-item">Подбор образа на любое мероприятие;</li>
-            <li class="services-item">Разбор и составление гардероба;</li>
-            <li class="services-item">Стилизация съемок</li>
-          </ul>
-          <a href="#consultation" class="a-consultation">Записаться на консультацию</a>
-        </div>
-        <!-- /.txt-header -->
-        <!-- img - размер без размерности! width="600" height="500" -->
-        <img src="img/family-1.jpg" alt="family-1.jpg" class="img-header" width="435" height="601">
-      </div>
-      <!-- /.middle-header -->
-      <svg class="arrow-svg" width="21" height="47" viewBox="0 0 21 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 37.0352L10.625 46.4102L1.25 37.0352" stroke="#333333" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M10.625 45.9414L10.625 1" stroke="#333333" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </header>
-
-
-    <main class="main">
-      <section id="box-section-service" class="section-services">
-        <a href="#" name="services" class="a-anchor-link"></a>
-        <h2 class="h2-heading">Услуги</h2>
-
-        <div class="service-wrapper-left">
-          <article class="separate-service separate-service-1">
-            <!-- img - размер без размерности! width="600" height="500" -->
-            <img src="img/picture-service-1.jpg" alt="service image" class="img-separate-service" width="198"
-              height="198">
-            <h3 class="h3-service-name">Разбор гардероба (один сезон)</h3>
-            <ul class="services-list services-list-section-service">
-              <li class="services-item">Составление максимального количества образов из имеющихся вещей</li>
-              <li class="services-item">Рекомендации с конкретными ссылками на вещи, которые необходимо докупить</li>
-              <li class="services-item">Учитываются все ваши предпочтения и бюджет</li>
-            </ul>
-            <div class="wrapper-price">
-              <span class="service-price">3.000&nbsp;₽</span>
-              <a href="#consultation" class="a-consultation a-consultation-service">Заказать услугу</a>
-            </div>
-            <!-- /.wrapper-price -->
-          </article>
-          <article class="separate-service separate-service-3">
-            <!-- img - размер без размерности! width="600" height="500" -->
-            <img src="img/picture-service-3.jpg" alt="service image" class="img-separate-service" width="198"
-              height="198">
-            <h3 class="h3-service-name">Подбор образа</h3>
-            <ul class="services-list services-list-section-service">
-              <li class="services-item">Подбор образа (одежда, обувь и аксессуары) для любого мероприятия: день
-                рождения,
-                выпускной или фотосессия</li>
-              <li class="services-item">Два варианта с учётом вашего бюджета и предпочтений</li>
-            </ul>
-            <div class="wrapper-price">
-              <span class="service-price">700&nbsp;₽</span>
-              <a href="#consultation" class="a-consultation a-consultation-service">Заказать услугу</a>
-            </div>
-            <!-- /.wrapper-price -->
-          </article>
-        </div>
-        <!-- /.service-wrapper-left -->
-        <div class="service-wrapper-right">
-          <article class="separate-service separate-service-2">
-            <!-- img - размер без размерности! width="600" height="500" -->
-            <img src="img/picture-service-2.jpg" alt="service image" class="img-separate-service" width="198"
-              height="198">
-            <h3 class="h3-service-name">Составление индивидуальной капсулы (школьная или повседневная)
-            </h3>
-            <ul class="services-list services-list-section-service">
-              <li class="services-item">Формирование индивидуального гардероба исходя из ваших предпочтений (бренд,
-                бюджет, цветовая палитра)</li>
-              <li class="services-item">Учитывается так же телосложение, назначение (сад, школа, прогулки)
-                и наличие необходимых размеров</li>
-              <li class="services-item">Рекомендации как выгоднее заказать вещи онлайн с учётом действующих акций и
-                скидок
-              </li>
-              <li class="services-item">Капсула составляется на один сезон</li>
-            </ul>
-            <div class="wrapper-price">
-              <span class="service-price">2.000&nbsp;₽</span>
-              <a href="#consultation" class="a-consultation a-consultation-service">Заказать услугу</a>
-            </div>
-            <!-- /.wrapper-price -->
-          </article>
-          <article class="separate-service separate-service-4">
-            <!-- img - размер без размерности! width="600" height="500" -->
-            <img src="img/picture-service-4.jpg" alt="service image" class="img-separate-service" width="198"
-              height="198">
-            <h3 class="h3-service-name">Капсула для взрослых</h3>
-            <ul class="services-list services-list-section-service">
-              <li class="services-item">Формирование капсульного гардероба любого назначения</li>
-              <li class="services-item">Капсула на один сезон включает до 15 вещей без учета обуви и аксессуаров</li>
-            </ul>
-            <div class="wrapper-price">
-              <span class="service-price">3.500&nbsp;₽</span>
-              <a href="#consultation" class="a-consultation a-consultation-service">Заказать услугу</a>
-            </div>
-            <!-- /.wrapper-price -->
-          </article>
-        </div>
-        <!-- /.service-wrapper-right -->
-      </section>
-
-      <section class="section-clients">
-        <a href="#" name="myclients" class="a-anchor-link"></a>
-        <h2 class="h2-heading">Мои клиенты</h2>
-        <section class="section-slider">
-          <h3 class="h3-section-slider">slider</h3>
-
-          <!-- https://github.com/nolimits4web/Swiper/blob/master/demos/290-dynamic-slides.html -->
-          <!-- Swiper -->
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide swiper-slide-1"></div>
-              <div class="swiper-slide swiper-slide-2"></div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
-              <div class="swiper-slide">Slide 10</div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-          <!-- Swiper JS -->
-          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-          <!-- https://github.com/nolimits4web/Swiper/blob/master/demos/290-dynamic-slides.html -->
-
-
-
-
-        </section>
-      </section>
-
-      <section class="section-reviews">
-        <a href="#" name="reviews" class="a-anchor-link"></a>
-        <h2 class="h2-heading">Отзывы</h2>
-      </section>
-
-      <section class="section-consultation">
-        <a href="#" name="consultation" class="a-anchor-link"></a>
-        <h2 class="h2-heading">Консультация</h2>
-        <div class="consultation-img">
-          <img src="img/consultation-img-1.jpg" alt="consultation-img" class="cons-img" width="370" height="430">
-          <img src="img/consultation-img-2.jpg" alt="consultation-img" class="cons-img" width="275" height="220">
-        </div>
-        <form action="/my-handling-form-page" method="post" class="form-consultation">
-          <p class="p-form-consultation item-form-li">Отвечу на&nbsp;все ваши вопросы.
-            Подскажу в&nbsp;какой именно одежде ваш ребенок будет выделяться.</p>
-          <ul>
-            <li class="item-form-li">
-              <!-- <label for="username">Name:</label> -->
-              <input class="input-text" type="text" id="username" name="user_name" placeholder="Имя">
-            </li>
-            <select class="select-form select" name="language">
-              <option disabled class="option-form">Какая услуга вам нужна?</option>
-              <option class="option-form" value="Подбор образа">Подбор образа</option>
-              <option class="option-form" value="Разбор гардероба">Разбор гардероба</option>
-              <option class="option-form" value="Капсула для взрослых">Капсула для взрослых</option>
-              <option class="option-form" value="Составление индивидуальной капсулы">Составление индивидуальной
-                капсулы</option>
-            </select>
-
-            <!-- <p class="input-text p-input-text item-form-li">
-              <select class="select-form select" name="language">
-                <option class="option-form">Какая услуга вам нужна?</option>
-                <option class="option-form" value="Подбор образа">Подбор образа</option>
-                <option class="option-form" value="Разбор гардероба">Разбор гардероба</option>
-                <option class="option-form" value="Капсула для взрослых">Капсула для взрослых</option>
-                <option class="option-form" value="Составление индивидуальной капсулы">Составление индивидуальной
-                  капсулы</option>
-              </select>
-            </p> -->
-            <li class="item-form-li">
-              <!-- <label for="mail">E-mail:</label> -->
-              <input class="input-text" type="email" id="mail" name="user_mail" placeholder="Ваш E-mail">
-            </li>
-            <li class="button">
-              <button class="button-form" type="submit">
-                <span class="span-button-form">Заказать услугу</span>
-              </button>
-            </li>
-          </ul>
-          <p class="p-form-confidentiality">Нажимая на&nbsp;кнопку, вы&nbsp;даёте соглашение на&nbsp;обработку ваших <a
-              href="privacy-policy.html" class="confidentiality">персональных данных</a></p>
-
-
-
-        </form>
-      </section>
-    </main>
-
-
-    <footer class="footer">
-
-      <nav class="nav nav-footer">
-        <a href="https://www.instagram.com/stylist__kids/" class="logo logo-footer">
-          <div class="logo-img logo-img-footer"></div>
-          <div class="logo-txt">
-            <span class="txt-logo-1 txt-logo-1-footer">Maria</span>
-            <span class="txt-logo-2 txt-logo-2-footer">Stylist kids</span>
-          </div>
-        </a>
-        <!-- <input type="checkbox" class="input_nav" />
-              <span class="span_burgerMenu"></span>
-              <span class="span_burgerMenu"></span>
-              <span class="span_burgerMenu"></span> -->
-        <ul class="nav_list nav_list-footer">
-          <li class="nav_item nav_item-footer">
-            <a href="#services" class="nav_link nav_link-footer">Услуги</a>
-          </li>
-          <li class="nav_item nav_item-footer">
-            <a href="#myclients" class="nav_link nav_link-footer">Мои клиенты</a>
-          </li>
-          <li class="nav_item nav_item-footer">
-            <a href="#reviews" class="nav_link nav_link-footer">Отзывы</a>
-          </li>
-          <li class="nav_item nav_item-footer">
-            <a href="#consultation" class="nav_link nav_link-footer">Консультация</a>
-          </li>
-        </ul>
-        <a href="https://www.instagram.com/stylist__kids/" class="nav_link nav_item-instagram">
-          <svg class="nav_link_instagram nav_link_instagram-footer" viewBox="0 0 512.00096 512.00096"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m373.40625 0h-234.8125c-76.421875 0-138.59375 62.171875-138.59375 138.59375v234.816406c0 76.417969 62.171875 138.589844 138.59375 138.589844h234.816406c76.417969 0 138.589844-62.171875 138.589844-138.589844v-234.816406c0-76.421875-62.171875-138.59375-138.59375-138.59375zm108.578125 373.410156c0 59.867188-48.707031 108.574219-108.578125 108.574219h-234.8125c-59.871094 0-108.578125-48.707031-108.578125-108.574219v-234.816406c0-59.871094 48.707031-108.578125 108.578125-108.578125h234.816406c59.867188 0 108.574219 48.707031 108.574219 108.578125zm0 0" />
-            <path
-              d="m256 116.003906c-77.195312 0-139.996094 62.800782-139.996094 139.996094s62.800782 139.996094 139.996094 139.996094 139.996094-62.800782 139.996094-139.996094-62.800782-139.996094-139.996094-139.996094zm0 249.976563c-60.640625 0-109.980469-49.335938-109.980469-109.980469 0-60.640625 49.339844-109.980469 109.980469-109.980469 60.644531 0 109.980469 49.339844 109.980469 109.980469 0 60.644531-49.335938 109.980469-109.980469 109.980469zm0 0" />
-            <path
-              d="m399.34375 66.285156c-22.8125 0-41.367188 18.558594-41.367188 41.367188 0 22.8125 18.554688 41.371094 41.367188 41.371094s41.371094-18.558594 41.371094-41.371094-18.558594-41.367188-41.371094-41.367188zm0 52.71875c-6.257812 0-11.351562-5.09375-11.351562-11.351562 0-6.261719 5.09375-11.351563 11.351562-11.351563 6.261719 0 11.355469 5.089844 11.355469 11.351563 0 6.257812-5.09375 11.351562-11.355469 11.351562zm0 0" />
-          </svg>
-        </a>
-      </nav>
-
-      <div class="white-border-footer"></div>
-      <!-- /.white-border-footer -->
-
-      <ul class="nav_list nav_list-footer nav_list-footer-bottom">
-        <li class="nav_item nav_item-footer">
-          <a href="privacy-policy.html" class="nav_link nav_link-footer">&copy;2020&nbsp;&mdash; MariaStylistKids</a>
-        </li>
-        <li class="nav_item nav_item-footer">
-          <a href="privacy-policy.html" class="nav_link nav_link-footer">Политика конфиденциальности</a>
-        </li>
-        <li class="nav_item nav_item-footer nav_item-footer-link">
-          <a href="https://www.behance.net/grodesgn" class="nav_link nav_link-footer">Дизайн сайта: Громова Ольга</a>
-          <a href="https://taplink.cc/ermilov_code" class="nav_link nav_link-footer">
-            Верстка сайта: Ермилов Павел</a>
-        </li>
-
-
-      </ul>
-
-
-
-
-    </footer>
-
-  </div>
-  <!-- /.wrapper -->
-
-
-
-  <!-- =================== HTML =================== -->
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/select.css">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Стилизайция и отправка формы</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="form">
+				<form action="#" id="form" class="form__body">
+					<h1 class="form__title">Отправда данных на почту</h1>
+					<div class="form__item">
+						<label for="formName" class="form__label">Имя*:</label>
+						<input id="formName" type="text" name="name" class="form__input _req">
+					</div>
+					<div class="form__item">
+						<label for="formEmail" class="form__label">E-mail*:</label>
+						<input id="formEmail" type="text" name="email" class="form__input _req _email">
+					</div>
+					<div class="form__item">
+						<div class="form__label">Левша или правша?</div>
+						<div class="options">
+							<div class="options__item">
+								<input id="formRightHanded" checked type="radio" value="right" name="hand" class="options__input">
+								<label for="formRightHanded" class="options__label"><span>Правша</span></label>
+							</div>
+							<div class="options__item">
+								<input id="formLeftHanded" type="radio" value="left" name="hand" class="options__input">
+								<label for="formLeftHanded" class="options__label"><span>Левша</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="form__item">
+						<label for="formMessage" class="form__label">Сообщение:</label>
+						<textarea name="message" id="formMessage" class="form__input"></textarea>
+					</div>
+					<div class="form__item">
+						<div class="form__label">Возраст:</div>
+						<select name="age" class="form__select">
+							<option value="от 18 до 25" selected>Молодой</option>
+							<option value="от 25 до 45">Старый</option>
+							<option value="от 45">Супер стар</option>
+						</select>
+					</div>
+					<div class="form__item">
+						<div class="form__label">Прикрепить фото</div>
+						<div class="file">
+							<div class="file__item">
+								<input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+								<div class="file__button">Выбрать</div>
+							</div>
+							<div id="formPreview" class="file__preview"></div>
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="checkbox">
+							<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+							<label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="">Условиями</a>*</span></label>
+						</div>
+					</div>
+					<button type="submit" class="form__button">Отправить</button>
+				</form>
+			</div>
+		</div>
+		<script src="js/select.js"></script>
+		<script src="js/script.js"></script>
+	</body>
 </html>
