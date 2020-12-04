@@ -1,0 +1,90 @@
+.section-services {
+  background: #F5F0EA;
+  width: 100%;
+  min-height: 900px;
+  padding: 60px 165px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.h2-heading {
+  width: 100%;
+  font-family: 'Cormorant', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 130%;
+  color: #AA816D;
+  text-align: center;
+  padding: 0 0 60px 0;
+  margin: 0;
+}
+.wrapper-price {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.separate-service {
+  width: 540px;
+  padding: 46px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin: 0 27px 30px 0;
+}
+.separate-service-1 {
+  height: 656px;
+}
+.separate-service-2 {
+  margin: 50px 0 30px 0;
+}
+.separate-service-3 {
+  margin: 0 27px 0 0;
+}
+.separate-service-4 {
+  margin: 0;
+}
+.img-separate-service {
+  object-fit: contain;
+  width: 100%;
+  padding: 0 0 20px 0;
+}
+.h3-service-name {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+  color: #333333;
+  padding: 0 0 20px 0;
+}
+.services-list-section-service {
+  padding: 0 0 30px 0;
+}
+.services-item {
+  margin: 0 0 10px 0;
+}
+.service-price {
+  height: 58px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.a-consultation-service {
+  width: 217px;
+}
