@@ -176,65 +176,57 @@
       <section class="section-clients">
         <a href="#" name="myclients" class="a-anchor-link"></a>
         <h2 class="h2-heading">Мои клиенты</h2>
-        <!-- <section class="section-slider"> -->
-
-        <div class="image-slider swiper-container">
-          <!-- Слайдер -->
-          <div class="image-slider__wrapper swiper-wrapper">
-            <div class="image-slider__slide swiper-slide">
-              <div class="image-slider__image">
-                <img src="img/photo-for-gallery-1.jpg" width="600" height="400" alt="Картинка">
+        <div class="wrapper-swiper">
+          <div class="image-slider swiper-container">
+            <!-- Слайдер -->
+            <div class="image-slider__wrapper swiper-wrapper">
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img width="600" height="400" src="img/photo-for-gallery-1.jpg" alt="Картинка">
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img width="600" height="400" src="img/photo-for-gallery-2.jpg" alt="Картинка">
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img width="600" height="400" src="img/photo-for-gallery-3.jpg" alt="Картинка">
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img width="600" height="400" src="img/photo-for-gallery-4.jpg" alt="Картинка">
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img width="600" height="400" src="img/photo-for-gallery-1.jpg" alt="Картинка">
+                </div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <img width="600" height="400" src="img/photo-for-gallery-3.jpg" alt="Картинка">
+                </div>
               </div>
             </div>
-            <div class="image-slider__slide swiper-slide">
-              <div class="image-slider__image">
-                <img src="img/photo-for-gallery-2.jpg" width="600" height="400" alt="Картинка">
-              </div>
-            </div>
-            <div class="image-slider__slide swiper-slide">
-              <div class="image-slider__image">
-                <img src="img/photo-for-gallery-3.jpg" width="600" height="400" alt="Картинка">
-              </div>
-            </div>
-            <div class="image-slider__slide swiper-slide">
-              <div class="image-slider__image">
-                <img src="img/photo-for-gallery-4.jpg" width="600" height="400" alt="Картинка">
-              </div>
-            </div>
-            <div class="image-slider__slide swiper-slide">
-              <div class="image-slider__image">
-                <img src="img/photo-for-gallery-3.jpg" width="600" height="400" alt="Картинка">
-              </div>
-            </div>
-            <div class="image-slider__slide swiper-slide">
-              <div class="image-slider__image">
-                <img src="img/photo-for-gallery-4.jpg" width="600" height="400" alt="Картинка">
-              </div>
-            </div>
-            <!-- <div class="image-slider__slide swiper-slide">
-              <div class="image-slider__image">
-                <img src="img/05.jpg" alt="Картинка">
-              </div>
-            </div>
-            <div class="image-slider__slide swiper-slide">
-              <div class="image-slider__image">
-                <img src="img/06.jpg" alt="Картинка">
-              </div>
-            </div> -->
+            <!-- Добавляем если нам нужны стрелки управления -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- Добавляем, если нам нужна пагинация -->
+            <div class="swiper-pagination"></div>
+            <!-- Фракция -->
+            <!-- 
+                  <div class="image-slider__fraction">
+                    <div class="image-slider__current">1</div>
+                    <div class="image-slider__sepparator"> / </div>
+                    <div class="image-slider__total">1</div>
+                  </div>
+                   -->
           </div>
-          <!-- Добавляем если нам нужны стрелки управления -->
-          <div class="swiper-button-prev">
-          </div>
-          <div class="swiper-button-next">
-          </div>
-          <!-- Добавляем, если нам нужна пагинация -->
-          <div class="swiper-pagination"></div>
+        </div>
 
-
-
-
-
-          <!-- </section> -->
       </section>
 
       <section class="section-reviews">
@@ -269,6 +261,7 @@
               <!-- <label for="mail">E-mail:</label> -->
               <input class="input-text _req _email" type="email" id="mail" name="user_mail" placeholder="Ваш E-mail">
             </li>
+            <p class="p-input-text-error">E-mail введен некорректно. Пример: ermilov@mail.ru</p>
             <li class="button">
               <button class="button-form" type="submit">
                 <span class="span-button-form">Заказать услугу</span>
@@ -370,6 +363,7 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/form.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -47,7 +47,26 @@ body>div>main>section.section-consultation>div>img:nth-child(2) {
     padding: 9px 9px 9px 14px;
     border-bottom: 1px solid #D0D0D0;
     outline: none;
+}
 
+._error {
+    // color: #EE5252;
+    border-bottom: 1px solid #EE5252;
+}
+
+.p-input-text-error {
+    visibility: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #EE5252;
+    padding: 9px 9px 9px 14px;
+}
+
+.display-block {
+    visibility: visible;
 }
 
 .item-form-li {
@@ -71,6 +90,11 @@ body>div>main>section.section-consultation>div>img:nth-child(2) {
     background: #AA816D;
     border-radius: 4px;
     margin: 0 0 21px 0;
+    outline: none;
+}
+
+#form>ul>li.button>button {
+    outline: none;
 }
 
 .option-form {
@@ -226,10 +250,6 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
 
 // https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
 
-
-._error {
-    box-shadow: 0 0 15px red;
-}
 
 
 .form-consultation {

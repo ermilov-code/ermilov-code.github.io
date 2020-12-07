@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (response.ok) {
 				let result = await response.json();
 				alert(result.message);
-				formPreview.innerHTML = '';
+				// formPreview.innerHTML = '';
 				form.reset();
 				form.classList.remove('_sending');
 			} else {
@@ -64,7 +64,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	function formAddError(input) {
 		input.parentElement.classList.add('_error');
 		input.classList.add('_error');
+		document.querySelector('[name="user_name"]').placeholder = 'Нужный текст';
 	}
+
+	// function formAddErrorP() {
+	// 	document.querySelector('.p-input-text-error').classList.add('display-block');
+	// }
+
+	// function formAddErrorPdel() {
+	// 	document.querySelector('.p-input-text-error').classList.remove('display-block');
+	// }
+
+	// document.querySelector('.p-input-text-error').classList.add('display-block');
 
 	function formRemoveError(input) {
 		input.parentElement.classList.remove('_error');
