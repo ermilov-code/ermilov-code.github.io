@@ -1,0 +1,45 @@
+@import "variables.css";
+@import "header.css";
+@import "mixins.css";
+@import "main.css";
+@import "section-services.css";
+@import "section-clients.css";
+@import "section-reviews.css";
+@import "section-consultation.css";
+@import "footer.css";
+@import "privacy-policy.css";
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  /*убираем маркеры списка*/
+  margin: 0;
+  /*убираем верхнее и нижнее поле, равное 1em*/
+  padding-left: 0;
+  /*убираем левый отступ, равный 40px*/
+}
+a {
+  text-decoration: none;
+  /*убираем подчеркивание текста ссылок*/
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+  background-color: #FFFFFF;
+}
+a {
+  text-decoration: none;
+}
