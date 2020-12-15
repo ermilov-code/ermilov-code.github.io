@@ -1,3 +1,6 @@
+.nav_link-inst {
+  display: none;
+}
 .header {
   width: 100%;
   min-height: 100px;
@@ -11,6 +14,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 .fullscreen {
   min-height: 100vh;
@@ -188,6 +192,7 @@ body > div > header > div.top-header > nav > ul > li:nth-child(5) {
 .services-item::before {
   content: "• ";
   color: #AA816D;
+  font-size: 26px;
 }
 .a-consultation {
   font-family: 'Montserrat', sans-serif;

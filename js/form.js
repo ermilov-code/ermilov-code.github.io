@@ -1,8 +1,18 @@
 "use strict"
 
+// // убираем pop-up_window при нажатии на крестик
+// document.querySelector('.div-cross').addEventListener('click', () => {
+// 	document.querySelector('.pop-up_window').classList.toggle('pop-up_window-none')
+// })
+// document.querySelector('.div-cross').addEventListener('click', () => {
+// 	document.querySelector('.pop-up_window').classList.toggle('pop-up_window-none')
+// })
+
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.getElementById('form');
 	form.addEventListener('submit', formSend);
+
+
 
 	async function formSend(e) {
 		e.preventDefault();
@@ -20,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 			if (response.ok) {
 				let result = await response.json();
-				alert(result.message);
+				// alert(result.message);
+				document.querySelector('.pop-up_window').classList.add('pop-up_window-block')
 				// formPreview.innerHTML = '';
 				form.reset();
 				form.classList.remove('_sending');
@@ -31,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		} else {
 			alert('Заполните обязательные поля');
 		}
+
+
 
 	}
 
@@ -90,6 +103,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	const formImage = document.getElementById('formImage');
 	//Получаем див для превью в переменную
 	const formPreview = document.getElementById('formPreview');
+
+	// // убираем pop-up_window при нажатии на крестик
+	// document.querySelector('.div-cross').addEventListener('click', () => {
+	// 	document.querySelector('.pop-up_window').classList.toggle('pop-up_window-none')
+	// })
 
 	// //Слушаем изменения в инпуте file
 	// formImage.addEventListener('change', () => {

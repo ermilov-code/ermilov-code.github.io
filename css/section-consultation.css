@@ -5,6 +5,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
+  position: relative;
 }
 .consultation-img {
   width: 575px;
@@ -233,4 +234,65 @@ body > div > main > section.section-consultation > form > ul > div > div.new-sel
 }
 .a-anchor-link {
   visibility: hidden;
+}
+.pop-up_window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.pop-up_window-block {
+  display: flex;
+}
+.pop-up_window-none {
+  display: none;
+}
+.pop-up_window-application {
+  width: 500px;
+  height: 350px;
+  background: #F5F0EA;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 75px 0 0 0;
+  position: relative;
+}
+.p-pop-up {
+  width: 278px;
+  height: 74px;
+  font-family: 'Cormorant', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 123.48%;
+  text-align: center;
+  color: #333333;
+}
+.div-cross {
+  position: absolute;
+  right: 26px;
+  top: 26px;
+  width: 26px;
+  height: 26px;
+  background-image: url(../img/cross.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.div-cross:hover {
+  transform: scale(1.2);
+}
+.pop-up-svg {
+  width: 150px;
+  height: 150px;
 }
