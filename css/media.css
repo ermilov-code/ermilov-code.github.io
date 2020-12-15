@@ -1,6 +1,6 @@
 @media (max-width: 575.98px) {
   .header {
-    padding: 13px 15px 39px 15px;
+    padding: 13px 15px 125px 15px;
   }
   .wrapper {
     width: 570px;
@@ -41,7 +41,37 @@
     object-fit: contain;
   }
   .arrow-svg {
-    bottom: 8px;
+    bottom: 64px;
+  }
+  .section-services {
+    padding: 40px 30px;
+  }
+  .services-list-section-service {
+    padding: 0 0 28px 0px;
+  }
+  .separate-service {
+    padding: 20px;
+    width: 100%;
+  }
+  .img-separate-service {
+    height: 400px;
+  }
+  .h3-service-name {
+    font-size: 28px;
+  }
+  .wrapper-price {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .service-price {
+    font-size: 42px;
+    margin: 0 0 14px 0;
+  }
+  .a-consultation-service {
+    width: 285px;
+    height: 78px;
+    font-size: 23px;
   }
   .section-clients {
     display: none;
