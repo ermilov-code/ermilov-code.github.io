@@ -1,5 +1,38 @@
 // ============================================================
 
+// бургер меню
+$(document).ready(function () {
+    $('.header__burger').click(function (event) {
+        $('.header__burger,.header__menu').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
+
+$(document).ready(function () {
+    $('.nav_item').click(function (event) {
+        $('.header__burger,.header__menu').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
+
+// плавный якорь
+// Найти все ссылки начинающиеся на #
+const anchors = document.querySelectorAll('a[href^="#"]')
+
+// Цикл по всем ссылкам
+for (let anchor of anchors) {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault() // Предотвратить стандартное поведение ссылок
+        // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
+        const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
+        // Плавная прокрутка до элемента с id = href у ссылки
+        document.querySelector(goto).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
+}
+
 
 // скрипт для scroll-а текущего блока
 

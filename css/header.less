@@ -98,7 +98,7 @@
     height: 100%;
     width: 51px;
     margin-right: 8px;
-    background-image: url(../img/family-1.png);
+    background-image: url(../img/family-1.jpg);
     background-size: cover;
     background-color: @backgroundColor;
     background-repeat: no-repeat;
@@ -106,6 +106,10 @@
     // // запрещаю скрол вместе с экраном
     // background-attachment: fixed;
 
+}
+
+body>div>header>div.top-header>a.nav_link.nav_link-inst {
+    display: none;
 }
 
 .logo-txt {
@@ -196,6 +200,7 @@ body>div>header>div.top-header>nav>ul>li:nth-child(5) {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
 }
 
 .txt-header {
@@ -295,6 +300,15 @@ body>div>header>div.top-header>nav>ul>li:nth-child(5) {
     enable-background: new 0 0 38.417 18.592;
     position: absolute;
     bottom: 30px;
+    left: 50%;
+    cursor: pointer;
+}
+
+
+
+
+.header__burger {
+    display: none;
 }
 
 // Extra small devices (portrait phones, less than 576px)

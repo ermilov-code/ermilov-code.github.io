@@ -20,10 +20,13 @@
 .txt-logo-2-footer {
   color: #FFFFFF;
 }
+.logo-txt-footer {
+  padding-bottom: 11px;
+}
 .logo-img-footer {
-  background-image: url(../img/family-footer.svg);
+  background-image: url(../img/family-footer.png);
   background-color: #B1A29B;
-  height: 51px;
+  height: 100%;
 }
 .nav-footer {
   width: 100%;

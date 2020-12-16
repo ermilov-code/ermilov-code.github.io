@@ -108,7 +108,7 @@ let myImageSlider = new Swiper('.image-slider', {
     centeredSlides: true,
 
     // Стартовый слайд.
-    initialSlide: 1,
+    initialSlide: 0,
 
     // Мультирядность
     slidesPerColumn: 1,

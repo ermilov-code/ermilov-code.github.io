@@ -108,7 +108,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     centeredSlides: true,
 
     // Стартовый слайд.
-    initialSlide: 1,
+    initialSlide: 0,
 
     // Мультирядность
     slidesPerColumn: 1,
@@ -275,7 +275,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
 
     // Обновить свайпер
     // при изменении элементов слайдера
-    observer: true,
+    observer: falce,
 
     // Обновить свайпер
     // при изменении родительских
