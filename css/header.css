@@ -78,7 +78,7 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
-body > div > header > div.top-header > a.nav_link.nav_link-inst {
+.nav_link-inst {
   display: none;
 }
 .logo-txt {
