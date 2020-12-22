@@ -1,54 +1,3 @@
-// .section-clients ================================================
-
-
-// /* Обнуление */
-// *,
-// *::before,
-// *::after {
-//     padding: 0;
-//     margin: 0;
-//     border: 0;
-//     box-sizing: border-box;
-// }
-
-// a {
-//     text-decoration: none;
-// }
-
-// ul,
-// ol,
-// li {
-//     list-style: none;
-// }
-
-// img {
-//     vertical-align: top;
-// }
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//     font-weight: inherit;
-//     font-size: inherit;
-// }
-
-// html,
-// body {
-//     height: 100%;
-//     line-height: 1;
-//     font-size: 14px;
-//     background-color: #333;
-//     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-// }
-
-// .wrapper {
-//     padding: 30px;
-//     min-height: 100%;
-// }
-
 /* ------------------ */
 .title {
     font-size: 30px;
@@ -178,14 +127,14 @@ div.image-slider__slide>div>img {
     background: #D0D0D0;
 }
 
-body>div>main>section.section-clients>div>div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode>div.swiper-pagination.swiper-pagination-bullets>span.swiper-pagination-bullet {
+div.swiper-pagination.swiper-pagination-bullets>span.swiper-pagination-bullet {
     width: 50px;
     height: 1px;
     background: #D0D0D0;
     margin: 0 0;
 }
 
-body>div>main>section.section-clients>div>div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode>div.swiper-pagination.swiper-pagination-bullets>span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+div.swiper-pagination.swiper-pagination-bullets>span.swiper-pagination-bullet-active {
     width: 50px;
     height: 1px;
     background: #AA816D;
@@ -197,23 +146,34 @@ body>div>main>section.section-clients>div>div.image-slider.swiper-container.swip
     background: #AA816D;
 }
 
-
-
-body>div>main>section.section-clients>div>div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode>div.swiper-button-prev>svg {
+div.swiper-button-prev>svg {
     animation: none;
     bottom: 0;
     transform: rotate(90deg);
 }
 
 
-body>div>main>section.section-clients>div>div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode>div.swiper-button-next>svg {
+div.swiper-button-next>svg {
     animation: none;
     bottom: 0;
     transform: rotate(270deg);
 }
 
+// body>div>main>section.section-clients>div>div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode>div.swiper-button-prev>svg {
+//     animation: none;
+//     bottom: 0;
+//     transform: rotate(90deg);
+// }
 
-body>div>main>section.section-clients>div>div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode>div.swiper-button-prev {
+
+// body>div>main>section.section-clients>div>div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode>div.swiper-button-next>svg {
+//     animation: none;
+//     bottom: 0;
+//     transform: rotate(270deg);
+// }
+
+
+div.swiper-button-prev {
     outline: none;
     z-index: 1000;
     top: 90%;

@@ -86,13 +86,13 @@ div.image-slider__slide > div > img {
   height: 1px;
   background: #D0D0D0;
 }
-body > div > main > section.section-clients > div > div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode > div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet {
+div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet {
   width: 50px;
   height: 1px;
   background: #D0D0D0;
   margin: 0 0;
 }
-body > div > main > section.section-clients > div > div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode > div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet-active {
   width: 50px;
   height: 1px;
   background: #AA816D;
@@ -102,17 +102,17 @@ body > div > main > section.section-clients > div > div.image-slider.swiper-cont
   height: 1px;
   background: #AA816D;
 }
-body > div > main > section.section-clients > div > div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode > div.swiper-button-prev > svg {
+div.swiper-button-prev > svg {
   animation: none;
   bottom: 0;
   transform: rotate(90deg);
 }
-body > div > main > section.section-clients > div > div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode > div.swiper-button-next > svg {
+div.swiper-button-next > svg {
   animation: none;
   bottom: 0;
   transform: rotate(270deg);
 }
-body > div > main > section.section-clients > div > div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode > div.swiper-button-prev {
+div.swiper-button-prev {
   outline: none;
   z-index: 1000;
   top: 90%;

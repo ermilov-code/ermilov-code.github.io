@@ -199,21 +199,22 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     	slideShadows: true,
     },
     */
-    /*
+
     // Брейк поинты (адаптив)
     // Ширина экрана
     breakpoints: {
-    	320: {
-    		slidesPerView: 1,
-    	},
-    	480: {
-    		slidesPerView: 2,
-    	},
-    	992: {
-    		slidesPerView: 3,
-    	}
+        320: {
+            slidesPerView: 1,
+
+        },
+        480: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        }
     },
-    */
+
     /*
     // Брейк поинты (адаптив)
     // Соотношение сторон
