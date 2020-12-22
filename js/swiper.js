@@ -199,36 +199,37 @@ let myImageSlider = new Swiper('.image-slider', {
     	slideShadows: true,
     },
     */
-    /*
+
     // Брейк поинты (адаптив)
     // Ширина экрана
     breakpoints: {
-    	320: {
-    		slidesPerView: 1,
-    	},
-    	480: {
-    		slidesPerView: 2,
-    	},
-    	992: {
-    		slidesPerView: 3,
-    	}
+        320: {
+            slidesPerView: 1.3,
+
+        },
+        480: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        }
     },
-    */
-    /*
-    // Брейк поинты (адаптив)
-    // Соотношение сторон
-    breakpoints: {
-    	'@0.75': {
-    		slidesPerView: 1,
-    	},
-    	'@1.00': {
-    		slidesPerView: 2,
-    	},
-    	'@1.50': {
-    		slidesPerView: 3,
-    	}
-    },
-    */
+
+
+    // // Брейк поинты (адаптив)
+    // // Соотношение сторон
+    // breakpoints: {
+    //     '@0.75': {
+    //         slidesPerView: 1,
+    //     },
+    //     '@1.00': {
+    //         slidesPerView: 2,
+    //     },
+    //     '@1.50': {
+    //         slidesPerView: 3,
+    //     }
+    // },
+
 
     // Отключить предзагрузка картинок
     preloadImages: false,

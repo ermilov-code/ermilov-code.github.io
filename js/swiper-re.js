@@ -275,7 +275,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
 
     // Обновить свайпер
     // при изменении элементов слайдера
-    observer: falce,
+    observer: true,
 
     // Обновить свайпер
     // при изменении родительских
