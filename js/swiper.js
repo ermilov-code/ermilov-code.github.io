@@ -120,7 +120,7 @@ let myImageSlider = new Swiper('.image-slider', {
     loopedSlides: 0,
 
     // Свободный режим
-    freeMode: true,
+    freeMode: false,
 
     // Автопрокрутка
     /*
