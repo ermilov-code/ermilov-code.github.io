@@ -38,13 +38,13 @@ let myImageSlider = new Swiper('.image-slider', {
     //     delay: 5000,
     // },
     // Скролл
-    /*
-    scrollbar: {
-    	el: '.swiper-scrollbar',
-    	// Возможность перетаскивать скролл
-    	draggable: true
-    },
-    */
+
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    //     // Возможность перетаскивать скролл
+    //     draggable: true
+    // },
+
 
     // Включение/отключение
     // перетаскивания на ПК
@@ -120,7 +120,7 @@ let myImageSlider = new Swiper('.image-slider', {
     loopedSlides: 0,
 
     // Свободный режим
-    freeMode: false,
+    freeMode: true,
 
     // Автопрокрутка
     /*
