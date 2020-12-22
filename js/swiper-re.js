@@ -38,13 +38,13 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     //     delay: 5000,
     // },
     // Скролл
-    /*
-    scrollbar: {
-    	el: '.swiper-scrollbar',
-    	// Возможность перетаскивать скролл
-    	draggable: true
-    },
-    */
+
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    //     // Возможность перетаскивать скролл
+    //     draggable: true
+    // },
+
 
     // Включение/отключение
     // перетаскивания на ПК
@@ -96,7 +96,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
 
     // Отключение функционала
     // если слайдов меньше чем нужно
-    watchOverflow: true,
+    watchOverflow: false,
 
     // Отступ между слайдами
     spaceBetween: 20,
@@ -231,7 +231,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     */
 
     // Отключить предзагрузка картинок
-    preloadImages: false,
+    preloadImages: true,
     // Lazy Loading
     // (подгрузка картинок)
     lazy: {
@@ -275,17 +275,17 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
 
     // Обновить свайпер
     // при изменении элементов слайдера
-    observer: true,
+    observer: false,
 
     // Обновить свайпер
     // при изменении родительских
     // элементов слайдера
-    observeParents: true,
+    observeParents: false,
 
     // Обновить свайпер
     // при изменении дочерних
     // элементов слайда
-    observeSlideChildren: true,
+    observeSlideChildren: false,
 
     // Виртуальные слайды
     // формирование слайдера
