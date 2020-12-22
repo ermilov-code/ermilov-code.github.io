@@ -204,7 +204,7 @@ let myImageSlider = new Swiper('.image-slider', {
     // Ширина экрана
     breakpoints: {
         320: {
-            slidesPerView: 1.3,
+            slidesPerView: 1,
 
         },
         480: {
