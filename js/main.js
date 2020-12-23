@@ -9,7 +9,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $('.nav_item').click(function (event) {
+    $('.nav_item_burger').click(function (event) {
         $('.header__burger,.header__menu').toggleClass('active');
         $('body').toggleClass('lock');
     });

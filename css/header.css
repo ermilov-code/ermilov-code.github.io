@@ -96,7 +96,7 @@
   font-style: normal;
   font-weight: bold;
   font-size: 42px;
-  line-height: 51px;
+  line-height: 62px;
   color: #AA816D;
 }
 .txt-logo-2 {
@@ -105,11 +105,12 @@
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
-  line-height: 19.5px;
+  font-size: 14px;
+  line-height: 15.5px;
   text-transform: uppercase;
   font-variant: small-caps;
   color: #AA816D;
+  text-align: center;
 }
 body > div > header > div.top-header > a.nav_link.nav_link-inst {
   display: none;
