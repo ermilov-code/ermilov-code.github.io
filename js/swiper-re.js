@@ -50,9 +50,9 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     // перетаскивания на ПК
     simulateTouch: true,
     // Чувствительность свайпа
-    touchRatio: 1,
+    touchRatio: 6,
     // Угол срабатывания свайпа/перетаскивания
-    touchAngle: 45,
+    touchAngle: 1,
     // Курсор перетаскивания
     grabCursor: true,
 
