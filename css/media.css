@@ -24,7 +24,8 @@
   .nav_link_inst_li {
     display: none;
   }
-  .nav_link-inst {
+  body > div > header > div.top-header > a.nav_link.nav_link-inst {
+    display: none;
     display: block;
     width: 30px;
     height: 30px;
@@ -134,7 +135,7 @@
     top: -100%;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     overflow: auto;
     transition: all 0.3s ease 0s;
     background-color: #F5F0EA;
@@ -178,6 +179,9 @@
     order: -1;
     height: 32vh;
     object-fit: contain;
+  }
+  body > div > header > div.middle-header > img {
+    height: 32vh;
   }
   .arrow-svg {
     bottom: 49px;
@@ -253,15 +257,20 @@
   .swiper-button-next,
   .swiper-button-prev {
     top: 92%;
-    right: 39%;
+    right: 31%;
     outline: none;
   }
+  div.swiper-button-prev {
+    left: 34%;
+    top: 92%;
+  }
   div.swiper-button-prev > svg {
-    bottom: -16px;
-    left: -150px;
+    bottom: 0px;
+    left: 0px;
   }
   div.swiper-button-next > svg {
-    bottom: -3px;
+    bottom: 0px;
+    left: 0px;
   }
   button:active,
   button:focus {
@@ -292,10 +301,171 @@
     padding: 120px 0 260px 0;
   }
   .section-consultation {
-    display: none;
+    padding: 40px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .consultation-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 225px;
+    margin: 0;
+    position: relative;
+    margin: 0 0 30px 0;
+  }
+  .cons-img {
+    width: 163px;
+    height: 190px;
+    margin-right: 112px;
+  }
+  #consultation > div.consultation-img > img.cons-img.cons-img-2 {
+    width: 122px;
+    height: 97px;
+    position: absolute;
+    left: 168px;
+    top: 132px;
+  }
+  .form-consultation {
+    width: 100%;
+  }
+  .nav_item-instagram {
+    order: -1;
+    margin: 0 0 16px 0;
   }
   .footer {
-    display: none;
+    padding: 40px;
+    min-height: 60vh;
+  }
+  .white-border-footer {
+    /* width: 790px; */
+    width: 100%;
+    height: 1px;
+    left: 325px;
+    background: #FFFFFF;
+    margin: 0 0 50px 0;
+  }
+  .p-form-consultation {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .input-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .p-input-text-error {
+    margin: 0;
+  }
+  .p-form-consultation {
+    margin-bottom: 30px;
+  }
+  .button-form-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .span-button-form {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  #form > ul > li:nth-child(3) {
+    margin: 0;
+  }
+  .button-form {
+    width: 166px;
+    height: 51px;
+  }
+  .p-form-confidentiality {
+    font-size: 12px;
+    line-height: 130%;
+    text-align: center;
+    margin: 0;
+  }
+  .input-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .nav-footer {
+    min-height: 63px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 33px 0;
+    width: 100%;
+    overflow: auto;
+    transition: all 0.3s ease 0s;
+    background-color: #B1A29B;
+    padding: 0;
+    position: relative;
+  }
+  .logo-footer {
+    width: 156px;
+    height: 63px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #contacts > nav > ul > li:nth-child(4) {
+    margin: 0;
+  }
+  .nav_list-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+  #contacts > nav > ul {
+    margin: 0 0 24px 0;
+  }
+  .logo-img-footer {
+    height: 100%;
+    width: 100px;
+  }
+  .logo-txt-footer {
+    padding: 0;
+  }
+  .txt-logo-1-footer {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 51px;
+  }
+  .txt-logo-2-footer {
+    font-size: 16px;
+    line-height: 20px;
+    font-variant: small-caps;
+  }
+  .nav_link-footer {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .nav_item-footer {
+    margin: 0 0 20px 0;
+  }
+  ::placeholder {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .new-select {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .new-select__list {
+    font-size: 12px;
+    line-height: 15px;
+    top: 35px;
+  }
+  .new-select:after {
+    width: 19px;
+    height: 11px;
+    top: 12px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {

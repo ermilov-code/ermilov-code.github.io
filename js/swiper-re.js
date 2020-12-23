@@ -52,7 +52,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     // Чувствительность свайпа
     touchRatio: 6,
     // Угол срабатывания свайпа/перетаскивания
-    touchAngle: 1,
+    touchAngle: 90,
     // Курсор перетаскивания
     grabCursor: true,
 

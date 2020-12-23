@@ -13,7 +13,7 @@
   position: relative;
   margin: 0 89px 0 0;
 }
-body > div > main > section.section-consultation > div > img:nth-child(2) {
+.section-consultation > div > img:nth-child(2) {
   position: absolute;
   left: 300px;
   top: 289px;
