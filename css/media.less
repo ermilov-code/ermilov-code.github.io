@@ -304,13 +304,9 @@
     }
 
     .swiper-container {
-        padding: 120px 0 220px 0;
+        padding: 120px 0 99px 0;
         height: 100%;
-        /* padding: 0 0 120px 0; */
-        // display: flex;
-        // flex-direction: row;
-        // align-items: center;
-        // margin: 0 0 120px 0;
+        position: static;
     }
 
     .image-slider .swiper-pagination {
@@ -320,9 +316,9 @@
     .swiper-container-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-        bottom: 92px;
+        bottom: -28px;
         left: auto;
-        width: 85vw;
+        width: 89vw;
     }
 
     #reviews {
@@ -342,21 +338,21 @@
     }
 
     body>div>main>section.section-clients>div>div.image-slider.swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-free-mode>div.swiper-button-prev {
-        top: 92%;
+        top: 115%;
         left: 35%;
         outline: none;
     }
 
     .swiper-button-next,
     .swiper-button-prev {
-        top: 92%;
+        top: 115%;
         right: 31%;
         outline: none;
     }
 
     div.swiper-button-prev {
         left: 34%;
-        top: 92%;
+        top: 115%;
     }
 
     div.swiper-button-prev>svg {
@@ -462,10 +458,7 @@
         width: 100%;
     }
 
-    .logo-footer {
-        // margin: 0 234px 0 0;
 
-    }
 
 
     .nav_item-instagram {
@@ -482,11 +475,11 @@
 
     .white-border-footer {
         /* width: 790px; */
-        width: 100%;
+        width: 73%;
         height: 1px;
         left: 325px;
         background: #FFFFFF;
-        margin: 0 0 50px 0;
+        margin: 0 0 25px 0;
     }
 
     .p-form-consultation {
@@ -568,7 +561,7 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-end;
 
     }
 
@@ -604,12 +597,16 @@
         font-weight: bold;
         font-size: 42px;
         line-height: 51px;
+        text-align: center;
+        width: 100%;
     }
 
     .txt-logo-2-footer {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
         font-variant: small-caps;
+        text-align: center;
+        width: 100%;
     }
 
     .nav_link-footer {
@@ -643,6 +640,29 @@
         height: 11px;
         top: 12px;
     }
+
+    // #contacts > ul > li.nav_item.nav_item-footer.nav_item-footer-link {
+    //     order: -1;
+    // }
+
+
+
+    .nav_item-footer-link:nth-child(3) {
+        order: 2;
+    }
+
+    .nav_item-footer-link:nth-child(1) {
+        order: 1;
+    }
+
+    .nav_item-footer-link:nth-child(2) {
+        order: 3;
+    }
+
+    .nav_link-footer-gro {
+        margin: 0 0 6px 0;
+    }
+
 
 
 }
