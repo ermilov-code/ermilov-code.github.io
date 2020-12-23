@@ -50,9 +50,9 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     // перетаскивания на ПК
     simulateTouch: true,
     // Чувствительность свайпа
-    touchRatio: 6,
+    touchRatio: 1,
     // Угол срабатывания свайпа/перетаскивания
-    touchAngle: 90,
+    touchAngle: 45,
     // Курсор перетаскивания
     grabCursor: true,
 
@@ -120,7 +120,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     loopedSlides: 0,
 
     // Свободный режим
-    freeMode: true,
+    freeMode: false,
 
     // Автопрокрутка
     /*
