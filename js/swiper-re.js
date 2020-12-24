@@ -1,5 +1,7 @@
 // Инициализируем Swiper
-let myImageSliderReviews = new SwiperRew('#image-slider-reviews-id', {
+const slider1 = document.querySelector('#image-slider-reviews-id');
+
+let myImageSliderReviews = new Swiper(slider1, {
     // Стрелки
     navigation: {
         nextEl: '.swiper-button-next_reviews',
@@ -42,7 +44,7 @@ let myImageSliderReviews = new SwiperRew('#image-slider-reviews-id', {
         // Включить\выключить
         // управление клавишами
         // pageUp, pageDown
-        pageUpDown: true,
+        pageUpDown: false,
     },
 
 
@@ -99,7 +101,8 @@ let myImageSliderReviews = new SwiperRew('#image-slider-reviews-id', {
     // Ширина экрана
     breakpoints: {
         320: {
-            slidesPerView: 1,
+            slidesPerView: 1.6,
+            spaceBetween: 40,
 
         },
         480: {

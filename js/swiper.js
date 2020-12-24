@@ -1,5 +1,7 @@
 // Инициализируем Swiper
-let myImageSlider = new Swiper('.image-slider', {
+const slider = document.querySelector('#image-slider-clients-id');
+
+let myImageSlider = new Swiper(slider, {
     // Стрелки
     navigation: {
         nextEl: '.swiper-button-next',
