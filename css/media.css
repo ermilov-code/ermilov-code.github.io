@@ -178,7 +178,7 @@
   .services-item {
     margin: 0 0 6px 0;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 130%;
   }
   .a-consultation {
     font-size: 12px;
@@ -218,10 +218,11 @@
     align-items: center;
   }
   .img-separate-service {
-    height: 400px;
+    height: 289px;
   }
   .h3-service-name {
-    font-size: 28px;
+    font-size: 18px;
+    line-height: 130%;
   }
   .wrapper-price {
     flex-direction: column;
@@ -229,13 +230,19 @@
     align-items: center;
   }
   .service-price {
-    font-size: 42px;
     margin: 0 0 14px 0;
+    font-size: 24px;
+    line-height: 29px;
   }
   .a-consultation-service {
-    width: 285px;
-    height: 78px;
-    font-size: 23px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 18px 32px;
+    font-size: 12px;
+    line-height: 15px;
+    background: #AA816D;
+    border-radius: 4px;
   }
   .section-clients {
     padding: 40px 0 120px 0;
@@ -315,10 +322,12 @@
   #swiper-button-prev-reviews {
     top: 115%;
     right: 34%;
+    z-index: 50;
   }
   #swiper-button-next-reviews {
     top: 115%;
     right: 34%;
+    z-index: 50;
   }
   body > div > main > section.section-reviews.section-clients > div > div > div.swiper-pagination.swiper-pagination-bullets {
     bottom: -34px;

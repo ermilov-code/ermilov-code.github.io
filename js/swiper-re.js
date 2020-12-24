@@ -1,14 +1,14 @@
 // Инициализируем Swiper
-let myImageSliderReviews = new Swiper('.image-slider-reviews', {
+let myImageSliderReviews = new SwiperRew('#image-slider-reviews-id', {
     // Стрелки
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '#swiper-button-next-reviews',
+        prevEl: '#swiper-button-prev-reviews'
     },
     // Навигация 
     // Буллеты, текущее положение, прогрессбар
     pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination_reviews',
         /*
         // Буллеты
         type: 'bullets',
@@ -89,7 +89,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     // },
 
     // Автовысота
-    autoHeight: false,
+    autoHeight: true,
 
     // Количество слайдов для показа
     slidesPerView: 3,
@@ -232,7 +232,7 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
     */
 
     // Отключить предзагрузка картинок
-    preloadImages: true,
+    preloadImages: false,
     // Lazy Loading
     // (подгрузка картинок)
     lazy: {
@@ -276,17 +276,17 @@ let myImageSliderReviews = new Swiper('.image-slider-reviews', {
 
     // Обновить свайпер
     // при изменении элементов слайдера
-    observer: false,
+    observer: true,
 
     // Обновить свайпер
     // при изменении родительских
     // элементов слайдера
-    observeParents: false,
+    observeParents: true,
 
     // Обновить свайпер
     // при изменении дочерних
     // элементов слайда
-    observeSlideChildren: false,
+    observeSlideChildren: true,
 
     // Виртуальные слайды
     // формирование слайдера

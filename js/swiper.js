@@ -89,14 +89,14 @@ let myImageSlider = new Swiper('.image-slider', {
     // },
 
     // Автовысота
-    autoHeight: false,
+    autoHeight: true,
 
     // Количество слайдов для показа
     slidesPerView: 3,
 
     // Отключение функционала
     // если слайдов меньше чем нужно
-    watchOverflow: true,
+    watchOverflow: false,
 
     // Отступ между слайдами
     spaceBetween: 20,
