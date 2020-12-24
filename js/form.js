@@ -1,12 +1,5 @@
 "use strict"
 
-// // убираем pop-up_window при нажатии на крестик
-// document.querySelector('.div-cross').addEventListener('click', () => {
-// 	document.querySelector('.pop-up_window').classList.toggle('pop-up_window-none')
-// })
-// document.querySelector('.div-cross').addEventListener('click', () => {
-// 	document.querySelector('.pop-up_window').classList.toggle('pop-up_window-none')
-// })
 
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.getElementById('form');
@@ -80,15 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.querySelector('[name="user_name"]').placeholder = 'Нужный текст';
 	}
 
-	// function formAddErrorP() {
-	// 	document.querySelector('.p-input-text-error').classList.add('display-block');
-	// }
 
-	// function formAddErrorPdel() {
-	// 	document.querySelector('.p-input-text-error').classList.remove('display-block');
-	// }
-
-	// document.querySelector('.p-input-text-error').classList.add('display-block');
 
 	function formRemoveError(input) {
 		input.parentElement.classList.remove('_error');
@@ -103,37 +88,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	const formImage = document.getElementById('formImage');
 	//Получаем див для превью в переменную
 	const formPreview = document.getElementById('formPreview');
-
-	// // убираем pop-up_window при нажатии на крестик
-	// document.querySelector('.div-cross').addEventListener('click', () => {
-	// 	document.querySelector('.pop-up_window').classList.toggle('pop-up_window-none')
-	// })
-
-	// //Слушаем изменения в инпуте file
-	// formImage.addEventListener('change', () => {
-	// 	uploadFile(formImage.files[0]);
-	// });
-
-	// function uploadFile(file) {
-	// 	// провераяем тип файла
-	// 	if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
-	// 		alert('Разрешены только изображения.');
-	// 		formImage.value = '';
-	// 		return;
-	// 	}
-	// 	// проверим размер файла (<2 Мб)
-	// 	if (file.size > 2 * 1024 * 1024) {
-	// 		alert('Файл должен быть менее 2 МБ.');
-	// 		return;
-	// 	}
-
-	// 	var reader = new FileReader();
-	// 	reader.onload = function (e) {
-	// 		formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-	// 	};
-	// 	reader.onerror = function (e) {
-	// 		alert('Ошибка');
-	// 	};
-	// 	reader.readAsDataURL(file);
-	// }
 });
