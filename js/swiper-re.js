@@ -2,8 +2,8 @@
 let myImageSliderReviews = new SwiperRew('#image-slider-reviews-id', {
     // Стрелки
     navigation: {
-        nextEl: '#swiper-button-next-reviews',
-        prevEl: '#swiper-button-prev-reviews'
+        nextEl: '.swiper-button-next_reviews',
+        prevEl: '.swiper-button-prev_reviews'
     },
     // Навигация 
     // Буллеты, текущее положение, прогрессбар
