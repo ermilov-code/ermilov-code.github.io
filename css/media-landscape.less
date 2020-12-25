@@ -1,6 +1,5 @@
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
     body.lock {
         overflow: hidden;
     }
@@ -50,7 +49,7 @@
     }
 
     .h2-heading {
-        padding: 0 0 40px 0;
+        padding: 0 0 21px 0;
     }
 
     .header__burger {
@@ -106,7 +105,7 @@
     }
 
     div.image-slider__slide.swiper-slide.swiper-slide-visible.swiper-slide-active {
-        transform: scale(1.5);
+        transform: scale(1.3);
     }
 
     .swiper-slide-reviews.image-slider__slide.swiper-slide.swiper-slide-visible.swiper-slide-active {
@@ -149,13 +148,15 @@
     }
 
     .header__list {
-        // display: block;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     .header__list li {
+        width: 40%;
         margin: 0;
         padding: 30px 0 30px 0;
     }
@@ -228,17 +229,17 @@
     }
 
     .middle-header {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         width: 100%;
-        padding-bottom: 125px;
+        padding-bottom: 32px;
     }
 
     .txt-header {
         padding: 20px 0 0 0;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
     }
 
@@ -264,7 +265,7 @@
     .a-consultation {
         font-size: 12px;
         line-height: 15px;
-        width: 69vw;
+        width: 32vw;
     }
 
     .img-header {
@@ -274,7 +275,8 @@
     }
 
     body>div>header>div.middle-header>img {
-        height: 37vh;
+        height: 63vh;
+        width: 39%;
     }
 
     #consultation>h2 {
@@ -282,13 +284,14 @@
     }
 
     .arrow-svg {
-        bottom: 49px;
+        bottom: 44px;
+        left: 636px;
     }
 
 
 
     .section-services {
-        padding: 40px 0 40px 0;
+        padding: 20px 0 20px 0;
     }
 
     .services-list-section-service {
@@ -299,16 +302,25 @@
 
     .separate-service {
         padding: 20px;
-        width: 80%;
+        width: 41%;
         margin: 0 0 30px 0;
     }
+
+    .separate-service-3 {
+        margin: 142px 0 0 0;
+    }
+
+    .separate-service-4 {
+        margin: 90px 0 0 0;
+    }
+
 
     .service-wrapper-left,
     .service-wrapper-right {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
     }
 
     .img-separate-service {
@@ -334,35 +346,19 @@
     }
 
     .a-consultation-service {
-        // width: 285px;
-        // height: 78px;
-        // font-size: 23px;
         display: flex;
         flex-direction: row;
         align-items: center;
         padding: 18px 32px;
         font-size: 12px;
         line-height: 15px;
-
-        // position: absolute;
-        // width: 166px;
-        // height: 51px;
-        // left: 77px;
-        // top: 2807px;
-
         background: #AA816D;
         border-radius: 4px;
     }
 
     .section-clients {
-        // display: none;
-        padding: 40px 0 98px 0;
+        padding: 10px 0 98px 0;
         min-height: 79vh;
-    }
-
-
-    body>div>main>section.section-clients>h2 {
-        padding: 0px 0 40px 0;
     }
 
     .swiper-container {
@@ -451,7 +447,7 @@
     }
 
     body>div>main>section.section-clients>h2 {
-        padding: 0px 0 16px 0;
+        padding: 0px 0 1px 0;
     }
 
 
@@ -770,6 +766,121 @@
 
 
 
-
 }
 
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .wrapper {
+        width: 320px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .main {
+        display: none;
+    }
+
+    .section-services {
+        display: none;
+    }
+
+    .section-clients {
+        display: none;
+    }
+
+    .image-slider {
+        display: none;
+    }
+
+    .section-reviews {
+        display: none;
+    }
+
+    .section-consultation {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+}
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) {
+//     .wrapper {
+//         width: 320px;
+//     }
+
+//     .header {
+//         display: none;
+//     }
+
+//     .main {
+//         display: none;
+//     }
+
+//     .section-services {
+//         display: none;
+//     }
+
+//     .section-clients {
+//         display: none;
+//     }
+
+//     .image-slider {
+//         display: none;
+//     }
+
+//     .section-reviews {
+//         display: none;
+//     }
+
+//     .section-consultation {
+//         display: none;
+//     }
+
+//     .footer {
+//         display: none;
+//     }
+// }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    // .wrapper {
+    //     width: 320px;
+    // }
+
+    // .header {
+    //     display: none;
+    // }
+
+    // .main {
+    //     display: none;
+    // }
+
+    // .section-services {
+    //     display: none;
+    // }
+
+    // .section-clients {
+    //     display: none;
+    // }
+
+    // .image-slider {
+    //     display: none;
+    // }
+
+    // .section-reviews {
+    //     display: none;
+    // }
+
+    // .section-consultation {
+    //     display: none;
+    // }
+
+    // .footer {
+    //     display: none;
+    // }
+}
