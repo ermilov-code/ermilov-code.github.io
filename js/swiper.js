@@ -63,7 +63,7 @@ let myImageSlider = new Swiper(slider, {
     watchOverflow: false,
 
     // Отступ между слайдами
-    spaceBetween: 20,
+    spaceBetween: 40,
 
     // Количество пролистываемых слайдов
     slidesPerGroup: 1,
@@ -103,8 +103,14 @@ let myImageSlider = new Swiper(slider, {
     // Брейк поинты (адаптив)
     // Ширина экрана
     breakpoints: {
-        320: {
-            slidesPerView: 1,
+        300: {
+            slidesPerView: 1.5,
+            spaceBetween: 55,
+
+        },
+        325: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
 
         },
         480: {

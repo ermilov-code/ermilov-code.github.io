@@ -100,9 +100,14 @@ let myImageSliderReviews = new Swiper(slider1, {
     // Брейк поинты (адаптив)
     // Ширина экрана
     breakpoints: {
-        320: {
-            slidesPerView: 1.6,
-            spaceBetween: 40,
+        300: {
+            slidesPerView: 1.5,
+            spaceBetween: 55,
+
+        },
+        325: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
 
         },
         480: {
