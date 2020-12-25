@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	function formAddError(input) {
 		input.parentElement.classList.add('_error');
 		input.classList.add('_error');
-		document.querySelector('[name="user_name"]').placeholder = 'Нужный текст';
+		document.querySelector('[name="user_name"]').placeholder = 'Имя';
 	}
 
 

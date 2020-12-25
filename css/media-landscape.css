@@ -85,7 +85,7 @@
     transform: scale(1.3);
   }
   .swiper-slide-reviews.image-slider__slide.swiper-slide.swiper-slide-visible.swiper-slide-active {
-    transform: scale(1.8);
+    transform: scale(1.4);
   }
   .header__burger.active span {
     transform: scale(0);
@@ -225,7 +225,7 @@
     width: 39%;
   }
   #consultation > h2 {
-    padding: 0 0 40px 0;
+    padding: 0 0 15px 0;
   }
   .arrow-svg {
     bottom: 44px;
@@ -283,7 +283,7 @@
     border-radius: 4px;
   }
   .section-clients {
-    padding: 10px 0 98px 0;
+    padding: 10px 0 40px 0;
     min-height: 79vh;
   }
   .swiper-container {
@@ -301,20 +301,23 @@
   .swiper-container-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    bottom: -28px;
-    left: auto;
+    bottom: 20px;
+    left: -209px;
     width: 89vw;
   }
   #reviews {
     min-height: 100vh;
   }
   body > div > main > section.section-reviews.section-clients > h2 {
-    padding: 0px 0 40px 0;
+    padding: 0px 0 7px 0;
   }
   div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     width: 30px;
     border: none;
     border-radius: 0;
+  }
+  #swiper-pagination-reviews > span {
+    width: 15px;
   }
   div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet {
     width: 30px;
@@ -328,13 +331,13 @@
   }
   .swiper-button-next,
   .swiper-button-prev {
-    top: 115%;
-    right: 31%;
+    top: 94%;
+    right: 6%;
     outline: none;
   }
   div.swiper-button-prev {
-    left: 34%;
-    top: 115%;
+    left: 80%;
+    top: 94%;
   }
   div.swiper-button-prev > svg {
     bottom: 0px;
@@ -359,20 +362,20 @@
     padding: 0px 0 1px 0;
   }
   #swiper-button-prev-reviews {
-    top: 115%;
-    right: 34%;
+    top: 92%;
+    left: 81%;
     z-index: 50;
   }
   #swiper-button-next-reviews {
-    top: 115%;
-    right: 34%;
+    top: 92%;
+    left: 90%;
     z-index: 50;
   }
   body > div > main > section.section-reviews.section-clients > div > div > div.swiper-pagination.swiper-pagination-bullets {
-    bottom: -34px;
+    bottom: 27px;
   }
   .section-reviews.section-clients > div > div {
-    padding: 120px 0 129px 0;
+    padding: 67px 0 66px 0;
     position: static;
   }
   body > div > main > section.section-reviews.section-clients > div > div {
@@ -380,7 +383,7 @@
     width: 100%;
   }
   .section-consultation {
-    padding: 40px 15px;
+    padding: 10px 15px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -395,10 +398,10 @@
     margin: 0 0 30px 0;
   }
   .section-reviews {
-    padding: 40px 0 119px 0;
+    padding: 1px 0 24px 0;
   }
   .swiper-wrapper .swiper-slide-reviews {
-    transform: scale(1.3);
+    transform: scale(1);
   }
   .swiper-wrapper .swiper-slide-reviews .swiper-slide-active {
     transform: scale(1.8);
@@ -412,7 +415,7 @@
     width: 122px;
     height: 97px;
     position: absolute;
-    left: 168px;
+    left: 339px;
     top: 132px;
   }
   .form-consultation {
