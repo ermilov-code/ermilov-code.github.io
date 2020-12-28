@@ -114,7 +114,8 @@ let myImageSlider = new Swiper(slider, {
 
         },
         480: {
-            slidesPerView: 3,
+            slidesPerView: 2,
+            spaceBetween: 10,
         },
         992: {
             slidesPerView: 3,
