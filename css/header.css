@@ -21,7 +21,7 @@
   max-height: 120vh;
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 85%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,7 +35,7 @@
   overflow: hidden;
 }
 .fullscreen__body {
-  width: 100%;
+  width: 85%;
   max-width: 1110px;
   margin: 0 auto;
   flex: 1 1 auto;
@@ -47,7 +47,7 @@
 }
 .header {
   background-color: #FFFFFF;
-  padding: 24px 165px;
+  padding: 24px 60px;
 }
 .top-header {
   width: 100%;
