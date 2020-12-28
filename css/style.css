@@ -44,6 +44,10 @@ body {
   height: 100%;
   background-color: #FFFFFF;
 }
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
 a {
   text-decoration: none;
 }
