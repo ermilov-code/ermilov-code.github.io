@@ -45,8 +45,36 @@ body {
   background-color: #FFFFFF;
 }
 @font-face {
+  font-family: 'Cormorant';
+  src: url('../fonts/Cormorant-Bold.eot');
+  src: url('../fonts/Cormorant-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Cormorant-Bold.woff2') format('woff2'), url('../fonts/Cormorant-Bold.woff') format('woff'), url('../fonts/Cormorant-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  src: url('../fonts/Montserrat-Bold.eot');
+  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Bold.woff2') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Thin.eot');
+  src: url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Thin.woff2') format('woff2'), url('../fonts/Montserrat-Thin.woff') format('woff'), url('../fonts/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.eot');
+  src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 a {
   text-decoration: none;
