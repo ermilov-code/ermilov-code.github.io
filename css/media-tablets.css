@@ -268,7 +268,7 @@
     margin: 55px 0 0 0;
   }
   .separate-service-4 {
-    margin: -20px 0 0 0;
+    margin: 92px 0 0 0;
   }
   .service-wrapper-left,
   .service-wrapper-right {
@@ -638,35 +638,4 @@
     line-height: 130%;
     color: #333333;
   }
-}
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .wrapper {
-    width: 320px;
-  }
-  .header {
-    display: none;
-  }
-  .main {
-    display: none;
-  }
-  .section-services {
-    display: none;
-  }
-  .section-clients {
-    display: none;
-  }
-  .image-slider {
-    display: none;
-  }
-  .section-reviews {
-    display: none;
-  }
-  .section-consultation {
-    display: none;
-  }
-  .footer {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
 }
