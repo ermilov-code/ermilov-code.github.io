@@ -14,6 +14,7 @@
   }
   .top-header {
     padding: 0 0 35px 0;
+    margin: 0 0 55px 0;
     align-items: center;
     height: 89px;
   }
@@ -229,8 +230,8 @@
     object-fit: contain;
   }
   body > div > header > div.middle-header > img {
-    height: 43vh;
-    width: 44%;
+    width: 273px;
+    height: 375px;
   }
   #consultation > h2 {
     padding: 0 0 15px 0;
