@@ -13,9 +13,10 @@
 	//От кого письмо
 	$mail->setFrom($_POST['user_mail'], $_POST['user_name']);
 	//Кому отправить
-	$mail->addAddress('ermilovpp@gmail.com');
+	$mail->addAddress('ermilov1994@yandex.ru');
+	// $mail->addAddress('nad.zakharova2010@yandex.ru');
 	//Тема письма
-	$mail->Subject = 'ЗАЯВКА - STYLIST-KIDS.RU';
+	$mail->Subject = 'ОТКАЧКА!';
 
 	//Рука
 	$hand = "Правая";
@@ -24,13 +25,16 @@
 	}
 
 	//Тело письма
-	$body = '<h1>Встречайте супер письмо!</h1>';
+	$body = '<h1>ЗАЯВКА с сайта stylist-kids.ru!</h1>';
 	
 	if(trim(!empty($_POST['user_name']))){
 		$body.='<p><strong>Имя:</strong> '.$_POST['user_name'].'</p>';
 	}
-	if(trim(!empty($_POST['user_mail']))){
-		$body.='<p><strong>E-mail:</strong> '.$_POST['user_mail'].'</p>';
+	if(trim(!empty($_POST['utel']))){
+		$body.='<p><strong>Телефон:</strong> '.$_POST['utel'].'</p>';
+	}
+	if(trim(!empty($_POST['language']))){
+		$body.='<p><strong>Услуга:</strong> '.$_POST['language'].'</p>';
 	}
 	// if(trim(!empty($_POST['hand']))){
 	// 	$body.='<p><strong>Рука:</strong> '.$hand.'</p>';
