@@ -1,99 +1,231 @@
 // .section-services ===============================================
 
-// основной цвет фона
-@backgroundColor: #FDFDFD;
-// основной цвет шрифта
-@txtBaseColor: #141A26;
-// цвет шрифта в кнопках и карточках
-@txtButtonColor: #FDFDFD;
-// // базовый цвет
-// @baseColor: #fff;
-// цвет для кнопок
-@colorButton: linear-gradient(180deg, #FF9823 0%, #FF591F 100%);
-// background: @colorButton;
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     color: @colorButton;
-// цвет для фона карточек
-@colorCards: linear-gradient(312.61deg, #366BDB 16.36%, #578CFB 91.28%);
-// цвет кнопок при наведении
-@colorButtonHover: 0px 21px 50px rgba(255, 95, 5, 0.35);
+@backgroundColor: #FFFFFF;
+// базовый цвет
+@baseColor: #fff;
+// LightSeaGreen - цвет для кнопок
+@colorButton: #20B2AA;
+// font-family: 'Roboto', sans-serif;
+@colorMain: #AA816D;
+@colorButton: #AA816D;
 
 
 .section-services {
-    // background: #F5F0EA;
+    background: #F5F0EA;
     width: 100%;
     min-height: 900px;
-    padding: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.h2-heading-services {
-    width: 100%;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 46px;
-    color: @txtBaseColor;
-    text-align: center;
-    margin: 0 0 63px 0;
-}
-
-.service-wrapper {
-    width: 90%;
+    padding: 60px 20px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
+}
+
+.wrap-container-sServices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.h2-heading {
+    width: 100%;
+    font-family: 'Cormorant', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 130%;
+    color: @colorButton;
+    text-align: center;
+    padding: 0 0 60px 0;
+    margin: 0;
+}
+
+.wrapper-price {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
 }
 
 .separate-service {
-    width: 552px;
-    height: 360px;
-    background: @colorCards;
-    border-radius: 6px;
-    padding: 68px 0 0 51px;
+    width: 540px;
+    padding: 46px;
+    background-color: #FFFFFF;
+    // min-height: 656px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 15px;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin: 0 0px 30px 0;
+    border-radius: 5px;
+}
+
+
+// swiper-container-service
+
+.separate-service .slider-container {
+    width: 100%;
+    height: 321px;
+    margin: 0 0 54px 0;
+}
+
+.swiper-container-service {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {}
+
+
+
+#swiper-container-service .swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+}
+
+#swiper-container-service .swiper-slide-active {
+    transform: scale(1);
+}
+
+#swiper-container-service .swiper-pagination-sService {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#swiper-container-service .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #AA816D;
+    ;
+
+}
+
+
+
+.card {}
+
+.sSlideService-1 {
+    background-image: url(../img/wardrobe-parsing-slider-1.jpg);
+}
+
+.sSlideService-2 {
+    background-image: url(../img/wardrobe-parsing-slider-2.jpg);
+}
+
+.sSlideService-3 {
+    background-image: url(../img/wardrobe-parsing-slider-3.jpg);
+}
+
+.sSlideService-4 {
+    background-image: url(../img/wardrobe-parsing-slider-4.jpg);
+}
+
+.sSlideService-5 {
+    background-image: url(../img/wardrobe-parsing-slider-5.jpg);
+}
+
+.sSlideService-6 {
+    background-image: url(../img/wardrobe-parsing-slider-6.jpg);
+}
+
+.sSlideService-7 {
+    background-image: url(../img/wardrobe-parsing-slider-7.jpg);
+}
+
+.swiper-pagination-sService {}
+
+.swiper-button-prev-sService {}
+
+.swiper-button-next-sService {}
+
+
+// swiper-container-service
+
+.separate-service-1 {
+    overflow: hidden;
+}
+
+.separate-service-2 {
+    margin: 0px 0 30px 0;
+}
+
+.separate-service-3 {
+    margin: 0px 0px 0 0;
+}
+
+.separate-service-4 {
+    margin: 60px 0 0 0;
+}
+
+.img-separate-service {
+    // позиционирование изображения
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 20px 0;
 }
 
 .h3-service-name {
-    min-height: 93px;
-    width: 70%;
-    text-align: left;
-    font-family: Inter;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 24px;
     line-height: 130%;
-    color: @txtButtonColor;
-    margin: 0 0 30px 0;
+    text-align: center;
+    color: #333333;
+    margin: 0 0 20px 0;
+
 }
 
-.a-consultation.a-consultation-service {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 24px 50px;
-    width: 184px;
-    height: 70px;
-    background: @colorButton;
-    border-radius: 6px;
 
-    font-family: Inter;
+.services-list-section-service {
+    padding: 0 0 30px 0;
+}
+
+.services-item {
+    margin: 0 0 10px 0px;
+    text-indent: 15px
+    // position: relative;
+}
+
+.services-item::before {
+    font-size: 30px;
+}
+
+.service-price {
+    height: 58px;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    color: @txtButtonColor;
-    margin: 10px 0px;
+    font-size: 28px;
+    line-height: 34px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+
+.a-consultation-service {
+    width: 217px;
+}
+
+
+
+// // /.section-services ===============================================

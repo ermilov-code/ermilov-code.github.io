@@ -1,19 +1,19 @@
 // ============================================================
 
-// // бургер меню
-// $(document).ready(function () {
-//     $('.header__burger').click(function (event) {
-//         $('.header__burger,.header__menu').toggleClass('active');
-//         $('body').toggleClass('lock');
-//     });
-// });
+// бургер меню
+$(document).ready(function () {
+    $('.header__burger').click(function (event) {
+        $('.header__burger,.header__menu').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
 
-// $(document).ready(function () {
-//     $('.nav_item_burger').click(function (event) {
-//         $('.header__burger,.header__menu').toggleClass('active');
-//         $('body').toggleClass('lock');
-//     });
-// });
+$(document).ready(function () {
+    $('.nav_item_burger').click(function (event) {
+        $('.header__burger,.header__menu').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
 
 // плавный якорь
 // Найти все ссылки начинающиеся на #
@@ -36,17 +36,17 @@ for (let anchor of anchors) {
 
 // скрипт для scroll-а текущего блока
 
-// let hiddenElement = document.getElementById("box-section-service");
-// let btn = document.querySelector('.arrow-svg');
+let hiddenElement = document.getElementById("box-section-service");
+let btn = document.querySelector('.arrow-svg');
 
-// function handleButtonClick() {
-//     hiddenElement.scrollIntoView({
-//         block: "start",
-//         behavior: "smooth"
-//     });
-// }
+function handleButtonClick() {
+    hiddenElement.scrollIntoView({
+        block: "start",
+        behavior: "smooth"
+    });
+}
 
-// btn.addEventListener('click', handleButtonClick);
+btn.addEventListener('click', handleButtonClick);
 
 // КОНЕЦ скриптА для scroll-а текущего блока
 

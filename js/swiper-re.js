@@ -106,7 +106,7 @@ let myImageSliderReviews = new Swiper(slider1, {
         },
         300: {
             slidesPerView: 1.5,
-            spaceBetween: 55,
+            spaceBetween: 10,
 
         },
         325: {
