@@ -4,9 +4,13 @@
   }
   .header {
     padding: 22px 45px 50px 45px;
+    min-height: 50vh;
   }
   .wrap-container-1110 {
     width: 100%;
+  }
+  .wrap-container-header {
+    height: 100%;
   }
   .wrapper {
     width: 100vw;
@@ -54,7 +58,7 @@
   .nav_link_inst_li {
     display: none;
   }
-  body > div > header > div.top-header > a.nav_link.nav_link-inst {
+  a.nav_link.nav_link-inst {
     display: none;
     display: block;
     width: 40px;
@@ -125,10 +129,13 @@
   }
   .header__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+  }
+  div.top-header > nav > ul > li:nth-child(5) {
+    display: none;
   }
   .header__list li {
     width: 40%;
@@ -144,6 +151,7 @@
     font-size: 45px;
     line-height: 123.48%;
     font-family: 'Cormorant', serif;
+    text-align: center;
   }
   .logo {
     order: 2;
@@ -230,7 +238,8 @@
   }
   .img-header {
     order: 1;
-    height: 32vh;
+    width: 273px;
+    height: 375px;
     object-fit: contain;
   }
   body > div > header > div.middle-header > img {
@@ -243,7 +252,7 @@
     line-height: 123.48%;
   }
   .arrow-svg {
-    bottom: 79px;
+    bottom: 3px;
     left: 50%;
   }
   .section-services {
@@ -255,20 +264,14 @@
   }
   .separate-service {
     padding: 20px;
-    width: 324px;
-    margin: 0 0 30px 0;
-  }
-  .separate-service-1 {
-    margin: 0 30px 30px 0;
-  }
-  .separate-service-2 {
-    margin: 0px 30px 0 0;
+    width: 45%;
+    margin: 15px;
   }
   .separate-service-3 {
-    margin: 55px 0 0 0;
+    margin-top: 42px;
   }
   .separate-service-4 {
-    margin: 92px 0 0 0;
+    margin-top: 42px;
   }
   .service-wrapper-left,
   .service-wrapper-right {
@@ -278,12 +281,16 @@
     align-items: flex-start;
   }
   .img-separate-service {
-    height: 189px;
-    padding: 0 0 16px 0;
+    height: 273px;
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+  .separate-service .slider-container {
+    height: 273px;
   }
   .h3-service-name {
     font-size: 20px;
-    line-height: 130%;
+    line-height: 26px;
     padding: 0 0 16px 0;
     margin: 0;
   }
@@ -420,7 +427,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
     height: 373px;
     margin: 0;
     position: relative;
@@ -444,7 +450,7 @@
     width: 192px;
     height: 153px;
     position: absolute;
-    left: 362px;
+    left: 280px;
     top: 215px;
   }
   .form-consultation {

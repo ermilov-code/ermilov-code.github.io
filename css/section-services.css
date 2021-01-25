@@ -46,10 +46,11 @@
   align-content: space-around;
   margin: 0 0px 30px 0;
   border-radius: 5px;
+  overflow: hidden;
 }
 .separate-service .slider-container {
   width: 100%;
-  height: 321px;
+  height: 450px;
   margin: 0 0 54px 0;
 }
 .swiper-container-service {
@@ -58,7 +59,7 @@
 }
 #swiper-container-service .swiper-slide {
   width: 100%;
-  height: 100%;
+  height: 450px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -79,27 +80,95 @@
   width: 10px;
   height: 10px;
   background-color: #AA816D;
+  border-radius: 50%;
+  outline: none;
 }
-.sSlideService-1 {
-  background-image: url(../img/wardrobe-parsing-slider-1.jpg);
+.swardrobeParsing-1 {
+  background-image: url(../img/imagesSectionSERVICES/wardrobe-parsing-slider-1.jpg);
 }
-.sSlideService-2 {
-  background-image: url(../img/wardrobe-parsing-slider-2.jpg);
+.swardrobeParsing-2 {
+  background-image: url(../img/imagesSectionSERVICES/wardrobe-parsing-slider-2.jpg);
 }
-.sSlideService-3 {
-  background-image: url(../img/wardrobe-parsing-slider-3.jpg);
+.swardrobeParsing-3 {
+  background-image: url(../img/imagesSectionSERVICES/wardrobe-parsing-slider-3.jpg);
 }
-.sSlideService-4 {
-  background-image: url(../img/wardrobe-parsing-slider-4.jpg);
+.swardrobeParsing-4 {
+  background-image: url(../img/imagesSectionSERVICES/wardrobe-parsing-slider-4.jpg);
 }
-.sSlideService-5 {
-  background-image: url(../img/wardrobe-parsing-slider-5.jpg);
+.swardrobeParsing-5 {
+  background-image: url(../img/imagesSectionSERVICES/wardrobe-parsing-slider-5.jpg);
 }
-.sSlideService-6 {
-  background-image: url(../img/wardrobe-parsing-slider-6.jpg);
+.swardrobeParsing-6 {
+  background-image: url(../img/imagesSectionSERVICES/wardrobe-parsing-slider-6.jpg);
 }
-.sSlideService-7 {
-  background-image: url(../img/wardrobe-parsing-slider-7.jpg);
+.swardrobeParsing-7 {
+  background-image: url(../img/imagesSectionSERVICES/wardrobe-parsing-slider-7.jpg);
+}
+.capsuleForChildren-1 {
+  background-image: url(../img/imagesSectionSERVICES/capsule-for-children-1-min.jpg);
+}
+.capsuleForChildren-2 {
+  background-image: url(../img/imagesSectionSERVICES/capsule-for-children-2-min.jpg);
+}
+.capsuleForChildren-3 {
+  background-image: url(../img/imagesSectionSERVICES/capsule-for-children-3-min.jpg);
+}
+.capsuleForChildren-4 {
+  background-image: url(../img/imagesSectionSERVICES/capsule-for-children-4-min.jpg);
+}
+.capsuleForChildren-5 {
+  background-image: url(../img/imagesSectionSERVICES/capsule-for-children-5-min.jpg);
+}
+.capsuleForAdults-1 {
+  background-image: url(../img/imagesSectionSERVICES/adult-capsule-1-min.jpg);
+}
+.capsuleForAdults-2 {
+  background-image: url(../img/imagesSectionSERVICES/adult-capsule-2-min.jpg);
+}
+.capsuleForAdults-3 {
+  background-image: url(../img/imagesSectionSERVICES/adult-capsule-3-min.jpg);
+}
+.capsuleForAdults-4 {
+  background-image: url(../img/imagesSectionSERVICES/adult-capsule-4-min.jpg);
+}
+.capsuleForAdults-5 {
+  background-image: url(../img/imagesSectionSERVICES/adult-capsule-5-min.jpg);
+}
+.capsuleForAdults-6 {
+  background-image: url(../img/imagesSectionSERVICES/adult-capsule-6-min.jpg);
+}
+.capsuleForAdults-7 {
+  background-image: url(../img/imagesSectionSERVICES/adult-capsule-7-min.jpg);
+}
+.imageSelection-1 {
+  background-image: url(../img/imagesSectionSERVICES/image-selection-1-min.jpg);
+}
+.imageSelection-2 {
+  background-image: url(../img/imagesSectionSERVICES/image-selection-2-min.jpg);
+}
+.imageSelection-3 {
+  background-image: url(../img/imagesSectionSERVICES/image-selection-3-min.jpg);
+}
+.imageSelection-4 {
+  background-image: url(../img/imagesSectionSERVICES/image-selection-4-min.jpg);
+}
+.imageSelection-5 {
+  background-image: url(../img/imagesSectionSERVICES/image-selection-5-min.jpg);
+}
+.imageSelection-6 {
+  background-image: url(../img/imagesSectionSERVICES/image-selection-6-min.jpg);
+}
+.imageSelection-7 {
+  background-image: url(../img/imagesSectionSERVICES/image-selection-7-min.jpg);
+}
+.filmingStylization-1 {
+  background-image: url(../img/imagesSectionSERVICES/stylization-of-a-photo-session-1-min.jpg);
+}
+.filmingStylization-2 {
+  background-image: url(../img/imagesSectionSERVICES/stylization-of-a-photo-session-1-min.jpg);
+}
+.filmingStylization-3 {
+  background-image: url(../img/imagesSectionSERVICES/stylization-of-a-photo-session-1-min.jpg);
 }
 .separate-service-1 {
   overflow: hidden;

@@ -251,6 +251,9 @@
     width: 80%;
     margin: 0 0 30px 0;
   }
+  #swiper-container-service .swiper-slide {
+    height: 291px;
+  }
   .service-wrapper-left,
   .service-wrapper-right {
     display: flex;
@@ -259,7 +262,12 @@
     align-items: center;
   }
   .img-separate-service {
-    height: 198px;
+    height: 260px;
+    margin: 0 0 16px 0;
+  }
+  .separate-service .slider-container {
+    height: 260px;
+    margin: 0px 0 75px 0;
   }
   .h3-service-name {
     font-size: 18px;

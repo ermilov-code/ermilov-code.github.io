@@ -8,11 +8,12 @@
 @import "section-consultation.css";
 @import "footer.css";
 @import "privacy-policy.css";
-@import "4-992px-1199.98px(desktops).css";
 @import "0-max-width-320px(small-phones).css";
 @import "1-max-width-575.98px(phones).css";
 @import "2-576px-767.98px(landscape phones).css";
 @import "3-768px-991.98px(tablets).css";
+@import "4-992px-1199.98px(desktops).css";
+@import "5-min-width-1824px.css";
 *,
 *:before,
 *:after {
@@ -44,6 +45,9 @@ html,
 body {
   height: 100%;
   background-color: #FFFFFF;
+}
+.swiper-pagination-bullet {
+  border-radius: 0;
 }
 @font-face {
   font-family: 'Cormorant';
