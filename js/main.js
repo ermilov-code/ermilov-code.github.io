@@ -1,23 +1,19 @@
 // ============================================================
 
-// // бургер меню
-// $(document).ready(function () {
-//     $('.header__burger').click(function (event) {
-//         $('.header__burger,.header__menu').toggleClass('active');
-//         $('body').toggleClass('lock');
-//     });
-// });
+// бургер меню
+$(document).ready(function () {
+    $('.header__burger').click(function (event) {
+        $('.header__burger,.header__menu').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
 
-// $(document).ready(function () {
-//     $('.nav_item_burger').click(function (event) {
-//         $('.header__burger,.header__menu').toggleClass('active');
-//         $('body').toggleClass('lock');
-//     });
-// });
-
-// $('#myModal').on('shown.bs.modal', function () {
-//     $('#myInput').trigger('focus')
-// })
+$(document).ready(function () {
+    $('.nav_item_burger').click(function (event) {
+        $('.header__burger,.header__menu').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
 
 // плавный якорь
 // Найти все ссылки начинающиеся на #
@@ -38,7 +34,7 @@ for (let anchor of anchors) {
 }
 
 
-// скрипт для scroll-а текущего блока
+// // скрипт для scroll-а текущего блока
 
 // let hiddenElement = document.getElementById("box-section-service");
 // let btn = document.querySelector('.arrow-svg');
@@ -52,7 +48,7 @@ for (let anchor of anchors) {
 
 // btn.addEventListener('click', handleButtonClick);
 
-// КОНЕЦ скриптА для scroll-а текущего блока
+// // КОНЕЦ скриптА для scroll-а текущего блока
 
 
 
@@ -119,3 +115,27 @@ $('.select').each(function () {
     });
 });
 // https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
+
+
+
+// КНОПКА ВВЕРХ НА САЙТЕ
+
+let btnUp = $('#btnUp'); //создаем переменную для кнопки
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 500) { //отслеживаем высоту от верха страницы в 100px
+        btnUp.addClass('show'); // присваиваем кнопке класс show для управления видимостью
+    } else {
+        btnUp.removeClass('show'); // если меньше 500px от верха страницы убираем класс show
+    }
+});
+
+btnUp.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
+    }, '500'); //при клике на кнопку плавно прокручиваем до верха body
+});
+
+
+// КНОПКА ВВЕРХ НА САЙТЕ

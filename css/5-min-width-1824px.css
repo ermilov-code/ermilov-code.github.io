@@ -9,6 +9,9 @@
     height: 75vh;
     width: 571px;
   }
+  .header__burger {
+    display: none;
+  }
   .middle-header .services-item {
     font-size: 26px;
     line-height: 41px;

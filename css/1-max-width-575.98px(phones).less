@@ -180,6 +180,121 @@
         // display: none;
     }
 
+
+
+
+
+
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 101;
+    }
+
+
+    .header__burger span {
+        position: absolute;
+        background-color: #333333;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger:before,
+    .header__burger:after {
+        content: '';
+        background-color: #333333;
+        position: absolute;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger:before {
+        top: 0;
+        width: 110%;
+    }
+
+    .header__burger:after {
+        bottom: 0;
+        width: 90%;
+    }
+
+
+
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+        width: 100%;
+    }
+
+    .header__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        width: 100%;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        transition: all 0.3s ease 0s;
+        background-color: #18b5a4;
+        padding: 70px 10px 20px 10px;
+    }
+
+    .header__menu.active {
+        top: 0;
+    }
+
+    .header__list {
+        // display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header__list li {
+        margin: 0;
+        padding: 30px 0 30px 0;
+    }
+
+    .nav_link:hover,
+    .nav_link:active {
+        color: #AA816D;
+        text-decoration: underline;
+    }
+
+
+    .header__link {
+        font-size: 45px;
+        font-family: 'Cormorant', serif;
+    }
+
+
+
+
+
+
+
+
+
+
+
     .section-services {
         // display: none
     }
@@ -285,7 +400,7 @@
     }
 
     .nav.header__menu {
-        // position: relative;
+        //  position: relative;
     }
 
     .burger {
@@ -417,11 +532,10 @@
         align-items: center;
 
         background: linear-gradient(312.61deg, #366BDB 16.36%, #578CFB 91.28%);
-        // z-index: 110;
-        transform: translate(-100%, 0%);
+        z-index: 110;
+        // transform: translate(-100%, 0%);
         transform-origin: 0% 0%;
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-        display: none;
 
     }
 

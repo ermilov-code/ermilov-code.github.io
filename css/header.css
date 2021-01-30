@@ -368,3 +368,6 @@
     transform: rotate(0deg);
   }
 }
+.header__burger {
+  display: none;
+}
