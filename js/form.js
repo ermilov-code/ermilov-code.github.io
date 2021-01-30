@@ -49,12 +49,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			const input = formReq[index];
 			formRemoveError(input);
 
-			if (input.classList.contains('_email')) {
-				if (emailTest(input)) {
-					formAddError(input);
-					error++;
-				}
-			} else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+			// if (input.classList.contains('_email')) {
+			// 	if (emailTest(input)) {
+			// 		formAddError(input);
+			// 		error++;
+			// 	}
+			// } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+			// 	formAddError(input);
+			// 	error++;
+
+			if (input.getAttribute("type") === "checkbox" && input.checked === false) {
 				formAddError(input);
 				error++;
 			} else {
