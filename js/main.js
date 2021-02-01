@@ -1,5 +1,66 @@
 // ============================================================
 
+// // приняли код HTML
+// let sliderСontrolCars = document.getElementById("head-slider-control");
+
+// // let sliderСontrolCars = `<div class="head-slider-control">
+// let sliderCarsSwiper = document.querySelector(".swiper-slide-cars.swiper-slide-active");
+
+
+// function sliderCarsSwiperControl(sliderCarsSwiper, sliderСontrolCars) {
+//     let poper1 = sliderCarsSwiper.classList("swiper-slide-active");
+//     if (poper1 = true) {
+//         sliderCarsSwiper.appendChild(sliderСontrolCars);
+//     }
+
+
+// }
+
+
+
+// sliderCarsSwiperControl(sliderCarsSwiper, sliderСontrolCars);
+
+
+
+// document.querySelector(".swiper-slide-cars .swiper-slide-active").innerHTML = `<div class="swiperHeader-button-prev swiperCars-button-prev">
+// <svg class="svg-swiperHeader-button-prev" width="22" height="12" viewBox="0 0 22 12" fill="none"
+//   xmlns="http://www.w3.org/2000/svg">
+//   <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
+//     stroke-linejoin="round" />
+// </svg>
+// </div>
+// <div class="swiperHeader-button-next swiperCars-button-next">
+// <svg class="svg-swiperHeader-button-next" width="22" height="12" viewBox="0 0 22 12" fill="none"
+//   xmlns="http://www.w3.org/2000/svg">
+//   <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
+//     stroke-linejoin="round" />
+// </svg>
+// </div>
+// </div>`;
+// swiperSlideCarsActive.innerHTML = sliderСontrolCars;
+// document.getElementsByClassName("swiper-slide-cars swiper-slide-active").innerHTML = `<div class="head-slider-control">
+// <div class="swiperHeader-button-prev swiperCars-button-prev">
+//   <svg class="svg-swiperHeader-button-prev" width="22" height="12" viewBox="0 0 22 12" fill="none"
+//     xmlns="http://www.w3.org/2000/svg">
+//     <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
+//       stroke-linejoin="round" />
+//   </svg>
+// </div>
+// <div class="swiperHeader-button-next swiperCars-button-next">
+//   <svg class="svg-swiperHeader-button-next" width="22" height="12" viewBox="0 0 22 12" fill="none"
+//     xmlns="http://www.w3.org/2000/svg">
+//     <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
+//       stroke-linejoin="round" />
+//   </svg>
+// </div>
+// </div>`;
+
+
+
+
+
+
+
 // бургер меню
 $(document).ready(function () {
     $('.header__burger').click(function (event) {
@@ -52,10 +113,10 @@ for (let anchor of anchors) {
 
 
 
-// убираем pop-up_window при нажатии на крестик
-document.querySelector('.div-cross').addEventListener('click', () => {
-    document.querySelector('.pop-up_window').classList.remove('pop-up_window-block')
-})
+// // убираем pop-up_window при нажатии на крестик
+// document.querySelector('.div-cross').addEventListener('click', () => {
+//     document.querySelector('.pop-up_window').classList.remove('pop-up_window-block')
+// })
 
 
 

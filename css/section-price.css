@@ -16,7 +16,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  display: none;
+  overflow: hidden;
 }
 .wrapper-section-price {
   position: relative;
@@ -43,7 +43,7 @@
   width: 285px;
   height: 285px;
   right: -336px;
-  bottom: -205px;
+  bottom: 0px;
   border: 20px solid rgba(20, 26, 38, 0.04);
   box-sizing: border-box;
   border-radius: 42.7576px;

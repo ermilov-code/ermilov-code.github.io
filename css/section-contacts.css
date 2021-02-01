@@ -11,7 +11,7 @@
 }
 .section-contacts {
   background-color: #FDFDFD;
-  padding: 60px 0 60px 0;
+  padding: 60px 0 120px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -31,7 +31,7 @@
   color: #141A26;
 }
 .article-sectionContacts {
-  width: 596px;
+  width: 39%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -138,12 +138,14 @@
   color: #141A26;
 }
 .wrapper-rightSideContacts {
+  width: 47%;
   position: relative;
 }
 .img-sectionContacts {
   z-index: 100;
   overflow: hidden;
   background: transparent;
+  position: absolute;
 }
 .decorative-square-6 {
   position: absolute;
@@ -154,6 +156,6 @@
   border: 20.789px solid rgba(20, 26, 38, 0.04);
   box-sizing: border-box;
   border-radius: 57.0049px;
-  transform: rotate(-34.46deg);
+  animation: cubeAnimation infinite linear 10s;
   z-index: 10;
 }

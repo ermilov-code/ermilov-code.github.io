@@ -38,7 +38,7 @@
 
 .section-contacts {
     background-color: @backgroundColor;
-    padding: 60px 0 60px 0;
+    padding: 60px 0 120px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -60,7 +60,7 @@
 }
 
 .article-sectionContacts {
-    width: 596px;
+    width: 39%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -183,6 +183,7 @@
 }
 
 .wrapper-rightSideContacts {
+    width: 47%;
     position: relative;
 }
 
@@ -190,6 +191,7 @@
     z-index: 100;
     overflow: hidden;
     background: transparent;
+    position: absolute;
 }
 
 .decorative-square-6 {
@@ -201,6 +203,8 @@
     border: 20.789px solid rgba(20, 26, 38, 0.04);
     box-sizing: border-box;
     border-radius: 57.0049px;
-    transform: rotate(-34.46deg);
+    // transform: rotate(-34.46deg);
+    animation: cubeAnimation infinite linear 10s;
     z-index: 10;
+
 }

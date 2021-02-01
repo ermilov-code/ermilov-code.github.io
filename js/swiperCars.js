@@ -1,16 +1,20 @@
 // 
 
 
+
+
+
 const sliderCars = document.querySelector('.swiper-container-cars');
 
 let mySwiperCars = new Swiper(sliderCars, {
     slidesPerView: 3,
-    spaceBetween: 60,
+    spaceBetween: 82,
     centeredSlides: true,
     loop: true,
     pagination: {
         el: '.swiper-pagination-cars',
         clickable: true,
+        type: 'fraction',
     },
     // autoplay: {
     //     delay: 2000,
@@ -18,8 +22,8 @@ let mySwiperCars = new Swiper(sliderCars, {
     // // Скорость
     // speed: 1000,
     navigation: {
-        nextEl: '.swiper-button-next-cars',
-        prevEl: '.swiper-button-prev-cars',
+        nextEl: '.swiperCars-button-next',
+        prevEl: '.swiperCars-button-prev',
     },
     // Брейк поинты (адаптив)
     // Ширина экрана

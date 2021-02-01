@@ -10,15 +10,16 @@ let mySwiper = new Swiper(slider, {
         prevEl: '.swiperHeader-button-prev'
     },
     loop: true,
-    effect: 'fade',
+    // effect: 'fade',
+    effect: 'flip',
     fadeEffect: {
         crossFade: true,
     },
     autoplay: {
-        delay: 4000,
+        delay: 6000,
     },
     // Скорость
-    speed: 500,
+    speed: 800,
 
 })
 

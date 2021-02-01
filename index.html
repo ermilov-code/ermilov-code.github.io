@@ -238,12 +238,6 @@
         <h2 class="h2-heading-cars">Наша техника</h2>
 
         <div class="slider-container slider-container-cars">
-          <div class="slider-top slider-top-cars">
-            <div class="slider-buttons slider-buttons-cars">
-              <button class="swiper-button-prev-cars"></button>
-              <button class="swiper-button-next-cars"></button>
-            </div>
-          </div>
           <div class="swiper-container swiper-container-cars">
             <div class="swiper-wrapper swiper-wrapper-cars">
               <div class="swiper-slide swiper-slide-cars card slideCars1"></div>
@@ -253,7 +247,25 @@
               <div class="swiper-slide swiper-slide-cars card slideCars5"></div>
               <div class="swiper-slide swiper-slide-cars card slideCars6"></div>
             </div>
+            <div class="head-slider-control" id="head-slider-control">
+              <div class="swiperHeader-button-prev swiperCars-button-prev">
+                <svg class="svg-swiperHeader-button-prev" width="22" height="12" viewBox="0 0 22 12" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="swiperHeader-button-next swiperCars-button-next">
+                <svg class="svg-swiperHeader-button-next" width="22" height="12" viewBox="0 0 22 12" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+            <!-- /.head-slider-control -->
             <div class="swiper-pagination swiper-pagination-cars"></div>
+
           </div>
         </div>
       </section>
@@ -279,7 +291,6 @@
       </section>
 
       <section class="section-price" id="price">
-
         <div class="wrapper-section-price">
           <div class="decorative-square-3"></div>
           <div class="decorative-square-4"></div>
@@ -349,14 +360,8 @@
             <img src="img/local-map.png" alt="local-map" class="img-local-map" width="750" height="570">
           </div>
           <!-- /.wrapper-form-section-price -->
-
         </div>
         <!-- /.wrapper-section-price -->
-
-
-
-
-
       </section>
       <!-- /.section-price -->
 
@@ -497,38 +502,11 @@
         <!-- /.wrapper-rightSideContacts -->
       </section>
 
-
-
-
-
-      <section class="section-reviews section-clients" id="reviews">
-        <a href="#" class="a-anchor-link"></a>
-        <h2 class="h2-heading">Отзывы</h2>
-        <div class="wrapper-swiper wrapper-swiper-reviews">
-          <div class="image-slider swiper-container image-slider-reviews" id="image-slider-reviews-id">
-            <div class="swiper-button-prev swiper-button-prev_reviews" id="swiper-button-prev-reviews">
-              <svg class="arrow-svg arrow-svg-slider" width="21" height="47" viewBox="0 0 21 47" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 37.0352L10.625 46.4102L1.25 37.0352" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M10.625 45.9414L10.625 1" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="swiper-button-next swiper-button-next_reviews" id="swiper-button-next-reviews">
-              <svg class="arrow-svg arrow-svg-slider" width="21" height="47" viewBox="0 0 21 47" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 37.0352L10.625 46.4102L1.25 37.0352" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M10.625 45.9414L10.625 1" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <!-- Добавляем, если нам нужна пагинация -->
-            <div class="swiper-pagination swiper-pagination_reviews" id="swiper-pagination-reviews"></div>
-            <!-- Слайдер -->
-
-          </div>
-        </div>
-      </section>
-
     </main>
+
+    <footer class="footer">
+      
+    </footer>
 
 
   </div>
@@ -537,8 +515,7 @@
 
 
 
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
