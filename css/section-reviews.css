@@ -1,138 +1,53 @@
 .section-reviews {
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 26px 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-width: 0;
-  background: #F5F0EA;
 }
-.wrapper-swiper-reviews {
+.wrapper-benefit {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
 }
-.image-slider-reviews {
-  height: 630px;
-  padding: 128px 0 261px 0;
-}
-.img-slide-reviews {
-  width: 409px;
-  height: 438px;
-}
-.wrapper-swiper-reviews .swiper-slide-active {
-  transform: scale(1.8);
-}
-body > div > main > section.section-reviews.section-clients > h2 {
-  padding: 0px 0 13px 0;
-}
-body > div > main > section.section-reviews.section-clients > div > div > div.swiper-pagination.swiper-pagination-bullets {
-  bottom: 23px;
-}
-#swiper-button-next-reviews,
-#swiper-button-prev-reviews {
-  top: 95%;
-}
-body > div > main > section.section-reviews.section-clients > div > div {
-  margin: 0;
-  width: 84%;
-}
-.swiper-wrapper .swiper-slide-reviews {
-  margin-right: 0px;
+.card-benefit {
+  width: 264px;
+  margin: 0 15px 0 15px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-div.image-slider__slide > div > a > img {
-  object-fit: contain;
-  object-position: center;
-  width: 390px;
-  height: 308px;
-}
-#swiper-pagination-reviews > span {
-  width: 26px;
-}
-.image-slider__image-reviews {
-  display: block;
-}
-.image-slider__phone {
-  border: 6px solid #AA816D;
-  border-radius: 20px;
-  width: 145px;
-  height: 300px;
-  position: relative;
-  background-position: center;
-  background-size: contain;
+.picture-benefit {
+  width: 100%;
+  height: 60px;
+  background-position: left 5% bottom 5%;
   background-repeat: no-repeat;
-  background-color: #AA816D;
+  background-size: contain;
+  margin: 0 0 15px 0;
 }
-.image-slider__phone_eyebrow {
-  position: absolute;
-  width: 52%;
-  height: 12px;
-  left: 34px;
-  top: -2px;
-  background: #AA816D;
-  border-radius: 0px 0px 7px 7px;
+.txt-benefit {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #333333;
+  text-align: left;
 }
-.image-slider__phone_volumeTop {
-  position: absolute;
-  width: 6.99px;
-  height: 31px;
-  left: -8px;
-  top: 40px;
-  background: #AA816D;
-  border-radius: 75px;
+.p-b-1 {
+  background-image: url(../img/picture-benefit-1__GUIDE.png);
 }
-.image-slider__phone_volumeBot {
-  position: absolute;
-  width: 6.99px;
-  height: 31px;
-  left: -8px;
-  top: 77px;
-  background: #AA816D;
-  border-radius: 75px;
+.p-b-2 {
+  background-image: url(../img/picture-benefit-2__GUIDE.png);
 }
-.image-slider__phone_off {
-  position: absolute;
-  width: 6.99px;
-  height: 31px;
-  right: -8px;
-  top: 59px;
-  background: #AA816D;
-  border-radius: 75px;
+.p-b-3 {
+  background-image: url(../img/picture-benefit-3__GUIDE.png);
 }
-.is_p_img1 {
-  background-image: url(../img/reviews_2.PNG);
-}
-.is_p_img2 {
-  background-image: url(../img/reviews_5.PNG);
-}
-.is_p_img3 {
-  background-image: url(../img/reviews_3.PNG);
-}
-.is_p_img4 {
-  background-image: url(../img/reviews_4.PNG);
-}
-.is_p_img5 {
-  background-image: url(../img/reviews_8.PNG);
-}
-.is_p_img6 {
-  background-image: url(../img/reviews_6.PNG);
-}
-.is_p_img7 {
-  background-image: url(../img/reviews_7.PNG);
-}
-.is_p_img8 {
-  background-image: url(../img/reviews_1.PNG);
-}
-.is_p_img9 {
-  background-image: url(../img/reviews_9.PNG);
-}
-.is_p_img10 {
-  background-image: url(../img/reviews_10.PNG);
-}
-.is_p_img11 {
-  background-image: url(../img/reviews_11.PNG);
+.p-b-4 {
+  background-image: url(../img/picture-benefit-4__GUIDE.png);
 }

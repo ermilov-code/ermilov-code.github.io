@@ -52,10 +52,10 @@ btn.addEventListener('click', handleButtonClick);
 
 
 
-// убираем pop-up_window при нажатии на крестик
-document.querySelector('.div-cross').addEventListener('click', () => {
-    document.querySelector('.pop-up_window').classList.remove('pop-up_window-block')
-})
+// // убираем pop-up_window при нажатии на крестик
+// document.querySelector('.div-cross').addEventListener('click', () => {
+//     document.querySelector('.pop-up_window').classList.remove('pop-up_window-block')
+// })
 
 
 

@@ -17,12 +17,14 @@
 }
 .h2-heading {
   width: 100%;
-  font-family: 'Cormorant', serif;
+  font-family: Lighthaus;
   font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 130%;
-  color: #AA816D;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 54px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #333333;
   text-align: center;
   padding: 0 0 60px 0;
   margin: 0;
