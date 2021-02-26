@@ -2,12 +2,12 @@
   body.lock {
     overflow: hidden;
   }
+  .header {
+    padding: 13px 0 10px 0;
+  }
   .wrapper {
     width: 100vw;
     margin: 0 auto;
-  }
-  .wrap-container-1110 {
-    width: 100%;
   }
   .nav_link.nav_link-inst {
     display: block;
@@ -20,6 +20,10 @@
     height: 20px;
     position: relative;
     z-index: 101;
+    order: -1;
+  }
+  .nav {
+    z-index: 100;
   }
   .nav_link_inst_li {
     display: none;
