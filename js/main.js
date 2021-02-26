@@ -34,29 +34,6 @@ for (let anchor of anchors) {
 }
 
 
-// скрипт для scroll-а текущего блока
-
-let hiddenElement = document.getElementById("box-section-service");
-let btn = document.querySelector('.arrow-svg');
-
-function handleButtonClick() {
-    hiddenElement.scrollIntoView({
-        block: "start",
-        behavior: "smooth"
-    });
-}
-
-btn.addEventListener('click', handleButtonClick);
-
-// КОНЕЦ скриптА для scroll-а текущего блока
-
-
-
-// // убираем pop-up_window при нажатии на крестик
-// document.querySelector('.div-cross').addEventListener('click', () => {
-//     document.querySelector('.pop-up_window').classList.remove('pop-up_window-block')
-// })
-
 
 
 // https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/

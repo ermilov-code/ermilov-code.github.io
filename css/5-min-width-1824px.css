@@ -1,64 +1,79 @@
 /* Большие экраны ----------- */
 @media only screen and (min-width: 1824px) {
-  .wrap-container-1110 {
-    width: 1390px;
-    margin: 0 auto;
+  .header {
+    min-height: 1080px;
+    max-height: 1080px;
+  }
+  .top-header {
+    position: relative;
+    margin: 0 0 220px 0;
+  }
+  .top-header .logo {
+    position: absolute;
+    top: 0px;
+    left: -320px;
+  }
+  .nav_list {
+    position: relative;
+  }
+  .top-header > nav > ul > li:nth-child(5) {
+    position: absolute;
+    margin: 0;
+    top: 19px;
+    right: -40vw;
   }
   .img-header {
-    object-fit: contain;
-    height: 800px;
-    width: 1076px;
+    height: 692px;
+    width: 893px;
+    bottom: -45%;
+    right: -31%;
   }
-  .txt-header {
-    width: 50%;
+  .middle-header__yellow-circle {
+    width: 440px;
+    height: 440px;
+    right: -4%;
+    bottom: 24%;
   }
-  .h1-name {
-    font-size: 81px;
-    line-height: 97.48%;
+  .middle-header__gray-circle {
+    width: 770px;
+    height: 770px;
+    right: -54%;
+    bottom: -56%;
   }
-  .middle-header .services-item {
-    font-size: 26px;
-    line-height: 41px;
+  .middle-header__empty-circle {
+    width: 770px;
+    height: 770px;
+    right: -50%;
+    bottom: -54%;
   }
-  .a-consultation {
-    font-size: 20px;
-    width: 392px;
-    height: 81px;
+  .section-services__empty-circle {
+    width: 454px;
+    height: 454px;
+    left: -8%;
+    top: 74%;
   }
-  .arrow-svg {
-    bottom: -23px;
+  .section-services__gray-circle {
+    width: 340px;
+    height: 340px;
+    left: -3%;
+    top: 104%;
   }
-  .separate-service {
-    margin: 15px;
-    width: 45%;
+  .section-benefit__empty-circle {
+    width: 371px;
+    height: 371px;
+    right: -134px;
+    top: -222px;
   }
-  .wrap-container-sServices {
-    justify-content: center;
+  .section-cost__empty-circle {
+    left: 32%;
   }
-  .h3-service-name {
-    font-size: 32px;
+  .section-cost__gray-circle {
+    left: 33%;
   }
-  .wrapper-price .a-consultation {
-    width: 305px;
-    height: 67px;
+  .section-cost__picture-journal {
+    left: 53%;
   }
-  .section-clients {
-    height: 80vh;
-  }
-  .image-slider__image-img {
-    height: 449px;
-  }
-  .image-slider .swiper-pagination {
-    bottom: 4px;
-  }
-  .wrapper-swiper-reviews .swiper-slide-active {
-    transform: scale(2.4);
-  }
-  .image-slider-reviews {
-    height: 806px;
-    padding: 232px 0 190px 0;
-  }
-  .section-reviews {
-    min-height: 88vh;
+  .wrapper-buy-guide {
+    padding: 100px 0 0 73px;
   }
 }

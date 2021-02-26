@@ -1,4 +1,8 @@
 // Инициализируем Swiper
+
+
+
+
 const slider = document.querySelector('#image-slider-clients-id');
 
 let myImageSlider = new Swiper(slider, {
@@ -11,10 +15,9 @@ let myImageSlider = new Swiper(slider, {
     // Буллеты, текущее положение, прогрессбар
     pagination: {
         el: '.swiper-pagination',
-
+        clickable: true,
+        type: 'fraction',
     },
-
-
 
 
     // Включение/отключение
@@ -56,7 +59,7 @@ let myImageSlider = new Swiper(slider, {
     autoHeight: true,
 
     // Количество слайдов для показа
-    slidesPerView: 3,
+    slidesPerView: 1,
 
     // Отключение функционала
     // если слайдов меньше чем нужно
@@ -93,38 +96,46 @@ let myImageSlider = new Swiper(slider, {
     // Вертикальный слайдер
     direction: 'horizontal',
 
-
     // Эффекты переключения слайдов.
     // Листание
-    effect: 'slide',
+    // effect: 'fade',
 
+    // // Эффекты переключения слайдов.
+    // // Листание
+    // effect: 'slide',
 
-
-    // Брейк поинты (адаптив)
-    // Ширина экрана
-    breakpoints: {
-        200: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        300: {
-            slidesPerView: 1.5,
-            spaceBetween: 55,
-
-        },
-        325: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
-
-        },
-        480: {
-            slidesPerView: 2.5,
-            spaceBetween: 20,
-        },
-        992: {
-            slidesPerView: 3,
-        }
+    effect: 'flip',
+    fadeEffect: {
+        crossFade: true,
     },
+
+
+
+    // // Брейк поинты (адаптив)
+    // // Ширина экрана
+    // breakpoints: {
+    //     200: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 10,
+    //     },
+    //     300: {
+    //         slidesPerView: 1.5,
+    //         spaceBetween: 55,
+
+    //     },
+    //     325: {
+    //         slidesPerView: 1.5,
+    //         spaceBetween: 20,
+
+    //     },
+    //     480: {
+    //         slidesPerView: 2.5,
+    //         spaceBetween: 20,
+    //     },
+    //     992: {
+    //         slidesPerView: 1,
+    //     }
+    // },
 
     // Отключить предзагрузка картинок
     preloadImages: false,

@@ -12,6 +12,10 @@
 
 }
 
+.section-consultation .h2-heading {
+    margin: 0 0 60px 0;
+}
+
 .cons-img {
     width: 100%;
     height: 100%;
@@ -21,6 +25,50 @@
 .cons-img-2 {
     // border: 8px solid #FFFFFF;
     height: 300px;
+}
+
+.section-cost__picture-wrapper {
+    position: relative;
+    width: 45%;
+    height: 510px;
+    margin: 0 10px 0 0;
+}
+
+.section-cost__picture-journal {
+    z-index: 4;
+    position: absolute;
+    width: 311px;
+    height: 440px;
+    left: 34%;
+    top: 10%;
+    background: url(../img/journal-footer.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(-10px 9px 17px rgba(51, 51, 51, 0.25));
+    transform: rotate(-8.92deg);
+}
+
+.section-cost__gray-circle {
+    z-index: 2;
+    position: absolute;
+    width: 509.36px;
+    height: 509.36px;
+    left: 4%;
+    top: -5%;
+    background: #949597;
+    border-radius: 50%;
+}
+
+.section-cost__empty-circle {
+    z-index: 3;
+    position: absolute;
+    width: 510px;
+    height: 510px;
+    left: 12px;
+    top: 1px;
+    border: 1px solid #333333;
+    border-radius: 50%;
 }
 
 
@@ -392,7 +440,8 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
 
 
 .wrapper-buy-guide {
-    padding: 60px 0 0 0;
+    padding: 100px 0 0 30px;
+    width: 45%;
     height: 100%;
     display: flex;
     flex-direction: column;
