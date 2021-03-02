@@ -10,7 +10,16 @@ window.onload = function () {
     })
 
     // Add animation bindings to elements
-    lax.addElements('.h2-heading', {
+    lax.addElements('.h2-heading-anim1', {
+        scrollY: {
+            translateX: [
+                ["elInY", "elCenterY", "elOutY"],
+                ['screenWidth', 'screenHeight/15', 0],
+            ]
+        }
+    })
+
+    lax.addElements('.card-benefit-anim2', {
         scrollY: {
             translateX: [
                 ["elInY", "elCenterY", "elOutY"],
