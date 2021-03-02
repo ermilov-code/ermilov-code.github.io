@@ -11,6 +11,9 @@
     justify-content: flex-start;
     margin: 0;
   }
+  .link-guide__svg {
+    width: 60px;
+  }
   .top-header {
     flex-wrap: wrap;
     margin: 0 0 42px 0;
@@ -35,8 +38,8 @@
     margin: 0;
   }
   .img-header {
-    bottom: -64%;
-    right: -36%;
+    bottom: -62%;
+    right: -42%;
     height: 404px;
     width: 617px;
   }
@@ -63,8 +66,11 @@
     line-height: 140%;
     margin: 0 0 20px 0;
   }
+  .wrapper-buy-guide .a-consultation {
+    width: 164px;
+  }
   .link-guide__text {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 15px;
   }
   .a-consultation {

@@ -153,12 +153,16 @@ div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet-
 }
 .swiper-pagination-current,
 .swiper-pagination-total {
+  padding: 0 0 0 5px;
   font-family: Lighthaus;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+}
+.swiper-pagination-total {
+  display: none;
 }
 .image-slider__image {
   text-align: center;
@@ -228,6 +232,7 @@ div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet-
   justify-content: center;
   align-items: center;
   margin: 0px 26px 0 26px;
+  color: #fff;
 }
 /* Прогрессбар */
 .image-slider .swiper-pagination-progressbar-fill {

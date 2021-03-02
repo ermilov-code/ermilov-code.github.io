@@ -1,3 +1,14 @@
+@keyframes wantGuideAnim {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(7px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
 .nav_link.nav_link-inst {
   display: none;
 }
@@ -18,7 +29,7 @@
   width: 863px;
   position: absolute;
   bottom: -34%;
-  right: -18%;
+  right: -21%;
 }
 .wrap-container-header {
   display: flex;
@@ -245,6 +256,7 @@ body > div > header > div.top-header > nav > ul > li:nth-child(5) {
 }
 .link-guide__svg {
   z-index: 5;
+  animation: wantGuideAnim infinite 2s;
 }
 .link-guide__circle {
   position: absolute;
