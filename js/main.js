@@ -23,7 +23,7 @@ window.onload = function () {
         scrollY: {
             translateX: [
                 ["elInY", "elCenterY", "elOutY"],
-                ['screenWidth', 'screenHeight/15', 0],
+                ['screenWidth', 'screenHeight/25', 0],
             ]
         }
     })
