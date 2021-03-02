@@ -265,8 +265,11 @@ div.swiper-pagination.swiper-pagination-bullets > span.swiper-pagination-bullet-
   stroke: #333333;
 }
 .swiper-button-next svg:hover,
-.swiper-button-prev svg:hover {
+.swiper-button-prev svg:hover,
+.swiper-button-prev svg:active,
+.swiper-button-next svg:active {
   stroke: #AA816D;
+  fill: rgba(51, 51, 51, 0.7);
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {

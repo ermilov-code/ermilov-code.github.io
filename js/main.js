@@ -27,7 +27,19 @@ window.onload = function () {
             ]
         }
     })
+
 }
+
+
+new TypeIt("#elementSpan", {
+    strings: "ДЕТСКОЙ ОДЕЖДЕ",
+    speed: 100,
+    waitUntilVisible: true
+  }).go();
+
+
+
+
 
 // бургер меню
 $(document).ready(function () {
