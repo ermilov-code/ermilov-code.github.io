@@ -39,8 +39,8 @@ let mySwiperCars = new Swiper(sliderCars, {
 
         },
         325: {
-            slidesPerView: 1,
-            spaceBetween: 0,
+            slidesPerView: 1.4,
+            spaceBetween: 40,
 
         },
         480: {
