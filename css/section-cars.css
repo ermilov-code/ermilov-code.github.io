@@ -33,6 +33,7 @@
 }
 .swiper-slide.swiper-slide-cars.card {
   width: 415px;
+  height: 252px;
   display: flex;
   flex-direction: column;
   justify-content: center;
