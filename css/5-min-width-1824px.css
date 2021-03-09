@@ -1,79 +1,102 @@
 /* Большие экраны ----------- */
 @media only screen and (min-width: 1824px) {
-  .header {
-    min-height: 1080px;
-    max-height: 1080px;
+  @keyframes cubeAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .blue-square {
+    width: 1300px;
+    height: 1200.59px;
+    left: 1158px;
+    top: -282.41px;
+  }
+  .swiper-container-cars .head-slider-control {
+    width: 280px;
+    top: 74%;
+    left: 43%;
+  }
+  .swiper-container-cars {
+    padding: 20px 0 41px 0;
+  }
+  .swiper-pagination.swiper-pagination-cars {
+    width: 92px;
+    height: 92px;
+  }
+  .swiper-slide.swiper-slide-cars.card {
+    height: 360px;
+  }
+  .logo {
+    left: -322px;
+    top: -21px;
+  }
+  .head-slider-control {
+    width: 206px;
+    height: 76px;
+    top: 643px;
+    left: 365px;
+  }
+  .head-slider-control .swiperHeader-button-prev,
+  .head-slider-control .swiperHeader-button-next {
+    width: 75px;
+    height: 75px;
+  }
+  .swiper-wrapper.swiper-wrapper-cars {
+    margin: 0 0 98px 0;
+  }
+  .svg-swiperHeader-button-prev,
+  .svg-swiperHeader-button-next {
+    width: 23px;
+    height: 33px;
+  }
+  .swiperHeader-slide-img {
+    width: 903px;
+    height: 100%;
   }
   .top-header {
-    position: relative;
-    margin: 0 0 220px 0;
+    padding: 0 45px 0 380px;
+    margin: 0px 0 107px 0;
   }
-  .top-header .logo {
-    position: absolute;
-    top: 0px;
-    left: -320px;
+  .p-txt-header {
+    font-size: 27px;
   }
-  .nav_list {
-    position: relative;
+  .nav_link.header__link {
+    font-size: 27px;
   }
-  .top-header > nav > ul > li:nth-child(5) {
-    position: absolute;
-    margin: 0;
-    top: 19px;
-    right: -40vw;
+  .a-header-contacts {
+    font-size: 28px;
   }
-  .img-header {
-    height: 740px;
-    width: 996px;
-    bottom: -49%;
-    right: -40%;
+  .whatsApp {
+    width: 67px;
+    height: 67px;
   }
-  .middle-header__yellow-circle {
-    width: 440px;
-    height: 440px;
-    right: -4%;
-    bottom: 24%;
+  .txt-logo-1 {
+    font-size: 38px;
   }
-  .middle-header__gray-circle {
-    width: 770px;
-    height: 770px;
-    right: -54%;
-    bottom: -56%;
+  .txt-logo-2 {
+    font-size: 31.6px;
   }
-  .middle-header__empty-circle {
-    width: 770px;
-    height: 770px;
-    right: -50%;
-    bottom: -54%;
+  .middle-header {
+    padding: 0 0 0 380px;
+    align-items: flex-start;
   }
-  .section-services__empty-circle {
-    width: 454px;
-    height: 454px;
-    left: -8%;
-    top: 74%;
+  .txt-header {
+    width: 628px;
+    height: 545px;
   }
-  .section-services__gray-circle {
-    width: 340px;
-    height: 340px;
-    left: -3%;
-    top: 104%;
+  .h1-name {
+    font-size: 58px;
+    min-height: 225px;
   }
-  .section-benefit__empty-circle {
-    width: 371px;
-    height: 371px;
-    right: -134px;
-    top: -222px;
-  }
-  .section-cost__empty-circle {
-    left: 32%;
-  }
-  .section-cost__gray-circle {
-    left: 33%;
-  }
-  .section-cost__picture-journal {
-    left: 53%;
-  }
-  .wrapper-buy-guide {
-    padding: 100px 0 0 73px;
+  .a-consultation-header {
+    bottom: 32px;
+    left: 380px;
+    font-size: 24px;
   }
 }

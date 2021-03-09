@@ -1,42 +1,82 @@
 // ============================================================
 
 
-window.onload = function () {
-    lax.init()
+$('.part').click(
+    function () {
+        $('.description').html($(this).attr('description-data'));
+        $('.description').fadeIn(500);
+    }
+)
 
-    // Add a driver that we use to control our animations
-    lax.addDriver('scrollY', function () {
-        return window.scrollY
-    })
+$('.description').click(
+    function () {
+        $('.description').fadeOut(500);
+    }
+)
 
-    // Add animation bindings to elements
-    lax.addElements('.h2-heading-anim1', {
-        scrollY: {
-            translateX: [
-                ["elInY", "elCenterY", "elOutY"],
-                ['screenWidth', 'screenHeight/15', 0],
-            ]
-        }
-    })
+$('.button-cities').click(
+    function () {
+        $('.description').html($(this).attr('description-data'));
+        $('.description').fadeIn(500);
+    }
+)
 
-    lax.addElements('.card-benefit-anim2', {
-        scrollY: {
-            translateX: [
-                ["elInY", "elCenterY", "elOutY"],
-                ['screenWidth', 'screenHeight/25', 0],
-            ]
-        }
-    })
+// $(function () {
+//     $('.input-city-search').on('change', function () {
+//         var val = $('.input-city-search').val();
 
-}
+//         var descriptionData = $('#accessible-cities').find('option[value="' + val + '"]').data('description');
 
 
-new TypeIt("#elementSpan", {
-    strings: "ДЕТСКОЙ ОДЕЖДЕ",
-    speed: 100,
-    waitUntilVisible: true
-  }).go();
+//         $('.description').html($(this).descriptionData);
+//         $('.description').fadeIn(500);
 
+//         // alert('data-id= ' + data_id);
+//     });
+// });
+
+
+
+$(function () {
+    $('#input-city-search').on('change', function () {
+        var val = $('#input-city-search').val();
+
+        var data_id = $('#accessible-cities').find('option[value="' + val + '"]').data('id');
+        alert(data_id);
+
+        // $('.description').html($(this).data_id);
+
+        // $(data_id).replaceAll(".description");
+        // $('.description').fadeIn(500);
+
+
+
+    });
+
+
+});
+
+
+// $(function () {
+//     $('.input-city-search').on('change', function () {
+//         let val = $('.input-city-search').val();
+
+//         let data_id = $('#accessible-cities').find('option[value="' + val + '"]').data('id');
+//         // alert('data-id= ' + data_id);
+
+//         // document.getElementById('description').value = this.data_id;
+//         // document.getElementById('description').innerHTML = this.data_id;
+//         $('.description').html($(this).data_id);
+//         $('.description').fadeIn(500);
+
+//     });
+
+
+// });
+
+
+
+// ИНТЕРАКТИВНАЯ карта
 
 
 
@@ -74,6 +114,29 @@ for (let anchor of anchors) {
     })
 }
 
+
+// // скрипт для scroll-а текущего блока
+
+// let hiddenElement = document.getElementById("box-section-service");
+// let btn = document.querySelector('.arrow-svg');
+
+// function handleButtonClick() {
+//     hiddenElement.scrollIntoView({
+//         block: "start",
+//         behavior: "smooth"
+//     });
+// }
+
+// btn.addEventListener('click', handleButtonClick);
+
+// // КОНЕЦ скриптА для scroll-а текущего блока
+
+
+
+// // убираем pop-up_window при нажатии на крестик
+// document.querySelector('.div-cross').addEventListener('click', () => {
+//     document.querySelector('.pop-up_window').classList.remove('pop-up_window-block')
+// })
 
 
 
