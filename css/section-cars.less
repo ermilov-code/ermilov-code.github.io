@@ -76,15 +76,19 @@
 .swiper-container.swiper-container-cars {}
 
 .swiper-wrapper.swiper-wrapper-cars {
-    margin: 0 0 42px 0;
+    margin: 0 0 58px 0;
 }
 
 .swiper-slide.swiper-slide-cars.card {
     width: 415px;
-    height: 299.9px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    // height: 299.9px;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: none;
 }
 
@@ -115,29 +119,37 @@
 
 }
 
-.slideCars1 {
-    background-image: url(../img/1imgCar.jpg);
+// .slideCars1 {
+//     background-image: url(../img/1imgCar.jpg);
+// }
+
+.sliderCars__img {
+    width: 100%;
+    border-radius: 6px;
+    height: 100%;
+    object-fit: contain;
+
 }
 
-.slideCars2 {
-    background-image: url(../img/2imgCar.jpg);
-}
+// .slideCars2 {
+//     background-image: url(../img/2imgCar.jpg);
+// }
 
-.slideCars3 {
-    background-image: url(../img/3imgCar.jpg);
-}
+// .slideCars3 {
+//     background-image: url(../img/3imgCar.jpg);
+// }
 
-.slideCars4 {
-    background-image: url(../img/4imgCar.jpg);
-}
+// .slideCars4 {
+//     background-image: url(../img/4imgCar.jpg);
+// }
 
-.slideCars5 {
-    background-image: url(../img/5imgCar.jpg);
-}
+// .slideCars5 {
+//     background-image: url(../img/5imgCar.jpg);
+// }
 
-.slideCars6 {
-    background-image: url(../img/6imgCar.jpg);
-}
+// .slideCars6 {
+//     background-image: url(../img/6imgCar.jpg);
+// }
 
 .swiper-button-prev-cars,
 .swiper-button-next-cars {
@@ -146,7 +158,7 @@
 }
 
 .swiper-container-cars {
-    padding: 20px 0 20px 0;
+    padding: 30px 0 20px 0;
     width: 90%;
     display: flex;
     flex-direction: column;

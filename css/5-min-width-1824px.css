@@ -23,14 +23,11 @@
     left: 43%;
   }
   .swiper-container-cars {
-    padding: 20px 0 41px 0;
+    padding: 44px 0 41px 0;
   }
   .swiper-pagination.swiper-pagination-cars {
     width: 92px;
     height: 92px;
-  }
-  .swiper-slide.swiper-slide-cars.card {
-    height: 360px;
   }
   .logo {
     left: -322px;
