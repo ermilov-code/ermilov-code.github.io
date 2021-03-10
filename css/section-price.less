@@ -152,6 +152,7 @@
 }
 
 .form-section-price {
+    position: relative;
     width: 360px;
     display: flex;
     flex-direction: column;
@@ -257,6 +258,37 @@
     line-height: 150%;
     color: @txtBaseColor;
     padding: 15px 25px 15px 25px;
+}
+
+.city-search__magnifier {
+    position: absolute;
+    right: 12px;
+    top: 15px;
+    cursor: pointer;
+
+}
+
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+    display: none;
+}
+
+.datalist__style {
+    width: 100%;
+}
+
+.form-section-price option {
+    width: 200px;
 }
 
 

@@ -25,6 +25,10 @@
 
   <!-- КНОПКА ВВЕРХ НА САЙТЕ -->
   <div id="btnUp">
+    <svg class="btnUp__white" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L11 11L21 1" stroke="#FFFFFF" stroke-width="0.977869" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
   </div>
 
   <div class="wrapper">
@@ -324,7 +328,7 @@
           <div class="decorative-square-4"></div>
           <h2 class="h2-section-price">Стоимость</h2>
           <p class="p-section-price">
-            Стоимость одного рейса от&nbsp;1.200&nbsp;₽. <br>
+            Стоимость одного рейса <b>от&nbsp;1.200&nbsp;₽.</b> <br>
             Цена рассчитывается индивидуально и&nbsp;зависит от&nbsp;дальности поездки, объема и&nbsp;сложности откачки.
             <br>
             Уточнить стоимость работ и&nbsp;получить более подробную информацию можно по&nbsp;телефону: <a
@@ -337,7 +341,17 @@
             <form action="#" class="form-section-price">
               <input type="search" id="input-city-search" class="input-city-search" placeholder="Населённый пункт"
                 list="accessible-cities">
-              <datalist id="accessible-cities">
+
+              <svg class="city-search__magnifier" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.9545 3.75C11.134 3.75 9.35443 4.28983 7.84075 5.30124C6.32708 6.31264 5.14732 7.75018 4.45065 9.43209C3.75399 11.114 3.57171 12.9647 3.92687 14.7502C4.28202 16.5357 5.15867 18.1758 6.44594 19.4631C7.73321 20.7503 9.37329 21.627 11.1588 21.9821C12.9443 22.3373 14.795 22.155 16.4769 21.4583C18.1588 20.7617 19.5963 19.5819 20.6078 18.0682C21.6192 16.5546 22.159 14.775 22.159 12.9545C22.1588 10.5134 21.189 8.17225 19.4629 6.44611C17.7367 4.71996 15.3956 3.75016 12.9545 3.75V3.75Z"
+                  stroke="#141A26" stroke-width="1.8125" stroke-miterlimit="10" />
+                <path d="M19.8213 19.8218L26.2496 26.2501" stroke="#141A26" stroke-width="1.8125" stroke-miterlimit="10"
+                  stroke-linecap="round" />
+              </svg>
+
+              <datalist id="accessible-cities" class="datalist__style">
                 <option value="Куровское"
                   data-id="Куровское - Откачка канализации, септиков - 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
                 </option>
