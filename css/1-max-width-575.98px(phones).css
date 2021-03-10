@@ -618,6 +618,18 @@
     top: 15px;
     font-size: 10px;
   }
+  .input-city-search {
+    height: 54px;
+    font-size: 12px;
+    padding: 19px 40px 17px 17px;
+  }
+  .input-city-search::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .city-search__magnifier {
+    right: 12px;
+    top: 13px;
+  }
   .wrap-for-cities {
     width: 100%;
     display: flex;
