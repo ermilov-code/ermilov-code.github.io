@@ -23,107 +23,107 @@
     // цвет стрелок переключения
     @arrowColor: #3A6FDE;
 
-    @keyframes cubeAnimation {
-        0% {
-            transform: rotate(0deg);
-        }
+    // @keyframes cubeAnimation {
+    //     0% {
+    //         transform: rotate(0deg);
+    //     }
 
-        50% {
-            transform: rotate(180deg);
-        }
+    //     50% {
+    //         transform: rotate(180deg);
+    //     }
 
-        100% {
-            transform: rotate(360deg);
-        }
-    }
+    //     100% {
+    //         transform: rotate(360deg);
+    //     }
+    // }
 
-    @keyframes circleAnimation1 {
-        0% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    // @keyframes circleAnimation1 {
+    //     0% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        25% {
-            background: #366BDB;
-        }
+    //     25% {
+    //         background: #366BDB;
+    //     }
 
-        50% {
-            background: #366BDB;
-        }
+    //     50% {
+    //         background: #366BDB;
+    //     }
 
-        75% {
-            background: #366BDB;
-        }
+    //     75% {
+    //         background: #366BDB;
+    //     }
 
-        100% {
-            background: #366BDB;
-        }
-    }
+    //     100% {
+    //         background: #366BDB;
+    //     }
+    // }
 
-    @keyframes circleAnimation2 {
-        0% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    // @keyframes circleAnimation2 {
+    //     0% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        25% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    //     25% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        50% {
-            background: #366BDB;
-        }
+    //     50% {
+    //         background: #366BDB;
+    //     }
 
-        75% {
-            background: #366BDB;
-        }
+    //     75% {
+    //         background: #366BDB;
+    //     }
 
-        100% {
-            background: #366BDB;
-        }
-    }
+    //     100% {
+    //         background: #366BDB;
+    //     }
+    // }
 
-    @keyframes circleAnimation3 {
-        0% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    // @keyframes circleAnimation3 {
+    //     0% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        25% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    //     25% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        50% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    //     50% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        75% {
-            background: #366BDB;
-        }
+    //     75% {
+    //         background: #366BDB;
+    //     }
 
-        100% {
-            background: #366BDB;
-        }
-    }
+    //     100% {
+    //         background: #366BDB;
+    //     }
+    // }
 
-    @keyframes circleAnimation4 {
-        0% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    // @keyframes circleAnimation4 {
+    //     0% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        25% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    //     25% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        50% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    //     50% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        75% {
-            background: rgba(54, 107, 219, 0.4);
-        }
+    //     75% {
+    //         background: rgba(54, 107, 219, 0.4);
+    //     }
 
-        100% {
-            background: #366BDB;
-        }
-    }
+    //     100% {
+    //         background: #366BDB;
+    //     }
+    // }
 
 
 
@@ -324,6 +324,7 @@
     }
 
     .section-workProcess {
+
         // display: none
     }
 
@@ -1038,7 +1039,7 @@
     }
 
     .section-workProcess {
-        padding: 40px 0 40px 0;
+        padding: 40px 13px 40px 13px;
     }
 
     .h2-section-workProcess {
@@ -1054,21 +1055,42 @@
 
     }
 
-    .dotted-line {}
+    .dotted-line {
+        transform: rotate(90deg);
+        top: 121px;
+        left: -80px;
+        width: 713%;
+        border: 1px dashed rgba(20, 26, 38, 0.3);
+    }
 
     .article-workProcess {
         margin: 0 0 30px 0;
+        width: 72%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
     }
 
-    .big-circle-workProcess {}
+    .big-circle-workProcess {
+        margin: 0 14px 0 0;
+        width: 30px;
+        height: 30px;
 
-    .small-circle-workProcess {}
+    }
+
+    .small-circle-workProcess {
+        width: 12px;
+        height: 12px;
+    }
 
     .sCircle-wP1 {}
 
     .p-workProcess {
+        width: 231px;
         font-size: 14px;
         line-height: 130%;
+        text-align: left;
     }
 
     .sCircle-wP2 {}

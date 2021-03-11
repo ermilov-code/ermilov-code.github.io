@@ -1,71 +1,3 @@
-@keyframes circleAnimation1 {
-  0% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  25% {
-    background: #366BDB;
-  }
-  50% {
-    background: #366BDB;
-  }
-  75% {
-    background: #366BDB;
-  }
-  100% {
-    background: #366BDB;
-  }
-}
-@keyframes circleAnimation2 {
-  0% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  25% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  50% {
-    background: #366BDB;
-  }
-  75% {
-    background: #366BDB;
-  }
-  100% {
-    background: #366BDB;
-  }
-}
-@keyframes circleAnimation3 {
-  0% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  25% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  50% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  75% {
-    background: #366BDB;
-  }
-  100% {
-    background: #366BDB;
-  }
-}
-@keyframes circleAnimation4 {
-  0% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  25% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  50% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  75% {
-    background: rgba(54, 107, 219, 0.4);
-  }
-  100% {
-    background: #366BDB;
-  }
-}
 .section-workProcess {
   display: flex;
   flex-direction: column;
@@ -91,9 +23,9 @@
 }
 .dotted-line {
   position: absolute;
-  width: 78%;
-  top: 23px;
-  left: 11%;
+  width: 2196%;
+  top: 22px;
+  left: 102%;
   height: 0px;
   border: 2px dashed rgba(20, 26, 38, 0.3);
   z-index: 3;
