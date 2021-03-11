@@ -128,7 +128,7 @@
     font-family: 'Cormorant', serif;
   }
   .section-price {
-    padding: 35px 0 35px 0;
+    padding: 35px 0 10px 0;
   }
   .whatsApp {
     width: 36px;
@@ -591,17 +591,20 @@
   }
   .dotted-line {
     transform: rotate(90deg);
-    top: 121px;
-    left: -80px;
-    width: 713%;
+    top: 189px;
+    left: -147.7px;
+    width: 322px;
     border: 1px dashed rgba(20, 26, 38, 0.3);
   }
   .article-workProcess {
-    margin: 0 0 30px 0;
-    width: 72%;
+    margin: 0 0 74px 0;
+    width: 85%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+  }
+  .article-workProcess:nth-child(4) {
+    margin: 0 0 10px 0;
   }
   .big-circle-workProcess {
     margin: 0 14px 0 0;
