@@ -1,40 +1,5 @@
 // .section-sendApplication ===============================================
 
-// основной цвет фона
-@backgroundColor: #FDFDFD;
-// основной цвет шрифта
-@txtBaseColor: #141A26;
-// цвет шрифта в кнопках и карточках
-@txtButtonColor: #FDFDFD;
-// // базовый цвет
-// @baseColor: #fff;
-// цвет для кнопок
-@colorButton: linear-gradient(180deg, #FF9823 0%, #FF591F 100%);
-// background: @colorButton;
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     color: @colorButton;
-// цвет для фона карточек
-@colorCards: linear-gradient(312.61deg, #366BDB 16.36%, #578CFB 91.28%);
-// цвет кнопок при наведении
-@colorButtonHover: 0px 21px 50px rgba(255, 95, 5, 0.35);
-// цвет стрелок переключения
-@arrowColor: #3A6FDE;
-
-@keyframes cubeAnimation {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(180deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 
 .section-sendApplication {
     overflow: hidden;
@@ -59,6 +24,74 @@
     transform: rotate(-41.01deg);
 }
 
+
+
+.close-form {
+    top: -199px;
+}
+
+
+
+.form-section-sendApplication {
+    .modal-content {
+        background: transparent;
+        border: 0px;
+    }
+
+    .modal.show .modal-dialog {
+        max-width: 750px;
+        min-height: 100vh;
+    }
+
+    .modal-body {
+        padding: 0;
+        background: transparent;
+        min-height: 121px;
+    }
+
+    .header-contacts-modal {
+        background: linear-gradient(312.61deg, #366BDB 16.36%, #578CFB 91.28%);
+        border-radius: 6px;
+        padding: 65px 130px 65px 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .contact-form__message {
+        text-align: center;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 150%;
+        color: #FDFDFD;
+        // margin: 0 0 50px 0;
+        margin: 0;
+    }
+
+    button.close {
+        top: -52px;
+        right: -45px;
+    }
+
+    .modal__wrapper-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .modal__square-img {}
+
+    .modal__successfully-img {}
+
+}
+
+
+
+
+
+
 .pop-up_window {
     display: none;
 }
@@ -75,7 +108,7 @@
 
 .h2-section-sendApplication {
     width: 667px;
-    height: 171px;
+    min-height: 171px;
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
@@ -99,6 +132,23 @@
     width: 100%;
 }
 
+button.close {
+    border-radius: 50%;
+    position: absolute;
+    top: -52px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: #3A6FDE;
+    opacity: 1;
+    outline: none;
+}
+
+.close {
+    text-shadow: none;
+    color: @txtButtonColor;
+}
+
 .input-text-section-sendApplication {
     font-family: Inter;
     font-style: normal;
@@ -114,6 +164,36 @@
     padding: 23px 15px 23px 15px;
     margin: 0 0 20px 0;
 }
+
+.contact-form__input-wrapper_name {
+    ::-webkit-input-placeholder {
+        text-transform: none;
+    }
+
+    ::-moz-placeholder {
+        text-transform: none;
+    }
+
+    /* Firefox 19+ */
+    :-moz-placeholder {
+        text-transform: none;
+    }
+
+    /* Firefox 18- */
+    :-ms-input-placeholder {
+        text-transform: none;
+    }
+
+    .input-text-section-sendApplication {
+        text-transform: capitalize;
+    }
+
+}
+
+
+
+
+
 
 .select-form {}
 
@@ -156,8 +236,8 @@
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 150%;
+    // font-size: 16px;
+    // line-height: 150%;
     color: @txtButtonColor;
     text-decoration: underline;
 }
@@ -177,20 +257,20 @@
     border-radius: 3px;
     position: relative;
     border-bottom: 1px solid #D0D0D0;
-    padding: 10px 15px 10px 14px;
+    padding: 23px 15px 23px 15px;
     cursor: pointer;
     user-select: none;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 150%;
+    line-height: 110%;
     color: rgba(20, 26, 38, 0.4);
 }
 
 .new-select__list {
     position: absolute;
-    top: 42px;
+    top: 64px;
     left: 0;
     border: 1px solid rgba(20, 26, 38, 0.4);
     cursor: pointer;
@@ -200,8 +280,8 @@
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 111%;
+    font-size: 18px;
+    line-height: 110%;
     color: rgba(20, 26, 38, 0.4);
     user-select: none;
     text-align: left;
@@ -229,19 +309,17 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
 .new-select:after {
     content: '';
     display: block;
-    width: 26px;
-    height: 13px;
+    width: 15px;
+    height: 10px;
     fill: rgba(20, 26, 38, 0.5);
     position: absolute;
-    right: 9px;
-    top: 16px;
-    background: url(../img/Vector.svg) no-repeat center / cover;
+    right: 13px;
+    top: 43%;
+    background: url(../img/Vector-2.svg) no-repeat center / contain;
     opacity: 1;
-
     -webkit-transition: all .27s ease-in-out;
     -o-transition: all .27s ease-in-out;
     transition: all .27s ease-in-out;
-
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -256,333 +334,3 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
 }
 
 // https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
-
-
-
-
-
-
-
-
-
-
-
-// .section-consultation {
-//     min-height: 498px;
-//     padding: 60px 10px;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: flex-start;
-//     flex-wrap: wrap;
-//     position: relative;
-//     background-color: #366BDB;
-
-// }
-
-// .div-form-wrap {
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: flex-start;
-
-// }
-
-// .h2-heading-consultation {
-//     width: 667px;
-//     height: 100%;
-//     font-family: Inter;
-//     font-style: normal;
-//     font-weight: bold;
-//     font-size: 38px;
-//     line-height: 150%;
-//     color: @txtButtonColor;
-//     text-align: left;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: flex-start;
-
-// }
-
-
-
-
-
-
-
-
-// .consultation-img {
-//     width: 575px;
-//     height: 509px;
-//     position: relative;
-//     margin: 0 89px 0 0;
-
-// }
-
-// .section-consultation>div>img:nth-child(2) {
-//     position: absolute;
-//     left: 300px;
-//     top: 289px;
-
-// }
-
-// .p-form-consultation {
-//     font-family: 'Montserrat', sans-serif;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 24px;
-//     line-height: 29px;
-//     color: #333333;
-//     margin: 0;
-// }
-
-// .input-text {
-//     width: 100%;
-//     font-family: 'Montserrat', sans-serif;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 18px;
-//     line-height: 22px;
-//     color: #333333;
-//     padding: 9px 9px 9px 14px;
-//     border-bottom: 1px solid #D0D0D0;
-//     outline: none;
-// }
-
-// ._error {
-//     // color: #EE5252;
-//     border-bottom: 1px solid #EE5252;
-// }
-
-// .p-input-text-error {
-//     visibility: hidden;
-//     font-family: 'Montserrat', sans-serif;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 14px;
-//     line-height: 17px;
-//     color: #EE5252;
-//     padding: 9px 9px 9px 14px;
-// }
-
-// .display-block {
-//     visibility: visible;
-// }
-
-// .item-form-li {
-//     margin: 0 0 38px 0;
-// }
-
-// .p-input-text {
-//     margin: 0 0 44px 0;
-//     padding: 9px 9px 9px 14px;
-// }
-
-// // .select-form {
-// //     outline: none;
-// // }
-
-// .button-form {
-//     height: 58px;
-//     width: 217px;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     // padding: 18px 32px;
-//     background: @colorButton;
-//     border-radius: 4px;
-//     margin: 0 0 21px 0;
-//     outline: none;
-//     box-sizing: border-box;
-//     font-family: Inter;
-//     font-style: normal;
-//     font-weight: bold;
-//     font-size: 18px;
-//     line-height: 22px;
-//     color: @txtButtonColor;
-
-// }
-
-// .button-form:hover .span-button-form {
-//     color: #AA816D;
-//     text-decoration: underline;
-// }
-
-// .button-form:hover {
-//     color: #AA816D;
-//     background: #FFFFFF;
-//     border: 1px solid #AA816D;
-//     box-sizing: border-box;
-// }
-
-// #form>ul>li.button>button {
-//     outline: none;
-// }
-
-// .option-form {
-//     text-align: left;
-//     font-family: 'Montserrat', sans-serif;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 12px;
-//     line-height: 10px;
-//     color: #333333;
-// }
-
-// .span-button-form {
-//     // width: 153px;
-//     // height: 22px;
-//     font-family: 'Montserrat', sans-serif;
-//     font-style: normal;
-//     font-weight: 600;
-//     font-size: 18px;
-//     line-height: 22px;
-//     color: #FFFFFF;
-//     flex: none;
-//     order: 0;
-//     align-self: center;
-//     flex-grow: 0;
-//     // margin: 10px 0px;
-// }
-
-// ::placeholder {
-//     font-family: 'Montserrat', sans-serif;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 18px;
-//     line-height: 22px;
-//     color: #333333;
-//     padding: 9px 9px 9px 0;
-// }
-
-
-// .p-form-confidentiality {
-//     font-family: 'Montserrat', sans-serif;
-//     font-style: normal;
-//     font-weight: normal;
-//     font-size: 14px;
-//     line-height: 130%;
-//     color: #333333;
-// }
-
-// .form-consultation {
-//     width: 445px;
-
-// }
-
-// .confidentiality {
-//     color: #333333;
-//     text-decoration: underline;
-// }
-
-// .confidentiality:hover {
-//     color: #AA816D;
-// }
-
-
-
-
-
-// .form-consultation {
-//     position: relative;
-// }
-
-// .form-consultation::after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: rgba(51, 51, 51, 0.9) url("../img/loading.gif") center / 50px no-repeat;
-//     opacity: 0;
-//     visibility: hidden;
-//     transition: all 0.5s ease 0s;
-// }
-
-// .form-consultation._sending::after {
-//     opacity: 0.7;
-//     visibility: visible;
-// }
-
-
-
-// .a-anchor-link {
-//     // Данный способ убирает элемент из вида, при этом не затрагивая поток html-документа, оставляя пустое пространство в том месте, где данный элемент должен был находиться.
-//     visibility: hidden;
-// }
-
-// .pop-up_window {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 1000;
-//     background: rgba(0, 0, 0, 0.4);
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     display: none;
-// }
-
-// .pop-up_window-block {
-//     display: flex;
-// }
-
-// .pop-up_window-none {
-//     display: none;
-// }
-
-// .pop-up_window-application {
-//     width: 500px;
-//     height: 350px;
-//     background: #F5F0EA;
-//     border-radius: 4px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     align-items: center;
-//     padding: 75px 0 0 0;
-//     position: relative;
-// }
-
-// .p-pop-up {
-//     width: 278px;
-//     height: 74px;
-//     font-family: 'Cormorant', serif;
-//     font-style: normal;
-//     font-weight: bold;
-//     font-size: 30px;
-//     line-height: 123.48%;
-//     text-align: center;
-//     color: #333333;
-// }
-
-// .div-cross {
-//     position: absolute;
-//     right: 26px;
-//     top: 26px;
-//     width: 26px;
-//     height: 26px;
-//     background-image: url(../img/cross.png);
-//     background-size: contain;
-//     background-position: center;
-//     background-repeat: no-repeat;
-// }
-
-// .div-cross:hover {
-//     transform: scale(1.2);
-// }
-
-// .pop-up-svg {
-//     width: 150px;
-//     height: 150px;
-// }
-
-
-// .section-consultation ===============================================

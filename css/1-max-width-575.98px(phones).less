@@ -1,5 +1,10 @@
 // Extra small devices (portrait phones, less than 576px)
+
+// @import "variables.less";
+
 @media (min-width: 321px) and (max-width: 575.98px) {
+
+
 
 
     // основной цвет фона
@@ -23,119 +28,36 @@
     // цвет стрелок переключения
     @arrowColor: #3A6FDE;
 
-    // @keyframes cubeAnimation {
-    //     0% {
-    //         transform: rotate(0deg);
-    //     }
+    // // МИКСИНЫ 
 
-    //     50% {
-    //         transform: rotate(180deg);
-    //     }
+    .flex-column-start-base {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-    //     100% {
-    //         transform: rotate(360deg);
-    //     }
-    // }
-
-    // @keyframes circleAnimation1 {
-    //     0% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     25% {
-    //         background: #366BDB;
-    //     }
-
-    //     50% {
-    //         background: #366BDB;
-    //     }
-
-    //     75% {
-    //         background: #366BDB;
-    //     }
-
-    //     100% {
-    //         background: #366BDB;
-    //     }
-    // }
-
-    // @keyframes circleAnimation2 {
-    //     0% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     25% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     50% {
-    //         background: #366BDB;
-    //     }
-
-    //     75% {
-    //         background: #366BDB;
-    //     }
-
-    //     100% {
-    //         background: #366BDB;
-    //     }
-    // }
-
-    // @keyframes circleAnimation3 {
-    //     0% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     25% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     50% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     75% {
-    //         background: #366BDB;
-    //     }
-
-    //     100% {
-    //         background: #366BDB;
-    //     }
-    // }
-
-    // @keyframes circleAnimation4 {
-    //     0% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     25% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     50% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     75% {
-    //         background: rgba(54, 107, 219, 0.4);
-    //     }
-
-    //     100% {
-    //         background: #366BDB;
-    //     }
-    // }
-
-
+    // // МИКСИНЫ 
 
     #btnUp {
         width: 40px;
         height: 40px;
     }
 
+    .header {
+
+        .modal-body {
+            height: 121px;
+        }
+
+    }
+
+
     .modal-body {
         padding: 0;
         width: 100%;
-        height: 121px;
+        // height: 121px;
         background: #FDFDFD;
         border-radius: 3px;
     }
@@ -148,17 +70,6 @@
         position: relative;
     }
 
-    button.close {
-        border-radius: 50%;
-        position: absolute;
-        top: -52px;
-        right: 0px;
-        width: 40px;
-        height: 40px;
-        background: #3A6FDE;
-        opacity: 1;
-        outline: none;
-    }
 
     .close {
         text-shadow: none;
@@ -332,9 +243,7 @@
         // display: none
     }
 
-    .section-contacts {
-        // display: none
-    }
+
 
 
     .whatsApp {
@@ -496,24 +405,6 @@
         transform: rotate(-45deg) translate(0, 0px);
         width: 36px;
     }
-
-    // .burger-menu-elem {
-    //     position: absolute;
-    //     width: 400px;
-    //     height: 100vh;
-    //     margin: -100px 0 0 -60px;
-    //     padding: 50px;
-    //     padding-top: 125px;
-    //     background: #fff;
-    //     list-style-type: none;
-    //     transform: translate(-100%, 0%);
-    //     transform-origin: 0% 0%;
-    //     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    // }
-
-
-
-
 
 
 
@@ -872,21 +763,6 @@
         height: 195.9px;
     }
 
-    .slideCars1 {}
-
-    .slideCars2 {}
-
-    .slideCars3 {}
-
-    .slideCars4 {}
-
-    .slideCars5 {}
-
-    .slideCars6 {}
-
-    .swiper-pagination {}
-
-    .swiper-pagination-cars {}
 
     .section-advantages {
         padding: 40px 25px 40px 25px;
@@ -923,9 +799,6 @@
         padding: 15px;
     }
 
-    .decorative-square-3 {}
-
-    .decorative-square-4 {}
 
     .h2-section-price {
         font-size: 24px;
@@ -956,9 +829,6 @@
         width: 100%;
     }
 
-    .footer {
-        display: none;
-    }
 
 
     .map {
@@ -986,19 +856,6 @@
         font-size: 12px;
     }
 
-    // ::-moz-placeholder {
-    //     color: #c0392b;
-    // }
-
-    // /* Firefox 19+ */
-    // :-moz-placeholder {
-    //     color: #c0392b;
-    // }
-
-    // /* Firefox 18- */
-    // :-ms-input-placeholder {
-    //     color: #c0392b;
-    // }
 
 
     .city-search__magnifier {
@@ -1097,127 +954,215 @@
         text-align: left;
     }
 
-    .sCircle-wP2 {}
-
-    .sCircle-wP3 {}
-
-    .sCircle-wP4 {}
+    // стили для секции ОТПРАВИТЬ ЗАЯВКУ
 
     .section-sendApplication {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        padding: 40px 0 47px 0;
+
+        .h2-section-sendApplication {
+            min-height: 90px;
+            margin: 0 0 40px 0;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            line-height: 150%;
+        }
+
+        .input-text-section-sendApplication {
+            padding: 18px 16px 18px 16px;
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+
+        .input-text-section-sendApplication::-webkit-input-placeholder {
+            font-size: 14px;
+        }
+
+        .new-select {
+            font-size: 14px;
+            padding: 18px 16px 18px 16px;
+        }
+
+        .new-select__list {
+            font-size: 14px;
+            top: 50px;
+        }
+
+        .select {
+            margin-bottom: 24px;
+        }
+
+        .button-sectionSendApplication {
+            height: 47px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .p-form-confidentiality {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .decorative-square-5 {
+            position: absolute;
+            width: 625px;
+            height: 625px;
+            left: -36%;
+            top: -147%;
+            border: 9.86287px solid rgba(253, 253, 253, 0.2);
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+
+        .contact-form__input-wrapper_name,
+        .contact-form__input-wrapper,
+        .select,
+        .p-form-confidentiality {
+            z-index: 10;
+        }
+
+        .form-section-sendApplication {
+
+            .contact-form__message {
+                font-size: 20px;
+            }
+
+            .header-contacts-modal {
+                padding: 33px 23px 33px 23px;
+            }
+
+            .modal-content {
+                width: 93%;
+            }
+
+            button.close {
+                top: -48px;
+                right: -11px;
+            }
+        }
+
     }
 
-    .decorative-square-5 {
-        display: none;
+    // стили для секции ОТПРАВИТЬ ЗАЯВКУ
+
+
+    // стили для секции КОНТАКТЫ 
+
+    .section-contacts {
+        padding: 40px 0 40px 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .h2-section-contacts {
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0 0 40px 0;
+        }
+
+        .article-sectionContacts {
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0px 15px 0 15px;
+            width: 100%;
+            margin: 0 0 52px 0;
+        }
+
+        .span-wrapperPhones,
+        .span-wrapperMail,
+        .p-address,
+        .phone-sectionContacts,
+        .mail-sectionContacts,
+        .span-servicesYandex {
+            font-size: 14px;
+        }
+
+        .wrapper-phones,
+        .wrapper-mail,
+        .p-address {
+            margin: 0 0 14px 0;
+        }
+
+        .span-servicesYandex {
+            margin: 0 0 15px 0;
+        }
+
+        .img-servicesYandex {
+            width: 28px;
+            height: 28px;
+        }
+
+        .span-nameServicesYandex {
+            font-size: 14px;
+        }
+
+        .a-servicesYandex {
+            margin: 0 60px 0 0;
+        }
+
+        .wrapper-servicesYandex>a:nth-child(3) {
+            margin: 0;
+        }
+
+        .wrapper-rightSideContacts {
+            // position: relative;
+            width: 100%;
+            .flex-column-start-base;
+        }
+
+        .img-sectionContacts {
+            position: static;
+            width: 70%;
+            // display: none;
+        }
+
+        .decorative-square-6 {
+            // animation: none;
+
+        }
+
+
     }
 
-    .pop-up_window {}
+    // стили для секции КОНТАКТЫ 
 
-    .pop-up_window-application {}
 
-    .pop-up-svg {}
 
-    .p-pop-up {}
+    // стили для секции ПОДВАЛА 
 
-    .div-cross {}
-
-    .h2-section-sendApplication {
-        width: 100%;
-        text-align: center;
-        font-size: 24px;
-        line-height: 150%;
-
+    .footer {
+        // display: none;
     }
 
-    .form-section-sendApplication {}
+    // стили для секции ПОДВАЛА 
 
-    .input-text-section-sendApplication {}
 
-    .select-form {}
 
-    .select {}
 
-    .option-form {}
 
-    .button-sectionSendApplication {}
 
-    .p-form-confidentiality {}
 
-    .confidentiality {}
 
-    .section-contacts {}
 
-    .h2-section-contacts {}
 
-    .article-sectionContacts {
-        padding: 10px;
-        width: 100%;
-    }
 
-    .wrapper-phones {}
 
-    .span-wrapperPhones {}
 
-    .phone-sectionContacts {}
 
-    .wrapper-mail {}
 
-    .span-wrapperMail {}
 
-    .mail-sectionContacts {}
 
-    .p-address {}
 
-    .wrapper-servicesYandex {}
 
-    .span-servicesYandex {}
 
-    .a-servicesYandex {}
 
-    .img-servicesYandex {}
 
-    .span-nameServicesYandex {}
 
-    .wrapper-rightSideContacts {}
 
-    .img-sectionContacts {
-        width: 70%;
-        display: none;
-    }
 
-    .decorative-square-6 {}
-
-    .section-reviews {}
-
-    .section-clients {}
-
-    .a-anchor-link {}
-
-    .h2-heading {}
-
-    .wrapper-swiper {}
-
-    .wrapper-swiper-reviews {}
-
-    .image-slider {}
-
-    .image-slider-reviews {}
-
-    .swiper-button-prev {}
-
-    .swiper-button-prev_reviews {}
-
-    .arrow-svg {}
-
-    .arrow-svg-slider {}
-
-    .swiper-button-next {}
-
-    .swiper-button-next_reviews {}
-
-    .swiper-pagination_reviews {}
 
 
 
