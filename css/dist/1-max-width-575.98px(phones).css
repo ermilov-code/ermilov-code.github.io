@@ -101,7 +101,6 @@
     height: 100%;
     overflow: auto;
     transition: all 0.3s ease 0s;
-    background-color: #18b5a4;
     padding: 70px 10px 20px 10px;
   }
   .header__menu.active {
@@ -266,7 +265,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -744,6 +743,101 @@
   }
   .section-contacts .img-sectionContacts {
     position: static;
-    width: 70%;
+    width: 76%;
+  }
+  .section-contacts .decorative-square-6 {
+    width: 185.78px;
+    height: 185.78px;
+    border: 10.0658px solid rgba(20, 26, 38, 0.04);
+    border-radius: 27.8669px;
+    left: 212px;
+    top: -18px;
+  }
+  .footer {
+    padding: 40px 0 40px 0;
+  }
+  .footer .top-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .footer .bottom-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .footer .header-contacts-right {
+    display: none;
+  }
+  .footer .nav_link-whatsApp {
+    display: none;
+  }
+  .footer .footer-contacts-mobile,
+  .footer .footer-phones {
+    display: flex;
+  }
+  .footer .footer-contacts-mobile {
+    margin: 0 0 30px 0;
+  }
+  .footer .nav_link-whatsApp.whatsApp-footer {
+    display: block;
+  }
+  .footer .a-header-contacts {
+    color: #FDFDFD;
+    border: none;
+    font-size: 14px;
+  }
+  .footer .btn-primary {
+    display: none;
+  }
+  .footer .footer__menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .footer .nav_list.header__list {
+    position: static;
+    margin: 0 0 30px 0;
+    justify-content: flex-start;
+    background: none;
+    min-height: 10vh;
+  }
+  .footer .logo {
+    position: static;
+    display: block;
+    margin: 0 0 30px 0;
+  }
+  .footer .logo-txt {
+    margin: 0;
+  }
+  .footer .a-header-contacts:nth-child(1) {
+    margin: 0 0 8px 0;
+  }
+  .footer .nav_item.nav_item_burger {
+    margin: 10px 0 10px 0;
+    padding: 0;
+  }
+  .footer .p-rights-reserved,
+  .footer .confidentiality-footer {
+    margin: 0 0 16px 0;
+  }
+  .footer .section-developers {
+    align-items: center;
+  }
+  .footer .header__link,
+  .footer .p-rights-reserved,
+  .footer .confidentiality-footer,
+  .footer .a-section-developers {
+    font-size: 12px;
   }
 }

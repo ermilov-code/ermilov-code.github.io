@@ -1,9 +1,12 @@
 .flex-column-start-base {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+}
+.hidden-element {
+  display: none;
 }
 @keyframes cubeAnimation {
   0% {

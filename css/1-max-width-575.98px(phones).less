@@ -3,10 +3,6 @@
 // @import "variables.less";
 
 @media (min-width: 321px) and (max-width: 575.98px) {
-
-
-
-
     // основной цвет фона
     @backgroundColor: #FDFDFD;
     // основной цвет шрифта
@@ -29,7 +25,6 @@
     @arrowColor: #3A6FDE;
 
     // // МИКСИНЫ 
-
     .flex-column-start-base {
         display: flex;
         flex-direction: column;
@@ -46,11 +41,9 @@
     }
 
     .header {
-
         .modal-body {
             height: 121px;
         }
-
     }
 
 
@@ -97,10 +90,6 @@
     .main {
         // display: none;
     }
-
-
-
-
 
 
 
@@ -175,7 +164,7 @@
         height: 100%;
         overflow: auto;
         transition: all 0.3s ease 0s;
-        background-color: #18b5a4;
+        // background-color: #18b5a4;
         padding: 70px 10px 20px 10px;
     }
 
@@ -208,36 +197,11 @@
     }
 
 
-
-
-
-
-
-
-
-
-
-    .section-services {
-        // display: none
-    }
-
-    .section-cars {
-        // display: none
-    }
-
-    .section-advantages {
-        //  display: none
-    }
-
     .section-price {
         // display: none
         padding: 35px 0 10px 0;
     }
 
-    .section-workProcess {
-
-        // display: none
-    }
 
     .section-sendApplication {
         // display: none
@@ -251,10 +215,6 @@
         height: 36px;
     }
 
-
-    .wrapper {}
-
-    .header {}
 
     .btn-primary {
         display: block;
@@ -429,9 +389,6 @@
         display: block;
     }
 
-    .logo-txt {}
-
-    .txt-logo-1 {}
 
     .txt-logo-2 {
         font-size: 19.6px;
@@ -442,7 +399,7 @@
         top: 0;
         left: 0;
         // margin: -100px 0 0 -60px;
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -461,11 +418,6 @@
         transform: scale(1.0, 1.0);
         opacity: 1;
     }
-
-    // .burger-menu-elem li {
-    //     padding: 10px 0;
-    //     font-size: 30px;
-    // }
 
 
     .nav_item.nav_item_burger {
@@ -500,7 +452,6 @@
         margin: 0 16px 0px 0;
     }
 
-    .whatsApp {}
 
     .header-contacts .header-contacts-right {
         display: none;
@@ -599,13 +550,7 @@
         order: -1;
     }
 
-    .swiperHeader-button-prev {}
 
-    .svg-swiperHeader-button-prev {}
-
-    .swiperHeader-button-next {}
-
-    .svg-swiperHeader-button-next {}
 
     .swiper-container.swiperHeader-container {
         width: 100%;
@@ -630,15 +575,6 @@
         line-height: 15px;
     }
 
-    .swiper-wrapper {}
-
-    .swiperHeader-wrapper {}
-
-    .swiper-slide {}
-
-    .swiperHeader-slide {}
-
-    .card {}
 
     .swiperHeader-slide-img {
         order: -1;
@@ -646,7 +582,6 @@
         height: 310px;
     }
 
-    .main {}
 
     .section-services {}
 
@@ -954,8 +889,13 @@
         text-align: left;
     }
 
-    // стили для секции ОТПРАВИТЬ ЗАЯВКУ
 
+
+
+
+
+
+    // стили для секции ОТПРАВИТЬ ЗАЯВКУ
     .section-sendApplication {
         flex-direction: column;
         justify-content: flex-start;
@@ -1050,7 +990,6 @@
 
 
     // стили для секции КОНТАКТЫ 
-
     .section-contacts {
         padding: 40px 0 40px 0;
         flex-direction: column;
@@ -1115,13 +1054,17 @@
 
         .img-sectionContacts {
             position: static;
-            width: 70%;
+            width: 76%;
             // display: none;
         }
 
         .decorative-square-6 {
-            // animation: none;
-
+            width: 185.78px;
+            height: 185.78px;
+            border: 10.0658px solid rgba(20, 26, 38, 0.04);
+            border-radius: 27.8669px;
+            left: 212px;
+            top: -18px;
         }
 
 
@@ -1134,7 +1077,100 @@
     // стили для секции ПОДВАЛА 
 
     .footer {
-        // display: none;
+        padding: 40px 0 40px 0;
+
+        .top-header {
+            .flex-column-start-base;
+        }
+
+        .bottom-footer {
+            .flex-column-start-base;
+            padding: 0;
+        }
+
+        .header-contacts-right {
+            display: none;
+        }
+
+        .nav_link-whatsApp {
+            display: none;
+        }
+
+        .footer-contacts-mobile,
+        .footer-phones {
+            display: flex;
+        }
+
+        .footer-contacts-mobile {
+            margin: 0 0 30px 0;
+        }
+
+        .nav_link-whatsApp.whatsApp-footer {
+            display: block;
+        }
+
+        .a-header-contacts {
+            color: @txtButtonColor;
+            border: none;
+            font-size: 14px;
+
+        }
+
+        .btn-primary {
+            display: none;
+        }
+
+        .footer__menu {
+            position: relative;
+            width: 100%;
+            .flex-column-start-base;
+            padding: 0;
+        }
+
+        .nav_list.header__list {
+            position: static;
+            margin: 0 0 30px 0;
+            justify-content: flex-start;
+            background: none;
+            min-height: 10vh;
+        }
+
+        .logo {
+            position: static;
+            display: block;
+            margin: 0 0 30px 0;
+        }
+
+        .logo-txt {
+            margin: 0;
+        }
+
+        .a-header-contacts:nth-child(1) {
+            margin: 0 0 8px 0;
+        }
+
+        .nav_item.nav_item_burger {
+            margin: 10px 0 10px 0;
+            padding: 0;
+        }
+
+        .p-rights-reserved,
+        .confidentiality-footer {
+            margin: 0 0 16px 0;
+        }
+
+        .section-developers {
+            align-items: center;
+        }
+
+        .header__link, .p-rights-reserved, .confidentiality-footer, .a-section-developers {
+            font-size: 12px;
+        }
+
+
+
+
+
     }
 
     // стили для секции ПОДВАЛА 
