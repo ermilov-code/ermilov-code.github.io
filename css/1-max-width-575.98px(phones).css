@@ -25,6 +25,17 @@
   .modal-header {
     position: relative;
   }
+  button.close {
+    border-radius: 50%;
+    position: absolute;
+    top: -52px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background: #3A6FDE;
+    opacity: 1;
+    outline: none;
+  }
   .close {
     text-shadow: none;
     color: #FDFDFD;
