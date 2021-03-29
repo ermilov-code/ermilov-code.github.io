@@ -18,6 +18,7 @@
   }
   .header .header__menu.active {
     left: 0;
+    overflow-y: hidden;
   }
   .header .header__menu {
     left: -100%;
@@ -30,7 +31,7 @@
     color: #FDFDFD;
   }
   .header .nav_list.header__list {
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
   .modal-body {
     padding: 0;
