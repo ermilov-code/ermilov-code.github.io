@@ -29,6 +29,9 @@
     text-decoration: underline;
     color: #FDFDFD;
   }
+  .header .nav_list.header__list {
+    overflow-x: hidden;
+  }
   .modal-body {
     padding: 0;
     width: 100%;
