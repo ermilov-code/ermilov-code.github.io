@@ -21,19 +21,7 @@ $('.button-cities').click(
     }
 )
 
-// $(function () {
-//     $('.input-city-search').on('change', function () {
-//         var val = $('.input-city-search').val();
 
-//         var descriptionData = $('#accessible-cities').find('option[value="' + val + '"]').data('description');
-
-
-//         $('.description').html($(this).descriptionData);
-//         $('.description').fadeIn(500);
-
-//         // alert('data-id= ' + data_id);
-//     });
-// });
 
 
 
@@ -44,35 +32,10 @@ $(function () {
         var data_id = $('#accessible-cities').find('option[value="' + val + '"]').data('id');
         alert(data_id);
 
-        // $('.description').html($(this).data_id);
-
-        // $(data_id).replaceAll(".description");
-        // $('.description').fadeIn(500);
-
-
-
     });
 
 
 });
-
-
-// $(function () {
-//     $('.input-city-search').on('change', function () {
-//         let val = $('.input-city-search').val();
-
-//         let data_id = $('#accessible-cities').find('option[value="' + val + '"]').data('id');
-//         // alert('data-id= ' + data_id);
-
-//         // document.getElementById('description').value = this.data_id;
-//         // document.getElementById('description').innerHTML = this.data_id;
-//         $('.description').html($(this).data_id);
-//         $('.description').fadeIn(500);
-
-//     });
-
-
-// });
 
 
 
@@ -115,28 +78,7 @@ for (let anchor of anchors) {
 }
 
 
-// // скрипт для scroll-а текущего блока
 
-// let hiddenElement = document.getElementById("box-section-service");
-// let btn = document.querySelector('.arrow-svg');
-
-// function handleButtonClick() {
-//     hiddenElement.scrollIntoView({
-//         block: "start",
-//         behavior: "smooth"
-//     });
-// }
-
-// btn.addEventListener('click', handleButtonClick);
-
-// // КОНЕЦ скриптА для scroll-а текущего блока
-
-
-
-// // убираем pop-up_window при нажатии на крестик
-// document.querySelector('.div-cross').addEventListener('click', () => {
-//     document.querySelector('.pop-up_window').classList.remove('pop-up_window-block')
-// })
 
 
 

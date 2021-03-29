@@ -19,6 +19,9 @@
   padding: 65px 0 66px 0;
   overflow: hidden;
 }
+.footer .nav_item {
+  margin: 0 38px 0 0;
+}
 .top-footer {
   margin: 0 0 50px 0;
 }
