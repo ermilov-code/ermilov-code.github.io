@@ -1,0 +1,119 @@
+// .main ===============================================
+
+// ___________________________________________________________
+
+// ПЕРЕМЕННЫЕ
+
+// цвет фона
+@backgroundColor: #FFFFFF;
+// цвет текста
+@txtColor: #333333;
+// цвет кнопок сайта stylist-kids.ru
+@buttonColorWebsite: #AA816D;
+// цвет кнопок сайта stylist-kids.ru/guide
+@buttonColorGuide: #F5DF4D;
+// цвет текста в кнопке
+@txtColorButton: #FFFFFF;
+
+// ___________________________________________________________
+
+// МИКСИНЫ 
+
+.flex-column-start-base {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+// ___________________________________________________________
+
+
+
+
+
+.wrapper {
+    .flex-column-start-base;
+    width: 100%;
+    min-height: 100vh;
+    background-color: @backgroundColor;
+
+}
+
+.main {
+    .flex-column-start-base;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: @backgroundColor;
+}
+
+
+.h1-name {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 6vh;
+    line-height: 123.48%;
+    color: @txtColor;
+    margin: 0 0 13px 0;
+    padding: 20px 10px 20px 10px;
+}
+
+.link {
+    .flex-column-start-base;
+    justify-content: center;
+    width: 60%;
+    height: 58px;
+    border-radius: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 2.5vh;
+    line-height: 22px;
+    text-decoration: none;
+    text-align: center;
+    color: @txtColorButton;
+    background: @buttonColorWebsite;
+    margin: 0 0 20px 0;
+}
+
+.link:hover,
+.link:active {
+    color: @txtColorButton;
+    text-decoration: underline;
+}
+
+.link__guide {
+    background: @buttonColorGuide;
+    color: @txtColor;
+}
+
+.link__guide:hover,
+.link__guide:active {
+    color: @txtColor;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .main ===============================================

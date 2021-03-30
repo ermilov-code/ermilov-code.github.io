@@ -1,49 +1,5 @@
 // ============================================================
 
-
-$('.part').click(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(500);
-    }
-)
-
-$('.description').click(
-    function () {
-        $('.description').fadeOut(500);
-    }
-)
-
-$('.button-cities').click(
-    function () {
-        $('.description').html($(this).attr('description-data'));
-        $('.description').fadeIn(500);
-    }
-)
-
-
-
-
-
-$(function () {
-    $('#input-city-search').on('change', function () {
-        var val = $('#input-city-search').val();
-
-        var data_id = $('#accessible-cities').find('option[value="' + val + '"]').data('id');
-        alert(data_id);
-
-    });
-
-
-});
-
-
-
-// ИНТЕРАКТИВНАЯ карта
-
-
-
-
 // бургер меню
 $(document).ready(function () {
     $('.header__burger').click(function (event) {
@@ -78,7 +34,28 @@ for (let anchor of anchors) {
 }
 
 
+// скрипт для scroll-а текущего блока
 
+let hiddenElement = document.getElementById("box-section-service");
+let btn = document.querySelector('.arrow-svg');
+
+function handleButtonClick() {
+    hiddenElement.scrollIntoView({
+        block: "start",
+        behavior: "smooth"
+    });
+}
+
+btn.addEventListener('click', handleButtonClick);
+
+// КОНЕЦ скриптА для scroll-а текущего блока
+
+
+
+// убираем pop-up_window при нажатии на крестик
+document.querySelector('.div-cross').addEventListener('click', () => {
+    document.querySelector('.pop-up_window').classList.remove('pop-up_window-block')
+})
 
 
 

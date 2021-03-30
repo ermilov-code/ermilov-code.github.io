@@ -1,0 +1,148 @@
+// =====================================================
+
+// переменные, миксины, стилизация отдельных блоков тоже идет отдельными файлами, стилизация ЧАСТО ИСПОЛЬЗУЕМЫХ ЭЛЕМЕНТОВ (кнопка) - как правило записываются в отдельные файлы
+
+// добавлять эффект наведения и эффект нажатия всем КНОПКАМ, переключателям, логатипам, элементам меню!
+
+// минимальное обнуление стилей 
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    /*убираем маркеры списка*/
+    margin: 0;
+    /*убираем верхнее и нижнее поле, равное 1em*/
+    padding-left: 0;
+    /*убираем левый отступ, равный 40px*/
+}
+
+a {
+    text-decoration: none;
+    /*убираем подчеркивание текста ссылок*/
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+
+
+@font-face {
+    font-family: 'Lighthaus';
+    src: url('../fonts/Lighthaus.eot');
+    src: url('../fonts/Lighthaus.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lighthaus.woff2') format('woff2'),
+        url('../fonts/Lighthaus.woff') format('woff'),
+        url('../fonts/Lighthaus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../fonts/Cormorant-Bold.eot');
+    src: url('../fonts/Cormorant-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Cormorant-Bold.woff2') format('woff2'),
+        url('../fonts/Cormorant-Bold.woff') format('woff'),
+        url('../fonts/Cormorant-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.eot');
+    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff'),
+        url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Thin.eot');
+    src: url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+        url('../fonts/Montserrat-Thin.woff') format('woff'),
+        url('../fonts/Montserrat-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.eot');
+    src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+        url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+// @import "variables.css";
+// @import "header.css";
+// @import "mixins.css";
+@import "main.css";
+// @import "section-services.css";
+// @import "section-clients.css";
+// @import "section-reviews.css";
+// @import "section-consultation.css";
+// @import "footer.css";
+// @import "privacy-policy.css";
+// @import "5-min-width-1824px.css";
+// @import "4-992px-1199.98px(desktops).css";
+// @import "3-768px-991.98px(tablets).css";
+
+// @import "0-max-width-320px(small-phones).css";
+// @import "1-max-width-575.98px(phones).css";
+// @import "2-576px-767.98px(landscape phones).css";
+// @import "6-max-width: 767.98px.css";
+
+// =====================================================
