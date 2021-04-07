@@ -1,0 +1,103 @@
+@keyframes cubeAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes circleAnimation1 {
+  0% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  25% {
+    background: #366BDB;
+  }
+  50% {
+    background: #366BDB;
+  }
+  75% {
+    background: #366BDB;
+  }
+  100% {
+    background: #366BDB;
+  }
+}
+@keyframes circleAnimation2 {
+  0% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  25% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  50% {
+    background: #366BDB;
+  }
+  75% {
+    background: #366BDB;
+  }
+  100% {
+    background: #366BDB;
+  }
+}
+@keyframes circleAnimation3 {
+  0% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  25% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  50% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  75% {
+    background: #366BDB;
+  }
+  100% {
+    background: #366BDB;
+  }
+}
+@keyframes circleAnimation4 {
+  0% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  25% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  50% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  75% {
+    background: rgba(54, 107, 219, 0.4);
+  }
+  100% {
+    background: #366BDB;
+  }
+}
+.main {
+  display: none;
+}
+.section-services {
+  display: none;
+}
+.section-cars {
+  display: none;
+}
+.section-advantages {
+  display: none;
+}
+.section-price {
+  display: none;
+}
+.section-workProcess {
+  display: none;
+}
+.section-sendApplication {
+  display: none;
+}
+.section-contacts {
+  display: none;
+}

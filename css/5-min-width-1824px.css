@@ -1,64 +1,99 @@
 /* Большие экраны ----------- */
 @media only screen and (min-width: 1824px) {
-  .wrap-container-1110 {
-    width: 1390px;
-    margin: 0 auto;
+  @keyframes cubeAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  .img-header {
-    object-fit: contain;
-    height: 75vh;
-    width: 571px;
+  .blue-square {
+    width: 1300px;
+    height: 1200.59px;
+    left: 1158px;
+    top: -282.41px;
   }
-  .txt-header {
-    width: 50%;
+  .swiper-container-cars .head-slider-control {
+    width: 280px;
+    top: 74%;
+    left: 43%;
   }
-  .h1-name {
-    font-size: 81px;
-    line-height: 97.48%;
+  .swiper-container-cars {
+    padding: 44px 0 41px 0;
   }
-  .middle-header .services-item {
-    font-size: 26px;
-    line-height: 41px;
+  .swiper-pagination.swiper-pagination-cars {
+    width: 92px;
+    height: 92px;
   }
-  .a-consultation {
-    font-size: 20px;
-    width: 392px;
-    height: 81px;
+  .logo {
+    left: -322px;
+    top: -21px;
   }
-  .arrow-svg {
-    bottom: -23px;
+  .head-slider-control {
+    width: 206px;
+    height: 76px;
+    top: 643px;
+    left: 365px;
   }
-  .separate-service {
-    margin: 15px;
-    width: 45%;
+  .head-slider-control .swiperHeader-button-prev,
+  .head-slider-control .swiperHeader-button-next {
+    width: 75px;
+    height: 75px;
   }
-  .wrap-container-sServices {
-    justify-content: center;
+  .swiper-wrapper.swiper-wrapper-cars {
+    margin: 0 0 98px 0;
   }
-  .h3-service-name {
-    font-size: 32px;
+  .svg-swiperHeader-button-prev,
+  .svg-swiperHeader-button-next {
+    width: 23px;
+    height: 33px;
   }
-  .wrapper-price .a-consultation {
-    width: 305px;
+  .swiperHeader-slide-img {
+    width: 903px;
+    height: 100%;
+  }
+  .top-header {
+    padding: 0 45px 0 380px;
+    margin: 0px 0 107px 0;
+  }
+  .p-txt-header {
+    font-size: 27px;
+  }
+  .nav_link.header__link {
+    font-size: 27px;
+  }
+  .a-header-contacts {
+    font-size: 28px;
+  }
+  .whatsApp {
+    width: 67px;
     height: 67px;
   }
-  .section-clients {
-    height: 80vh;
+  .txt-logo-1 {
+    font-size: 38px;
   }
-  .image-slider__image-img {
-    height: 449px;
+  .txt-logo-2 {
+    font-size: 31.6px;
   }
-  .image-slider .swiper-pagination {
-    bottom: 4px;
+  .middle-header {
+    padding: 0 0 0 380px;
+    align-items: flex-start;
   }
-  .wrapper-swiper-reviews .swiper-slide-active {
-    transform: scale(2.4);
+  .txt-header {
+    width: 628px;
+    height: 545px;
   }
-  .image-slider-reviews {
-    height: 806px;
-    padding: 232px 0 190px 0;
+  .h1-name {
+    font-size: 58px;
+    min-height: 225px;
   }
-  .section-reviews {
-    min-height: 88vh;
+  .a-consultation-header {
+    bottom: 32px;
+    left: 380px;
+    font-size: 24px;
   }
 }

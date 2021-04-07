@@ -1,0 +1,90 @@
+.section-workProcess {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 60px 0;
+}
+.h2-section-workProcess {
+  width: 100%;
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;
+  color: #141A26;
+  margin: 0 0 98px 0;
+}
+.wrapper-section-workProcess {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.dotted-line {
+  position: absolute;
+  width: 2196%;
+  top: 22px;
+  left: 102%;
+  height: 0px;
+  border: 2px dashed rgba(20, 26, 38, 0.3);
+  z-index: 3;
+}
+.article-workProcess {
+  width: 268px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 40px 0 40px;
+  z-index: 100;
+}
+.big-circle-workProcess {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(20, 26, 38, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 21px 0;
+  z-index: 100;
+  background: #FDFDFD;
+}
+.small-circle-workProcess {
+  width: 18px;
+  height: 18px;
+  background: rgba(54, 107, 219, 0.4);
+  border-radius: 50%;
+  z-index: 100;
+}
+.sCircle-wP1 {
+  animation: circleAnimation1 infinite linear 8s;
+  z-index: 100;
+}
+.sCircle-wP2 {
+  animation: circleAnimation2 infinite linear 8s;
+  z-index: 100;
+}
+.sCircle-wP3 {
+  animation: circleAnimation3 infinite linear 8s;
+  z-index: 100;
+}
+.sCircle-wP4 {
+  animation: circleAnimation4 infinite linear 8s;
+  z-index: 100;
+}
+.p-workProcess {
+  text-align: center;
+  width: 100%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 130%;
+  color: #141A26;
+  margin: 0;
+}

@@ -2,8 +2,8 @@
 $msgs = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
-    $token = "1418709221:AAHg0drPYXFV4wgZYHwTx355af_bM-XH_4I";
-    $chat_id = "-1001258031710";
+    $token = "1631195970:AAEz6lO167W4kxTAp_Qv7LnEmlPTOE-LGPw";
+    $chat_id = "-439970138";
  
     if (!empty($_POST['name']) && !empty($_POST['phone'])){
         $bot_url = "https://api.telegram.org/bot{$token}/";
@@ -85,20 +85,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
         $sendTextToTelegram = file_get_contents("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}");
         if ($output && $sendTextToTelegram) {
-            $msgs['okSend'] = 'Спасибо за заявку!';
+            $msgs['okSend'] = ' Ваша заявка отправлена! <br> Ожидайте нашего звонка ';
             echo json_encode($msgs);
         } elseif ($sendTextToTelegram) {
-            $msgs['okSend'] = 'Спасибо за заявку!';
+            $msgs['okSend'] = ' Ваша заявка отправлена! <br> Ожидайте нашего звонка ';
             echo json_encode($msgs);
           return true;
         } else {
-            $msgs['err'] = 'Ошибка. Сообщение не отправлено!';
+            $msgs['err'] = ' Ошибка. <br> Сообщение не отправлено! ';
             echo json_encode($msgs);
-            die('Ошибка. Сообщение не отправлено!');
+            die(' Ошибка. Сообщение не отправлено! ');
         }
  
     } else {
-        $msgs['err'] = 'Ошибка. Вы заполнили не все обязательные поля!';
+        $msgs['err'] = ' Ошибка. <br> Вы заполнили не все обязательные поля! ';
         echo json_encode($msgs);;
     }
 } else {
