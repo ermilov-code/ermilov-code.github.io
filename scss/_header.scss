@@ -1,0 +1,261 @@
+// _header.scss ____________________________
+
+
+.header {
+    min-height: 100vh;
+    background: $background-color;
+    padding: 25px 0 0 0;
+
+}
+
+.container {}
+
+.header__control {
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    @include display-row-start;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+
+// styles for BURGER MENU ===============
+.burger-menu {
+    @include responsive-width(50, 30);
+    @include responsive-height(50, 30);
+
+    &__button {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 30;
+        @include responsive-width(50, 30);
+        @include responsive-height(50, 30);
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    &__lines::before,
+    &__lines::after,
+    &__lines {
+        position: absolute;
+        @include responsive-width (31, 18);
+        @include responsive-height (4.7, 2);
+        background-color: #BB1E99;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    &__lines {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__lines::before {
+        @include responsive-width (46.8, 28);
+        content: '';
+        // top: -6px;
+        @include responsive-top (-12, -6);
+    }
+
+    &__lines::after {
+        @include responsive-width (12.5, 7.5);
+        content: '';
+        @include responsive-top (12, 6);
+        // top: 6px;
+    }
+
+    &_active .burger-menu__lines {
+        background-color: transparent;
+    }
+
+    &_active .burger-menu__lines::before {
+        @include responsive-width (27, 20);
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    &_active .burger-menu__lines::after {
+        @include responsive-width (27, 20);
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    &__nav {
+        padding-top: 120px;
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        flex-flow: column;
+        width: 100vw;
+        height: 100%;
+        background-color: #F9AFE9;
+        overflow-y: auto;
+        left: -100%;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -o-transition: 0.8s;
+        transition: 0.8s;
+    }
+
+    &_active .burger-menu__nav {
+        left: 0;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    &__link {
+        padding: 18px 35px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-weight: 400;
+        color: #BB1E99;
+        border-bottom: 1px solid #fff;
+    }
+
+    &__link:first-child {
+        border-top: 1px solid #fff;
+    }
+
+    &__link:hover {
+        filter: brightness(0.9);
+    }
+
+    &__overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+    }
+
+    &_active .burger-menu__overlay {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+// / styles for BURGER MENU ===============
+
+
+.logo {
+    font-family: CRENZO;
+    font-style: normal;
+    font-weight: normal;
+    @include responsive-font(32, 15);
+    line-height: 15px;
+    color: $text-color;
+
+    &__underline {
+        color: $accent-color;
+    }
+
+    &:hover {
+        color: $accent-color;
+        transition: color 0.8s;
+    }
+
+    &:active {}
+}
+
+
+
+.header__contacts {
+
+    .btn {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        &__icon {
+            @include responsive-width(40, 24);
+            @include responsive-height(40, 24);
+
+        }
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+.btn-primary {}
+
+.btn__icon {}
+
+.modal {}
+
+.fade {}
+
+.modal-dialog {}
+
+.modal-content {}
+
+.modal-header {}
+
+.modal-title {}
+
+.btn-close {}
+
+.modal-body {}
+
+.modal-footer {}
+
+.btn-secondary {}
+
+.header__content {}
+
+
+
+
+
+
+
+
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}
+
+
+
+// _header.scss ____________________________

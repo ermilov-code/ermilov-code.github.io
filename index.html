@@ -1,807 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
-  <!-- <meta name="viewport" content="width=1300px, initial-scale=1.0"> -->
+  <!-- From the Freelancer template -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <!-- =================== -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Откачка септиков, выгребных ям, канализации, воды - Ликино-Дулёво, Куровское, Шатура, Егорьевск, Орехово-Зуево
-    - Вызов ассенизатора - Утилизация ЖБО</title>
-  <meta name="description"
-    content="Откачать канализацию в частном доме, откачать туалет в частном доме, откачать туалет на даче цена, откачать воду из подвала, откачать воду из погреба, откачать воду из колодца, откачать септик. Ликино-Дулево, Шатура, Егорьевск, Куровское, Авсюнино. Орехово-Зуевский, Шатурский, Егорьевский район Московской области, Срочный вызов ассенизатора.">
-  <meta name="keywords"
-    content="откачать канализацию в частном доме цена, откачать септик в частном доме цена, вызов ассенизатора, откачка орехово-зуево, откачка шатура, откачка ликино-дулёво, откачка егорьевск, откачка куровское, откачка авсюнино">
-  <link rel="shortcut icon" href="img/site-icon.png" type="image/png" />
+  <!-- A bit of SEO -->
+  <title>Разработка сайтов – заказать сайт под ключ | Веб-разработчик Павел Ермилов</title>
+  <meta name="keywords" content="Заказ сайта, Заказать сайт, Cоздание сайтов, Разработка сайта, Заказать лендинг" />
+  <meta name="description" content="Закажите разработку сайта у частного веб-разработчика" />
+  <!-- =================== -->
   <link rel="stylesheet" href="css/normalize.css" />
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Website Icon -->
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 </head>
 
 <body>
-
-  <!-- КНОПКА ВВЕРХ НА САЙТЕ -->
-  <div id="btnUp">
-    <svg class="btnUp__white" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1 1L11 11L21 1" stroke="#FFFFFF" stroke-width="0.977869" stroke-linecap="round"
-        stroke-linejoin="round" />
-    </svg>
-  </div>
-
+  <!-- =================== HTML =================== -->
   <div class="wrapper">
-    <div class="decorative-square-1"></div>
-    <header class="header" id="homePage">
-      <div class="blue-square"></div>
-      <!-- /.blue-square -->
-      <!-- <div class="decorative-square-1"></div> -->
-      <div class="container-header">
-        <div class="top-header">
-          <div class="header__burger">
-            <!-- <input type="checkbox" class="input_nav" /> -->
-            <span class="span_burgerMenu"></span>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__control">
+          <div class="burger-menu">
+            <a href="" class="burger-menu__button">
+              <span class="burger-menu__lines"></span>
+            </a>
+            <nav class="burger-menu__nav">
+              <a href="#section-1" class="burger-menu__link">Обо мне</a>
+              <a href="#section-2" class="burger-menu__link">Сертификаты</a>
+              <a href="#section-3" class="burger-menu__link">Портфолио</a>
+              <a href="#section-4" class="burger-menu__link">Услуги</a>
+              <a href="#section-5" class="burger-menu__link">Процесс работы</a>
+              <a href="#section-6" class="burger-menu__link">Стоимость</a>
+              <a href="#section-7" class="burger-menu__link">Отзывы</a>
+              <a href="#section-8" class="burger-menu__link">Контакты</a>
+            </nav>
+            <div class="burger-menu__overlay"></div>
+            <!-- /.burger-menu__overlay -->
           </div>
-          <!-- /.header__burger -->
-          <nav class="nav header__menu">
-            <a href="index.html" class="logo">
-              <div class="logo-txt">
-                <span class="txt-logo-1">ОТКАЧКА</span>
-                <span class="txt-logo-2">ОТ БОРИСА</span>
-              </div>
-            </a>
-            <ul class="nav_list header__list">
-              <li class="nav_item nav_item_burger">
-                <a href="#homePage" class="nav_link header__link">Главная</a>
-              </li>
-              <li class="nav_item nav_item_burger">
-                <a href="#box-section-service" class="nav_link header__link">Услуги</a>
-              </li>
-              <li class="nav_item nav_item_burger">
-                <a href="#myCars" class="nav_link header__link">Техника</a>
-              </li>
-              <li class="nav_item nav_item_burger">
-                <a href="#price" class="nav_link header__link">Стоимость</a>
-              </li>
-              <!-- <li class="nav_item nav_item_burger">
-                <a href="#process" class="nav_link header__link">Процесс работы</a>
-              </li> -->
-              <li class="nav_item nav_item_burger">
-                <a href="#сontacts" class="nav_link header__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <a href="index.html" id="logo-mobile">
-            <div class="logo-txt">
-              <span class="txt-logo-1">ОТКАЧКА</span>
-              <span class="txt-logo-2">ОТ БОРИСА</span>
-            </div>
+          <!-- /.burger-menu -->
+          <a href="index.html" class="logo">
+            ermilov<span class="logo__underline">_</span>code
           </a>
-          <div class="header-contacts">
-            <a href="https://wa.me/79261357645" class="nav_link nav_link-whatsApp">
-              <svg class="whatsApp" width="32" height="32" viewBox="-23 -21 682 682.66669"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m544.386719 93.007812c-59.875-59.945312-139.503907-92.9726558-224.335938-93.007812-174.804687 0-317.070312 142.261719-317.140625 317.113281-.023437 55.894531 14.578125 110.457031 42.332032 158.550781l-44.992188 164.335938 168.121094-44.101562c46.324218 25.269531 98.476562 38.585937 151.550781 38.601562h.132813c174.785156 0 317.066406-142.273438 317.132812-317.132812.035156-84.742188-32.921875-164.417969-92.800781-224.359376zm-224.335938 487.933594h-.109375c-47.296875-.019531-93.683594-12.730468-134.160156-36.742187l-9.621094-5.714844-99.765625 26.171875 26.628907-97.269531-6.269532-9.972657c-26.386718-41.96875-40.320312-90.476562-40.296875-140.28125.054688-145.332031 118.304688-263.570312 263.699219-263.570312 70.40625.023438 136.589844 27.476562 186.355469 77.300781s77.15625 116.050781 77.132812 186.484375c-.0625 145.34375-118.304687 263.59375-263.59375 263.59375zm144.585938-197.417968c-7.921875-3.96875-46.882813-23.132813-54.148438-25.78125-7.257812-2.644532-12.546875-3.960938-17.824219 3.96875-5.285156 7.929687-20.46875 25.78125-25.09375 31.066406-4.625 5.289062-9.242187 5.953125-17.167968 1.984375-7.925782-3.964844-33.457032-12.335938-63.726563-39.332031-23.554687-21.011719-39.457031-46.960938-44.082031-54.890626-4.617188-7.9375-.039062-11.8125 3.476562-16.171874 8.578126-10.652344 17.167969-21.820313 19.808594-27.105469 2.644532-5.289063 1.320313-9.917969-.664062-13.882813-1.976563-3.964844-17.824219-42.96875-24.425782-58.839844-6.4375-15.445312-12.964843-13.359374-17.832031-13.601562-4.617187-.230469-9.902343-.277344-15.1875-.277344-5.28125 0-13.867187 1.980469-21.132812 9.917969-7.261719 7.933594-27.730469 27.101563-27.730469 66.105469s28.394531 76.683594 32.355469 81.972656c3.960937 5.289062 55.878906 85.328125 135.367187 119.648438 18.90625 8.171874 33.664063 13.042968 45.175782 16.695312 18.984374 6.03125 36.253906 5.179688 49.910156 3.140625 15.226562-2.277344 46.878906-19.171875 53.488281-37.679687 6.601563-18.511719 6.601563-34.375 4.617187-37.683594-1.976562-3.304688-7.261718-5.285156-15.183593-9.253906zm0 0"
-                  fill-rule="evenodd" />
-              </svg>
-            </a>
-            <div class="header-contacts-right">
-              <a href="tel:+79852976113" class="a-header-contacts">+7 (985) 297-61-13</a>
-              <a href="tel:+79261357645" class="a-header-contacts">+7 (926) 135-76-45</a>
-            </div>
-            <!-- /.header-contacts-right -->
-            <!-- Vertically centered modal -->
-
-
-
+          <div class="header__contacts">
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M33.2343 27.0217C31.9937 25.7717 28.989 23.9475 27.5312 23.2124C25.6328 22.2561 25.4765 22.178 23.9843 23.2866C22.989 24.0264 22.3273 24.6874 21.1625 24.4389C19.9976 24.1905 17.4664 22.7897 15.25 20.5803C13.0336 18.3709 11.5515 15.7663 11.3023 14.6053C11.0531 13.4444 11.725 12.7905 12.4578 11.7928C13.4906 10.3866 13.4125 10.1522 12.5296 8.25376C11.8414 6.7772 9.96402 3.80064 8.70934 2.56626C7.36715 1.24048 7.36715 1.47486 6.5023 1.83423C5.79822 2.13047 5.12274 2.49057 4.48433 2.91001C3.23433 3.74048 2.54058 4.43032 2.05543 5.46704C1.57027 6.50376 1.3523 8.93423 3.85777 13.4858C6.36324 18.0374 8.12105 20.3647 11.7593 23.9928C15.3976 27.621 18.1953 29.5717 22.2851 31.8655C27.3445 34.6991 29.2851 34.1467 30.325 33.6624C31.3648 33.178 32.0578 32.4905 32.8898 31.2405C33.3103 30.6031 33.6712 29.9284 33.9679 29.2249C34.3281 28.3631 34.5625 28.3631 33.2343 27.0217Z"
-                  stroke="#FDFDFD" stroke-width="2.6" stroke-miterlimit="10" />
+              <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28">
+                <path stroke="#F4F4F4" stroke-miterlimit="10" stroke-width="2"
+                  d="M25.426 20.914c-.93-.937-3.184-2.306-4.277-2.857-1.424-.717-1.541-.776-2.66.056-.747.555-1.243 1.05-2.117.864-.873-.186-2.772-1.237-4.434-2.894-1.663-1.657-2.774-3.61-2.96-4.481-.188-.87.316-1.361.866-2.11.774-1.054.716-1.23.054-2.654-.517-1.107-1.925-3.34-2.866-4.265-1.006-.995-1.006-.82-1.655-.55a9.385 9.385 0 0 0-1.513.807c-.938.623-1.458 1.14-1.822 1.918-.364.778-.527 2.6 1.352 6.014s3.197 5.16 5.926 7.88c2.729 2.721 4.827 4.185 7.894 5.905 3.795 2.125 5.25 1.71 6.03 1.348.78-.364 1.3-.88 1.924-1.817.315-.478.586-.984.808-1.511.27-.647.446-.647-.55-1.653z" />
               </svg>
             </button>
-
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-dialog">
                 <div class="modal-content">
-
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
                   <div class="modal-body">
-                    <div class="header-contacts-modal">
-                      <a href="tel:+79852976113" class="a-header-contacts">+7 (985) 297-61-13</a>
-                      <a href="tel:+79261357645" class="a-header-contacts">+7 (926) 135-76-45</a>
-                    </div>
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                   </div>
                 </div>
               </div>
             </div>
-
-
-
-
           </div>
+          <!-- /.header__contacts -->
         </div>
-        <!-- /.top-header -->
+        <!-- /.header__control -->
+        <div class="header__content">
 
-        <div class="swiper-container swiperHeader-container">
-
-          <div class="swiper-wrapper swiperHeader-wrapper">
-            <div class="swiper-slide swiperHeader-slide card">
-              <div class="middle-header">
-                <div class="txt-header">
-                  <h1 class="h1-name">Откачка септиков, туалетов, выгребных ям, канализации</h1>
-                  <p class="p-txt-header">
-                    Услуги ассенизатора - Ликино-Дулёво, Орехово-Зуево, Шатура, Рошаль, Черусти, Куровское, Егорьевск и
-                    другие населенные пункты на востоке и юго-востоке Московской области
-                  </p>
-                  <!-- <a href="#sendApplication" class="a-consultation a-consultation-header">Оставить заявку</a> -->
-                </div>
-                <!-- /.txt-header -->
-                <img src="img/auto-1-min.png" alt="авто-1" class="swiperHeader-slide-img" width="1000" height="800">
-              </div>
-              <!-- /.middle-header -->
-            </div>
-            <div class="swiper-slide swiperHeader-slide card">
-              <div class="middle-header">
-                <div class="txt-header">
-                  <h2 class="h1-name">Каналопромывочная машина, илосос</h2>
-                  <p class="p-txt-header">
-                    Прочистка канализации, откачка и чистка отстойников и накопителей жидких отходов - услуги для
-                    предприятий и организаций в Московской области
-                  </p>
-                </div>
-                <!-- /.txt-header -->
-                <img src="img/auto-2-min.png" alt="авто-2" class="swiperHeader-slide-img" width="1000" height="800">
-              </div>
-              <!-- /.middle-header -->
-            </div>
-          </div>
-          <a href="#sendApplication" class="a-consultation a-consultation-header">Заказать откачку</a>
-          <div class="head-slider-control">
-            <div class="swiperHeader-button-prev">
-              <svg class="svg-swiperHeader-button-prev" width="22" height="12" viewBox="0 0 22 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="swiperHeader-button-next">
-              <svg class="svg-swiperHeader-button-next" width="22" height="12" viewBox="0 0 22 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-          </div>
-          <!-- /.head-slider-control -->
         </div>
-        <a href="tel:+79261357645" id="uptocall-mini" rel="open_form" title='Позвонить'>
-          <div class="uptocall-mini-phone"></div>
-        </a>
+        <!-- /.header__content -->
       </div>
-      <!-- /.container-header -->
+      <!-- /.container -->
     </header>
 
-    <main class="main" id="box-section-service">
+    <main id="section-1" class="main">
+      <div class="container">
 
-      <section class="section-services">
-        <h2 class="h2-heading-services">Какие услуги мы оказываем</h2>
-        <div class="service-wrapper">
-          <article class="separate-service s-s-1">
-            <h3 class="h3-service-name">Откачка септиков, выгребных ям и уличных туалетов в частном секторе</h3>
-            <img src="img/s-s-1.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <article class="separate-service s-s-2">
-            <h3 class="h3-service-name">Откачка септиков, выгребных ям в магазинах, кафе и ресторанах</h3>
-            <img src="img/s-s-2.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <article class="separate-service s-s-3">
-            <h3 class="h3-service-name">Откачка биотуалетов и вывоз жидких бытовых отходов с предприятий</h3>
-            <img src="img/s-s-3.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <article class="separate-service s-s-4">
-            <h3 class="h3-service-name">Откачка отстойников на автомойках и АЗС</h3>
-            <img src="img/s-s-4.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <article class="separate-service s-s-5">
-            <h3 class="h3-service-name">Регулярная откачка для предприятий</h3>
-            <img src="img/s-s-5.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <article class="separate-service s-s-6">
-            <h3 class="h3-service-name">Откачка воды, фекальных и ливневых стоков</h3>
-            <img src="img/s-s-6.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <article class="separate-service s-s-7">
-            <h3 class="h3-service-name">Каналопромывочная машина</h3>
-            <img src="img/s-s-7.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <article class="separate-service s-s-8">
-            <h3 class="h3-service-name">Бурление скважин на воду</h3>
-            <img src="img/s-s-8.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <article class="separate-service s-s-9">
-            <h3 class="h3-service-name">Монтаж систем канализации, водоснабжения, отопления</h3>
-            <img src="img/s-s-9.png" alt="img" class="img-service">
-            <a href="#sendApplication" class="a-consultation a-consultation-service">Заказать</a>
-          </article>
-          <div class="decorative-square-2"></div>
-        </div>
-        <!-- /.service-wrapper -->
-
-
-
-      </section>
-
-      <section class="section-cars" id="myCars">
-        <!-- <a href="#" class="a-anchor-link"></a> -->
-        <h2 class="h2-heading-cars">Наша техника</h2>
-
-        <div class="slider-container slider-container-cars">
-          <div class="swiper-container swiper-container-cars">
-            <div class="swiper-wrapper swiper-wrapper-cars">
-              <div class="swiper-slide swiper-slide-cars card">
-                <img src="img/1imgCar.jpg" alt="откачка септиков" class="sliderCars__img">
-              </div>
-              <div class="swiper-slide swiper-slide-cars card">
-                <img src="img/2imgCar.jpg" alt="откачка септиков" class="sliderCars__img">
-              </div>
-              <div class="swiper-slide swiper-slide-cars card">
-                <img src="img/3imgCar.jpg" alt="откачка септиков" class="sliderCars__img">
-              </div>
-              <div class="swiper-slide swiper-slide-cars card">
-                <img src="img/4imgCar.jpg" alt="откачка септиков" class="sliderCars__img">
-              </div>
-              <div class="swiper-slide swiper-slide-cars card">
-                <img src="img/5imgCar.jpg" alt="откачка септиков" class="sliderCars__img">
-              </div>
-              <div class="swiper-slide swiper-slide-cars card">
-                <img src="img/6imgCar.jpg" alt="откачка септиков" class="sliderCars__img">
-              </div>
-            </div>
-            <div class="head-slider-control" id="head-slider-control">
-              <div class="swiperHeader-button-prev swiperCars-button-prev">
-                <svg class="svg-swiperHeader-button-prev" width="22" height="12" viewBox="0 0 22 12" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-
-              <div class="swiper-pagination swiper-pagination-cars"></div>
-
-              <div class="swiperHeader-button-next swiperCars-button-next">
-                <svg class="svg-swiperHeader-button-next" width="22" height="12" viewBox="0 0 22 12" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L11 11L21 1" stroke="#FDFDFD" stroke-width="0.977869" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-            </div>
-            <!-- /.head-slider-control -->
-            <!-- <div class="swiper-pagination swiper-pagination-cars"></div> -->
-
-          </div>
-        </div>
-      </section>
-
-      <section class="section-advantages">
-        <h2 class="h2-section-advantages">Почему доверяют нам?</h2>
-        <article class="article-advantages">
-          <img src="img/advantages-1.png" alt="advantages" class="img-advantages" width="70" height="70">
-          <h4 class="h4-advantages">Мы работаем качественно и оперативно</h4>
-        </article>
-        <article class="article-advantages">
-          <img src="img/advantages-2.png" alt="advantages" class="img-advantages" width="70" height="70">
-          <h4 class="h4-advantages">Самые низкие цены в Орехово-Зуевском районе</h4>
-        </article>
-        <article class="article-advantages">
-          <img src="img/advantages-3.png" alt="advantages" class="img-advantages" width="70" height="70">
-          <h4 class="h4-advantages">Уже более 10 лет на рынке</h4>
-        </article>
-        <article class="article-advantages">
-          <img src="img/advantages-4.png" alt="advantages" class="img-advantages" width="70" height="70">
-          <h4 class="h4-advantages">Есть все необходимые лицензии для работы</h4>
-        </article>
-      </section>
-
-      <section class="section-price" id="price">
-        <div class="wrapper-section-price">
-          <div class="decorative-square-3"></div>
-          <div class="decorative-square-4"></div>
-          <h2 class="h2-section-price">Стоимость</h2>
-          <p class="p-section-price">
-            Стоимость одного рейса <b>от&nbsp;1.200&nbsp;₽.</b> <br>
-            Цена рассчитывается индивидуально и&nbsp;зависит от&nbsp;дальности поездки, объема и&nbsp;сложности откачки.
-            <br>
-            Уточнить стоимость работ и&nbsp;получить более подробную информацию можно по&nbsp;телефону: <a
-              href="tel:+79852976113" class="a-section-price">+7 (985) 297-61-13</a>.
-          </p>
-          <span class="span-section-price">
-            Нажмите на ваш район или введите название населённого пункта, чтобы узнать примерную стоимость откачки:
-          </span>
-          <div class="wrapper-form-section-price">
-            <form action="#" class="form-section-price">
-              <input type="text" id="input-city-search" class="input-city-search" placeholder="Населённый пункт"
-                list="accessible-cities">
-
-              <svg class="city-search__magnifier" width="30" height="30" viewBox="0 0 30 30" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12.9545 3.75C11.134 3.75 9.35443 4.28983 7.84075 5.30124C6.32708 6.31264 5.14732 7.75018 4.45065 9.43209C3.75399 11.114 3.57171 12.9647 3.92687 14.7502C4.28202 16.5357 5.15867 18.1758 6.44594 19.4631C7.73321 20.7503 9.37329 21.627 11.1588 21.9821C12.9443 22.3373 14.795 22.155 16.4769 21.4583C18.1588 20.7617 19.5963 19.5819 20.6078 18.0682C21.6192 16.5546 22.159 14.775 22.159 12.9545C22.1588 10.5134 21.189 8.17225 19.4629 6.44611C17.7367 4.71996 15.3956 3.75016 12.9545 3.75V3.75Z"
-                  stroke="#141A26" stroke-width="1.8125" stroke-miterlimit="10" />
-                <path d="M19.8213 19.8218L26.2496 26.2501" stroke="#141A26" stroke-width="1.8125" stroke-miterlimit="10"
-                  stroke-linecap="round" />
-              </svg>
-
-              <datalist id="accessible-cities" class="datalist__style">
-                <option value="Куровское"
-                  data-id="Куровское - Откачка канализации, септиков - 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Авсюнино"
-                  data-id="Авсюнино - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Ликино-Дулёво"
-                  data-id="Ликино-Дулёво - Откачка канализации, септиков - 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров. ">
-                </option>
-                <option value="Егорьевск"
-                  data-id="Егорьевск - Откачка канализации, септиков - 3000 руб. Откачка выгребных ям и уличных туалетов - 3500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Шатура"
-                  data-id="Шатура - Откачка канализации, септиков - 2500 руб. Откачка выгребных ям и уличных туалетов - 3000 руб. Стоимость указана из расчета длины шланга не более 10 метров. ">
-                </option>
-                <option value="Орехово-Зуево"
-                  data-id="Орехово-Зуево - Откачка канализации, септиков - от 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Запутное"
-                  data-id="Запутное - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Заполицы"
-                  data-id="Заполицы - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Зворково"
-                  data-id="Зворково - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Петрушино"
-                  data-id="Петрушино - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Мисцево"
-                  data-id="Мисцево - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Понарино"
-                  data-id="Понарино - Откачка канализации, септиков - 1200 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Титово"
-                  data-id="Титово - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Селиваниха"
-                  data-id="Селиваниха - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Устьяново"
-                  data-id="Устьяново - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Шувое"
-                  data-id="Шувое - Откачка канализации, септиков - 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Ильинский погост"
-                  data-id="Ильинский погост - Откачка канализации, септиков - 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Цаплино"
-                  data-id="Цаплино - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Степановка"
-                  data-id="Степановка - Откачка канализации, септиков - 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Абрамовка"
-                  data-id="Абрамовка - Откачка канализации, септиков 1500 руб. Откачка выгребных ям и уличных туалетов - 2000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Анциферово"
-                  data-id="Анциферово - Откачка канализации, септиков - 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Слободище"
-                  data-id="Слободище - Откачка канализации, септиков - 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Давыдово"
-                  data-id="Давыдово - Откачка канализации, септиков - 2000 руб. Откачка выгребных ям и уличных туалетов - 2500 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-                <option value="Андреево"
-                  data-id="Андреево - Откачка канализации, септиков - 2500 руб. Откачка выгребных ям и уличных туалетов - 3000 руб. Стоимость указана из расчета длины шланга не более 10 метров.    ">
-                </option>
-                <option value="Шатурторф"
-                  data-id="Шатурторф - Откачка канализации, септиков - 2500 руб. Откачка выгребных ям и уличных туалетов - 3000 руб. Стоимость указана из расчета длины шланга не более 10 метров.">
-                </option>
-
-
-                <!-- <option value="Дрезна" data-id="ХХххххххххх"></option>
-                <option value="Смолёво" data-id="ХХххххххххх"></option>
-                <option value="Соболево" data-id="ХХххххххххх"></option>
-                <option value="Дуброво" data-id="ХХххххххххх"></option>
-                <option value="Коротково" data-id="ХХххххххххх"></option>
-                <option value="Кабаново" data-id="ХХххххххххх"></option>
-                <option value="Губино" data-id="ХХххххххххх"></option>
-                <option value="Савинская" data-id="ХХххххххххх"></option>
-                <option value="Виноградово" data-id="ХХххххххххх"></option>
-                <option value="Кривандино" data-id="ХХххххххххх"></option>
-                <option value="Рошаль" data-id="ХХххххххххх"></option>
-                <option value="Черусти" data-id="ХХххххххххх"></option> -->
-              </datalist>
-
-              <div class="wrap-for-cities">
-                <button type="button" class="button-cities cities__1"
-                  description-data="<u>ОРЕХОВО-ЗУЕВО</u>: <br> Откачка канализации, септиков - <b>от  2000 руб</b>. Откачка выгребных ям и уличных туалетов - <b>2500 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Орехово-Зуево</button>
-                <button type="button" class="button-cities cities__10"
-                  description-data="<u>КУРОВСКОЕ</u>: <br> Откачка канализации, септиков - <b>2000 руб</b>. Откачка выгребных ям и уличных туалетов - <b>2500 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Куровское</button>
-                <button type="button" class="button-cities cities__2"
-                  description-data="<u>ДАВЫДОВО</u>: <br> Откачка канализации, септиков - <b>2000 руб</b>. Откачка выгребных ям и уличных туалетов - <b>2500 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Давыдово</button>
-                <button type="button" class="button-cities cities__3"
-                  description-data="<u>ЛИКИНО-ДУЛЕВО</u>: <br> Откачка канализации, септиков - <b>2000 руб</b>. Откачка выгребных ям и уличных туалетов - <b>2500 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Ликино-Дулёво</button>
-                <button type="button" class="button-cities cities__4"
-                  description-data="<u>ШАТУРА</u>: <br> Откачка канализации, септиков - <b>2500 руб</b>. Откачка выгребных ям и уличных туалетов - <b>3000 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Шатура</button>
-                <button type="button" class="button-cities cities__5"
-                  description-data="<u>ЕГОРЬЕВСК</u>: <br> Откачка канализации, септиков - <b>3000 руб</b>. Откачка выгребных ям и уличных туалетов - <b>3500 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Егорьевск</button>
-                <button type="button" class="button-cities cities__6"
-                  description-data="<u>АВСЮНИНО</u>: <br> Откачка канализации, септиков - <b>1500 руб</b>. Откачка выгребных ям и уличных туалетов - <b>2000 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Авсюнино</button>
-                <button type="button" class="button-cities cities__7"
-                  description-data="<u>ИЛЬИНСКИЙ ПОГОСТ</u>: <br> Откачка канализации, септиков - <b>2000 руб</b>. Откачка выгребных ям и уличных туалетов - <b>2500 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Ильинский
-                  погост</button>
-                <button type="button" class="button-cities cities__8"
-                  description-data="<u>АНЦИФЕРОВО</u>: <br> Откачка канализации, септиков - <b>2000 руб</b>. Откачка выгребных ям и уличных туалетов - <b>2500 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Анциферово</button>
-                <button type="button" class="button-cities cities__9"
-                  description-data="<u>МИСЦЕВО</u>: <br> Откачка канализации, септиков - <b>1500 руб</b>. Откачка выгребных ям и уличных туалетов - <b>2000 руб</b>.<br> <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">Мисцево</button>
-
-              </div>
-              <!-- /.wrap-for-cities -->
-
-
-            </form>
-            <div class="map">
-
-              <svg viewBox="0 0 1064 821.33331">
-                <a href="#">
-                  <path class="part" id="zona-1"
-                    d="m 240.94026,516.30057 c 10.38301,-30.41075 9.05382,-32.57109 9.49519,-33.23314 l 26.11175,-7.12139 15.42967,-66.46628 -11.86898,-46.28902 13.05588,-28.48555 45.10212,16.61657 52.2235,-14.24277 41.54143,23.73796 -4.74759,48.66281 87.83044,20.17726 32.04624,22.55106 26.11175,45.10212 -118.68978,36.79383 -5.93449,41.54143 -29.67245,22.55106 -153.10982,5.93449 -41.54143,-10.68208 11.86898,-78.33526 z"
-                    description-data="<u>Зона 1</u>: <br> Откачка канализации, септиков - <b>от&nbsp;1200&nbsp;руб</b>. Откачка выгребных ям и уличных туалетов -<b>&nbsp;2000&nbsp;руб</b>.<br> 
-                    <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">
-                </a>
-                <a href="#">
-                  <path class="part" id="zona-2"
-                    d="m 224.32369,291.97687 125.81118,3.56069 59.34489,14.24278 75.96146,-1.1869 41.54143,42.72832 92.57803,60.53179 33.23314,53.41041 -7.12139,21.36416 -62.90559,21.36416 -86.64354,80.70905 -73.58766,42.72833 -59.3449,-1.1869 -53.4104,3.56069 2.37379,30.85935 -81.89595,-9.49519 -56.97109,36.79384 -34.42004,-47.47592 -5.93449,-55.7842 51.03661,-137.68015 5.93449,-1.18689 16.61657,-40.35453 -2.3738,-48.66281 9.49518,-39.16763 66.46628,41.54142 11.86898,46.28902 -15.42967,66.46628 -26.11175,7.12139 c -2.86561,13.91449 -6.06061,22.2076 -9.49519,33.23314 l -4.74759,-1.1869 -11.86898,78.33526 41.54143,10.68208 153.10982,-5.93449 29.67245,-22.55106 5.93449,-41.54143 118.68978,-36.79383 -26.11175,-45.10212 -32.04624,-22.55106 -87.83044,-20.17726 4.74759,-48.66281 -41.54143,-23.73796 -52.2235,14.24277 -45.10212,-16.61657 -13.05588,28.48555 -66.46628,-41.54142 z"
-                    description-data="<u>Зона 2</u>: <br> Откачка канализации, септиков - <b>&nbsp;2000&nbsp;руб</b>. Откачка выгребных ям и уличных туалетов -<b>&nbsp;2500&nbsp;руб</b>.<br> 
-                    <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">
-                  </path>
-                </a>
-                <a href="#">
-                  <path class="part" id="zona-3"
-                    d="m 29.625138,471.30902 114.011892,-123.88694 11.67051,-70.92079 -20.64782,-32.31833 25.13648,-11.67051 6.28412,-21.54556 77.20491,-41.29564 138.25064,87.97768 177.75083,13.46597 66.43213,15.26144 179.54629,187.62587 -24.23875,37.70472 -135.55745,9.87505 -158.00074,135.55745 21.54556,54.76162 -10.77278,40.39792 -136.45518,33.21606 -70.02305,-87.07995 -33.21607,-20.64783 -85.28449,29.62514 -39.50018,-46.68203 -31.4206,-70.92079 -63.738937,-68.22759 145.366717,-70.5608 -51.03661,137.68015 5.93449,55.7842 34.42004,47.47592 56.97109,-36.79384 81.89595,9.49519 -2.37379,-30.85935 53.4104,-3.56069 59.3449,1.1869 73.58766,-42.72833 86.64354,-80.70905 62.90559,-21.36416 7.12139,-21.36416 -33.23314,-53.41041 -92.57803,-60.53179 -41.54143,-42.72832 -75.96146,1.1869 -59.34489,-14.24278 -125.81118,-3.56069 -10.68208,29.67245 -9.49518,39.16763 2.3738,48.66281 -16.61657,40.35453 -5.93449,1.18689 -145.366717,70.5608 z"
-                    description-data="<u>Зона 3</u>: <br> Откачка канализации, септиков - <b>от&nbsp;2000&nbsp;руб до 3500 руб</b>. Откачка выгребных ям и уличных туалетов - <b>от&nbsp;2500&nbsp;руб до 4000 руб</b>.<br> 
-                    <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">
-                </a>
-                <a href="#">
-                  <path class="part" id="zona-4"
-                    d="m 159.7962,232.51245 6.28412,-21.54556 77.20491,-41.29564 138.25064,87.97768 177.75083,13.46597 66.43213,15.26144 179.54629,187.62587 -24.23875,37.70472 -135.55745,9.87505 -158.00074,135.55745 21.54556,54.76162 -10.77278,40.39792 -136.45518,33.21606 -70.02305,-87.07995 -33.21607,-20.64783 -85.28449,29.62514 -39.50018,-46.68203 -31.4206,-70.92079 L 38.602453,521.58198 29.625138,471.30902 143.63703,347.42208 155.30754,276.50129 134.65972,244.18296 0,0 V 821.33331 H 1064 V 0 H 0 l 134.65972,244.18296 z"
-                    description-data="<u>Зона 4</u>: <br> Откачка канализации, септиков - <b>от&nbsp;2000&nbsp;руб</b>. Откачка выгребных ям и уличных туалетов -<b>&nbsp;от&nbsp;2500&nbsp;руб</b>.<br> 
-                    <i>Стоимость указана из расчета длины шланга не более 10 метров.</i>">
-                </a>
-              </svg>
-              <div class="description" id="description">
-                <!-- <div class="description__close"></div> -->
-                <!-- /.description__close -->
-              </div>
-              <!-- /.description -->
-              <img src="img/local-map.png" alt="local-map" class="img-local-map" width="750" height="570">
-            </div>
-            <!-- /.map -->
-
-          </div>
-          <!-- /.wrapper-form-section-price -->
-        </div>
-        <!-- /.wrapper-section-price -->
-      </section>
-      <!-- /.section-price -->
-
-      <section class="section-workProcess" id="process">
-        <h2 class="h2-section-workProcess">Процесс работы</h2>
-        <div class="wrapper-section-workProcess">
-          <!-- <div class="dotted-line"></div> -->
-          <!-- /.dotted-line -->
-          <article class="article-workProcess">
-            <div class="big-circle-workProcess">
-              <div class="dotted-line"></div>
-              <div class="small-circle-workProcess sCircle-wP1"></div>
-              <!-- /.small-circle-workProcess -->
-            </div>
-            <!-- /.big-circle-workProcess -->
-            <p class="p-workProcess">
-              Звоните нам/заполняете форму, мы согласовываем детали
-            </p>
-          </article>
-          <article class="article-workProcess">
-            <div class="big-circle-workProcess">
-              <div class="small-circle-workProcess sCircle-wP2"></div>
-              <!-- /.small-circle-workProcess -->
-            </div>
-            <!-- /.big-circle-workProcess -->
-            <p class="p-workProcess">
-              Приезжает ассенизаторская машина
-            </p>
-          </article>
-          <article class="article-workProcess">
-            <div class="big-circle-workProcess">
-              <div class="small-circle-workProcess sCircle-wP3"></div>
-              <!-- /.small-circle-workProcess -->
-            </div>
-            <!-- /.big-circle-workProcess -->
-            <p class="p-workProcess">
-              Производится откачка
-            </p>
-          </article>
-          <article class="article-workProcess">
-            <div class="big-circle-workProcess">
-              <div class="small-circle-workProcess sCircle-wP4"></div>
-              <!-- /.small-circle-workProcess -->
-            </div>
-            <!-- /.big-circle-workProcess -->
-            <p class="p-workProcess">
-              Мы отвозим отходы и утилизируем их
-            </p>
-          </article>
-        </div>
-        <!-- /.wrapper-section-workProcess -->
-      </section>
-      <!-- /.section-workProcess -->
-
-      <section class="section-sendApplication" id="sendApplication">
-        <!-- <div class="decorative-square-5"></div> -->
-        <!-- <div class="pop-up_window">
-          <div class="pop-up_window-application">
-            <svg class="pop-up-svg" width="151" height="151" viewBox="0 0 151 151" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M131.66 74.2344C131.66 43.0827 106.386 17.8086 75.2344 17.8086C44.0827 17.8086 18.8086 43.0827 18.8086 74.2344C18.8086 105.386 44.0827 130.66 75.2344 130.66C106.386 130.66 131.66 105.386 131.66 74.2344Z"
-                stroke="#AA816D" stroke-width="5" stroke-miterlimit="10" />
-              <path d="M103.447 50.7236L63.9492 97.7452L47.0215 78.9365" stroke="#AA816D" stroke-width="5"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <p class="p-pop-up">Ваша заявка успешно отправлена!</p>
-            <div class="div-cross"></div>
-          </div>
-        </div> -->
-        <!-- <div class="div-form-wrap"> -->
-        <h2 class="h2-section-sendApplication">Заполните форму и&nbsp;мы&nbsp;перезвоним вам в&nbsp;ближайшее время</h2>
-        <!-- ФОРМА ОБРАТНОЙ СВЯЗИ -->
-        <form id="form-contact" method="POST" class="contact-form form-section-sendApplication" autocomplete="off"
-          enctype="multipart/form-data">
-          <div class="decorative-square-5"></div>
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-
-                <button type="button" class="close close-form" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body">
-                  <div class="header-contacts-modal">
-                    <p class="contact-form__message" id="contact-form__message"></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
-            <input name="name" type="text"
-              class="contact-form__input contact-form__input_name input-text-section-sendApplication" tabindex="0"
-              placeholder="Ваше имя">
-          </div>
-          <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
-            <input name="phone" type="tel"
-              class="contact-form__input contact-form__input_phone input-text-section-sendApplication" tabindex="0"
-              placeholder="Ваш телефон - 7(999)4448811">
-          </div>
-
-
-          <select class="select-form select" name="whatService">
-            <option disabled class="option-form">Выберите услугу</option>
-            <option class="option-form" value="Откачка септиков, выгребных ям и уличных туалетов в частном секторе">
-              Откачка септиков, выгребных ям и уличных туалетов в частном секторе</option>
-            <option class="option-form" value="Откачка отстойников на автомойках и АЗС">Откачка отстойников на
-              автомойках и АЗС</option>
-            <!-- <option class="option-form" value="Регулярная откачка для предприятий">Регулярная откачка для предприятий
-            </option> -->
-            <option class="option-form" value="Каналопромывочная машина">Каналопромывочная машина
-            </option>
-            <option class="option-form" value="Другая услуга">Другая услуга
-            </option>
-          </select>
-          <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
-            value="Заявка с сайта">
-          <button type="submit" class="contact-form__button button-sectionSendApplication" data-toggle="modal"
-            data-target="#exampleModal1">Отправить заявку</button>
-          <p class="p-form-confidentiality">Нажимая на&nbsp;эту кнопку, вы&nbsp;соглашаетесь с&nbsp;
-            <a href="privacy-policy.html" class="confidentiality">политикой конфиденциальности</a>
-          </p>
-        </form>
-      </section>
-
-      <section class="section-contacts" id="сontacts">
-        <h2 class="h2-section-contacts">Контакты</h2>
-        <article class="article-sectionContacts">
-          <div class="wrapper-phones">
-            <span class="span-wrapperPhones"><b>Телефон:</b></span>
-            <a href="tel:+79852976113" class="phone-sectionContacts">+7 (985) 297-61-13</a>
-            <a href="tel:+79261357645" class="phone-sectionContacts">+7 (926) 135-76-45</a>
-            <a href="tel:+79032752989" class="phone-sectionContacts">+7 (903) 275-29-89</a>
-          </div>
-          <!-- /.wrapper-phones -->
-          <div class="wrapper-mail">
-            <span class="span-wrapperMail"><b>E-mail:</b></span>
-            <!-- <a href="mailto:otkachaem@mail.ru" class="mail-sectionContacts">otkachaem@mail.ru</a>
-            <a href="mailto:otkachaem@yandex.ru" class="mail-sectionContacts">otkachaem@yandex.ru</a> -->
-            <a href="mailto:nad.zakharova2010@yandex.ru" class="mail-sectionContacts">nad.zakharova2010@yandex.ru</a>
-          </div>
-          <!-- /.wrapper-mail -->
-          <p class="p-address"><b>Адрес:</b> 142645, Московская область, Орехово-Зуевский район, пос. Авсюнино, ул.
-            Ленина, д.29б/1. Магазин &laquo;СтройАрсенал&raquo;
-          </p>
-          <div class="wrapper-servicesYandex">
-            <span class="span-servicesYandex"><b>Мы на Яндекс Услугах:</b></span>
-            <a href="https://yandex.ru/uslugi/profile/YakovM-169262" class="a-servicesYandex">
-              <img width="30" height="30" src="img/img-servicesYandex.png" alt="img-servicesYandex"
-                class="img-servicesYandex">
-              <span class="span-nameServicesYandex">Яков</span>
-            </a>
-            <a href="https://yandex.ru/uslugi/profile/BorisM-215092" class="a-servicesYandex">
-              <img width="30" height="30" src="img/img-servicesYandex.png" alt="img-servicesYandex"
-                class="img-servicesYandex">
-              <span class="span-nameServicesYandex">Борис</span>
-            </a>
-          </div>
-        </article>
-        <div class="wrapper-rightSideContacts">
-          <img src="img/phone-contacts.png" alt="phone-contacts" class="img-sectionContacts">
-          <div class="decorative-square-6"></div>
-          <!-- /.decorative-square-6 -->
-        </div>
-        <!-- /.wrapper-rightSideContacts -->
-      </section>
+      </div>
+      <!-- /.container -->
 
     </main>
 
     <footer class="footer">
-      <div class="top-header top-footer">
-        <nav class="nav header__menu footer__menu">
-          <a href="index.html" class="logo">
-            <div class="logo-txt">
-              <span class="txt-logo-1">ОТКАЧКА</span>
-              <span class="txt-logo-2">ОТ БОРИСА</span>
-            </div>
-          </a>
-          <div class="header-contacts footer-contacts-mobile">
-            <a href="https://wa.me/79261357645" class="nav_link nav_link-whatsApp whatsApp-footer">
-              <svg class="whatsApp" width="32" height="32" viewBox="-23 -21 682 682.66669"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="m544.386719 93.007812c-59.875-59.945312-139.503907-92.9726558-224.335938-93.007812-174.804687 0-317.070312 142.261719-317.140625 317.113281-.023437 55.894531 14.578125 110.457031 42.332032 158.550781l-44.992188 164.335938 168.121094-44.101562c46.324218 25.269531 98.476562 38.585937 151.550781 38.601562h.132813c174.785156 0 317.066406-142.273438 317.132812-317.132812.035156-84.742188-32.921875-164.417969-92.800781-224.359376zm-224.335938 487.933594h-.109375c-47.296875-.019531-93.683594-12.730468-134.160156-36.742187l-9.621094-5.714844-99.765625 26.171875 26.628907-97.269531-6.269532-9.972657c-26.386718-41.96875-40.320312-90.476562-40.296875-140.28125.054688-145.332031 118.304688-263.570312 263.699219-263.570312 70.40625.023438 136.589844 27.476562 186.355469 77.300781s77.15625 116.050781 77.132812 186.484375c-.0625 145.34375-118.304687 263.59375-263.59375 263.59375zm144.585938-197.417968c-7.921875-3.96875-46.882813-23.132813-54.148438-25.78125-7.257812-2.644532-12.546875-3.960938-17.824219 3.96875-5.285156 7.929687-20.46875 25.78125-25.09375 31.066406-4.625 5.289062-9.242187 5.953125-17.167968 1.984375-7.925782-3.964844-33.457032-12.335938-63.726563-39.332031-23.554687-21.011719-39.457031-46.960938-44.082031-54.890626-4.617188-7.9375-.039062-11.8125 3.476562-16.171874 8.578126-10.652344 17.167969-21.820313 19.808594-27.105469 2.644532-5.289063 1.320313-9.917969-.664062-13.882813-1.976563-3.964844-17.824219-42.96875-24.425782-58.839844-6.4375-15.445312-12.964843-13.359374-17.832031-13.601562-4.617187-.230469-9.902343-.277344-15.1875-.277344-5.28125 0-13.867187 1.980469-21.132812 9.917969-7.261719 7.933594-27.730469 27.101563-27.730469 66.105469s28.394531 76.683594 32.355469 81.972656c3.960937 5.289062 55.878906 85.328125 135.367187 119.648438 18.90625 8.171874 33.664063 13.042968 45.175782 16.695312 18.984374 6.03125 36.253906 5.179688 49.910156 3.140625 15.226562-2.277344 46.878906-19.171875 53.488281-37.679687 6.601563-18.511719 6.601563-34.375 4.617187-37.683594-1.976562-3.304688-7.261718-5.285156-15.183593-9.253906zm0 0"
-                  fill-rule="evenodd" />
-              </svg>
-            </a>
-            <div class="header-contacts-right footer-phones">
-              <a href="tel:+79852976113" class="a-header-contacts">+7 (985) 297-61-13</a>
-              <a href="tel:+79261357645" class="a-header-contacts">+7 (926) 135-76-45</a>
-            </div>
-            <!-- /.header-contacts-right -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M33.2343 27.0217C31.9937 25.7717 28.989 23.9475 27.5312 23.2124C25.6328 22.2561 25.4765 22.178 23.9843 23.2866C22.989 24.0264 22.3273 24.6874 21.1625 24.4389C19.9976 24.1905 17.4664 22.7897 15.25 20.5803C13.0336 18.3709 11.5515 15.7663 11.3023 14.6053C11.0531 13.4444 11.725 12.7905 12.4578 11.7928C13.4906 10.3866 13.4125 10.1522 12.5296 8.25376C11.8414 6.7772 9.96402 3.80064 8.70934 2.56626C7.36715 1.24048 7.36715 1.47486 6.5023 1.83423C5.79822 2.13047 5.12274 2.49057 4.48433 2.91001C3.23433 3.74048 2.54058 4.43032 2.05543 5.46704C1.57027 6.50376 1.3523 8.93423 3.85777 13.4858C6.36324 18.0374 8.12105 20.3647 11.7593 23.9928C15.3976 27.621 18.1953 29.5717 22.2851 31.8655C27.3445 34.6991 29.2851 34.1467 30.325 33.6624C31.3648 33.178 32.0578 32.4905 32.8898 31.2405C33.3103 30.6031 33.6712 29.9284 33.9679 29.2249C34.3281 28.3631 34.5625 28.3631 33.2343 27.0217Z"
-                  stroke="#FDFDFD" stroke-width="2.6" stroke-miterlimit="10" />
-              </svg>
-            </button>
-          </div>
-          <ul class="nav_list header__list">
-            <li class="nav_item ">
-              <a href="#homePage" class="nav_link header__link">Главная</a>
-            </li>
-            <li class="nav_item ">
-              <a href="#box-section-service" class="nav_link header__link">Услуги</a>
-            </li>
-            <li class="nav_item ">
-              <a href="#myCars" class="nav_link header__link">Техника</a>
-            </li>
-            <li class="nav_item ">
-              <a href="#price" class="nav_link header__link">Стоимость</a>
-            </li>
-            <li class="nav_item ">
-              <a href="#сontacts" class="nav_link header__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header-contacts">
-          <a href="https://wa.me/79261357645" class="nav_link nav_link-whatsApp">
-            <svg class="whatsApp" width="32" height="32" viewBox="-23 -21 682 682.66669"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="m544.386719 93.007812c-59.875-59.945312-139.503907-92.9726558-224.335938-93.007812-174.804687 0-317.070312 142.261719-317.140625 317.113281-.023437 55.894531 14.578125 110.457031 42.332032 158.550781l-44.992188 164.335938 168.121094-44.101562c46.324218 25.269531 98.476562 38.585937 151.550781 38.601562h.132813c174.785156 0 317.066406-142.273438 317.132812-317.132812.035156-84.742188-32.921875-164.417969-92.800781-224.359376zm-224.335938 487.933594h-.109375c-47.296875-.019531-93.683594-12.730468-134.160156-36.742187l-9.621094-5.714844-99.765625 26.171875 26.628907-97.269531-6.269532-9.972657c-26.386718-41.96875-40.320312-90.476562-40.296875-140.28125.054688-145.332031 118.304688-263.570312 263.699219-263.570312 70.40625.023438 136.589844 27.476562 186.355469 77.300781s77.15625 116.050781 77.132812 186.484375c-.0625 145.34375-118.304687 263.59375-263.59375 263.59375zm144.585938-197.417968c-7.921875-3.96875-46.882813-23.132813-54.148438-25.78125-7.257812-2.644532-12.546875-3.960938-17.824219 3.96875-5.285156 7.929687-20.46875 25.78125-25.09375 31.066406-4.625 5.289062-9.242187 5.953125-17.167968 1.984375-7.925782-3.964844-33.457032-12.335938-63.726563-39.332031-23.554687-21.011719-39.457031-46.960938-44.082031-54.890626-4.617188-7.9375-.039062-11.8125 3.476562-16.171874 8.578126-10.652344 17.167969-21.820313 19.808594-27.105469 2.644532-5.289063 1.320313-9.917969-.664062-13.882813-1.976563-3.964844-17.824219-42.96875-24.425782-58.839844-6.4375-15.445312-12.964843-13.359374-17.832031-13.601562-4.617187-.230469-9.902343-.277344-15.1875-.277344-5.28125 0-13.867187 1.980469-21.132812 9.917969-7.261719 7.933594-27.730469 27.101563-27.730469 66.105469s28.394531 76.683594 32.355469 81.972656c3.960937 5.289062 55.878906 85.328125 135.367187 119.648438 18.90625 8.171874 33.664063 13.042968 45.175782 16.695312 18.984374 6.03125 36.253906 5.179688 49.910156 3.140625 15.226562-2.277344 46.878906-19.171875 53.488281-37.679687 6.601563-18.511719 6.601563-34.375 4.617187-37.683594-1.976562-3.304688-7.261718-5.285156-15.183593-9.253906zm0 0"
-                fill-rule="evenodd" />
-            </svg>
-          </a>
-          <div class="header-contacts-right">
-            <a href="tel:+79852976113" class="a-header-contacts">+7 (985) 297-61-13</a>
-            <a href="tel:+79261357645" class="a-header-contacts">+7 (926) 135-76-45</a>
-          </div>
-          <!-- /.header-contacts-right -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M33.2343 27.0217C31.9937 25.7717 28.989 23.9475 27.5312 23.2124C25.6328 22.2561 25.4765 22.178 23.9843 23.2866C22.989 24.0264 22.3273 24.6874 21.1625 24.4389C19.9976 24.1905 17.4664 22.7897 15.25 20.5803C13.0336 18.3709 11.5515 15.7663 11.3023 14.6053C11.0531 13.4444 11.725 12.7905 12.4578 11.7928C13.4906 10.3866 13.4125 10.1522 12.5296 8.25376C11.8414 6.7772 9.96402 3.80064 8.70934 2.56626C7.36715 1.24048 7.36715 1.47486 6.5023 1.83423C5.79822 2.13047 5.12274 2.49057 4.48433 2.91001C3.23433 3.74048 2.54058 4.43032 2.05543 5.46704C1.57027 6.50376 1.3523 8.93423 3.85777 13.4858C6.36324 18.0374 8.12105 20.3647 11.7593 23.9928C15.3976 27.621 18.1953 29.5717 22.2851 31.8655C27.3445 34.6991 29.2851 34.1467 30.325 33.6624C31.3648 33.178 32.0578 32.4905 32.8898 31.2405C33.3103 30.6031 33.6712 29.9284 33.9679 29.2249C34.3281 28.3631 34.5625 28.3631 33.2343 27.0217Z"
-                stroke="#FDFDFD" stroke-width="2.6" stroke-miterlimit="10" />
-            </svg>
-          </button>
-        </div>
+      <div class="container">
+
       </div>
-      <!-- /.top-header -->
-      <div class="bottom-footer">
-        <p class="p-rights-reserved">&copy;2010-2021&nbsp;&mdash; Otkachaem</p>
-        <a href="privacy-policy.html" class="confidentiality confidentiality-footer">Политика конфиденциальности</a>
-        <section class="section-developers">
-          <a href="https://www.behance.net/grodesgn" class="a-section-developers">
-            <span>Дизайн сайта:</span> &thinsp;
-            <p>Громова Ольга</p>
-          </a>
-          <a href="https://taplink.cc/ermilov_code" class="a-section-developers">
-            <span>Верстка сайта:</span> &thinsp;
-            <p>Ермилов Павел</p>
-          </a>
-        </section>
-      </div>
-      <!-- /.bottom-footer -->
-
-
-
+      <!-- /.container -->
     </footer>
-
 
   </div>
   <!-- /.wrapper -->
-
-
-
+  <!-- =================== HTML =================== -->
   <!-- =================== JS =================== -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="telegramform/js/telegramform.js"></script>
+
+  <!-- connection bootstrap@4.6.0 -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
   </script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/swiperHeader.js"></script>
-  <script src="js/swiperCars.js"></script>
+  <!-- connection bootstrap@4.6.0 -->
+
   <script src="js/main.js"></script>
+
   <!-- =================== JS =================== -->
+
 </body>
 
 </html>

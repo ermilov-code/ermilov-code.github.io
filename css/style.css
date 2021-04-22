@@ -1,106 +1,334 @@
-@import "starter-template.css";
-@import "variables.css";
-@import "header.css";
-@import "mixins.css";
-@import "main.css";
-@import "section-services.css";
-@import "section-cars.css";
-@import "section-advantages.css";
-@import "section-price.css";
-@import "section-workProcess.css";
-@import "section-sendApplication.css";
-@import "section-contacts.css";
-@import "privacy-policy.css";
-@import "footer.css";
-@import "5-min-width-1824px.css";
-@import "4-992px-1199.98px(desktops).css";
-@import "1-max-width-575.98px(phones).css";
-@import "2-576px-767.98px(landscape phones).css";
-@import "3-768px-991.98px(tablets).css";
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-Regular.eot');
-  src: url('../fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Inter-Regular.woff2') format('woff2'), url('../fonts/Inter-Regular.woff') format('woff'), url('../fonts/Inter-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
 }
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-Medium.eot');
-  src: url('../fonts/Inter-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Inter-Medium.woff2') format('woff2'), url('../fonts/Inter-Medium.woff') format('woff'), url('../fonts/Inter-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-Bold.eot');
-  src: url('../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Inter-Bold.woff2') format('woff2'), url('../fonts/Inter-Bold.woff') format('woff'), url('../fonts/Inter-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+
+:focus,
+:active {
+  outline: none;
 }
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.eot');
-  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+
+a:focus,
+a:active {
+  outline: none;
 }
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Bold.eot');
-  src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold.woff2') format('woff2'), url('../fonts/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+
+.btn-primary.focus,
+.btn-primary:focus {
+  background: none;
+  border: none;
+  box-shadow: none;
 }
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Black.eot');
-  src: url('../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Black.woff2') format('woff2'), url('../fonts/Montserrat-Black.woff') format('woff'), url('../fonts/Montserrat-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
 }
-::-webkit-input-placeholder {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
-  color: rgba(20, 26, 38, 0.4);
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
 }
-::-moz-placeholder {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
-  color: rgba(20, 26, 38, 0.4);
+
+a,
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
 }
-/* Firefox 19+ */
-:-moz-placeholder {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
-  color: rgba(20, 26, 38, 0.4);
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
 }
-/* Firefox 18- */
-:-ms-input-placeholder {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
-  color: rgba(20, 26, 38, 0.4);
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
 }
-@media (min-width: 1000px) {
-  #logo-mobile {
-    display: none;
+
+@media (max-width: 1182px) {
+  .container {
+    max-width: 970px;
   }
+}
+@media (max-width: 992.98px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: none;
+    padding: 0 15px;
+  }
+}
+input,
+button,
+textarea {
+  font-family: "";
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/*  
+Uniform writing style for VARIABLES and CLASSES: 
+for VARIABLES - $primary-color, $font-stack
+for MIXIN - @mixin display-row-start 
+*/
+@font-face {
+  font-family: 'CRENZO';
+  src: url("../fonts/CRENZORegular.eot");
+  src: url("../fonts/CRENZORegular.eot?#iefix") format("embedded-opentype"), url("../fonts/CRENZORegular.woff2") format("woff2"), url("../fonts/CRENZORegular.woff") format("woff"), url("../fonts/CRENZORegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Light.eot");
+  src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Bold.eot");
+  src: url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Russo One';
+  src: url("../fonts/RussoOne-Regular.eot");
+  src: url("../fonts/RussoOne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/RussoOne-Regular.woff2") format("woff2"), url("../fonts/RussoOne-Regular.woff") format("woff"), url("../fonts/RussoOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-ExtraBold.eot");
+  src: url("../fonts/OpenSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-SemiBold.eot");
+  src: url("../fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans-Regular.eot");
+  src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.header {
+  min-height: 100vh;
+  background: #151F28;
+  padding: 25px 0 0 0;
+}
+
+.header__control {
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.burger-menu {
+  width: calc(30px + 20 * ((100vw - 320px) / 1600));
+  height: calc(30px + 20 * ((100vw - 320px) / 1600));
+}
+.burger-menu__button {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 30;
+  width: calc(30px + 20 * ((100vw - 320px) / 1600));
+  height: calc(30px + 20 * ((100vw - 320px) / 1600));
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu__lines::before, .burger-menu__lines::after, .burger-menu__lines {
+  position: absolute;
+  width: calc(18px + 13 * ((100vw - 320px) / 1600));
+  height: calc(2px + 2.7 * ((100vw - 320px) / 1600));
+  background-color: #BB1E99;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu__lines {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.burger-menu__lines::before {
+  width: calc(28px + 18.8 * ((100vw - 320px) / 1600));
+  content: '';
+  top: calc(-6px + -6 * ((100vw - 320px) / 1600));
+}
+.burger-menu__lines::after {
+  width: calc(7.5px + 5 * ((100vw - 320px) / 1600));
+  content: '';
+  top: calc(6px + 6 * ((100vw - 320px) / 1600));
+}
+.burger-menu_active .burger-menu__lines {
+  background-color: transparent;
+}
+.burger-menu_active .burger-menu__lines::before {
+  width: calc(20px + 7 * ((100vw - 320px) / 1600));
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger-menu_active .burger-menu__lines::after {
+  width: calc(20px + 7 * ((100vw - 320px) / 1600));
+  top: 0;
+  transform: rotate(-45deg);
+}
+.burger-menu__nav {
+  padding-top: 120px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: 100%;
+  background-color: #F9AFE9;
+  overflow-y: auto;
+  left: -100%;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+.burger-menu_active .burger-menu__nav {
+  left: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu__link {
+  padding: 18px 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: #BB1E99;
+  border-bottom: 1px solid #fff;
+}
+.burger-menu__link:first-child {
+  border-top: 1px solid #fff;
+}
+.burger-menu__link:hover {
+  filter: brightness(0.9);
+}
+.burger-menu__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.burger-menu_active .burger-menu__overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-family: CRENZO;
+  font-style: normal;
+  font-weight: normal;
+  font-size: calc(15px + 17 * ((100vw - 320px) / 1600));
+  line-height: 15px;
+  color: #F4F4F4;
+}
+.logo__underline {
+  color: #00E991;
+}
+.logo:hover {
+  color: #00E991;
+  transition: color 0.8s;
+}
+
+.header__contacts .btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.header__contacts .btn__icon {
+  width: calc(24px + 16 * ((100vw - 320px) / 1600));
+  height: calc(24px + 16 * ((100vw - 320px) / 1600));
+}
+
+.main {
+  min-height: 100vh;
 }
