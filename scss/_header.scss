@@ -15,7 +15,7 @@
     top: 0px;
     left: 0px;
     @include display-row-start;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 }
@@ -47,7 +47,7 @@
         position: absolute;
         @include responsive-width (31, 18);
         @include responsive-height (4.7, 2);
-        background-color: #BB1E99;
+        background-color: $text-color;
         -webkit-transition: 0.4s;
         -moz-transition: 0.4s;
         -o-transition: 0.4s;
@@ -63,7 +63,6 @@
     &__lines::before {
         @include responsive-width (46.8, 28);
         content: '';
-        // top: -6px;
         @include responsive-top (-12, -6);
     }
 
@@ -71,7 +70,6 @@
         @include responsive-width (12.5, 7.5);
         content: '';
         @include responsive-top (12, 6);
-        // top: 6px;
     }
 
     &_active .burger-menu__lines {
@@ -79,19 +77,26 @@
     }
 
     &_active .burger-menu__lines::before {
-        @include responsive-width (27, 20);
-        top: 0;
         transform: rotate(45deg);
     }
 
     &_active .burger-menu__lines::after {
-        @include responsive-width (27, 20);
-        top: 0;
         transform: rotate(-45deg);
     }
 
+    &_active {
+
+        .burger-menu__lines::after,
+        .burger-menu__lines::before {
+            @include responsive-width (27, 20);
+            top: 0;
+            background-color: $menu-item-color;
+        }
+    }
+
     &__nav {
-        padding-top: 120px;
+        @include responsive-padding-top (173, 103);
+        @include responsive-padding-left (58, 16);
         position: fixed;
         top: 0;
         z-index: 20;
@@ -99,13 +104,20 @@
         flex-flow: column;
         width: 100vw;
         height: 100%;
-        background-color: #F9AFE9;
+        background-color: $text-color;
         overflow-y: auto;
         left: -100%;
         -webkit-transition: 0.8s;
         -moz-transition: 0.8s;
         -o-transition: 0.8s;
         transition: 0.8s;
+
+        .logo {
+            color: $background-color;
+            position: absolute;
+            @include responsive-top (114, 34);
+            @include responsive-left (92, 90);
+        }
     }
 
     &_active .burger-menu__nav {
@@ -117,19 +129,13 @@
     }
 
     &__link {
-        padding: 18px 35px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 18px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        font-weight: 400;
-        color: #BB1E99;
-        border-bottom: 1px solid #fff;
-    }
-
-    &__link:first-child {
-        border-top: 1px solid #fff;
+        @include responsive-margin-bottom (40, 30);
+        font-family: Russo One;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font (40, 20);
+        @include responsive-line-height (48, 24);
+        color: $menu-item-color;
     }
 
     &__link:hover {
@@ -159,7 +165,7 @@
     font-family: CRENZO;
     font-style: normal;
     font-weight: normal;
-    @include responsive-font(32, 15);
+    @include responsive-font(32, 14);
     line-height: 15px;
     color: $text-color;
 
@@ -185,9 +191,25 @@
         border: none;
         outline: none;
 
+
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: inherit;
+
         &__icon {
             @include responsive-width(40, 24);
             @include responsive-height(40, 24);
+
+            &:hover {
+                transform: scale(1.2);
+                transition: transform 0.8s;
+
+            }
+
+            &:active {
+                transform: scale(1.2);
+                transition: transform 0.8s;
+            }
 
         }
     }

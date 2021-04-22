@@ -18,6 +18,9 @@ $accent-color: #00E991;
 $menu-item-color: rgba(21, 31, 40, 0.6);
 // COLOR menu item on :hover :focus :active
 $menu-item-color-OnHover: #151F28;
+// Phone button color on :hover :focus :active
+$phone-button-color-OnHover: rgba(244, 244, 244, 0.6);
+
 
 // FONT SIZES:
 $font-size-H1: 62px;
@@ -54,6 +57,12 @@ $max-width: 1920;
     font-size: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
+@mixin responsive-line-height($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    line-height: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
 @mixin responsive-width($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
@@ -72,10 +81,28 @@ $max-width: 1920;
     padding-top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
+@mixin responsive-padding-left($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-bottom($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
 @mixin responsive-top($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
     top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-left($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
 
