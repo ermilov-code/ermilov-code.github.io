@@ -9,30 +9,33 @@ for MIXIN - @mixin display-row-start
 
 // ============= VARIABLES =============
 // COLOR background, text color on white background
-$background-color: #151F28;
+$background-color: #FEFEFE;
+// background color of cards
+$background-color-cards: #F2F2F2;
 // COLOR text on dark background
-$text-color: #F4F4F4;
+$text-color: #232227;
 // COLOR of accent (arrows, buttons :)
-$accent-color: #00E991;
+$accent-color: #FE4445;
 // COLOR menu item
-$menu-item-color: rgba(21, 31, 40, 0.6);
+$menu-item-color: #232227;
 // COLOR menu item on :hover :focus :active
-$menu-item-color-OnHover: #151F28;
-// Phone button color on :hover :focus :active
-$phone-button-color-OnHover: rgba(244, 244, 244, 0.6);
+$menu-item-color-OnHover: #FE4445;
+// Button color on :hover :focus :active
+$button-color-OnHover: #DC3536;
 
+h1,
+h2,
+h3 {
+    font-family: Jost;
+}
 
-// FONT SIZES:
-$font-size-H1: 62px;
-$font-size-H2: 32px;
-$font-size-H3: 24px;
-$font-size-H4: 20px;
-$font-size-text: 20px;
-$font-size-buttons: 12px;
+span,
+p,
+a,
+input {
+    font-family: Lato;
+}
 
-// indents:
-$indent-H2-to-text: 0 0 40px 0;
-$indent-H3-to-text: 0 0 10px 0;
 
 // ============= MIXINS =============
 // mixin call - @include display-row-start;
@@ -45,8 +48,14 @@ $indent-H3-to-text: 0 0 10px 0;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    align-content: flex-start;
+    // align-content: flex-start;
 }
+
+// smooth EFFECT | @include smoothness(text-decoration, 0,8s |
+@mixin smoothness($property-css, $transition-delay) {
+    transition: $property-css $transition-delay;
+}
+
 
 // mixin for ADAPTIVE FONT
 $max-width: 1920;
@@ -69,6 +78,12 @@ $max-width: 1920;
     width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
+@mixin responsive-max-width($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    max-width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
 @mixin responsive-height($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
@@ -87,10 +102,42 @@ $max-width: 1920;
     padding-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
+@mixin responsive-padding-left-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+    padding-right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-padding-top-bottom($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+    padding-bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-top($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
 @mixin responsive-margin-bottom($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
     margin-bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-margin-left($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
 @mixin responsive-top($desktop-size, $mobile-size) {
@@ -104,6 +151,44 @@ $max-width: 1920;
     $max-width: $max-width - 320;
     left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
+
+// &:hover,
+// &:active {
+//     background-color: $button-color-OnHover;
+// }
+
+
+
+
+
+
+
+// // template for EFFECTS 
+// // @include hover-active-effect(color, $button-color-OnHover, .8s)
+// @mixin hover-active-effect($property-css, $property-value-css, $transition-delay) {
+
+//     &:hover,
+//     &:active {
+//         $property-css: $property-value-css;
+//         transition: $property-css $transition-delay;
+//     }
+// }
+
+// // template for EFFECTS 
+// // @include hover-active-effect(color, $button-color-OnHover, .8s)
+// @mixin hover-active-effect($property-css, $property-value-css) {
+
+//     &:hover,
+//     &:active {
+//         $property-css: $property-value-css;
+//         // transition: $property-css $transition-delay;
+//     }
+// }
+
+
+
+
+
 
 
 

@@ -4,7 +4,7 @@
 .header {
     min-height: 100vh;
     background: $background-color;
-    padding: 25px 0 0 0;
+    @include responsive-padding-top(32, 27);
 
 }
 
@@ -17,11 +17,8 @@
     @include display-row-start;
     justify-content: space-between;
     align-items: center;
-
+    @include responsive-margin-bottom(54, 58);
 }
-
-
-
 
 // styles for BURGER MENU ===============
 .burger-menu {
@@ -33,6 +30,8 @@
         top: 0px;
         left: 0px;
         z-index: 30;
+        background-color: $background-color-cards;
+        border-radius: 50%;
         @include responsive-width(50, 30);
         @include responsive-height(50, 30);
         -webkit-transition: 0.4s;
@@ -45,9 +44,9 @@
     &__lines::after,
     &__lines {
         position: absolute;
-        @include responsive-width (31, 18);
-        @include responsive-height (4.7, 2);
-        background-color: $text-color;
+        @include responsive-width (14, 14);
+        @include responsive-height (1.2, 1.2);
+        background-color: $menu-item-color;
         -webkit-transition: 0.4s;
         -moz-transition: 0.4s;
         -o-transition: 0.4s;
@@ -61,15 +60,15 @@
     }
 
     &__lines::before {
-        @include responsive-width (46.8, 28);
+        // @include responsive-width (46.8, 28);
         content: '';
-        @include responsive-top (-12, -6);
+        @include responsive-top (-4, -4);
     }
 
     &__lines::after {
-        @include responsive-width (12.5, 7.5);
+        // @include responsive-width (12.5, 7.5);
         content: '';
-        @include responsive-top (12, 6);
+        @include responsive-top (4, 4);
     }
 
     &_active .burger-menu__lines {
@@ -88,23 +87,23 @@
 
         .burger-menu__lines::after,
         .burger-menu__lines::before {
-            @include responsive-width (27, 20);
+            @include responsive-width (14, 14);
             top: 0;
             background-color: $menu-item-color;
         }
     }
 
     &__nav {
-        @include responsive-padding-top (173, 103);
-        @include responsive-padding-left (58, 16);
+        padding: 84px 0 0 0;
         position: fixed;
         top: 0;
         z-index: 20;
-        display: flex;
-        flex-flow: column;
+        @include display-row-start;
+        flex-direction: column;
+        align-items: center;
         width: 100vw;
         height: 100%;
-        background-color: $text-color;
+        background-color: $background-color;
         overflow-y: auto;
         left: -100%;
         -webkit-transition: 0.8s;
@@ -129,18 +128,32 @@
     }
 
     &__link {
-        @include responsive-margin-bottom (40, 30);
-        font-family: Russo One;
+        @include responsive-margin-bottom (35, 20);
+        font-family: Lato;
         font-style: normal;
         font-weight: normal;
-        @include responsive-font (40, 20);
-        @include responsive-line-height (48, 24);
+        @include responsive-font (18, 20);
+        @include responsive-line-height (27, 30);
         color: $menu-item-color;
+        box-sizing: border-box;
+        text-decoration: 1px solid underline $background-color;
+
+        &:hover,
+        &:active {
+            text-decoration: 1px solid underline $accent-color;
+            color: $menu-item-color;
+            @include smoothness(text-decoration, .8s);
+        }
     }
 
-    &__link:hover {
-        filter: brightness(0.9);
+    &__horizontal-bar {
+        width: 100%;
+        height: 1px;
+        background: #B1B1B1;
+        @include responsive-margin-top(60, 50);
+        @include responsive-margin-bottom(24, 22);
     }
+
 
     &__overlay {
         display: none;
@@ -161,97 +174,199 @@
 // / styles for BURGER MENU ===============
 
 
-.logo {
-    font-family: CRENZO;
-    font-style: normal;
-    font-weight: normal;
-    @include responsive-font(32, 14);
-    line-height: 15px;
-    color: $text-color;
+.call-button,
+.mail-button,
+.whatsapp-button {
 
-    &__underline {
-        color: $accent-color;
+    width: 100%;
+    @include display-row-start;
+    align-items: center;
+    @include responsive-padding-left(35, 28);
+    @include responsive-margin-bottom (25, 20);
+
+
+    &__icon {
+        @include display-row-start;
+        justify-content: center;
+        align-items: center;
+        @include responsive-width(42, 35);
+        @include responsive-height(42, 35);
+        margin: 0 16px 0 0;
+        padding: 0;
+        background-color: $accent-color;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: inherit;
     }
 
-    &:hover {
+    &__svg {
+        @include responsive-width(16, 13);
+        @include responsive-height(16, 13);
+
+        &:hover,
+        &:active {
+            transform: scale(1.2);
+            transition: transform 0.8s;
+        }
+    }
+
+    &__txt {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font(18, 12);
+        @include responsive-line-height(27, 14.4);
+    }
+
+    &__whatsapp {
+        @include responsive-width(42, 35);
+        @include responsive-height(42, 35);
+    }
+
+    &:hover .call-button__txt,
+    &:active .call-button__txt,
+    &:hover .mail-button__txt,
+    &:active .mail-button__txt,
+    &:hover .whatsapp-button__txt,
+    &:active .whatsapp-button__txt {
+        color: $text-color;
+    }
+}
+
+.whatsapp-button {
+    &__icon {
+        background-color: transparent;
+    }
+}
+
+.logo {
+    @include display-row-start;
+    align-items: center;
+    font-family: Jost;
+    font-style: normal;
+    font-weight: bold;
+    @include responsive-font(25, 21);
+    @include responsive-line-height(35, 29);
+    color: $text-color;
+
+    &__txt {
+        font-family: Jost;
+        @include responsive-margin-right(7.5, 6.3);
+    }
+
+    &__icon {
+        @include responsive-width(25, 21);
+        @include responsive-height(21.5, 18);
+    }
+
+    &:hover,
+    &:active {
         color: $accent-color;
         transition: color 0.8s;
     }
-
-    &:active {}
 }
-
-
 
 .header__contacts {
 
     .btn {
+        @include responsive-width(42, 35);
+        @include responsive-height(42, 35);
         padding: 0;
-        background-color: transparent;
+        background-color: $accent-color;
+        border-radius: 50%;
         border: none;
         outline: none;
-
-
         fill: inherit;
         stroke: inherit;
         stroke-width: inherit;
 
+        &:hover,
+        &:active {
+            background-color: $accent-color !important;
+        }
+
         &__icon {
-            @include responsive-width(40, 24);
-            @include responsive-height(40, 24);
+            @include responsive-width(16, 13);
+            @include responsive-height(16, 13);
 
-            &:hover {
-                transform: scale(1.2);
-                transition: transform 0.8s;
-
-            }
-
+            &:hover,
             &:active {
                 transform: scale(1.2);
                 transition: transform 0.8s;
             }
-
         }
     }
+}
 
+.modal {
+    &__close {
+        @include responsive-width (18, 15);
+        @include responsive-height (18, 15);
+    }
+}
 
+// styles for header__CONTENT ===============
+.header {
 
+    &__content {
+        @include display-row-start;
+        flex-direction: column;
+    }
 
+    &__main-heading {
+        @include responsive-font(50, 34);
+        @include responsive-line-height(65, 44);
+        color: $text-color;
+        @include responsive-margin-bottom(30, 20);
+    }
 
+    &__description-site {
+        @include responsive-font(20, 14);
+        @include responsive-line-height(30, 21);
+        color: $text-color;
+        @include responsive-margin-bottom(60, 40);
+    }
 
+    &__img {
+        max-width: 100%;
+        object-fit: cover;
+
+    }
+
+}
+
+.button-order {
+
+    @include display-row-start;
+    justify-content: center;
+    align-items: center;
+    // @include responsive-max-width(244, 179);
+    background-color: $accent-color;
+    border-radius: 5px;
+    @include responsive-margin-bottom(44, 40);
+    @include responsive-padding-left-right(48, 40);
+    @include responsive-padding-top-bottom(24, 20);
+
+    &__txt {
+        color: $background-color;
+        @include responsive-font(18, 12);
+        @include responsive-line-height(22, 14);
+    }
+
+    &:hover,
+    &:active {
+        background-color: $button-color-OnHover;
+        // transition: color .8s;
+        @include smoothness(background-color, .8s);
+    }
 
 
 }
 
-
-
-.btn-primary {}
-
-.btn__icon {}
-
-.modal {}
-
-.fade {}
-
-.modal-dialog {}
-
-.modal-content {}
-
-.modal-header {}
-
-.modal-title {}
-
-.btn-close {}
-
-.modal-body {}
-
-.modal-footer {}
-
-.btn-secondary {}
-
-.header__content {}
-
-
+// / styles for header__CONTENT ===============
 
 
 

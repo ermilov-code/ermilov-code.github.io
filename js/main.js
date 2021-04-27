@@ -20,10 +20,11 @@ function burgerMenu(selector) {
     function toggleMenu() {
         menu.toggleClass('burger-menu_active');
 
+        // remove scrolling in the menu:
         if (menu.hasClass('burger-menu_active')) {
-            $('body').css('overlow', 'hidden');
+            $('body').addClass('modal-open');
         } else {
-            $('body').css('overlow', 'visible');
+            $('body').removeClass('modal-open');
         }
     }
 }

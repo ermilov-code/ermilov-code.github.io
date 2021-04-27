@@ -1,85 +1,38 @@
 // _fonts.scss ____________________________
 
-@font-face {
-    font-family: 'CRENZO';
-    src: url('../fonts/CRENZORegular.eot');
-    src: url('../fonts/CRENZORegular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/CRENZORegular.woff2') format('woff2'),
-        url('../fonts/CRENZORegular.woff') format('woff'),
-        url('../fonts/CRENZORegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Light.eot');
-    src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/OpenSans-Light.woff2') format('woff2'),
-        url('../fonts/OpenSans-Light.woff') format('woff'),
-        url('../fonts/OpenSans-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Bold.eot');
-    src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/OpenSans-Bold.woff2') format('woff2'),
-        url('../fonts/OpenSans-Bold.woff') format('woff'),
-        url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-family: 'Jost';
+    src: url('../fonts/Jost-Bold.eot');
+    src: url('../fonts/Jost-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Jost-Bold.woff2') format('woff2'),
+        url('../fonts/Jost-Bold.woff') format('woff'),
+        url('../fonts/Jost-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Russo One';
-    src: url('../fonts/RussoOne-Regular.eot');
-    src: url('../fonts/RussoOne-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/RussoOne-Regular.woff2') format('woff2'),
-        url('../fonts/RussoOne-Regular.woff') format('woff'),
-        url('../fonts/RussoOne-Regular.ttf') format('truetype');
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.eot');
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato-Regular.woff') format('woff'),
+        url('../fonts/Lato-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-ExtraBold.eot');
-    src: url('../fonts/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'),
-        url('../fonts/OpenSans-ExtraBold.woff') format('woff'),
-        url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-SemiBold.eot');
-    src: url('../fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
-        url('../fonts/OpenSans-SemiBold.woff') format('woff'),
-        url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/OpenSans-Regular.eot');
-    src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-        url('../fonts/OpenSans-Regular.woff') format('woff'),
-        url('../fonts/OpenSans-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Bold.eot');
+    src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/Lato-Bold.woff') format('woff'),
+        url('../fonts/Lato-Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
