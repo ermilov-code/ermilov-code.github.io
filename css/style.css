@@ -159,6 +159,7 @@ input {
   min-height: 100vh;
   background: #FEFEFE;
   padding-top: calc(27px + 5 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(80px + 40 * ((100vw - 320px) / 1600));
 }
 
 .header__control {
@@ -452,7 +453,7 @@ input {
   flex-direction: column;
 }
 .header__main-heading {
-  font-size: calc(34px + 16 * ((100vw - 320px) / 1600));
+  font-size: calc(33px + 17 * ((100vw - 320px) / 1600));
   line-height: calc(44px + 21 * ((100vw - 320px) / 1600));
   color: #232227;
   margin-bottom: calc(20px + 10 * ((100vw - 320px) / 1600));
@@ -496,4 +497,20 @@ input {
 
 .main {
   min-height: 100vh;
+}
+
+.section-services {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heading-h2 {
+  width: 100%;
+  text-align: center;
+  font-size: calc(30px + 14 * ((100vw - 320px) / 1600));
+  line-height: calc(43px + 20 * ((100vw - 320px) / 1600));
 }

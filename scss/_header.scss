@@ -5,7 +5,7 @@
     min-height: 100vh;
     background: $background-color;
     @include responsive-padding-top(32, 27);
-
+    @include responsive-margin-bottom(120, 80)
 }
 
 .container {}
@@ -317,7 +317,7 @@
     }
 
     &__main-heading {
-        @include responsive-font(50, 34);
+        @include responsive-font(50, 33);
         @include responsive-line-height(65, 44);
         color: $text-color;
         @include responsive-margin-bottom(30, 20);
@@ -367,12 +367,6 @@
 }
 
 // / styles for header__CONTENT ===============
-
-
-
-
-
-
 
 
 // X-Small devices (portrait phones, less than 576px)

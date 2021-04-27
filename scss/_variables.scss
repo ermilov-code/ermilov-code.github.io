@@ -56,6 +56,9 @@ input {
     transition: $property-css $transition-delay;
 }
 
+// <div class="container"></div>
+// <!-- /.container -->
+
 
 // mixin for ADAPTIVE FONT
 $max-width: 1920;
@@ -151,6 +154,9 @@ $max-width: 1920;
     $max-width: $max-width - 320;
     left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
+
+
+
 
 // &:hover,
 // &:active {

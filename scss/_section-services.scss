@@ -1,8 +1,17 @@
-// _footer.scss ____________________________
+// _section-SERVICES.scss ____________________________
 
+.section-services {
+    @include display-row-start;
+    justify-content: center;
 
+}
 
-
+.heading-h2 {
+    width: 100%;
+    text-align: center;
+    @include responsive-font(44, 30);
+    @include responsive-line-height(63, 43);
+}
 
 
 
@@ -29,6 +38,4 @@
 
 
 
-
-
-// _footer.scss ____________________________
+// / _section-SERVICES.scss ____________________________
