@@ -159,7 +159,7 @@ input {
   min-height: 100vh;
   background: #FEFEFE;
   padding-top: calc(27px + 5 * ((100vw - 320px) / 1600));
-  margin-bottom: calc(80px + 40 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(40px + 20 * ((100vw - 320px) / 1600));
 }
 
 .header__control {
@@ -506,6 +506,46 @@ input {
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: calc(20px + 10 * ((100vw - 320px) / 1600));
+}
+.section-services .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section-services__service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(290px + 60 * ((100vw - 320px) / 1600));
+  min-height: calc(200px + 70 * ((100vw - 320px) / 1600));
+  background: #F2F2F2;
+  border-radius: 5px;
+  margin-bottom: calc(20px + 10 * ((100vw - 320px) / 1600));
+  margin-left: calc(0px + 15 * ((100vw - 320px) / 1600));
+  margin-right: calc(0px + 15 * ((100vw - 320px) / 1600));
+}
+.section-services__service-name {
+  text-align: center;
+  font-size: calc(16px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(24px + 9 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(40px + 16 * ((100vw - 320px) / 1600));
+  font-style: normal;
+  font-weight: bold;
+  color: #232227;
+}
+.section-services__service-price {
+  text-align: center;
+  font-size: calc(14px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(21px + 9 * ((100vw - 320px) / 1600));
+  font-style: normal;
+  font-weight: normal;
+  color: #232227;
 }
 
 .heading-h2 {
@@ -513,4 +553,6 @@ input {
   text-align: center;
   font-size: calc(30px + 14 * ((100vw - 320px) / 1600));
   line-height: calc(43px + 20 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(50px + 10 * ((100vw - 320px) / 1600));
+  margin-top: calc(40px + 20 * ((100vw - 320px) / 1600));
 }

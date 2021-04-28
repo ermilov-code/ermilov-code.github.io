@@ -51,6 +51,14 @@ input {
     // align-content: flex-start;
 }
 
+@mixin display($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: wrap;
+}
+
 // smooth EFFECT | @include smoothness(text-decoration, 0,8s |
 @mixin smoothness($property-css, $transition-delay) {
     transition: $property-css $transition-delay;
@@ -87,10 +95,22 @@ $max-width: 1920;
     max-width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
+@mixin responsive-min-width($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    min-width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
 @mixin responsive-height($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
     height: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-min-height($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    min-height: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
 @mixin responsive-padding-top($desktop-size, $mobile-size) {

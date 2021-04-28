@@ -3,7 +3,42 @@
 .section-services {
     @include display-row-start;
     justify-content: center;
+    @include responsive-margin-bottom(30, 20);
 
+    .container {
+        @include display-row-start;
+        justify-content: center;
+    }
+
+    &__service-card {
+        @include display(column, center, center);
+        @include responsive-width(350, 290);
+        @include responsive-min-height(270, 200);
+        background: $background-color-cards;
+        border-radius: 5px;
+        @include responsive-margin-bottom(30, 20);
+        @include responsive-margin-left(15, 0);
+        @include responsive-margin-right(15, 0);
+    }
+
+    &__service-name {
+        text-align: center;
+        @include responsive-font(22, 16);
+        @include responsive-line-height(33, 24);
+        @include responsive-margin-bottom(56, 40);
+        font-style: normal;
+        font-weight: bold;
+        color: $text-color;
+    }
+
+    &__service-price {
+        text-align: center;
+        @include responsive-font(20, 14);
+        @include responsive-line-height(30, 21);
+        font-style: normal;
+        font-weight: normal;
+        color: $text-color;
+    }
 }
 
 .heading-h2 {
@@ -11,7 +46,11 @@
     text-align: center;
     @include responsive-font(44, 30);
     @include responsive-line-height(63, 43);
+    @include responsive-margin-bottom(60, 50);
+    @include responsive-margin-top(60, 40);
 }
+
+
 
 
 

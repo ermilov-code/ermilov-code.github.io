@@ -5,7 +5,7 @@
     min-height: 100vh;
     background: $background-color;
     @include responsive-padding-top(32, 27);
-    @include responsive-margin-bottom(120, 80)
+    @include responsive-margin-bottom(60, 40);
 }
 
 .container {}
