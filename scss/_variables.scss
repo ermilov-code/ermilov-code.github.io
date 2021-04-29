@@ -34,6 +34,7 @@ p,
 a,
 input {
     font-family: Lato;
+    margin: 0;
 }
 
 
@@ -117,6 +118,12 @@ $max-width: 1920;
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
     padding-top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-padding-bottom($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    padding-bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
 @mixin responsive-padding-left($desktop-size, $mobile-size) {

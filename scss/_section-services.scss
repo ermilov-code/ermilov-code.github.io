@@ -3,7 +3,8 @@
 .section-services {
     @include display-row-start;
     justify-content: center;
-    @include responsive-margin-bottom(30, 20);
+    @include responsive-padding-bottom(30, 20);
+    @include responsive-padding-top(60, 40);
 
     .container {
         @include display-row-start;
@@ -46,8 +47,8 @@
     text-align: center;
     @include responsive-font(44, 30);
     @include responsive-line-height(63, 43);
-    @include responsive-margin-bottom(60, 50);
-    @include responsive-margin-top(60, 40);
+    @include responsive-margin-bottom(60, 40);
+    // @include responsive-margin-top(60, 40);
 }
 
 
