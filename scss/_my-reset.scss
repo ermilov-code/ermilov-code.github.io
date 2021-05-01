@@ -126,5 +126,14 @@ ul li {
     list-style: none;
 }
 
+svg {
+    overflow: visible;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
 
 // _my-reset.scss ____________________________

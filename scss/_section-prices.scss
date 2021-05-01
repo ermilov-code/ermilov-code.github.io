@@ -1,5 +1,29 @@
 // _section-PRICES.scss ____________________________
 
+.section-prices {
+    @include display(column, flex-start, center);
+    @include responsive-padding-top(60, 40);
+    @include responsive-padding-bottom(60, 40);
+
+
+    .container {
+        @include display(column, flex-start, center);
+    }
+
+    &__instruction-txt {
+        width: 100%;
+        text-align: left;
+        @include responsive-font(20, 14);
+        @include responsive-line-height(30, 21);
+    }
+
+    &__container-for-forms {
+        @include responsive-margin-bottom(40, 30);
+    }
+
+
+}
+
 
 
 // X-Small devices (portrait phones, less than 576px)

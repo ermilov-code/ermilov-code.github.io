@@ -113,6 +113,15 @@ ul li {
   list-style: none;
 }
 
+svg {
+  overflow: visible;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
 @font-face {
   font-family: 'Jost';
   src: url("../fonts/Jost-Bold.eot");
@@ -154,6 +163,9 @@ a,
 input {
   font-family: Lato;
   margin: 0;
+  color: #232227;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .header {
@@ -569,14 +581,14 @@ input {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: calc(20px + 10 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(30px + 18 * ((100vw - 320px) / 1600));
   padding-top: calc(40px + 20 * ((100vw - 320px) / 1600));
 }
 .section-advantages .container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: content;
+  align-items: center;
   flex-wrap: wrap;
 }
 .section-advantages__advantages-card {
@@ -585,6 +597,7 @@ input {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: calc(290px + 78 * ((100vw - 320px) / 1600));
   min-height: calc(110px + 70 * ((100vw - 320px) / 1600));
   background: #FE4445;
@@ -596,9 +609,6 @@ input {
   padding-right: calc(17px + 23 * ((100vw - 320px) / 1600));
   padding-top: calc(34px + 26 * ((100vw - 320px) / 1600));
   padding-bottom: calc(34px + 26 * ((100vw - 320px) / 1600));
-}
-.section-advantages__advantages-card_large-width {
-  width: calc(290px + 460 * ((100vw - 320px) / 1600));
 }
 .section-advantages__advantages-icon {
   width: calc(45px + 11 * ((100vw - 320px) / 1600));
@@ -617,4 +627,30 @@ input {
   font-style: normal;
   font-weight: normal;
   color: #FEFEFE;
+}
+
+.section-prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: calc(40px + 20 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(40px + 20 * ((100vw - 320px) / 1600));
+}
+.section-prices .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section-prices__instruction-txt {
+  width: 100%;
+  text-align: left;
+  font-size: calc(14px + 6 * ((100vw - 320px) / 1600));
+  line-height: calc(21px + 9 * ((100vw - 320px) / 1600));
+}
+.section-prices__container-for-forms {
+  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 1600));
 }

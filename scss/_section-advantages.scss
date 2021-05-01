@@ -2,15 +2,16 @@
 
 .section-advantages {
     @include display(column, flex-start, center);
-    @include responsive-padding-bottom(30, 20);
+    @include responsive-padding-bottom(48, 30);
     @include responsive-padding-top(60, 40);
 
     .container {
-        @include display(column, flex-start, content);
+        @include display(column, flex-start, center);
     }
 
     &__advantages-card {
         @include display(row, flex-start, center);
+        flex-wrap: nowrap;
         @include responsive-width(368, 290);
         @include responsive-min-height(180, 110);
         background: $accent-color;
@@ -20,10 +21,6 @@
         @include responsive-margin-right(3, 0);
         @include responsive-padding-left-right(40, 17);
         @include responsive-padding-top-bottom(60, 34);
-
-        &_large-width {
-            @include responsive-width(750, 290);
-        }
     }
 
     &__advantages-icon {
@@ -47,9 +44,6 @@
         color: $background-color;
 
     }
-
-
-
 }
 
 
