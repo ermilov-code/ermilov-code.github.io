@@ -23,6 +23,12 @@ $menu-item-color-OnHover: #FE4445;
 // Button color on :hover :focus :active
 $button-color-OnHover: #DC3536;
 
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
 h1,
 h2,
 h3 {

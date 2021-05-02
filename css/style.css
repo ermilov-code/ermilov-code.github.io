@@ -151,6 +151,12 @@ Uniform writing style for VARIABLES and CLASSES:
 for VARIABLES - $primary-color, $font-stack
 for MIXIN - @mixin display-row-start 
 */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
 h1,
 h2,
 h3 {
@@ -653,4 +659,34 @@ input {
 }
 .section-prices__container-for-forms {
   margin-bottom: calc(30px + 10 * ((100vw - 320px) / 1600));
+}
+
+.section-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: calc(40px + 20 * ((100vw - 320px) / 1600));
+  padding-top: calc(40px + 20 * ((100vw - 320px) / 1600));
+}
+.section-gallery .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section-gallery .swiper-container {
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100%;
+}
+.section-gallery .swiper-slide {
+  width: calc(225px + 525 * ((100vw - 320px) / 1600));
+  height: calc(168px + 394 * ((100vw - 320px) / 1600));
+}
+.section-gallery .swiper-button-prev, .section-gallery .swiper-button-next {
+  position: static;
+  margin-left: 10px;
 }
