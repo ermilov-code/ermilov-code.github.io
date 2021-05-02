@@ -9,9 +9,10 @@
     }
 
     .swiper {
+        position: relative;
 
         &-container {
-            padding-bottom: 50px;
+            // padding-bottom: 50px;
             width: 100%;
             height: 100%;
         }
@@ -19,10 +20,16 @@
         &-slide {
             @include responsive-width(750, 225);
             @include responsive-height(562, 168);
-            // @include responsive-margin-right(30, 20);
+            opacity: 0.5;
+
+            &-active {
+                opacity: 1;
+            }
         }
 
-        .slider-buttons {}
+        .slider-buttons {
+            @include display(row, flex-end, flex-start);
+        }
 
         &-button-prev,
         &-button-next {

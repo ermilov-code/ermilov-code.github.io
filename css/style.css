@@ -677,14 +677,27 @@ input {
   align-items: center;
   flex-wrap: wrap;
 }
+.section-gallery .swiper {
+  position: relative;
+}
 .section-gallery .swiper-container {
-  padding-bottom: 50px;
   width: 100%;
   height: 100%;
 }
 .section-gallery .swiper-slide {
   width: calc(225px + 525 * ((100vw - 320px) / 1600));
   height: calc(168px + 394 * ((100vw - 320px) / 1600));
+  opacity: 0.5;
+}
+.section-gallery .swiper-slide-active {
+  opacity: 1;
+}
+.section-gallery .swiper .slider-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .section-gallery .swiper-button-prev, .section-gallery .swiper-button-next {
   position: static;
