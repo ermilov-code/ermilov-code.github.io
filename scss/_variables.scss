@@ -69,7 +69,7 @@ input {
     flex-wrap: wrap;
 }
 
-// smooth EFFECT | @include smoothness(text-decoration, 0,8s |
+// smooth EFFECT | @include smoothness(text-decoration, 0.8s |
 @mixin smoothness($property-css, $transition-delay) {
     transition: $property-css $transition-delay;
 }
@@ -190,6 +190,14 @@ $max-width: 1920;
     $max-width: $max-width - 320;
     left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
+
+@mixin responsive-border-radius($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    border-radius: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+
 
 
 

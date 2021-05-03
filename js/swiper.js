@@ -4,14 +4,15 @@ const slider = document.querySelector('.swiper-container');
 
 let mySwiper = new Swiper(slider, {
     slidesPerView: 'auto',
+    centeredSlides: true,
     spaceBetween: 20,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-navigation__button-next',
+        prevEl: '.swiper-navigation__button-prev',
     },
     // Бесконечный слайдер
     loop: true,
