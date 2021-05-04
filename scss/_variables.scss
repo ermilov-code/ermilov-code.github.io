@@ -185,10 +185,22 @@ $max-width: 1920;
     top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
+@mixin responsive-bottom($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    bottom: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
 @mixin responsive-left($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
     left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
 @mixin responsive-border-radius($desktop-size, $mobile-size) {
@@ -199,6 +211,26 @@ $max-width: 1920;
 
 
 
+// ============= ANIMATION templates =============
+@keyframes upArrowAnim {
+    0% {
+        transform: translate(-50%, -65%);
+    }
+
+    50% {
+        transform: translate(-50%, -25%);
+    }
+
+    100% {
+        transform: translate(-50%, -65%);
+    }
+}
+
+
+// ============= ANIMATION templates =============
+
+
+
 
 
 
@@ -206,12 +238,6 @@ $max-width: 1920;
 // &:active {
 //     background-color: $button-color-OnHover;
 // }
-
-
-
-
-
-
 
 // // template for EFFECTS 
 // // @include hover-active-effect(color, $button-color-OnHover, .8s)

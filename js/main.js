@@ -52,6 +52,29 @@ for (let anchor of anchors) {
 
 
 
+// UP button on the site =================
+
+let btnUp = $('.up-button'); //создаем переменную для кнопки
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 500) { //отслеживаем высоту от верха страницы в 100px
+        btnUp.addClass('up-button_show'); // присваиваем кнопке класс show для управления видимостью
+    } else {
+        btnUp.removeClass('up-button_show'); // если меньше 500px от верха страницы убираем класс show
+    }
+});
+
+btnUp.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
+    }, '500'); //при клике на кнопку плавно прокручиваем до верха body
+});
+
+// UP button on the site =================
+
+
+
 
 
 

@@ -25,6 +25,14 @@
 </head>
 
 <body>
+  <!-- UP button on the site -->
+  <div class="up-button" id="btnUp">
+    <svg class="up-button__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L11 11L21 1" stroke="#FFFFFF" stroke-width="0.977869" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </div>
+  <!-- UP button on the site -->
   <!-- =================== HTML =================== -->
   <div class="wrapper">
 
@@ -341,8 +349,14 @@
         <div class="swiper">
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <img src="img/technics-1-min.jpg" alt="Буровая установка ЗИЛ 131, бурение" class="swiper-slide">
-              <img src="img/technics-2-min.jpg" alt="Буровая установка ЗИЛ-131, скважин" class="swiper-slide">
+              <img class="swiper-slide" src="img/technics-1-min.jpg" alt="Буровая установка ЗИЛ 131, бурение"
+                class="swiper-slide">
+              <img class="swiper-slide" src="img/technics-2-min.jpg" alt="Буровая установка ЗИЛ-131, скважин"
+                class="swiper-slide">
+              <img class="swiper-slide" src="img/technics-3-min.jpg" alt="Буровая установка ЗИЛ 130, бурение"
+                class="swiper-slide">
+              <img class="swiper-slide" src="img/technics-4-min.jpg" alt="Буровая установка ЗИЛ 130, скважин"
+                class="swiper-slide">
             </div>
           </div>
           <!-- /.swiper-container -->
@@ -367,6 +381,74 @@
       </section>
 
       <section class="section-form" id="section-form">
+        <div class="container">
+          <h3 class="heading-h3">Заполните форму
+            и&nbsp;мы&nbsp;перезвоним вам
+            в&nbsp;ближайшее время</h3>
+
+          <!-- ФОРМА ОБРАТНОЙ СВЯЗИ -->
+          <form id="form-contact" method="POST" class="contact-form form-section-sendApplication" autocomplete="off"
+            enctype="multipart/form-data">
+            <div class="decorative-square-5"></div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                  <button type="button" class="close close-form" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-body">
+                    <div class="header-contacts-modal">
+                      <p class="contact-form__message" id="contact-form__message"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+              <input name="name" type="text"
+                class="contact-form__input contact-form__input_name input-text-section-sendApplication" tabindex="0"
+                placeholder="Ваше имя">
+            </div>
+            <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+              <input name="phone" type="tel"
+                class="contact-form__input contact-form__input_phone input-text-section-sendApplication" tabindex="0"
+                placeholder="Ваш телефон - 7(999)4448811">
+            </div>
+
+
+            <select class="select-form select" name="whatService">
+              <option disabled class="option-form">Выберите услугу</option>
+              <option class="option-form" value="Откачка септиков, выгребных ям и уличных туалетов в частном секторе">
+                Откачка септиков, выгребных ям и уличных туалетов в частном секторе</option>
+              <option class="option-form" value="Откачка отстойников на автомойках и АЗС">Откачка отстойников на
+                автомойках и АЗС</option>
+              <!-- <option class="option-form" value="Регулярная откачка для предприятий">Регулярная откачка для предприятий
+          </option> -->
+              <option class="option-form" value="Каналопромывочная машина">Каналопромывочная машина
+              </option>
+              <option class="option-form" value="Другая услуга">Другая услуга
+              </option>
+            </select>
+            <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
+              value="Заявка с сайта">
+            <button type="submit" class="contact-form__button button-sectionSendApplication" data-toggle="modal"
+              data-target="#exampleModal1">Отправить заявку</button>
+            <p class="p-form-confidentiality">Нажимая на&nbsp;эту кнопку, вы&nbsp;соглашаетесь с&nbsp;
+              <a href="privacy-policy.html" class="confidentiality">политикой конфиденциальности</a>
+            </p>
+          </form>
+
+
+
+
+        </div>
+        <!-- /.container -->
+
 
       </section>
 
@@ -396,6 +478,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
   </script>
@@ -404,6 +487,7 @@
   </script>
   <!-- connection bootstrap@4.6.0 -->
 
+  <script src="telegramform/js/telegramform.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/swiper.js"></script>
 

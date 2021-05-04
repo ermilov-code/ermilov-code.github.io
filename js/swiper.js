@@ -17,6 +17,12 @@ let mySwiper = new Swiper(slider, {
     // Бесконечный слайдер
     loop: true,
 
+    // // Количество пролистываемых слайдов
+    // slidesPerGroup: 1,
+
+    // // Активный слайд по центру
+    // centeredSlides: true,
+
     // Брейк поинты (адаптив)
     // Ширина экрана
     breakpoints: {

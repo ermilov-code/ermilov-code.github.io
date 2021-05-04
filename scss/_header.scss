@@ -369,6 +369,42 @@
 
 // / styles for header__CONTENT ===============
 
+// UP button on the site =================
+.up-button {
+    @include responsive-bottom(25, 20);
+    @include responsive-right(20, 15);
+    display: block;
+    background-color: transparent;
+    background: $accent-color;
+    @include responsive-width(42, 35);
+    @include responsive-height(42, 35);
+    border-radius: 100%;
+    position: fixed;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 9999;
+    cursor: pointer;
+    transform: rotate(180deg);
+
+    &_show {
+        opacity: 0.7;
+    }
+
+    &__arrow {
+        position: absolute;
+        @include responsive-width(16, 14);
+        @include responsive-height(15, 13);
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        animation: upArrowAnim infinite 2s;
+    }
+}
+
+// UP button on the site =================
+
 
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap

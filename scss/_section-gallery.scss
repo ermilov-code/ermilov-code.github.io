@@ -17,12 +17,13 @@
 
         &-container {
             @include responsive-margin-bottom(40, 20);
-            @include responsive-margin-left(0, 15);
+            // @include responsive-margin-left(0, 15);
             width: 100%;
             height: 100%;
         }
 
         &-slide {
+            object-fit: contain;
             @include responsive-width(750, 225);
             @include responsive-height(562, 168);
             opacity: 0.5;
