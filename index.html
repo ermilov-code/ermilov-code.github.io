@@ -27,7 +27,8 @@
 <body>
   <!-- UP button on the site -->
   <div class="up-button" id="btnUp">
-    <svg class="up-button__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="up-button__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
       <path d="M1 1L11 11L21 1" stroke="#FFFFFF" stroke-width="0.977869" stroke-linecap="round"
         stroke-linejoin="round" />
     </svg>
@@ -389,37 +390,32 @@
           <!-- ФОРМА ОБРАТНОЙ СВЯЗИ -->
           <form id="form-contact" method="POST" class="contact-form form-section-sendApplication" autocomplete="off"
             enctype="multipart/form-data">
-            <div class="decorative-square-5"></div>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade show" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-
-                  <button type="button" class="close close-form" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                <div class="modal__content">
+                  <button type="button" class="close modal__close" data-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22">
+                      <path stroke="#B1B1B1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75"
+                        d="M20.625 1.375l-19.25 19.25m19.25 0L1.375 1.375l19.25 19.25z" /></svg>
                   </button>
                   <div class="modal-body">
-                    <div class="header-contacts-modal">
-                      <p class="contact-form__message" id="contact-form__message"></p>
-                    </div>
+                    <p class="contact-form__message" id="contact-form__message"></p>
                   </div>
                 </div>
               </div>
             </div>
-
+            <!-- / Modal -->
 
             <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
-              <input name="name" type="text"
-                class="contact-form__input contact-form__input_name input-text-section-sendApplication" tabindex="0"
-                placeholder="Ваше имя">
+              <input name="name" type="text" class="contact-form__input contact-form__input_name" tabindex="0"
+                placeholder="Александр">
             </div>
             <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
-              <input name="phone" type="tel"
-                class="contact-form__input contact-form__input_phone input-text-section-sendApplication" tabindex="0"
-                placeholder="Ваш телефон - 7(999)4448811">
+              <input name="phone" type="tel" class="contact-form__input contact-form__input_phone" tabindex="0"
+                placeholder="+7 (999) 999 99 99">
             </div>
-
 
             <select class="select-form select" name="whatService">
               <option disabled class="option-form">Выберите услугу</option>

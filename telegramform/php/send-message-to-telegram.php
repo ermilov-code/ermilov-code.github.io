@@ -2,8 +2,8 @@
 $msgs = [];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
-    $token = "1418709221:AAHg0drPYXFV4wgZYHwTx355af_bM-XH_4I";
-    $chat_id = "-1001258031710";
+    $token = "1759297251:AAHfuBMOq21zPGbROmljmBNOyavG_MKAxtE";
+    $chat_id = "-555669896";
  
     if (!empty($_POST['name']) && !empty($_POST['phone'])){
         $bot_url = "https://api.telegram.org/bot{$token}/";
@@ -85,10 +85,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
         $sendTextToTelegram = file_get_contents("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}");
         if ($output && $sendTextToTelegram) {
-            $msgs['okSend'] = 'Ваша заявка успешно <br> отправлена!';
+            $msgs['okSend'] = 'Спасибо, ваша заявка отправлена! Ожидайте звонка';
             echo json_encode($msgs);
         } elseif ($sendTextToTelegram) {
-            $msgs['okSend'] = 'Ваша заявка успешно <br> отправлена!';
+            $msgs['okSend'] = 'ВСпасибо, ваша заявка отправлена! Ожидайте звонка';
             echo json_encode($msgs);
           return true;
         } else {

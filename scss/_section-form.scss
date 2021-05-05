@@ -1,7 +1,18 @@
 // _section-FORM.scss ____________________________
 
+.heading-h3 {
+    @include responsive-width(419, 273);
+    text-align: center;
+    color: $text-color;
+    @include responsive-font(38, 26);
+    @include responsive-line-height(49.5, 34);
+    @include responsive-margin-bottom(50, 40);
+}
+
 .section-form {
     background-color: $background-color-cards;
+    @include responsive-padding-top(60, 50);
+    @include responsive-padding-bottom(60, 50);
 
     .container {
         @include display(column, flex-start, center);
@@ -9,263 +20,104 @@
 
 }
 
-.heading-h3 {
-    text-align: center;
-    color: $text-color;
-    @include responsive-font(38, 26);
-    @include responsive-line-height(49.5, 34);
-    @include responsive-padding-top(60, 50);
-    @include responsive-padding-bottom(60, 50);
-    @include responsive-margin-bottom(50, 40);
-
-
-
-}
-
-
-// .section-sendApplication ===============================================
-
-
-.section-sendApplication {
-    overflow: hidden;
+.contact-form {
     position: relative;
-    padding: 60px 0 60px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #366BDB;
-}
-
-.decorative-square-5 {
-    position: absolute;
-    width: 1267.55px;
-    height: 1267.55px;
-    left: -431%;
-    top: -128%;
-    border: 20px solid rgba(253, 253, 253, 0.2);
-    box-sizing: border-box;
-    border-radius: 100px;
-    transform: rotate(-41.01deg);
-}
-
-
-
-.close-form {
-    top: -199px;
-}
-
-
-
-.form-section-sendApplication {
-    .modal-content {
-        background: transparent;
-        border: 0px;
-    }
-
-    .modal.show .modal-dialog {
-        max-width: 750px;
-        min-height: 100vh;
-    }
-
-    .modal-body {
-        padding: 0;
-        background: transparent;
-        min-height: 121px;
-    }
-
-    .header-contacts-modal {
-        background: linear-gradient(312.61deg, #366BDB 16.36%, #578CFB 91.28%);
-        border-radius: 6px;
-        padding: 65px 130px 65px 130px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .contact-form__message {
-        text-align: center;
-        font-family: Inter;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 38px;
-        line-height: 150%;
-        color: #FDFDFD;
-        // margin: 0 0 50px 0;
-        margin: 0;
-    }
-
-    button.close {
-        top: -52px;
-        right: -45px;
-    }
-
-    .modal__wrapper-img {
-        width: 140px;
-        height: 140px;
-    }
-
-    .modal__square-img {}
-
-    .modal__successfully-img {}
-
-}
-
-
-
-
-
-
-.pop-up_window {
-    display: none;
-}
-
-.pop-up_window-application {}
-
-.pop-up-svg {}
-
-.p-pop-up {}
-
-.div-cross {}
-
-.div-form-wrap {}
-
-.h2-section-sendApplication {
-    width: 667px;
-    min-height: 171px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 38px;
-    line-height: 150%;
-    // color: @txtButtonColor;
-    text-align: left;
-    margin: 0;
-}
-
-.form-section-sendApplication {
-    position: relative;
-    width: 361px;
+    @include responsive-width(361, 277);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-}
 
-.contact-form__input-wrapper {
-    width: 100%;
-}
+    .modal {
 
-button.close {
-    border-radius: 50%;
-    position: absolute;
-    top: -52px;
-    right: 0px;
-    width: 40px;
-    height: 40px;
-    background: #3A6FDE;
-    opacity: 1;
-    outline: none;
-}
+        &__close {
+            font-size: 0px;
+            @include responsive-top-right(34, 23);
+            z-index: 10;
+            border-radius: 50%;
+            position: absolute;
+            @include responsive-width(20, 16);
+            @include responsive-height(20, 16);
+            background: transparent;
+            opacity: 1;
+            outline: none;
+            text-shadow: none;
 
-.close {
-    text-shadow: none;
-    // color: @txtButtonColor;
-}
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
 
-.input-text-section-sendApplication {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 150%;
-    color: rgba(20, 26, 38, 0.4);
+        &-dialog-centered {
+            justify-content: center;
+        }
 
-    width: 100%;
-    height: 58px;
-    // background: @backgroundColor;
-    border-radius: 3px;
-    padding: 23px 15px 23px 15px;
-    margin: 0 0 20px 0;
-}
+        &__content {
+            position: relative;
+            background: transparent;
+            border: 0px;
+        }
 
-.contact-form__input-wrapper_name {
-    ::-webkit-input-placeholder {
-        text-transform: none;
+        &-body {
+            @include display(column, flex-start, center);
+            padding: 0;
+            background: transparent;
+            @include responsive-min-height(500, 350);
+            @include responsive-width(686, 291);
+            background: $background-color;
+            border-radius: 5px;
+            @include responsive-padding-top(136, 84);
+            @include responsive-padding-top(90, 54);
+            @include responsive-padding-left-right(49, 22);
+        }
     }
 
-    ::-moz-placeholder {
-        text-transform: none;
+
+    &__message {
+        font-family: Jost;
+        text-align: center;
+        font-style: normal;
+        font-weight: bold;
+        @include responsive-font(38, 26);
+        @include responsive-line-height(53, 36);
+        color: $text-color;
+        @include responsive-margin-bottom(58, 40);
     }
 
-    /* Firefox 19+ */
-    :-moz-placeholder {
-        text-transform: none;
+    &__input-wrapper {
+        width: 100%;
+
+        &_name {
+
+            ::-webkit-input-placeholder,
+            ::-moz-placeholder,
+            :-moz-placeholder,
+            :-ms-input-placeholder {
+                text-transform: none;
+            }
+        }
     }
 
-    /* Firefox 18- */
-    :-ms-input-placeholder {
-        text-transform: none;
-    }
-
-    .input-text-section-sendApplication {
+    &__input {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font(18, 12);
+        @include responsive-line-height(27, 18);
+        color: $text-color;
+        @include responsive-padding-left-right(15, 16);
+        @include responsive-padding-top-bottom(23, 20);
+        @include responsive-margin-bottom(20, 15);
+        width: 100%;
+        border-radius: 5px;
         text-transform: capitalize;
     }
-
 }
 
 
 
 
-
-
-.select-form {}
-
-.select {}
-
-.option-form {}
-
-.button-sectionSendApplication {
-    width: 360px;
-    height: 70px;
-    background: linear-gradient(180deg, #FF9823 0%, #FF591F 100%);
-    border-radius: 6px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    // color: @txtButtonColor;
-    margin: 0 0 16px 0;
-}
-
-.button-sectionSendApplication:hover {
-    background: linear-gradient(180deg, #FF9823 0%, #FF591F 100%);
-    box-shadow: 0px 21px 50px rgba(255, 95, 5, 0.35);
-    border-radius: 6px;
-}
-
-.p-form-confidentiality {
-    width: 100%;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-    // color: @txtButtonColor;
-}
-
-.confidentiality {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    // font-size: 16px;
-    // line-height: 150%;
-    // color: @txtButtonColor;
-    text-decoration: underline;
-}
 
 // https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
 .select {
@@ -340,7 +192,7 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
     position: absolute;
     right: 13px;
     top: 43%;
-    background: url(../img/Vector-2.svg) no-repeat center / contain;
+    // background: url(../img/Vector-2.svg) no-repeat center / contain;
     opacity: 1;
     -webkit-transition: all .27s ease-in-out;
     -o-transition: all .27s ease-in-out;
@@ -359,6 +211,122 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
 }
 
 // https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
+
+
+
+
+
+
+
+
+
+.button-sectionSendApplication {
+    width: 360px;
+    height: 70px;
+    background: linear-gradient(180deg, #FF9823 0%, #FF591F 100%);
+    border-radius: 6px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    // color: @txtButtonColor;
+    margin: 0 0 16px 0;
+}
+
+.button-sectionSendApplication:hover {
+    background: linear-gradient(180deg, #FF9823 0%, #FF591F 100%);
+    box-shadow: 0px 21px 50px rgba(255, 95, 5, 0.35);
+    border-radius: 6px;
+}
+
+.p-form-confidentiality {
+    width: 100%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    // color: @txtButtonColor;
+}
+
+.confidentiality {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    // font-size: 16px;
+    // line-height: 150%;
+    // color: @txtButtonColor;
+    text-decoration: underline;
+}
+
+
+
+// стили для секции ОТПРАВИТЬ ЗАЯВКУ
+.section-form {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 0 47px 0;
+
+    .new-select {
+        font-size: 14px;
+        padding: 18px 16px 18px 16px;
+    }
+
+    .new-select__list {
+        font-size: 14px;
+        top: 50px;
+    }
+
+    .select {
+        margin-bottom: 24px;
+    }
+
+    .button-sectionSendApplication {
+        height: 47px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .p-form-confidentiality {
+        font-size: 12px;
+        margin: 0;
+    }
+
+
+
+    .form-section-sendApplication {
+
+        // width: 90%;
+
+
+
+        .header-contacts-modal {
+            padding: 33px 23px 33px 23px;
+        }
+
+
+
+
+
+        .button-sectionSendApplication {
+            width: 100%;
+        }
+    }
+
+}
+
+// стили для секции ОТПРАВИТЬ ЗАЯВКУ
+
+
+
+
+
+
+// .section-sendApplication ===============================================
+
 
 
 

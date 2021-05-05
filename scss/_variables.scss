@@ -22,6 +22,9 @@ $menu-item-color: #232227;
 $menu-item-color-OnHover: #FE4445;
 // Button color on :hover :focus :active
 $button-color-OnHover: #DC3536;
+// COLOR placeholder
+$placeholder-color: #B1B1B1;
+
 
 html,
 body {
@@ -200,6 +203,13 @@ $max-width: 1920;
 @mixin responsive-right($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
+    right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
+@mixin responsive-top-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    top: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
     right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
