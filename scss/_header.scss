@@ -86,11 +86,25 @@
 
     &_active {
 
+        .burger-menu__button {
+            background-color: $accent-color;
+        }
+
+
+        &:hover span {
+            background-color: transparent;
+        }
+
+        &::before,
+        &::after {
+            background-color: $background-color;
+        }
+
         .burger-menu__lines::after,
         .burger-menu__lines::before {
             @include responsive-width (14, 14);
             top: 0;
-            background-color: $menu-item-color;
+            background-color: $background-color;
         }
     }
 

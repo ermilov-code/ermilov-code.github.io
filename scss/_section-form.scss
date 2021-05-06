@@ -10,6 +10,7 @@
 }
 
 .section-form {
+    @include display(column, flex-start, center);
     background-color: $background-color-cards;
     @include responsive-padding-top(60, 50);
     @include responsive-padding-bottom(60, 50);
@@ -101,6 +102,7 @@
 
     &__input {
         font-family: Lato;
+        background-color: $background-color;
         font-style: normal;
         font-weight: normal;
         @include responsive-font(18, 12);
@@ -122,66 +124,84 @@
 // https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
 .select {
     display: block;
-    // max-width: 215px;
     width: 100%;
     position: relative;
-    margin-bottom: 30px;
+    @include responsive-margin-bottom(30, 25);
+
+    .new-select {
+        width: 100%;
+        background-color: $background-color;
+        border-radius: 3px;
+        position: relative;
+        border-bottom: 1px solid #D0D0D0;
+        padding: 23px 15px 23px 15px;
+        cursor: pointer;
+        user-select: none;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 110%;
+        color: rgba(20, 26, 38, 0.4);
+
+        &__list {
+            position: absolute;
+            top: 64px;
+            left: 0;
+            border: 1px solid rgba(20, 26, 38, 0.4);
+            cursor: pointer;
+            width: 100%;
+            z-index: 2;
+            background-color: $background-color;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 110%;
+            color: rgba(20, 26, 38, 0.4);
+            user-select: none;
+            text-align: left;
+
+            font-size: 14px;
+            top: 50px;
+
+        }
+
+        &__item span {
+            background-color: #fff;
+        }
+
+        &__item span {
+            display: block;
+            padding: 10px 15px;
+            border-bottom: 1px solid rgba(20, 26, 38, 0.4);
+        }
+
+        &__item span:hover {
+            background: $accent-color;
+        }
+
+
+
+    }
+
+
 }
 
-.new-select {
-    width: 100%;
-    background: #FDFDFD;
-    border-radius: 3px;
-    position: relative;
-    border-bottom: 1px solid #D0D0D0;
-    padding: 23px 15px 23px 15px;
-    cursor: pointer;
-    user-select: none;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 110%;
-    color: rgba(20, 26, 38, 0.4);
-}
 
-.new-select__list {
-    position: absolute;
-    top: 64px;
-    left: 0;
-    border: 1px solid rgba(20, 26, 38, 0.4);
-    cursor: pointer;
-    width: 100%;
-    z-index: 2;
-    background: #fff;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 110%;
-    color: rgba(20, 26, 38, 0.4);
-    user-select: none;
-    text-align: left;
-}
+
+
 
 .new-select__list.on {
     display: block;
 }
 
-.new-select__item span {
-    display: block;
-    padding: 10px 15px;
-    border-bottom: 1px solid rgba(20, 26, 38, 0.4);
-}
 
 body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:nth-child(4) {
     border: none;
 }
 
-.new-select__item span:hover {
-    background: linear-gradient(180deg, #FF9823 0%, #FF591F 100%);
-    // color: @txtButtonColor;
-}
+
 
 .new-select:after {
     content: '';
@@ -192,7 +212,7 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
     position: absolute;
     right: 13px;
     top: 43%;
-    // background: url(../img/Vector-2.svg) no-repeat center / contain;
+    background: url(../img/selection-arrow.svg) no-repeat center / contain;
     opacity: 1;
     -webkit-transition: all .27s ease-in-out;
     -o-transition: all .27s ease-in-out;
@@ -204,6 +224,8 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
 }
 
 .new-select.on:after {
+    transform: rotate(180deg);
+    background: url(../img/selection-arrow-red.svg) no-repeat center / contain;
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
@@ -248,16 +270,12 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
     font-size: 16px;
     line-height: 150%;
     text-align: center;
-    // color: @txtButtonColor;
 }
 
 .confidentiality {
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    // font-size: 16px;
-    // line-height: 150%;
-    // color: @txtButtonColor;
     text-decoration: underline;
 }
 
@@ -265,23 +283,10 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
 
 // стили для секции ОТПРАВИТЬ ЗАЯВКУ
 .section-form {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 40px 0 47px 0;
 
     .new-select {
         font-size: 14px;
         padding: 18px 16px 18px 16px;
-    }
-
-    .new-select__list {
-        font-size: 14px;
-        top: 50px;
-    }
-
-    .select {
-        margin-bottom: 24px;
     }
 
     .button-sectionSendApplication {
@@ -295,21 +300,11 @@ body>div>main>section.section-consultation>form>ul>div>div.new-select__list>div:
         margin: 0;
     }
 
-
-
     .form-section-sendApplication {
-
-        // width: 90%;
-
-
 
         .header-contacts-modal {
             padding: 33px 23px 33px 23px;
         }
-
-
-
-
 
         .button-sectionSendApplication {
             width: 100%;
