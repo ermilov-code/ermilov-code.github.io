@@ -77,6 +77,11 @@ input {
     transition: $property-css $transition-delay;
 }
 
+// &:hover {
+//     background: $button-color-OnHover;
+//     @include smoothness(background-color, .8s);
+// }
+
 // <div class="container"></div>
 // <!-- /.container -->
 
@@ -84,6 +89,7 @@ input {
 // mixin for ADAPTIVE FONT
 $max-width: 1920;
 
+// ПОМЕНЯТЬ НА font-size
 @mixin responsive-font($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
@@ -240,36 +246,6 @@ $max-width: 1920;
 // ============= ANIMATION templates =============
 
 
-
-
-
-
-// &:hover,
-// &:active {
-//     background-color: $button-color-OnHover;
-// }
-
-// // template for EFFECTS 
-// // @include hover-active-effect(color, $button-color-OnHover, .8s)
-// @mixin hover-active-effect($property-css, $property-value-css, $transition-delay) {
-
-//     &:hover,
-//     &:active {
-//         $property-css: $property-value-css;
-//         transition: $property-css $transition-delay;
-//     }
-// }
-
-// // template for EFFECTS 
-// // @include hover-active-effect(color, $button-color-OnHover, .8s)
-// @mixin hover-active-effect($property-css, $property-value-css) {
-
-//     &:hover,
-//     &:active {
-//         $property-css: $property-value-css;
-//         // transition: $property-css $transition-delay;
-//     }
-// }
 
 
 
