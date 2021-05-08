@@ -11,12 +11,12 @@
 
 .section-form {
     @include display(column, flex-start, center);
-    background-color: $background-color-cards;
-    @include responsive-padding-top(60, 50);
     @include responsive-padding-bottom(60, 50);
 
     .container {
         @include display(column, flex-start, center);
+        @include responsive-padding-top(60, 50);
+        background-color: $background-color-cards;
     }
 
 }
@@ -24,10 +24,9 @@
 .contact-form {
     position: relative;
     @include responsive-width(361, 277);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    @include display(column, flex-start, flex-start);
+    @include responsive-margin-bottom(50, 50);
+
 
     .modal {
 
@@ -188,11 +187,11 @@
 
             &__item span:hover {
                 background: $accent-color;
+                color: $background-color-cards;
             }
         }
     }
 }
-
 
 .contact-form {
     .new-select:after {
@@ -268,6 +267,20 @@
         }
     }
 }
+
+.section-form {
+
+    &__img {
+        max-width: 100%;
+        object-fit: cover;
+        @include responsive-width(1153, 367);
+        @include responsive-height(693, 347);
+    }
+
+
+}
+
+
 
 
 
