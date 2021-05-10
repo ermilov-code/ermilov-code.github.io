@@ -199,16 +199,54 @@ let mySwiper = new Swiper(slider, {
 
 })
 
-// var swiper = new Swiper('.swiper-container', {
-//     slidesPerView: 'auto',
-//     spaceBetween: 30,
-//     pagination: {
-//         el: '.swiper__pagination',
-//         clickable: true,
-//     },
-// });
+
+const sliderReviews = document.querySelector('.swiper-container__section-reviews');
+
+let mySwiperReviews = new Swiper(sliderReviews, {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-nav__btn-next_section-reviews',
+        prevEl: '.swiper-nav__btn-prev_section-reviews',
+    },
+    // Бесконечный слайдер
+    loop: true,
+
+    // // Количество пролистываемых слайдов
+    // slidesPerGroup: 1,
+
+    // // Активный слайд по центру
+    // centeredSlides: true,
+
+    // Брейк поинты (адаптив)
+    // Ширина экрана
+    breakpoints: {
+        200: {
+            // slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        300: {
+            // slidesPerView: 1.5,
+            spaceBetween: 20,
+
+        },
+        325: {
+            // slidesPerView: 1.5,
+            spaceBetween: 20,
+
+        },
+        480: {
+            // slidesPerView: 2.5,
+            spaceBetween: 25,
+        },
+        992: {
+            spaceBetween: 30,
+        }
+    },
 
 
+})
 
 
 

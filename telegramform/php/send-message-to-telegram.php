@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $msgs['okSend'] = 'Спасибо, ваша заявка отправлена! Ожидайте звонка';
             echo json_encode($msgs);
         } elseif ($sendTextToTelegram) {
-            $msgs['okSend'] = 'ВСпасибо, ваша заявка отправлена! Ожидайте звонка';
+            $msgs['okSend'] = 'Спасибо, ваша заявка отправлена! Ожидайте звонка';
             echo json_encode($msgs);
           return true;
         } else {

@@ -13,11 +13,13 @@ $background-color: #FEFEFE;
 // background color of cards
 $background-color-cards: #F2F2F2;
 // COLOR text on dark background
-$text-color: #232227;
+$text-color: #333333;
 // COLOR of accent (arrows, buttons :)
-$accent-color: #FE4445;
+$accent-color: #FE900B;
+// COLOR of accent (arrows, buttons :)
+$accent-color-green: #FE900B;
 // COLOR menu item
-$menu-item-color: #232227;
+$menu-item-color: #333333;
 // COLOR menu item on :hover :focus :active
 $menu-item-color-OnHover: #FE4445;
 // Button color on :hover :focus :active
@@ -35,14 +37,16 @@ body {
 h1,
 h2,
 h3 {
-    font-family: Jost;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
 }
 
 span,
 p,
 a,
 input {
-    font-family: Lato;
+    font-family: Montserrat;
     margin: 0;
     color: $text-color;
     font-style: normal;
@@ -107,6 +111,7 @@ $max-width: 1920;
     $max-width: $max-width - 320;
     width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
+
 
 @mixin responsive-max-width($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
