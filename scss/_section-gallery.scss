@@ -1,13 +1,15 @@
 // _section-GALLERY.scss ____________________________
 .section-gallery {
     @include display(column, flex-start, center);
-    @include responsive-padding-bottom(120, 80);
+    @include responsive-padding-bottom(70, 50);
     @include responsive-padding-top(60, 40);
 
     &__curved-line {
+        @include responsive-width(1360, 1020);
+        @include responsive-height(2313, 1060);
         position: absolute;
-        top: 100px;
-        left: 3px;
+        top: 151px;
+        left: -311px;
     }
 
     .container {

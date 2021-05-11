@@ -3,11 +3,67 @@
 .section-advantages {
     @include display(column, flex-start, center);
     @include responsive-padding-bottom(48, 30);
-    @include responsive-padding-top(60, 40);
+    @include responsive-padding-top(70, 50);
 
     .container {
         @include display(column, flex-start, center);
     }
+
+    .heading-h2 {
+        @include responsive-padding-right(80, 80);
+        @include responsive-margin-bottom(40, 2);
+
+    }
+
+    .circles-advantages {
+        @include display(column, center, center);
+        @include responsive-width(290, 236);
+        @include responsive-height(290, 236);
+        background: $background-color;
+        border: 5px solid $accent-color-green;
+        box-sizing: border-box;
+        border-radius: 50%;
+        z-index: 2;
+
+
+        &__txt-advantages {
+            text-align: center;
+            @include responsive-font(18, 14);
+            @include responsive-line-height(27, 21);
+        }
+
+        &__first-circle {
+            @include responsive-margin-top(77, 77);
+            align-self: flex-end;
+
+
+        }
+
+        &__second-circle {
+            @include responsive-width(329, 255);
+            @include responsive-height(329, 255);
+            align-self: flex-start;
+            @include responsive-margin-top(83, 83);
+
+
+        }
+
+        &__third-circle {
+            @include responsive-width(305, 237);
+            @include responsive-height(305, 237);
+            align-self: flex-end;
+            @include responsive-margin-top(138, 138);
+            @include responsive-margin-right(20, 20);
+
+        }
+
+
+
+    }
+
+
+
+
 
     &__advantages-card {
         @include display(row, flex-start, center);
