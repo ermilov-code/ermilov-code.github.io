@@ -24,9 +24,10 @@
 
         &-slide {
             object-fit: contain;
-            @include responsive-width(750, 225);
-            @include responsive-height(562, 168);
+            @include responsive-width(970, 384);
+            @include responsive-height(546, 176);
             opacity: 0.5;
+            
 
             &-active {
                 opacity: 1;

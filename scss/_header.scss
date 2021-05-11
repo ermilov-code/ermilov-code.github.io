@@ -6,7 +6,7 @@
     min-height: 100vh;
     background: $background-color;
     @include responsive-padding-top(35, 20);
-    @include responsive-margin-bottom(60, 40);
+    @include responsive-margin-bottom(70, 50);
 }
 
 .container {}
@@ -361,9 +361,29 @@
         @include responsive-margin-bottom(50, 40);
     }
 
+    &__image-wrapper {
+        max-width: 100%;
+        position: relative;
+        @include display(column, flex-start, center);
+    }
+
     &__img {
         max-width: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        @include responsive-width (660, 179);
+        @include responsive-height (762, 206);
+        z-index: 10;
+
+
+    }
+
+    &__svg-line {
+        @include responsive-width (1587, 438);
+        @include responsive-height (1536, 478);
+        position: absolute;
+        z-index: 9;
+        @include responsive-top (-120, -151);
+        @include responsive-right (-10, -146);
 
     }
 
@@ -377,6 +397,7 @@
     background-color: $accent-color;
     @include responsive-margin-bottom(30, 30);
     align-self: flex-end;
+    z-index: 15;
 
     &__txt {
         color: $background-color;

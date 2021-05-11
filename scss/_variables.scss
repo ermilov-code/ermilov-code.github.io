@@ -17,7 +17,7 @@ $text-color: #333333;
 // COLOR of accent (arrows, buttons :)
 $accent-color: #FE900B;
 // COLOR of accent (arrows, buttons :)
-$accent-color-green: #FE900B;
+$accent-color-green: #249C63;
 // COLOR menu item
 $menu-item-color: #333333;
 // COLOR menu item on :hover :focus :active
@@ -28,30 +28,6 @@ $button-color-OnHover: #DC3536;
 $placeholder-color: #B1B1B1;
 
 
-html,
-body {
-    position: relative;
-    height: 100%;
-}
-
-h1,
-h2,
-h3 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-}
-
-span,
-p,
-a,
-input {
-    font-family: Montserrat;
-    margin: 0;
-    color: $text-color;
-    font-style: normal;
-    font-weight: normal;
-}
 
 
 // ============= MIXINS =============
@@ -245,6 +221,47 @@ $max-width: 1920;
     100% {
         transform: translate(-50%, -65%);
     }
+}
+
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+}
+
+
+span,
+p,
+a,
+input {
+    font-family: Montserrat;
+    margin: 0;
+    color: $text-color;
+    font-style: normal;
+    font-weight: normal;
+}
+
+h2 {
+    width: 100%;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    @include responsive-font(45, 24);
+    @include responsive-line-height(63, 33.6);
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: $text-color;
+    @include responsive-margin-bottom(70, 50);
+    z-index: 11;
+
 }
 
 
