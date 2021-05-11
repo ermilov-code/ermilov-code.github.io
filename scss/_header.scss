@@ -312,19 +312,26 @@
         fill: inherit;
         stroke: inherit;
         stroke-width: inherit;
+        border: 1px solid transparent;
 
-        &:hover,
-        &:active {
-            background-color: $accent-color !important;
+        &:hover {
+            background-color: $background-color !important;
+            @include smoothness(background-color, .8s);
+            border: 1px solid $accent-color;
+
+            .link-instagram__icon path {
+                fill: $accent-color;
+                @include smoothness(fill, .8s);
+            }
+
         }
 
         &__icon {
+
             @include responsive-width(17, 20);
             @include responsive-height(17, 20);
 
-            &:hover,
-            &:active {
-                transform: scale(1.2);
+            &:hover {
                 transition: transform 0.8s;
             }
         }
