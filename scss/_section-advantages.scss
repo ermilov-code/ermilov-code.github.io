@@ -6,7 +6,13 @@
     @include responsive-padding-top(70, 50);
 
     .container {
+        position: relative;
         @include display(column, flex-start, center);
+    }
+
+    .section-gallery__curved-line {
+        top: -367px;
+        left: -345px;
     }
 
     .heading-h2 {
