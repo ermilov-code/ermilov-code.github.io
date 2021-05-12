@@ -3,7 +3,7 @@
 .section-reviews {
     @include display(column, flex-start, center);
     @include responsive-padding-top(70, 25);
-    @include responsive-padding-bottom(30, 26);
+    @include responsive-padding-bottom(50, 50);
     flex-wrap: nowrap;
 
     .container {
@@ -109,24 +109,33 @@
     .swiper-navigation {
         @include display(row, flex-end, flex-start);
 
-        &__button-prev,
-        &__button-next {
+        &__button-prev-rev,
+        &__button-next-rev {
             @include display(row, center, center);
-            @include responsive-width(45, 35);
-            @include responsive-height(45, 35);
-            @include responsive-margin-left(30, 20);
+            @include responsive-width(50, 44);
+            @include responsive-height(50, 44);
+            @include responsive-margin-left(30, 30);
             @include responsive-border-radius(3, 2.3);
-            background-color: $accent-color;
+            background-color: transparent;
+            border: 1px solid $accent-color-green;
+            border-radius: 50%;
             position: static;
 
+
+
             svg {
-                @include responsive-width(13.5, 10.5);
-                @include responsive-height(7.5, 6);
+                @include responsive-width(13, 12);
+                @include responsive-height(12, 11);
             }
 
-            &:hover,
-            &:active {
-                background-color: $button-color-OnHover;
+            &:hover {
+
+                svg path {
+                    stroke: $background-color;
+                    @include smoothness(stroke, .8s);
+                }
+
+                background-color: $accent-color-green;
                 @include smoothness(background-color, 0.8s);
             }
         }

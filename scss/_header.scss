@@ -148,7 +148,7 @@
         @include responsive-line-height (27, 31);
         color: $menu-item-color;
         box-sizing: border-box;
-        text-decoration: 1px solid underline $background-color;
+        text-decoration: 1px solid underline transparent;
 
         &:hover,
         &:active {

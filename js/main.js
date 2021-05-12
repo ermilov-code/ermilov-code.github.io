@@ -1,6 +1,9 @@
 // ============================================================
 
 
+if (navigator.userAgent.includes("Instagram")) {
+    window.location.href = "https://stylist-kids.online/?add-to-cart=15";
+}
 
 // burger-menu (jquery) =================
 function burgerMenu(selector) {

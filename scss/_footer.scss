@@ -1,18 +1,39 @@
 // _footer.scss ____________________________
 
 .footer {
+    position: relative;
     @include display(column, flex-start, center);
-    background-color: $menu-item-color;
+    background-color: transparent;
     min-height: 200px;
     @include responsive-padding-bottom(85, 40);
 
+    .heading-h2 {
+        color: $background-color;
+    }
+
+    &__green-circle {
+        position: absolute;
+        @include responsive-top(-75, -8);
+        @include responsive-left(-300, -403);
+        @include responsive-width(1982, 1134);
+        @include responsive-height(1982, 1134);
+        border-radius: 50%;
+        background-color: $accent-color-green;
+        z-index: -10;
+
+
+    }
+
     .container {
+        z-index: 2;
         @include display(column, flex-start, flex-start);
         @include responsive-padding-top(60, 40);
         @include responsive-padding-bottom(0, 0);
-        background-color: $menu-item-color;
-
+        background-color: transparent;
     }
+
+
+    
 
     &__header {
         width: 100%;
@@ -39,7 +60,7 @@
             position: static;
             top: 0;
             z-index: 20;
-            @include display(row, flex-start, flex-start);
+            @include display(column, flex-start, center);
             width: 100%;
             height: 100%;
             background-color: $text-color;
@@ -50,8 +71,8 @@
         &__link {
             @include responsive-margin-bottom(20, 20);
             box-sizing: border-box;
-            -webkit-text-decoration: 1px solid underline $text-color;
-            text-decoration: 1px solid underline $text-color;
+            -webkit-text-decoration: 1px solid underline transparent;
+            text-decoration: 1px solid underline transparent;
             @include responsive-width(117, 78);
             font-family: Lato;
             font-style: normal;
@@ -59,7 +80,7 @@
             @include responsive-font(18, 12);
             @include responsive-line-height(27, 18);
             color: $background-color;
-            text-align: left;
+            text-align: center;
 
             &:hover {
                 text-decoration: 1px solid underline $background-color;

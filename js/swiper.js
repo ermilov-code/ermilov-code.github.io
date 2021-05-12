@@ -174,8 +174,8 @@ let mySwiper1 = new Swiper(slider1, {
 
     // Стрелки
     navigation: {
-        nextEl: '.swiper-nav__btn-next_section-reviews',
-        prevEl: '.swiper-nav__btn-prev_section-reviews'
+        nextEl: '.swiper-navigation__button-next-rev',
+        prevEl: '.swiper-navigation__button-prev-rev'
     },
     // Навигация 
     // Буллеты, текущее положение, прогрессбар
