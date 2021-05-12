@@ -3,7 +3,7 @@
 .section-reviews {
     @include display(column, flex-start, center);
     @include responsive-padding-top(70, 25);
-    @include responsive-padding-bottom(50, 50);
+    @include responsive-padding-bottom(0, 0);
     flex-wrap: nowrap;
 
     .container {

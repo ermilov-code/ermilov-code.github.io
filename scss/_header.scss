@@ -410,6 +410,8 @@
         color: $background-color;
         @include responsive-font(16, 12);
         @include responsive-line-height(20, 14.6);
+        font-style: normal;
+        font-weight: 600;
     }
 
     &:hover {
