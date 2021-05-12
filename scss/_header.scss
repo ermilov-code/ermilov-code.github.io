@@ -433,8 +433,7 @@
     @include responsive-bottom(25, 20);
     @include responsive-right(20, 15);
     display: block;
-    background-color: transparent;
-    background: $accent-color;
+    background: $accent-color-green;
     @include responsive-width(42, 35);
     @include responsive-height(42, 35);
     border-radius: 100%;
