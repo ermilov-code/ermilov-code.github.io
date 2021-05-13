@@ -14,7 +14,7 @@
     &__green-circle {
         position: absolute;
         @include responsive-top(1, 13);
-        @include responsive-left(-300, -403);
+        @include responsive-left(-620, -500);
         @include responsive-width(1982, 1300);
         @include responsive-height(1982, 1300);
         border-radius: 50%;

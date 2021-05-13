@@ -3,7 +3,7 @@
 
 .header {
     @include display(column, flex-start, center);
-    min-height: 100vh;
+    min-height: 50vh;
     background: $background-color;
     @include responsive-padding-top(35, 20);
     @include responsive-margin-bottom(70, 50);
@@ -408,7 +408,7 @@
 
     &__txt {
         color: $background-color;
-        @include responsive-font(16, 12);
+        @include responsive-font(16, 15);
         @include responsive-line-height(20, 14.6);
         font-style: normal;
         font-weight: 600;

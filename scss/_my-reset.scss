@@ -62,7 +62,8 @@ section {
 .wrapper {
     width: 100%;
     min-height: 100vh;
-    // overflow: hidden;
+
+
 }
 
 .header,
@@ -71,13 +72,16 @@ section {
 .section-advantages,
 .section-reviews,
 .footer {
+    margin: 0 auto;
     overflow: hidden;
+    max-width: 790px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    // align-items: center;
+
 
 }
-
-
-
-
 
 
 
@@ -108,27 +112,28 @@ section {
 // }
 
 .container {
-    max-width: 576px;
-    margin: 0 auto;
-    width: 100%;
+    max-width: 600px;
+    // margin: 0 auto;
+    // width: 100%;
 
 }
 
 @media (max-width: 1182px) {
     .container {
-        max-width: 576px;
+        max-width: 600px;
     }
 }
 
 @media (max-width: 992.98px) {
     .container {
-        max-width: 576px;
+        max-width: 600px;
     }
 }
 
 @media (max-width: 767.98px) {
     .container {
         max-width: none;
+        max-width: 500px;
         padding: 0 15px;
     }
 }
