@@ -235,6 +235,20 @@ $max-width: 1920;
     }
 }
 
+@keyframes magnificationEffect {
+    0% {
+        transform: translate(-50%, -65%);
+    }
+
+    50% {
+        transform: translate(-50%, -25%);
+    }
+
+    100% {
+        transform: translate(-50%, -65%);
+    }
+}
+
 
 html,
 body {
