@@ -1,0 +1,163 @@
+// _section-REVIEWS.scss ____________________________
+
+.section-reviews {
+    @include display(column, flex-start, center);
+    @include responsive-padding-top(120, 80);
+    @include responsive-padding-bottom(120, 80);
+    flex-wrap: nowrap;
+
+    .container {
+        @include display(column, flex-start, center);
+
+        &_swiper-navigation {
+            @include display(row, flex-end, flex-start);
+        }
+
+
+    }
+
+    .heading-h2 {
+        @include responsive-margin-bottom(76, 50);
+    }
+
+    .review-card {
+        position: relative;
+        @include display(column, flex-start, flex-start);
+        @include responsive-padding-top-bottom(33, 20);
+        @include responsive-padding-left-right(30, 20);
+        background-color: $background-color-cards;
+        border-radius: 5px;
+        @include responsive-width(541, 279);
+        @include responsive-min-height(342, 228);
+
+        &__img {
+            position: absolute;
+            @include responsive-top(-16, -10);
+            @include responsive-left(-14, -10);
+            @include responsive-width(154, 80);
+            @include responsive-min-height(154, 80);
+        }
+
+        &__wrapper-names {
+            @include display(column, flex-start, flex-start);
+            @include responsive-margin-left(140, 66);
+            @include responsive-min-height(94, 67);
+            @include responsive-margin-bottom(33, 14);
+
+
+
+
+        }
+
+        &__client-name {
+            @include responsive-margin-bottom(10, 10);
+            font-family: Lato;
+            font-style: normal;
+            font-weight: bold;
+            @include responsive-font(20, 14);
+            @include responsive-line-height(30, 21);
+            color: $text-color;
+        }
+
+        &__service-name {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            @include responsive-font(18, 12);
+            @include responsive-line-height(27, 18);
+            color: rgba(35, 34, 39, 0.7);
+        }
+
+        &__review-text {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            @include responsive-font(20, 12);
+            @include responsive-line-height(30, 18);
+            color: $text-color;
+        }
+
+    }
+
+}
+
+.section-reviews {
+
+    .swiper {
+        position: relative;
+
+        &-container {
+            @include responsive-margin-bottom(40, 20);
+            // @include responsive-margin-left(0, 15);
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        &-slide {
+            @include responsive-width(555, 289);
+            @include responsive-height(358, 238);
+            // object-fit: contain;
+            // @include responsive-width(750, 225);
+            // @include responsive-height(562, 168);
+            opacity: 0.5;
+
+            &-active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .swiper-navigation {
+        @include display(row, flex-end, flex-start);
+
+        &__button-prev,
+        &__button-next {
+            @include display(row, center, center);
+            @include responsive-width(45, 35);
+            @include responsive-height(45, 35);
+            @include responsive-margin-left(30, 20);
+            @include responsive-border-radius(3, 2.3);
+            background-color: $accent-color;
+            position: static;
+
+            svg {
+                @include responsive-width(13.5, 10.5);
+                @include responsive-height(7.5, 6);
+            }
+
+            &:hover,
+            &:active {
+                background-color: $button-color-OnHover;
+                @include smoothness(background-color, 0.8s);
+            }
+        }
+    }
+
+}
+
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}
+
+
+
+
+
+// / _section-REVIEWS.scss ____________________________

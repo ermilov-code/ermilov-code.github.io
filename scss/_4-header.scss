@@ -1,0 +1,433 @@
+// _header.scss ____________________________
+
+
+.header {
+    @include display-flex(column, flex-start, center);
+    min-height: 100vh;
+    background: $background-color;
+    @include responsive-padding-top(30, 30);
+    @include responsive-padding-bottom(80, 60);
+}
+
+.header__control {
+    width: 100%;
+    // top: 0px;
+    // left: 0px;
+    @include display-flex(row, space-between, center);
+    @include responsive-margin-bottom(60, 58);
+}
+
+// styles for BURGER MENU ===============
+.burger-menu {
+    @include responsive-width(50, 40);
+    @include responsive-height(50, 40);
+
+    &__button {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        @include display-flex(column, center, center);
+        // top: 0px;
+        // left: 0px;
+        z-index: 30;
+        background-color: $background-color-cards;
+        border-radius: 50%;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    &__lines::before,
+    &__lines::after,
+    &__lines {
+        position: absolute;
+        @include responsive-border-radius (9, 6);
+        @include responsive-height (2, 2);
+        background-color: $text-color;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    &__lines {
+        @include responsive-width (30, 30);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__lines::before {
+        @include responsive-width (35, 35);
+        content: '';
+        @include responsive-top (-7, -7);
+    }
+
+    &__lines::after {
+        @include responsive-width (24, 24);
+        content: '';
+        @include responsive-top (7, 7);
+    }
+
+    &_active .burger-menu__lines {
+        background-color: $text-color;
+    }
+
+    &_active .burger-menu__lines::before {
+        transform: rotate(45deg);
+    }
+
+    &_active .burger-menu__lines::after {
+        transform: rotate(-45deg);
+    }
+
+    &_active {
+
+        .burger-menu__button {
+            background-color: transparent;
+        }
+
+
+        &:hover span {
+            background-color: transparent;
+        }
+
+        &::before,
+        &::after {
+            background-color: $background-color;
+        }
+
+        .burger-menu__lines::after,
+        .burger-menu__lines::before {
+            @include responsive-width (25, 25);
+            top: 0;
+            background-color: $text-color;
+        }
+    }
+
+    &__nav {
+        @include responsive-padding-top (83, 78);
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        @include display-flex(column, flex-start, center);
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        background: rgba(86, 88, 128, 0.8);
+        backdrop-filter: blur(14px);
+        overflow-y: auto;
+        left: -100%;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -o-transition: 0.8s;
+        transition: 0.8s;
+
+        .logo {
+            color: $background-color;
+            position: absolute;
+            @include responsive-top (114, 34);
+            @include responsive-left (92, 90);
+        }
+    }
+
+    &_active .burger-menu__nav {
+        left: 0;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    &__link {
+        @include responsive-margin-bottom (33, 30);
+        @include responsive-font-size (18, 16);
+        @include responsive-line-height (23, 20);
+        color: $menu-item-color;
+        box-sizing: border-box;
+        text-decoration: 0px solid underline transparent;
+
+
+        &:hover,
+        &:active {
+            text-decoration: 1px solid underline $accent-color;
+            color: $menu-item-color;
+            @include smoothness(text-decoration, .8s);
+        }
+    }
+
+    &__horizontal-bar {
+        width: 100%;
+        height: 1px;
+        background: rgba(250, 215, 151, 0.3);
+        @include responsive-margin-top(20, 19);
+        @include responsive-margin-bottom(42, 40);
+    }
+
+
+    &__overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+    }
+
+    &_active .burger-menu__overlay {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+// / styles for BURGER MENU ===============
+
+.social-media {
+    width: 100%;
+    @include display-flex(row, center, center);
+
+    &__button {
+        @include responsive-width(45, 40);
+        @include responsive-height(45, 40);
+        @include display-flex(column, center, center);
+        @include responsive-margin-left-right (13, 10);
+        border: 1px solid $accent-color;
+        border-radius: 50%;
+    }
+
+
+    &__icon {
+        @include responsive-width(20, 18);
+        @include responsive-height(20, 18);
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        fill: $text-color;
+        stroke: inherit;
+        stroke-width: inherit;
+    }
+
+    &__svg {
+        @include responsive-width(16, 13);
+        @include responsive-height(16, 13);
+
+        &:hover,
+        &:active {
+            transform: scale(1.2);
+            transition: transform 0.8s;
+        }
+    }
+
+    // &__txt {
+    //     font-family: Lato;
+    //     font-style: normal;
+    //     font-weight: normal;
+    //     @include responsive-font-size(18, 12);
+    //     @include responsive-line-height(27, 14.4);
+    // }
+
+    // &__whatsapp {
+    //     @include responsive-width(42, 35);
+    //     @include responsive-height(42, 35);
+    // }
+
+    // &:hover .call-button__txt,
+    // &:active .call-button__txt,
+    // &:hover .mail-button__txt,
+    // &:active .mail-button__txt,
+    // &:hover .whatsapp-button__txt,
+    // &:active .whatsapp-button__txt {
+    //     color: $text-color;
+    // }
+
+
+    // .whatsapp-button {
+    //     &__icon {
+    //         background-color: transparent;
+    //     }
+    // }
+}
+
+.logo {
+    @include display-flex(row, flex-start, center);
+    color: $text-color;
+
+    &__txt {
+        font-family: Spectral;
+        @include responsive-font-size(20, 16);
+        @include responsive-line-height(20.44, 16.35);
+    }
+
+    &__icon {
+        @include responsive-width(30, 26);
+        @include responsive-height(30, 26);
+        @include responsive-margin-right(10, 8.6);
+    }
+
+    &:hover,
+    &:active {
+        color: $accent-color;
+        transition: color 0.8s;
+    }
+}
+
+.header__contacts {
+
+    .btn {
+        @include responsive-width(42, 35);
+        @include responsive-height(42, 35);
+        padding: 0;
+        background-color: $accent-color;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: inherit;
+
+        &:hover,
+        &:active {
+            background-color: $accent-color !important;
+        }
+
+        &__icon {
+            @include responsive-width(16, 13);
+            @include responsive-height(16, 13);
+
+            &:hover,
+            &:active {
+                transform: scale(1.2);
+                transition: transform 0.8s;
+            }
+        }
+    }
+}
+
+.modal {
+    &__close {
+        @include responsive-width (18, 15);
+        @include responsive-height (18, 15);
+    }
+}
+
+// styles for header__CONTENT ===============
+.header {
+
+    &__content {
+        @include display-flex(column, flex-start, center);
+    }
+
+    &__main-heading {
+        @include responsive-font-size(50, 33);
+        @include responsive-line-height(65, 44);
+        color: $text-color;
+        @include responsive-margin-bottom(30, 20);
+    }
+
+    &__description-site {
+        @include responsive-font-size(20, 14);
+        @include responsive-line-height(30, 21);
+        color: $text-color;
+        @include responsive-margin-bottom(60, 40);
+    }
+
+    &__img {
+        max-width: 100%;
+        object-fit: cover;
+
+    }
+
+}
+
+.button-order {
+
+    @include display-flex(column, flex-start, center);
+    justify-content: center;
+    align-items: center;
+    // @include responsive-max-width(244, 179);
+    background-color: $accent-color;
+    border-radius: 5px;
+    @include responsive-margin-bottom(44, 40);
+    @include responsive-padding-left-right(48, 40);
+    @include responsive-padding-top-bottom(24, 20);
+
+    &__txt {
+        color: $background-color;
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(22, 14);
+    }
+
+    &:hover,
+    &:active {
+        background-color: $menu-item-color-hover;
+        // transition: color .8s;
+        @include smoothness(background-color, .8s);
+    }
+
+
+}
+
+// / styles for header__CONTENT ===============
+
+// UP button on the site =================
+.up-button {
+    @include responsive-bottom(25, 20);
+    @include responsive-right(20, 15);
+    display: block;
+    background-color: transparent;
+    background: $accent-color;
+    @include responsive-width(42, 35);
+    @include responsive-height(42, 35);
+    border-radius: 100%;
+    position: fixed;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 9999;
+    cursor: pointer;
+    transform: rotate(180deg);
+
+    &_show {
+        opacity: 0.7;
+    }
+
+    &__arrow {
+        position: absolute;
+        @include responsive-width(16, 14);
+        @include responsive-height(15, 13);
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        animation: upArrowAnim infinite 2s;
+    }
+}
+
+// UP button on the site =================
+
+
+// // X-Small devices (portrait phones, less than 576px)
+// // No media query for `xs` since this is the default in Bootstrap
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {}
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {}
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {}
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {}
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) {}
+
+
+
+// // _header.scss ____________________________

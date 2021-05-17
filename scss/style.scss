@@ -1,26 +1,20 @@
 // style.scss ____________________________
 
-// importing BASE STYLES file
-@import 'my-reset';
-// Import FONTS
-@import 'fonts';
-// Import VARIABLES
-@import 'variables';
-// Import BLOCKS
-@import 'header';
-@import 'main';
-@import 'section-inside';
-@import 'section-gallery';
-@import 'section-advantages';
-@import 'section-reviews';
-// @import 'section-prices';
-
-
-// @import 'section-services';
-// @import 'section-form';
-// @import 'privacy-policy';
-// @import 'section-contacts';
-
-@import 'footer';
+@import '1-fonts';
+@import '2-variables';
+@import '3-my-reset';
+@import '4-header';
+// @import '5-main';
+// @import '6-section-expert';
+// @import '7-section-advantages';
+// @import '8-section-services';
+// @import '9-section-gallery';
+// @import '10-section-video';
+// @import '11-section-reviews';
+// @import '12-section-form';
+// @import '13-section-licenses-certificates';
+// @import '14-section-FAQ';
+// @import '15-section-contacts';
+// @import '16-footer';
 
 // style.scss ____________________________
