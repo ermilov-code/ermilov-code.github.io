@@ -150,9 +150,8 @@
         text-decoration: 0px solid underline transparent;
 
 
-        &:hover,
-        &:active {
-            text-decoration: 1px solid underline $accent-color;
+        &:hover {
+            text-decoration: 1px solid underline $text-color;
             color: $menu-item-color;
             @include smoothness(text-decoration, .8s);
         }
@@ -210,46 +209,6 @@
         stroke: inherit;
         stroke-width: inherit;
     }
-
-    &__svg {
-        @include responsive-width(16, 13);
-        @include responsive-height(16, 13);
-
-        &:hover,
-        &:active {
-            transform: scale(1.2);
-            transition: transform 0.8s;
-        }
-    }
-
-    // &__txt {
-    //     font-family: Lato;
-    //     font-style: normal;
-    //     font-weight: normal;
-    //     @include responsive-font-size(18, 12);
-    //     @include responsive-line-height(27, 14.4);
-    // }
-
-    // &__whatsapp {
-    //     @include responsive-width(42, 35);
-    //     @include responsive-height(42, 35);
-    // }
-
-    // &:hover .call-button__txt,
-    // &:active .call-button__txt,
-    // &:hover .mail-button__txt,
-    // &:active .mail-button__txt,
-    // &:hover .whatsapp-button__txt,
-    // &:active .whatsapp-button__txt {
-    //     color: $text-color;
-    // }
-
-
-    // .whatsapp-button {
-    //     &__icon {
-    //         background-color: transparent;
-    //     }
-    // }
 }
 
 .logo {
@@ -278,52 +237,134 @@
 .header__contacts {
 
     .btn {
-        @include responsive-width(42, 35);
-        @include responsive-height(42, 35);
+        @include display-flex(column, center, center);
+        @include responsive-width(42, 40);
+        @include responsive-height(42, 40);
         padding: 0;
-        background-color: $accent-color;
+        background-color: transparent;
         border-radius: 50%;
-        border: none;
+        border: 1px solid $accent-color;
         outline: none;
         fill: inherit;
         stroke: inherit;
         stroke-width: inherit;
 
-        &:hover,
-        &:active {
-            background-color: $accent-color !important;
+        &:hover {
+            background-color: $text-color !important;
+            border: 1px solid transparent;
+            @include smoothness(background-color, .8s);
+
+            .btn__icon {
+                path {
+                    stroke: $background-color;
+                }
+            }
         }
 
         &__icon {
-            @include responsive-width(16, 13);
-            @include responsive-height(16, 13);
-
-            &:hover,
-            &:active {
-                transform: scale(1.2);
-                transition: transform 0.8s;
-            }
+            @include responsive-width(17, 17);
+            @include responsive-height(17, 17);
         }
     }
 }
 
 .modal {
+
+    &-content {
+        background: rgba(86, 88, 128, 0.8);
+        backdrop-filter: blur(14px);
+    }
+
+    &-header {
+        border-bottom: 1px solid rgba(250, 215, 151, 0.3);
+    }
+
+
+
     &__close {
         @include responsive-width (18, 15);
         @include responsive-height (18, 15);
+        fill: $text-color;
     }
+
+
 }
+
+.telephone {
+    @include display-flex(row, flex-start, center);
+    @include responsive-margin-bottom (16, 13);
+
+    &__wrapper-icons {
+        @include responsive-width(45, 40);
+        @include responsive-height(45, 40);
+        @include display-flex(column, center, center);
+        border: 1px solid $accent-color;
+        border-radius: 50%;
+        @include responsive-margin-right (20, 13);
+
+    }
+
+    &__icon {
+        @include responsive-width(17, 17);
+        @include responsive-height(17, 17);
+        fill: $text-color;
+    }
+
+    &__txt {
+        font-weight: bold;
+        @include responsive-font-size(20, 16);
+        @include responsive-line-height(25, 20);
+        text-decoration: 1px solid underline transparent;
+    }
+
+    &:hover {
+
+        .telephone__txt {
+            text-decoration: 1px solid underline $text-color;
+            @include smoothness(text-decoration, .8s);
+        }
+
+        .telephone__wrapper-icons {
+            background-color: $text-color !important;
+            border: 1px solid transparent;
+            @include smoothness(background-color, .8s);
+
+            .telephone__icon {
+                fill: $background-color;
+            }
+        }
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+}
+
+
 
 // styles for header__CONTENT ===============
 .header {
 
+    .container {
+        align-items: flex-start;
+    }
+
     &__content {
-        @include display-flex(column, flex-start, center);
+        @include display-flex(column, flex-start, flex-start);
     }
 
     &__main-heading {
-        @include responsive-font-size(50, 33);
-        @include responsive-line-height(65, 44);
+        @include responsive-font-size(56, 36);
+        @include responsive-line-height(72, 46);
         color: $text-color;
         @include responsive-margin-bottom(30, 20);
     }
