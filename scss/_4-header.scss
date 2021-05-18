@@ -11,8 +11,6 @@
 
 .header__control {
     width: 100%;
-    // top: 0px;
-    // left: 0px;
     @include display-flex(row, space-between, center);
     @include responsive-margin-bottom(60, 58);
 }
@@ -349,7 +347,14 @@
 
 }
 
-
+.ellipse {
+    position: absolute;
+    @include responsive-width(949, 394);
+    @include responsive-height(949, 394);
+    background: #696C9D;
+    filter: blur(230.179px);
+    z-index: -2;
+}
 
 // styles for header__CONTENT ===============
 .header {
@@ -359,7 +364,13 @@
     }
 
     &__content {
+        position: relative;
         @include display-flex(column, flex-start, flex-start);
+
+        .ellipse {
+            @include responsive-top(50, 10);
+            @include responsive-left(50, 10);
+        }
     }
 
     &__main-heading {
@@ -367,49 +378,60 @@
         @include responsive-line-height(72, 46);
         color: $text-color;
         @include responsive-margin-bottom(30, 20);
+        text-align: left;
     }
 
     &__description-site {
+        @include responsive-width(425, 270);
         @include responsive-font-size(20, 14);
-        @include responsive-line-height(30, 21);
+        @include responsive-line-height(32, 22.4);
         color: $text-color;
-        @include responsive-margin-bottom(60, 40);
+        @include responsive-margin-bottom(69, 40);
     }
 
     &__img {
-        max-width: 100%;
-        object-fit: cover;
-
+        @include responsive-padding-left(15, 15);
     }
 
 }
 
 .button-order {
-
-    @include display-flex(column, flex-start, center);
-    justify-content: center;
-    align-items: center;
-    // @include responsive-max-width(244, 179);
-    background-color: $accent-color;
+    @include display-flex(row, flex-start, center);
+    background-color: transparent;
     border-radius: 5px;
-    @include responsive-margin-bottom(44, 40);
-    @include responsive-padding-left-right(48, 40);
-    @include responsive-padding-top-bottom(24, 20);
+    @include responsive-margin-bottom(50, 50);
 
     &__txt {
-        color: $background-color;
+        font-weight: bold;
+        color: $text-color;
         @include responsive-font-size(18, 12);
-        @include responsive-line-height(22, 14);
+        @include responsive-line-height(22.6, 15);
+        letter-spacing: 0.02em;
+        @include responsive-margin-right(31, 24);
     }
 
-    &:hover,
-    &:active {
-        background-color: $menu-item-color-hover;
-        // transition: color .8s;
-        @include smoothness(background-color, .8s);
+    &__icon-wrapper {
+        @include display-flex(row, flex-start, center);
     }
 
+    &__arrow-icon {
+        @include responsive-width(55, 39);
+        @include responsive-height(13, 9);
+    }
 
+    &__circle-icon {
+        @include responsive-width(78, 54);
+        @include responsive-height(81, 56);
+        @include responsive-margin-left(-31, -24);
+    }
+
+    &:hover {
+
+        .button-order__arrow-icon {
+            transform: translate(10px);
+            @include smoothness(transform, .8s);
+        }
+    }
 }
 
 // / styles for header__CONTENT ===============
