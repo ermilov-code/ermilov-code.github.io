@@ -1,0 +1,55 @@
+// _fonts.scss ____________________________
+
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-Bold.eot');
+    src: url('../fonts/Spectral-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Spectral-Bold.woff2') format('woff2'),
+        url('../fonts/Spectral-Bold.woff') format('woff'),
+        url('../fonts/Spectral-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral-Regular.eot');
+    src: url('../fonts/Spectral-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Spectral-Regular.woff2') format('woff2'),
+        url('../fonts/Spectral-Regular.woff') format('woff'),
+        url('../fonts/Spectral-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.eot');
+    src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Regular.woff') format('woff'),
+        url('../fonts/SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Bold.eot');
+    src: url('../fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SourceSansPro-Bold.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Bold.woff') format('woff'),
+        url('../fonts/SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+// _fonts.scss ____________________________
