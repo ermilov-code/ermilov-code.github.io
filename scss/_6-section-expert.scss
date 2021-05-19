@@ -10,6 +10,7 @@
 
     .container {
         @include display-flex(column, flex-start, center);
+        background-color: $background-color;
     }
 
 
