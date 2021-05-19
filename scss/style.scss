@@ -1,0 +1,22 @@
+// style.scss ____________________________
+
+// importing BASE STYLES file
+@import 'my-reset';
+// Import FONTS
+@import 'fonts';
+// Import VARIABLES
+@import 'variables';
+// Import BLOCKS
+@import 'header';
+@import 'main';
+@import 'section-services';
+@import 'section-advantages';
+@import 'section-prices';
+@import 'section-gallery';
+@import 'section-form';
+@import 'privacy-policy';
+@import 'section-reviews';
+@import 'section-contacts';
+@import 'footer';
+
+// style.scss ____________________________
