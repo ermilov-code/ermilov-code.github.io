@@ -1,58 +1,49 @@
-// _section-ADVANTAGES.scss ____________________________
+// _section-expert.scss ____________________________
 
 .section-expert {
-
     background-color: $background-color;
-
-    @include display-flex(column, flex-start, center);
-    @include responsive-padding-bottom(48, 30);
-    @include responsive-padding-top(60, 40);
+    @include display-flex(column, flex-start, flex-start);
+    @include responsive-padding-bottom(80, 60);
+    @include responsive-padding-top(80, 60);
 
     .container {
-        @include display-flex(column, flex-start, center);
+        position: relative;
+        @include display-flex(column, flex-start, flex-start);
         background-color: $background-color;
     }
 
+    &__text {
+        @include responsive-margin-bottom(14, 12);
+        @include responsive-font-size(20, 14);
+        @include responsive-line-height(30, 21);
 
+        &:nth-child(5) {
+            @include responsive-margin-bottom(40, 40);
+        }
+    }
 
-    // &__advantages-card {
-    //     @include display-flex(column, flex-start, center);
-    //     flex-wrap: nowrap;
-    //     @include responsive-width(368, 290);
-    //     @include responsive-min-height(180, 110);
-    //     background: $accent-color;
-    //     border-radius: 5px;
-    //     @include responsive-margin-bottom(12, 10);
-    //     @include responsive-margin-left(3, 0);
-    //     @include responsive-margin-right(3, 0);
-    //     @include responsive-padding-left-right(40, 17);
-    //     @include responsive-padding-top-bottom(60, 34);
-    // }
-
-    // &__advantages-icon {
-    //     @include responsive-width(56, 45);
-    //     @include responsive-height(56, 45);
-    //     @include responsive-margin-right(20, 14);
-    //     fill: $background-color;
-
-    //     &_large-width {
-    //         @include responsive-width(100, 70);
-    //         @include responsive-height(86, 60);
-    //     }
-    // }
-
-    // &__advantages-text {
-    //     @include responsive-max-width(459, 197);
-    //     @include responsive-font-size(20, 14);
-    //     @include responsive-line-height(30, 21);
-    //     font-style: normal;
-    //     font-weight: normal;
-    //     color: $background-color;
-
-    // }
+    &__img {
+        @include responsive-padding-right(14, 12);
+    }
 }
 
+.img-container {
+    position: relative;
+    z-index: 3;
+}
 
+.section-expert__img {
+    z-index: 3;
+}
+
+.wave {
+    position: absolute;
+    @include responsive-top(48, 37);
+    @include responsive-left(-178, -26);
+    z-index: -2;
+    @include responsive-width(267, 120);
+    @include responsive-height(18, 9);
+}
 
 
 // X-Small devices (portrait phones, less than 576px)
@@ -76,6 +67,3 @@
 
 
 
-
-
-// / _section-ADVANTAGES.scss ____________________________
