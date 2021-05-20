@@ -1,50 +1,125 @@
-// _section-ADVANTAGES.scss ____________________________
+// _section-video.scss ____________________________
 
-.section-advantages {
-    @include display(column, flex-start, center);
-    @include responsive-padding-bottom(48, 30);
+.section-video {
+    @include display-flex(column, flex-start, flex-start);
+    @include responsive-padding-bottom(120, 80);
     @include responsive-padding-top(60, 40);
 
     .container {
-        @include display(column, flex-start, center);
-    }
+        @include display-flex(column, flex-start, flex-start);
 
-    &__advantages-card {
-        @include display(row, flex-start, center);
-        flex-wrap: nowrap;
-        @include responsive-width(368, 290);
-        @include responsive-min-height(180, 110);
-        background: $accent-color;
-        border-radius: 5px;
-        @include responsive-margin-bottom(12, 10);
-        @include responsive-margin-left(3, 0);
-        @include responsive-margin-right(3, 0);
-        @include responsive-padding-left-right(40, 17);
-        @include responsive-padding-top-bottom(60, 34);
-    }
+        &_swiper-navigation {
+            @include display-flex(row, flex-end, flex-start);
+            @include responsive-margin-bottom(35, 15);
+        }
 
-    &__advantages-icon {
-        @include responsive-width(56, 45);
-        @include responsive-height(56, 45);
-        @include responsive-margin-right(20, 14);
-        fill: $background-color;
-
-        &_large-width {
-            @include responsive-width(100, 70);
-            @include responsive-height(86, 60);
+        .wave {
+            z-index: 10;
+            @include responsive-padding-top(80, 80);
         }
     }
 
-    &__advantages-text {
-        @include responsive-max-width(459, 197);
-        @include responsive-font(20, 14);
-        @include responsive-line-height(30, 21);
-        font-style: normal;
-        font-weight: normal;
-        color: $background-color;
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-wrapper {
+        @include responsive-margin-bottom(60, 40);
 
     }
+
+    .swiper-slide {
+        @include responsive-width(398, 215);
+        @include responsive-height(225, 123);
+        opacity: 0.5;
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transform: scale(1);
+        transition: transform 0.8s;
+
+        &-active {
+            opacity: 1;
+            transform: scale(1.1);
+            transition: transform 0.8s;
+
+        }
+
+        &__video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+
+
+    .swiper-video-navigation {
+        @include display-flex(row, flex-start, flex-start);
+
+        &__button-prev,
+        &__button-next {
+            @include display-flex(column, flex-start, flex-start);
+            @include responsive-width(55, 55);
+            @include responsive-height(13, 13);
+            @include responsive-border-radius(3, 2.3);
+            background-color: transparent;
+            position: static;
+
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__button-prev {
+            @include responsive-margin-right(40, 40);
+
+        }
+    }
+
+    .swiper-pagination {
+        bottom: 0px;
+        position: static;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0;
+    }
+
+    .swiper-pagination-bullet {
+        border-radius: 0;
+        background: rgba(250, 215, 151, 0.3);
+        @include responsive-width(67, 50);
+        @include responsive-height(1, 1);
+
+
+        &-active {
+            background: $accent-color;
+            @include responsive-width(67, 50);
+            @include responsive-height(2, 2);
+        }
+    }
+
 }
+
+
+
 
 
 

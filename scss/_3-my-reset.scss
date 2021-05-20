@@ -101,6 +101,7 @@ section {
 }
 
 .container {
+    position: relative;
     @include display-flex(column, flex-start, flex-start);
     max-width: 1170px;
     margin: 0 auto;
