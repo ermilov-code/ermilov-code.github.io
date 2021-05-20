@@ -1,140 +1,161 @@
 // _section-REVIEWS.scss ____________________________
 
 .section-reviews {
-    @include display(column, flex-start, center);
-    @include responsive-padding-top(120, 80);
-    @include responsive-padding-bottom(120, 80);
-    flex-wrap: nowrap;
+    @include display-flex(column, flex-start, flex-start);
+    @include responsive-padding-bottom(80, 60);
+    @include responsive-padding-top(60, 40);
 
     .container {
-        @include display(column, flex-start, center);
+        @include display-flex(column, flex-start, flex-start);
 
         &_swiper-navigation {
-            @include display(row, flex-end, flex-start);
+            @include display-flex(row, flex-end, flex-start);
+            @include responsive-margin-bottom(60, 40);
         }
 
+        .wave {
+            z-index: 10;
+            @include responsive-padding-top(80, 80);
+        }
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-wrapper {
+        @include responsive-margin-bottom(60, 40);
 
     }
 
-    .heading-h2 {
-        @include responsive-margin-bottom(76, 50);
+    .swiper-slide {
+        @include responsive-width(555, 290);
+        @include responsive-min-height(346, 321);
+        opacity: 0.5;
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        &-active {
+            opacity: 1;
+        }
     }
 
     .review-card {
-        position: relative;
-        @include display(column, flex-start, flex-start);
-        @include responsive-padding-top-bottom(33, 20);
-        @include responsive-padding-left-right(30, 20);
-        background-color: $background-color-cards;
-        border-radius: 5px;
-        @include responsive-width(541, 279);
-        @include responsive-min-height(342, 228);
+        @include display-flex(column, flex-start, flex-start);
+        @include responsive-width(555, 290);
+        @include responsive-min-height(346, 321);
+        @include responsive-padding-top-bottom(66, 30);
+        @include responsive-padding-left-right(33, 45);
+        border: 1px solid $accent-color;
+        border-radius: 0px 40px 0px 0px;
 
-        &__img {
-            position: absolute;
-            @include responsive-top(-16, -10);
-            @include responsive-left(-14, -10);
-            @include responsive-width(154, 80);
-            @include responsive-min-height(154, 80);
-        }
-
-        &__wrapper-names {
-            @include display(column, flex-start, flex-start);
-            @include responsive-margin-left(140, 66);
-            @include responsive-min-height(94, 67);
-            @include responsive-margin-bottom(33, 14);
-
-
-
-
-        }
-
-        &__client-name {
+        &__name {
+            width: 100%;
+            text-align: left;
+            @include responsive-font-size(22, 16);
+            @include responsive-line-height(33, 24);
             @include responsive-margin-bottom(10, 10);
-            font-family: Lato;
+            font-family: Source Sans Pro;
             font-style: normal;
-            font-weight: bold;
-            @include responsive-font(20, 14);
-            @include responsive-line-height(30, 21);
-            color: $text-color;
+            font-weight: 600;
         }
 
-        &__service-name {
-            font-family: Lato;
+        &__type-service {
+            width: 100%;
+            text-align: left;
+            font-family: Source Sans Pro;
             font-style: normal;
             font-weight: normal;
-            @include responsive-font(18, 12);
+            @include responsive-font-size(18, 12);
             @include responsive-line-height(27, 18);
-            color: rgba(35, 34, 39, 0.7);
+            @include responsive-margin-bottom(24, 20);
+            color: #D0D0D0;
         }
 
         &__review-text {
-            font-family: Lato;
+            width: 100%;
+            text-align: left;
+            font-family: Source Sans Pro;
             font-style: normal;
             font-weight: normal;
-            @include responsive-font(20, 12);
-            @include responsive-line-height(30, 18);
-            color: $text-color;
-        }
-
-    }
-
-}
-
-.section-reviews {
-
-    .swiper {
-        position: relative;
-
-        &-container {
-            @include responsive-margin-bottom(40, 20);
-            // @include responsive-margin-left(0, 15);
-            width: 100%;
-            height: 100%;
-            overflow: visible;
-        }
-
-        &-slide {
-            @include responsive-width(555, 289);
-            @include responsive-height(358, 238);
-            // object-fit: contain;
-            // @include responsive-width(750, 225);
-            // @include responsive-height(562, 168);
-            opacity: 0.5;
-
-            &-active {
-                opacity: 1;
-            }
+            @include responsive-font-size(20, 14);
+            @include responsive-line-height(30, 21);
         }
     }
 
-    .swiper-navigation {
-        @include display(row, flex-end, flex-start);
+
+
+    .swiper-reviews-navigation {
+        @include display-flex(row, flex-start, flex-start);
 
         &__button-prev,
         &__button-next {
-            @include display(row, center, center);
-            @include responsive-width(45, 35);
-            @include responsive-height(45, 35);
-            @include responsive-margin-left(30, 20);
+            @include display-flex(column, flex-start, flex-start);
+            @include responsive-width(55, 55);
+            @include responsive-height(13, 13);
             @include responsive-border-radius(3, 2.3);
-            background-color: $accent-color;
+            background-color: transparent;
             position: static;
 
-            svg {
-                @include responsive-width(13.5, 10.5);
-                @include responsive-height(7.5, 6);
-            }
 
-            &:hover,
-            &:active {
-                background-color: $button-color-OnHover;
-                @include smoothness(background-color, 0.8s);
+            svg {
+                width: 100%;
+                height: 100%;
             }
+        }
+
+        &__button-prev {
+            @include responsive-margin-right(40, 40);
+
+        }
+    }
+
+    .swiper-reviews-pagination {
+        bottom: 0px;
+        position: static;
+        @include display-flex(row, center, center);
+
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0;
+    }
+
+    .swiper-pagination-bullet {
+        border-radius: 0;
+        background: rgba(250, 215, 151, 0.3);
+        @include responsive-width(67, 50);
+        @include responsive-height(1, 1);
+
+
+        &-active {
+            background: $accent-color;
+            @include responsive-width(67, 50);
+            @include responsive-height(2, 2);
         }
     }
 
 }
+
+
+
+
+
 
 
 
