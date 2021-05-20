@@ -9,15 +9,14 @@
         align-items: center;
     }
 
-    .heading-h2 {
-        width: 100%;
-        text-align: left;
-    }
-
     &__advantages-card {
         @include display-flex(column, flex-start, center);
         @include responsive-margin-bottom(90, 40);
         @include responsive-margin-left-right(30, 10);
+
+        &:nth-child(5) {
+            margin-bottom: 0px;
+        }
     }
 
     &__advantages-icon {

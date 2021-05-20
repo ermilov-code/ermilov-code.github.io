@@ -64,6 +64,11 @@ h3 {
     @include responsive-margin-bottom(80, 60);
 }
 
+.heading-h2 {
+    width: 100%;
+    text-align: left;
+}
+
 span,
 p,
 a,

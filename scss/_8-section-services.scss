@@ -1,57 +1,81 @@
 // _section-SERVICES.scss ____________________________
 
 .section-services {
-    @include display-row-start;
-    justify-content: center;
-    @include responsive-padding-bottom(30, 20);
-    @include responsive-padding-top(60, 40);
+    position: relative;
+    @include display-flex(column, flex-start, flex-start);
+    @include responsive-padding-bottom(60, 60);
+    @include responsive-padding-top(60, 60);
 
-    .container {
-        @include display-row-start;
-        justify-content: center;
+    .wave-big {
+        position: absolute;
+        z-index: 0;
+        @include responsive-width(549, 180);
+        @include responsive-height(37, 19);
+        top: -6px;
+        left: 48vw;
     }
 
     &__service-card {
-        @include display(column, center, center);
-        @include responsive-width(350, 290);
-        @include responsive-min-height(270, 200);
-        background: $background-color-cards;
-        border-radius: 5px;
+        @include display-flex(column, flex-start, flex-start);
+        @include responsive-width(360, 290);
+        @include responsive-min-height(236, 179);
+        // background: $background-color-cards;
+        border: 1px solid $accent-color;
+        border-radius: 0px 40px 0px 0px;
         @include responsive-margin-bottom(30, 20);
-        @include responsive-margin-left(15, 0);
         @include responsive-margin-right(15, 0);
+        @include responsive-padding-top(46, 30);
+        @include responsive-padding-bottom(16, 5);
+        @include responsive-padding-left-right(33, 30);
+
+        &:hover .section-services__circle-icon {
+            opacity: 1;
+            @include smoothness(opacity, 1.2s);
+        }
     }
 
     &__service-name {
-        text-align: center;
-        @include responsive-font(22, 16);
+        @include responsive-min-height(66, 50);
+        font-family: Source Sans Pro;
+        text-align: left;
+        @include responsive-font-size(22, 16);
         @include responsive-line-height(33, 24);
-        @include responsive-margin-bottom(56, 40);
-        font-style: normal;
+        @include responsive-margin-bottom(17, 16);
         font-weight: bold;
-        color: $text-color;
+    }
+
+    &__inner-wrapper {
+        width: 100%;
+        @include display-flex(row, flex-start, center);
+        justify-content: space-between;
     }
 
     &__service-price {
-        text-align: center;
-        @include responsive-font(20, 14);
+        text-align: left;
+        @include responsive-font-size(20, 14);
         @include responsive-line-height(30, 21);
         font-style: normal;
         font-weight: normal;
         color: $text-color;
     }
+
+    &__arrow-icon {
+        @include responsive-width(55, 55);
+        @include responsive-height(13, 13);
+    }
+
+    &__circle-icon {
+        opacity: 0;
+        @include responsive-width(78, 78);
+        @include responsive-height(81, 81);
+        margin-left: -42px;
+    }
+
+    &__arrow-icon path,
+    &__circle-icon path {
+        stroke: $text-color;
+    }
 }
-
-.heading-h2 {
-    width: 100%;
-    text-align: center;
-    @include responsive-font(44, 30);
-    @include responsive-line-height(63, 43);
-    @include responsive-margin-bottom(60, 40);
-    // @include responsive-margin-top(60, 40);
-}
-
-
 
 
 
