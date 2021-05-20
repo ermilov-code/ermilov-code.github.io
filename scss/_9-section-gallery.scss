@@ -10,7 +10,7 @@
 
         &_swiper-navigation {
             @include display-flex(row, flex-end, flex-start);
-            @include responsive-margin-bottom(35, 15);
+            @include responsive-margin-bottom(60, 40);
         }
 
         .wave {
@@ -96,6 +96,7 @@
     .swiper-pagination {
         bottom: 0px;
         position: static;
+        @include display-flex(row, center, center);
     }
 
     .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
