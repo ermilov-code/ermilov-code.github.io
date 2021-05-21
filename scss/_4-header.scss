@@ -407,7 +407,7 @@
         @include responsive-font-size(18, 12);
         @include responsive-line-height(22.6, 15);
         letter-spacing: 0.02em;
-        @include responsive-margin-right(31, 24);
+        @include responsive-margin-right(14, 12);
     }
 
     &__icon-wrapper {

@@ -11,7 +11,8 @@
 @import '9-section-gallery';
 @import '10-section-video';
 @import '11-section-reviews';
-// @import '12-section-form';
+@import '12-section-form';
+@import '17-privacy-policy.scss';
 // @import '13-section-licenses-certificates';
 // @import '14-section-FAQ';
 // @import '15-section-contacts';
@@ -24,12 +25,13 @@
 // .section-gallery,
 // .section-video,
 // .section-reviews,
-.section-form,
+// .section-form,
 .section-licenses-certificates,
 .section-FAQ,
 .section-contacts,
 .footer {
     display: none;
 }
+
 
 // style.scss ____________________________

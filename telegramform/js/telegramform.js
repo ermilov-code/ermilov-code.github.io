@@ -25,7 +25,7 @@
 
                 } else if (respond.okSend) {
                     message.html(respond.okSend).css({
-                        'color': '#333333',
+                        'color': '#565880',
                     });
                     document.getElementById('form-contact').reset();
 

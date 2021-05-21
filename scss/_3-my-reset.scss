@@ -93,6 +93,12 @@ section {
 }
 
 
+// .wrapper {
+//     width: 100%;
+//     min-height: 100%;
+//     overflow: hidden;
+//     background-color: $background-color;
+// }
 .wrapper {
     width: 100%;
     min-height: 100%;
@@ -103,30 +109,59 @@ section {
 .container {
     position: relative;
     @include display-flex(column, flex-start, flex-start);
-    max-width: 1170px;
+    max-width: 500px;
     margin: 0 auto;
     width: 100%;
+    overflow: hidden;
 
 }
 
 @media (max-width: 1182px) {
     .container {
-        max-width: 970px;
+        max-width: 500px;
     }
 }
 
 @media (max-width: 992.98px) {
     .container {
-        max-width: 750px;
+        max-width: 500px;
     }
 }
 
 @media (max-width: 767.98px) {
     .container {
-        max-width: none;
+        max-width: 500px;
         padding: 0 15px;
     }
 }
+
+// .container {
+//     position: relative;
+//     @include display-flex(column, flex-start, flex-start);
+//     max-width: 1170px;
+//     margin: 0 auto;
+//     width: 100%;
+
+// }
+
+// @media (max-width: 1182px) {
+//     .container {
+//         max-width: 970px;
+//     }
+// }
+
+// @media (max-width: 992.98px) {
+//     .container {
+//         max-width: 750px;
+//     }
+// }
+
+// @media (max-width: 767.98px) {
+//     .container {
+//         max-width: none;
+//         padding: 0 15px;
+//     }
+// }
 
 
 
@@ -135,6 +170,14 @@ input,
 button,
 textarea {
     font-family: Source Sans Pro;
+}
+
+input::-moz-placeholder {
+    color: #DADADA;
+}
+
+input::-webkit-input-placeholder {
+    color: #DADADA;
 }
 
 input::-ms-clear {

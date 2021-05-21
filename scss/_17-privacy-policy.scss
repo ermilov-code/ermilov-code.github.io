@@ -11,7 +11,7 @@
     }
 
     .container {
-        @include display(column, flex-start, flex-start);
+        @include display-flex(column, flex-start, flex-start);
     }
 
     .h1 {
@@ -19,24 +19,28 @@
         font-family: Jost;
         font-style: normal;
         font-weight: bold;
-        @include responsive-font(44, 30);
+        @include responsive-font-size(44, 30);
         @include responsive-line-height(64, 43);
         text-align: center;
-        color: $menu-item-color;
+        // color: $menu-item-color;
     }
 
     .link-go-back {
-        @include display(row, flex-start, center);
+        @include display-flex(row, flex-start, center);
         @include responsive-margin-bottom(60, 40);
 
         &__icon {
             @include responsive-width(30, 30);
             @include responsive-height(17, 17);
             @include responsive-margin-right(20, 16);
+
+            path {
+                stroke: #FAD797;
+            }
         }
 
         &__txt {
-            @include responsive-font(18, 12);
+            @include responsive-font-size(18, 12);
             @include responsive-line-height(21.6, 14.4);
         }
     }
@@ -44,13 +48,13 @@
     .main {
 
         p {
-            @include responsive-font(20, 14);
-            @include responsive-line-height(30, 21);
-            font-family: Lato;
-            font-style: normal;
-            font-weight: normal;
             color: $text-color;
             @include responsive-margin-bottom(30, 20);
+            font-family: Source Sans Pro;
+            font-style: normal;
+            font-weight: normal;
+            @include responsive-font-size(20, 14);
+            @include responsive-line-height(30, 21);
         }
     }
 
