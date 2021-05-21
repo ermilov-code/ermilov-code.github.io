@@ -108,6 +108,7 @@
         @include responsive-margin-bottom(20, 15);
         width: 100%;
         border-bottom: 1px solid $placeholder-color;
+        border-radius: 0px;
         @include responsive-padding-left-right(30, 14);
         @include responsive-padding-top-bottom(12, 10);
         font-family: Source Sans Pro;

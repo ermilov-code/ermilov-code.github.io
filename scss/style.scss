@@ -13,10 +13,10 @@
 @import '11-section-reviews';
 @import '12-section-form';
 @import '17-privacy-policy.scss';
-// @import '13-section-licenses-certificates';
+@import '13-section-licenses-certificates';
 // @import '14-section-FAQ';
 // @import '15-section-contacts';
-// @import '16-footer';
+@import '16-footer';
 
 
 // .section-expert,
@@ -26,10 +26,9 @@
 // .section-video,
 // .section-reviews,
 // .section-form,
-.section-licenses-certificates,
+// .section-licenses-certificates,
 .section-FAQ,
-.section-contacts,
-.footer {
+.section-contacts {
     display: none;
 }
 
