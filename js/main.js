@@ -135,7 +135,17 @@ $('.select').each(function () {
 
 
 
-
+// код для Спойлер на HTML CSS 
+$(document).ready(function () {
+    $('.card-FAQ__title').click(function (event) {
+        if ($('.card-FAQ').hasClass('one')) {
+            $('.card-FAQ__title').not($(this)).removeClass('active');
+            $('.card-FAQ__text').not($(this).next()).slideUp(300);
+        }
+        $(this).toggleClass('active').next().slideToggle(300);
+    });
+});
+// код для Спойлер на HTML CSS 
 
 
 

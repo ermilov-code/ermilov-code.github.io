@@ -1,50 +1,87 @@
 // _section-ADVANTAGES.scss ____________________________
 
-.section-advantages {
-    @include display(column, flex-start, center);
-    @include responsive-padding-bottom(48, 30);
-    @include responsive-padding-top(60, 40);
+.section-FAQ {
 
-    .container {
-        @include display(column, flex-start, center);
-    }
+    .card-FAQ {
+        width: 100%;
+        @include responsive-margin-bottom(40, 40);
+        border-bottom: 1px solid rgba(250, 215, 151, 0.3);
 
-    &__advantages-card {
-        @include display(row, flex-start, center);
-        flex-wrap: nowrap;
-        @include responsive-width(368, 290);
-        @include responsive-min-height(180, 110);
-        background: $accent-color;
-        border-radius: 5px;
-        @include responsive-margin-bottom(12, 10);
-        @include responsive-margin-left(3, 0);
-        @include responsive-margin-right(3, 0);
-        @include responsive-padding-left-right(40, 17);
-        @include responsive-padding-top-bottom(60, 34);
-    }
 
-    &__advantages-icon {
-        @include responsive-width(56, 45);
-        @include responsive-height(56, 45);
-        @include responsive-margin-right(20, 14);
-        fill: $background-color;
+        &__item {
+            width: 100%;
+            @include responsive-padding-top-bottom(26, 22);
+            @include responsive-padding-left-right(5, 3);
+            border-top: 1px solid rgba(250, 215, 151, 0.3);
+            // border-bottom: 1px solid rgba(250, 215, 151, 0.3);
+        }
 
-        &_large-width {
-            @include responsive-width(100, 70);
-            @include responsive-height(86, 60);
+        &__title {
+            font-family: Source Sans Pro;
+            @include responsive-font-size(22, 16);
+            @include responsive-line-height(33, 24);
+            position: relative;
+            cursor: pointer;
+            margin: 0;
+            padding-right: 60px;
+        }
+
+        .card-FAQ__title:before,
+        .card-FAQ__title:after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: rgba(250, 215, 151, 0.3);
+            position: absolute;
+            top: 11px;
+            transition: all 0.3s ease 0s;
+        }
+
+        .card-FAQ__title:before {
+            transform: rotate(0deg);
+            @include responsive-right(22, 16);
+
+        }
+
+        .card-FAQ__title:after {
+            transform: rotate(-90deg);
+            @include responsive-right(22, 16);
+        }
+
+        .card-FAQ__title.active:before,
+        .card-FAQ__title.active:after {
+            background-color: $accent-color;
+        }
+
+        &__title.active:before {
+            transform: rotate(0deg);
+        }
+
+        &__title.active:after {
+            transform: rotate(0deg);
+        }
+
+        &__text {
+            @include responsive-font-size(22, 16);
+            @include responsive-line-height(33, 24);
+            border-top: 1px solid rgba(250, 215, 151, 0.3);
+            display: none;
+            @include responsive-padding-top(20, 14);
+            @include responsive-margin-top(30, 21);
+            color: #D7D5D6;
         }
     }
 
-    &__advantages-text {
-        @include responsive-max-width(459, 197);
-        @include responsive-font(20, 14);
-        @include responsive-line-height(30, 21);
-        font-style: normal;
-        font-weight: normal;
-        color: $background-color;
 
-    }
 }
+
+
+
+
+
+
+
+
 
 
 
