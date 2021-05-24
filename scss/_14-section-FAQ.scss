@@ -1,6 +1,28 @@
 // _section-ADVANTAGES.scss ____________________________
 
 .section-FAQ {
+    position: relative;
+    @include display-flex(column, flex-start, flex-start);
+    @include responsive-padding-bottom(80, 60);
+    @include responsive-padding-top(80, 60);
+
+    .container {
+        @include display-flex(column, flex-start, flex-start);
+    }
+
+    .wave-section-FAQ {
+        position: absolute;
+        @include responsive-width(267, 120);
+        @include responsive-height(18, 9);
+        z-index: 10;
+        bottom: 34vh;
+        @include responsive-right(-57, -57);
+    }
+
+    &__img {
+        @include responsive-padding-left(15, 15);
+        border-radius: 25% 0% 0% 0%;
+    }
 
     .card-FAQ {
         width: 100%;
@@ -70,7 +92,15 @@
             @include responsive-margin-top(30, 21);
             color: #D7D5D6;
         }
+
+        &__list {
+            display: none;
+
+        }
+
+
     }
+
 
 
 }

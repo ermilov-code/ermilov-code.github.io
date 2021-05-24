@@ -1,32 +1,111 @@
 // _section-CONTACTS.scss ____________________________
 
 .section-contacts {
-    @include display(column, flex-start, center);
-    background-color: $background-color-cards;
+    @include display-flex(column, flex-start, flex-start);
+    @include responsive-padding-bottom(0, 0);
+    @include responsive-padding-top(80, 60);
 
     .container {
-        @include display(column, flex-start, flex-start);
-        @include responsive-padding-top-bottom(93, 50);
-        background-color: $background-color-cards;
+        @include display-flex(column, flex-start, flex-start);
+
     }
 
-    .call-button,
-    .whatsapp-button,
-    .mail-button,
-    .operating-mode {
-        padding-left: 0;
-    }
+    .mail-button {
+        @include display-flex(row, flex-start, center);
 
-    .operating-mode {
-        margin: 0;
+        &__svg {
+            @include responsive-width(17, 17);
+            @include responsive-height(17, 17);
+        }
     }
 
     &__img {
-        max-width: 100%;
-        object-fit: cover;
-        @include responsive-height(500, 224);
-        @include responsive-width(1033, 461);
+        @include responsive-padding-left(15, 15);
+        border-radius: 25% 0% 0% 0%;
     }
+
+    &__modal-body {
+        @include display-flex(row, flex-start, flex-start);
+        padding: 0;
+        @include responsive-margin-bottom(30, 30);
+
+        .telephone {
+            @include responsive-margin-right(20, 20);
+            @include responsive-margin-bottom(0, 0);
+
+            &__txt {
+                margin: 0;
+            }
+
+            &__wrapper-icons {
+                margin: 0;
+            }
+        }
+    }
+
+    .telephone {
+        @include responsive-margin-bottom(8, 10);
+
+        &__icon_nofill {
+            fill: transparent;
+            @include responsive-margin-right(12, 11);
+        }
+
+        .none {
+            opacity: 0;
+        }
+
+        &__txt {
+            @include responsive-font-size(20, 14);
+            @include responsive-line-height(25, 18);
+        }
+
+        &_last {
+            @include responsive-margin-bottom(30, 30);
+        }
+    }
+
+    .mail-button {
+        @include responsive-margin-bottom(30, 30);
+        flex-wrap: nowrap;
+
+        &__svg {
+            @include responsive-margin-right(12, 11);
+        }
+
+        &__txt {
+            @include responsive-font-size(20, 14);
+            @include responsive-line-height(25, 18);
+        }
+
+        &_location {
+            @include responsive-line-height(25, 21);
+        }
+
+        &_last {
+            @include responsive-margin-bottom(20, 20);
+        }
+    }
+
+    &__other-txt {
+        @include responsive-font-size(20, 14);
+        @include responsive-line-height(30, 21);
+        @include responsive-margin-bottom(40, 40);
+
+        &_small {
+            @include responsive-font-size(18, 12);
+            @include responsive-line-height(27, 18);
+            @include responsive-margin-bottom(40, 40);
+
+        }
+    }
+
+
+
+
+
+
+
 
 
 

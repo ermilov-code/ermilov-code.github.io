@@ -305,7 +305,7 @@
     }
 
     &__txt {
-        font-weight: bold;
+        font-weight: normal;
         @include responsive-font-size(20, 16);
         @include responsive-line-height(25, 20);
         text-decoration: 1px solid underline transparent;
