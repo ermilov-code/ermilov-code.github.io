@@ -387,6 +387,7 @@
 
     &__img {
         @include responsive-padding-left(15, 15);
+        border-radius: 20% 0% 0% 0%;
     }
 
 }

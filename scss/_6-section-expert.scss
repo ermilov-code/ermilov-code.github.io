@@ -24,6 +24,7 @@
 
     &__img {
         @include responsive-padding-right(14, 12);
+        border-radius: 0% 20% 0% 0%;
     }
 }
 
