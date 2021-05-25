@@ -54,17 +54,10 @@ body {
 
 }
 
-// html,
-// body {
-//     position: relative;
-//     height: 736px;
-// }
-
-
-
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: Spectral;
     font-style: normal;
     font-weight: bold;
@@ -110,98 +103,33 @@ section {
     background-color: $background-color;
 }
 
-// .wrapper {
-//     margin: 0 auto;
-//     max-width: 790px;
-//     // // min-height: 100%;
-//     height: 736px;
-//     // overflow: hidden;
-//     // background-color: $background-color;
-//     overflow-x: hidden;
-//     // overflow-y: scroll;
-//     width: 100%;
-//     min-height: 100vh;
-
-// }
-
 .container {
     position: relative;
     @include display-flex(column, flex-start, flex-start);
-    max-width: 414px;
+    max-width: 1170px;
     margin: 0 auto;
-    // width: 100%;
-    overflow: hidden;
-    background: $background-color;
-
+    width: 100%;
 
 }
 
 @media (max-width: 1182px) {
     .container {
-        max-width: 414px;
+        max-width: 970px;
     }
 }
 
 @media (max-width: 992.98px) {
     .container {
-        max-width: 414px;
+        max-width: 750px;
     }
 }
 
 @media (max-width: 767.98px) {
     .container {
-        max-width: 414px;
+        max-width: none;
         padding: 0 15px;
     }
 }
-
-// .header,
-// .section-expert,
-// .section-advantages,
-// .section-services,
-// .section-gallery,
-// .section-video,
-// .section-reviews,
-// .section-form,
-// .section-licenses-certificates,
-// .section-FAQ,
-// .section-contacts,
-// .footer,
-// .privacy-policy {
-//     max-width: 414px;
-//     max-width: 790px;
-//     margin: 0 auto;
-//     overflow: hidden;
-//     background: $background-color;
-// }
-
-// .container {
-//     position: relative;
-//     @include display-flex(column, flex-start, flex-start);
-//     max-width: 1170px;
-//     margin: 0 auto;
-//     width: 100%;
-
-// }
-
-// @media (max-width: 1182px) {
-//     .container {
-//         max-width: 970px;
-//     }
-// }
-
-// @media (max-width: 992.98px) {
-//     .container {
-//         max-width: 750px;
-//     }
-// }
-
-// @media (max-width: 767.98px) {
-//     .container {
-//         max-width: none;
-//         padding: 0 15px;
-//     }
-// }
 
 
 
@@ -255,6 +183,64 @@ img {
     object-fit: contain;
     background-color: $background-color;
 }
+
+
+// Стили для хлебных крошек
+.breadcrumb {
+    padding: 0;
+    background-color: transparent;
+    @include responsive-margin-bottom(0, 0);
+
+    &-item {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(27, 18);
+        @include responsive-margin-right(21, 15);
+
+        a {
+            color: $text-color;
+        }
+    }
+
+    .breadcrumb-item+.breadcrumb-item {
+        // padding-left: .5rem;
+        @include responsive-padding-left(26, 20);
+        position: relative;
+        color: #DADADA;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        position: absolute;
+        @include responsive-top(10, 4);
+        left: 0px;
+        // @include responsive-margin-right(21, 15);
+        color: #6c757d;
+        content: "";
+        background-image: url('../img/breadcrumb-arrow.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 5px;
+        height: 9px;
+    }
+
+    &-item .active {
+        position: relative;
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(27, 18);
+    }
+}
+
+// Стили для хлебных крошек
+
+
+
+
+
+
+
 
 
 // _my-reset.scss ____________________________
