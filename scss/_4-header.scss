@@ -205,7 +205,7 @@
         @include responsive-width(20, 18);
         @include responsive-height(20, 18);
         background-color: transparent;
-        border-radius: 50%;
+        // border-radius: 50%;
         border: none;
         outline: none;
         fill: $text-color;
