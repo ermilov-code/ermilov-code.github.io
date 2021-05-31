@@ -21,7 +21,7 @@ function burgerMenu(selector) {
         menu.toggleClass('burger-menu_active');
 
         // remove scrolling in the menu:
-        if (menu.hasClass('burger-menu_active')) {
+        if (menu.hasClass('burger-menu_active') && ($(window).width() <= '767')) {
             $('body').addClass('modal-open');
         } else {
             $('body').removeClass('modal-open');

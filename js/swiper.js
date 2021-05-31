@@ -449,11 +449,11 @@ let myImageSliderReviews = new Swiper(sliderReviews, {
 
         },
         480: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 40,
         },
         992: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 40,
         }
     },
