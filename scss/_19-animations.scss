@@ -71,7 +71,6 @@
 }
 
 
-
 // анимация карточек УСЛУГ
 
 // _anim-items - в данном случае это добавляем родителю
@@ -84,13 +83,151 @@
 // _anim-show - уже добавляем самому элементу 
 // <h3 class="section-services__service-name _anim-show">
 
-
-
-
 // анимация карточек УСЛУГ
 
 
 
+// анимация ДЛЯ ЗАГОЛОВКОВ отзывы
+// _anim-items - родителю
+
+._anim-show-h2 {
+    transform: translate(-120%, 0px);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+._anim-show-h2._active,
+._active ._anim-show-h2 {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+// анимация ДЛЯ ЗАГОЛОВКОВ отзывы
+
+
+
+// анимация ДЛЯ КАРТИНОК И ТЕКСТА ПОД НИМИ 
+
+
+.section-advantages__advantages-icon {
+    transform: scale(0);
+    transition: all 0.8s ease 0s;
+}
+
+.section-advantages__advantages-card._active .section-advantages__advantages-icon {
+    transform: scale(1);
+}
+
+.section-advantages__advantages-text {
+    transform: translate(0px, 50%);
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.section-advantages__advantages-card._active .section-advantages__advantages-text {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.6s;
+}
+
+
+// анимация ДЛЯ КАРТИНОК И ТЕКСТА ПОД НИМИ 
+
+
+
+
+// анимация элементов меню
+// _anim-items - добавили родителю - <nav class="burger-menu__nav _anim-items">
+
+.header {
+
+    .burger-menu__nav a {
+        transform: translate(0px, -520%);
+        transition: all 0.3s ease 0s;
+    }
+
+    .burger-menu__nav._active a:nth-child(1) {
+        transition: all 0.8s ease 0s;
+    }
+
+    .burger-menu__nav._active a:nth-child(2) {
+        transition: all 0.8s ease 0.2s;
+    }
+
+    .burger-menu__nav._active a:nth-child(3) {
+        transition: all 0.8s ease 0.4s;
+    }
+
+    .burger-menu__nav._active a:nth-child(4) {
+        transition: all 0.8s ease 0.6s;
+    }
+
+    .burger-menu__nav._active a:nth-child(5) {
+        transition: all 0.8s ease 0.8s;
+    }
+
+    .burger-menu__nav._active a:nth-child(6) {
+        transition: all 0.8s ease 1.0s;
+    }
+
+    .burger-menu__nav._active a:nth-child(7) {
+        transition: all 0.8s ease 1.2s;
+    }
+
+
+    .burger-menu__nav._active a {
+        transform: translate(0px, 0px);
+    }
+
+}
+
+// .burger-menu_active {
+
+//     .burger-menu__nav a {
+//         transform: translate(0px, -520%);
+//         transition: all 0.3s ease 0s;
+//     }
+
+//     .burger-menu__nav._active a:nth-child(1) {
+//         transition: all 0.8s ease 0s;
+//     }
+
+//     .burger-menu__nav._active a:nth-child(2) {
+//         transition: all 0.8s ease 0.2s;
+//     }
+
+//     .burger-menu__nav._active a:nth-child(3) {
+//         transition: all 0.8s ease 0.4s;
+//     }
+
+//     .burger-menu__nav._active a:nth-child(4) {
+//         transition: all 0.8s ease 0.6s;
+//     }
+
+//     .burger-menu__nav._active a:nth-child(5) {
+//         transition: all 0.8s ease 0.8s;
+//     }
+
+//     .burger-menu__nav._active a:nth-child(6) {
+//         transition: all 0.8s ease 1.0s;
+//     }
+
+//     .burger-menu__nav._active a:nth-child(7) {
+//         transition: all 0.8s ease 1.2s;
+//     }
+
+
+//     .burger-menu__nav._active a {
+//         transform: translate(0px, 0px);
+//     }
+
+// }
+
+
+
+
+
+// анимация элементов меню
 
 
 
