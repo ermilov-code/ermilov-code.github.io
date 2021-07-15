@@ -68,7 +68,7 @@
             <a href="" class="burger-menu__button">
               <span class="burger-menu__lines"></span>
             </a>
-            <nav class="burger-menu__nav _anim-items">
+            <nav class="burger-menu__nav _anim-items _anim-no-hide">
               <a href="#section-expert" class="burger-menu__link">Эксперт</a>
               <a href="#section-services" class="burger-menu__link">Наши цены</a>
               <a href="#section-reviews" class="burger-menu__link">Отзывы</a>
@@ -450,7 +450,7 @@
       </section>
 
       <section class="section-reviews" id="section-reviews">
-        <div class="container _anim-items">
+        <div class="container _anim-items _anim-no-hide">
           <h2 class="heading-h2 _anim-show-h2">Отзывы</h2>
         </div>
         <!-- /.container -->
@@ -485,16 +485,6 @@
             </div>
             <div class="swiper-slide">
               <div class="review-card">
-
-                <!-- <div id="text">
-                    <h3 onclick="toggle_show('bla-bla2')" style="margin-top:-10px; cursor:pointer; text-align:center;">Как
-                      войти в аккаунт?Где скачать Steam?</h3>
-                    <div id="bla-bla2" style="display: none; " class="spoiler">
-                      Необходимо скачать и установить Steam <a
-                        href="http://steampowered.com/download/SteamInstall.msi">http://steampowered.com/download/SteamInstall.msi</a>
-                      , далее ввести логин и пароль.
-                    </div>
-                  </div> -->
                 <h3 class="review-card__name">
                   Компания &laquo;Мир обуви&raquo;
                 </h3>
@@ -504,59 +494,42 @@
                 <p class="review-card__review-text">
                   Отличительной особенностью полиграфологов компании &laquo;Правовой эксперт&raquo; является высокий
                   профессионализм и&nbsp;индивидуальный подход к&nbsp;клиентам. Мы&nbsp;обратились в&nbsp;данную
-                  компанию с&nbsp;целью проведения скрининговых... Читать далее
+                  компанию с&nbsp;целью проведения скрининговых проверок для новых сотрудников. Ваша компания помогла
+                  принять нам верное решение! Спасибо вам!
                 </p>
               </div>
               <!-- /.review-card -->
             </div>
-            <div class="swiper-slide">
-              <div class="review-card">
-                <h3 class="review-card__name">
-                  Компания &laquo;Мир меха&raquo;
-                </h3>
-                <p class="review-card__type-service">
-                  Проверка по&nbsp;кражам и&nbsp;недостачам
-                </p>
-                <p class="review-card__review-text">
-                  Отличительной особенностью полиграфологов компании &laquo;Правовой эксперт&raquo; является высокий
-                  профессионализм и&nbsp;индивидуальный подход к&nbsp;клиентам. Мы&nbsp;обратились в&nbsp;данную
-                  компанию с&nbsp;целью проведения скрининговых... Читать далее
-                </p>
-              </div>
-              <!-- /.review-card -->
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+          <div class="container container_swiper-navigation">
+            <div class="swiper-reviews-navigation">
+              <button class="swiper-reviews-navigation__button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 57 15">
+                  <path stroke="#FAD797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M56 7.5H1m0 0L7.5 14M1 7.5L7.5 1" /></svg>
+              </button>
+              <button class="swiper-reviews-navigation__button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 57 15">
+                  <path stroke="#FAD797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M1 7.5h55m0 0L49.5 1M56 7.5L49.5 14" /></svg>
+              </button>
             </div>
-
+            <!-- /.swiper-navigation -->
           </div>
-          <!-- Add Pagination -->
-          <!-- <div class="swiper-pagination"></div> -->
-        </div>
-        <div class="container container_swiper-navigation">
-          <div class="swiper-reviews-navigation">
-            <button class="swiper-reviews-navigation__button-prev">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 57 15">
-                <path stroke="#FAD797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M56 7.5H1m0 0L7.5 14M1 7.5L7.5 1" /></svg>
-            </button>
-            <button class="swiper-reviews-navigation__button-next">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 57 15">
-                <path stroke="#FAD797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                  d="M1 7.5h55m0 0L49.5 1M56 7.5L49.5 14" /></svg>
-            </button>
+          <div class="swiper-container">
+            <div class="swiper-reviews-pagination"></div>
           </div>
-          <!-- /.swiper-navigation -->
-        </div>
-        <div class="swiper-container">
-          <div class="swiper-reviews-pagination"></div>
-        </div>
-        <!-- /.swiper-container -->
+          <!-- /.swiper-container -->
       </section>
 
       <section class="section-expert" id="section-expert">
         <div class="container">
           <div class="ellipse"></div>
           <!-- /.ellipse -->
-          <div class="section-expert__wrap _anim-items">
-            <h2 class="heading-h2 _anim-show-h2">Эксперт</h2>
+          <div class="section-expert__wrap">
+            <h2 class="heading-h2">Эксперт</h2>
             <p class="section-expert__text">
               Руководитель компании &laquo;Правовой эксперт&raquo;&nbsp;&mdash; Моложон Елена Владимировна,
               полиграфолог-судебный эксперт.
@@ -590,10 +563,10 @@
       </section>
 
       <section class="section-advantages" id="section-advantages">
-        <div class="container _anim-items">
+        <div class="container _anim-items _anim-no-hide">
           <h2 class="heading-h2 _anim-show-h2">Почему <br> выбирают нас?</h2>
           <div class="wrapper-for-cards">
-            <div class="section-advantages__advantages-card _anim-items">
+            <div class="section-advantages__advantages-card _anim-items _anim-no-hide">
               <svg class="section-advantages__advantages-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 60 60">
                 <circle cx="30.021" cy="29.552" r="27.33" stroke="#FAD797" stroke-linecap="round"
@@ -681,8 +654,8 @@
       </section>
 
       <section class="section-gallery" id="section-gallery">
-        <div class="container _anim-items">
-          <h2 class="heading-h2 _anim-show-h2">Рабочие моменты</h2>
+        <div class="container">
+          <h2 class="heading-h2">Рабочие моменты</h2>
           <svg class="wave" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 110 10">
             <path stroke="#FAD797" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
               d="M-11 9c6.002 0 6.002-8 12.004-8S7.006 9 13.01 9c6.002 0 6.002-8 11.99-8C31 1 31 9 36.989 9c6.002 0 6.002-8 11.99-8 6.002 0 6.002 8 12.004 8s6.002-8 12.004-8 6.002 8 12.005 8c6.002 0 6.002-8 12.004-8S102.998 9 109 9" />
@@ -752,7 +725,7 @@
       </section>
 
       <section class="section-video" id="section-video">
-        <div class="container _anim-items">
+        <div class="container _anim-items _anim-no-hide">
           <h2 class="heading-h2 _anim-show-h2">Мы&nbsp;участвуем в&nbsp;различных проектах</h2>
           <svg class="wave" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 110 10">
             <path stroke="#FAD797" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
@@ -813,8 +786,8 @@
       </section>
 
       <section class="section-form" id="section-form">
-        <div class="container _anim-items">
-          <h3 class="heading-h3 _anim-show-h2">Оставьте свои данные и мы свяжемся с вами для записи на проверку
+        <div class="container">
+          <h3 class="heading-h3">Оставьте свои данные и мы свяжемся с вами для записи на проверку
           </h3>
           <!-- FEEDBACK FORM -->
           <form id="form-contact" method="POST" class="contact-form" autocomplete="off" enctype="multipart/form-data">
@@ -876,7 +849,7 @@
       </section>
 
       <section class="section-licenses-certificates" id="section-licenses-certificates">
-        <div class="container _anim-items">
+        <div class="container _anim-items _anim-no-hide">
           <h2 class="heading-h2 _anim-show-h2">Лицензии и&nbsp;сертификаты</h2>
           <svg class="wave" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 110 10">
             <path stroke="#FAD797" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
@@ -977,8 +950,8 @@
       </section>
 
       <section class="section-FAQ" id="section-FAQ">
-        <div class="container _anim-items">
-          <h2 class="heading-h2 _anim-show-h2">Частые вопросы</h2>
+        <div class="container">
+          <h2 class="heading-h2">Частые вопросы</h2>
           <div class="card-FAQ one">
             <div class="card-FAQ__item">
               <h3 class="card-FAQ__title">
@@ -1133,7 +1106,7 @@
       </section>
 
       <section class="section-contacts" id="section-contacts">
-        <div class="container _anim-items">
+        <div class="container _anim-items _anim-no-hide">
           <h2 class="heading-h2 _anim-show-h2">Контакты</h2>
 
           <div class="modal-body section-contacts__modal-body">
