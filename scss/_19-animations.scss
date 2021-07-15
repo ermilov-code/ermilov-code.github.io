@@ -1,0 +1,143 @@
+// _section-SERVICES.scss ____________________________
+
+
+// Стили для свайп указателя
+.swipe-pointer {
+    animation: swipePointerAnim infinite 2s;
+
+}
+
+// Стили для свайп указателя
+
+// Анимация для волны
+.wave,
+.wave-big,
+.wave-section-FAQ {
+    animation: waveAnim infinite 2s;
+}
+
+// Анимация для волны
+
+
+
+
+
+
+
+// АНИМАЦИЯ элементов при СКРОЛЛЕ 
+
+// _anim-items - этот класс добавляем элементам в HTML, которые хотим анимировать 
+
+
+// ПРИДУМАЕМ ОДИН ОБЩИЙ  КЛАСС ДЛЯ АНИМАЦИИ ._anim-show
+// ==============================================
+._anim-show {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+._anim-show._active,
+._active ._anim-show {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+// ПРИДУМАЕМ ОДИН ОБЩИЙ  КЛАСС ДЛЯ АНИМАЦИИ ._anim-show
+// ==============================================
+
+.header__main-h1 {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.header__main-h1._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.header__description-site {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+// задерживает появление текста 
+.header__description-site._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.4s;
+}
+
+
+
+// анимация карточек УСЛУГ
+
+// _anim-items - в данном случае это добавляем родителю
+// <a href="services/1.1-On-site-lie-detector-check.html" class="section-services__service-card _anim-items">
+
+.section-services__service-card {
+    overflow: hidden;
+}
+
+// _anim-show - уже добавляем самому элементу 
+// <h3 class="section-services__service-name _anim-show">
+
+
+
+
+// анимация карточек УСЛУГ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// АНИМАЦИЯ элементов при СКРОЛЛЕ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}
+
+
+
+
+
+// / _section-SERVICES.scss ____________________________

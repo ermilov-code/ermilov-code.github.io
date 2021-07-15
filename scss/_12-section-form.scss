@@ -1,0 +1,432 @@
+// _section-FORM.scss ____________________________
+
+.heading-h3 {
+    @include responsive-width(419, 273);
+    text-align: center;
+    color: $text-color;
+    @include responsive-font-size(32, 20);
+    @include responsive-line-height(41, 26);
+    @include responsive-margin-bottom(50, 40);
+}
+
+.section-form {
+    @include display-flex(column, flex-start, center);
+    background-color: $background-color-cards;
+
+    .container {
+        @include display-flex(column, flex-start, center);
+        @include responsive-padding-top(60, 50);
+        background-color: $background-color-cards;
+    }
+
+}
+
+.contact-form {
+    position: relative;
+    @include responsive-width(361, 277);
+    @include display-flex(column, flex-start, center);
+    @include responsive-margin-bottom(40, 40);
+
+
+    .modal {
+
+        &__close {
+            font-size: 0px;
+            @include responsive-top-right(34, 23);
+            z-index: 10;
+            border-radius: 50%;
+            border: 1px solid rgba(86, 88, 128, 0.5);
+            position: absolute;
+            @include responsive-width(40, 40);
+            @include responsive-height(40, 40);
+            background: transparent;
+            opacity: 1;
+            outline: none;
+            text-shadow: none;
+
+            svg {
+                @include responsive-width(12, 10);
+                @include responsive-height(12, 10);
+
+                path {
+                    stroke: rgba(86, 88, 128, 0.5);
+                }
+            }
+        }
+
+        &-dialog-centered {
+            justify-content: center;
+        }
+
+        &__content {
+            position: relative;
+            background: transparent;
+            border: 0px;
+        }
+
+        &-body {
+            @include display-flex(column, flex-start, center);
+            padding: 0;
+            background: #ffffff;
+            @include responsive-min-height(500, 350);
+            @include responsive-width(686, 291);
+            border-radius: 5px;
+            @include responsive-padding-top(97, 80);
+            @include responsive-padding-left-right(53, 20);
+        }
+    }
+
+
+    &__message {
+        text-align: center;
+        @include responsive-margin-bottom(58, 40);
+        font-family: Spectral;
+        font-style: normal;
+        font-weight: bold;
+        @include responsive-font-size(32, 20);
+        @include responsive-line-height(41, 26);
+        text-align: center;
+        color: $background-color;
+    }
+
+    &__input-wrapper {
+        width: 100%;
+
+        &_name {
+
+            ::-webkit-input-placeholder,
+            ::-moz-placeholder,
+            :-moz-placeholder,
+            :-ms-input-placeholder {
+                text-transform: none;
+            }
+        }
+    }
+
+    &__input {
+        background-color: $background-color;
+        @include responsive-margin-bottom(20, 15);
+        width: 100%;
+        border-bottom: 1px solid $placeholder-color;
+        border-radius: 0px;
+        @include responsive-padding-left-right(30, 14);
+        @include responsive-padding-top-bottom(12, 10);
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(22, 15);
+        letter-spacing: 0.02em;
+        color: $text-color;
+
+        &_name {
+            text-transform: capitalize;
+        }
+    }
+
+
+    // https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
+    .select {
+        display: block;
+        width: 100%;
+        position: relative;
+        @include responsive-margin-bottom(15, 10);
+
+        .new-select {
+            width: 100%;
+            position: relative;
+            border: 1px solid $placeholder-color;
+            font-family: Lato;
+            background-color: $background-color;
+            font-style: normal;
+            font-weight: normal;
+            @include responsive-font-size(18, 12);
+            @include responsive-line-height(27, 18);
+            color: $text-color;
+            @include responsive-padding-left-right(15, 16);
+            @include responsive-padding-top-bottom(23, 20);
+            @include responsive-margin-bottom(20, 15);
+            width: 100%;
+            border-radius: 5px;
+            color: $text-color;
+            user-select: none;
+
+            &__list {
+                position: absolute;
+                left: 0;
+                border: 1px solid rgba(20, 26, 38, 0.4);
+                cursor: pointer;
+                width: 100%;
+                z-index: 2;
+                background-color: $background-color;
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                color: rgba(20, 26, 38, 0.4);
+                user-select: none;
+                text-align: left;
+                @include responsive-top(74, 58);
+                @include responsive-font-size(18, 12);
+                @include responsive-line-height(27, 18);
+
+                .on {
+                    display: block;
+                }
+
+
+            }
+
+            &__item span {
+                background-color: #fff;
+            }
+
+            &__item span {
+                display: block;
+                padding: 10px 15px;
+                border-bottom: 1px solid rgba(20, 26, 38, 0.4);
+            }
+
+            &__item span:hover {
+                background: $accent-color;
+                color: $background-color-cards;
+            }
+        }
+    }
+
+    .button-order {
+        @include display-flex(row, flex-start, center);
+        align-self: flex-end;
+        background-color: transparent;
+        border-radius: 5px;
+        @include responsive-margin-bottom(30, 12);
+
+        &__txt {
+            font-weight: bold;
+            color: $text-color;
+            @include responsive-font-size(18, 12);
+            @include responsive-line-height(22.6, 15);
+            letter-spacing: 0.02em;
+            @include responsive-margin-right(14, 12);
+        }
+
+        &__icon-wrapper {
+            @include display-flex(row, flex-start, center);
+        }
+
+        &__arrow-icon {
+            @include responsive-width(55, 39);
+            @include responsive-height(13, 9);
+        }
+
+        &__circle-icon {
+            @include responsive-width(78, 54);
+            @include responsive-height(81, 56);
+            @include responsive-margin-left(-31, -24);
+        }
+
+        &:hover {
+
+            .button-order__arrow-icon {
+                transform: translate(10px);
+                @include smoothness(transform, .8s);
+            }
+        }
+    }
+}
+
+.contact-form {
+    .new-select:after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 7px;
+        fill: rgba(20, 26, 38, 0.5);
+        position: absolute;
+        @include responsive-right(25, 21);
+        top: 43%;
+        background: url(../img/selection-arrow.svg) no-repeat center / contain;
+        opacity: 1;
+        -webkit-transition: all .27s ease-in-out;
+        -o-transition: all .27s ease-in-out;
+        transition: all .27s ease-in-out;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    .new-select.on:after {
+        transform: rotate(180deg);
+        background: url(../img/selection-arrow-red.svg) no-repeat center / contain;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    // .button-sectionSendApplication {
+    //     color: $background-color;
+    //     width: 100%;
+    //     background-color: $accent-color;
+    //     border-radius: 5px;
+    //     font-family: Lato;
+    //     font-style: normal;
+    //     font-weight: bold;
+    //     @include responsive-margin-bottom(14, 10);
+    //     @include responsive-padding-left-right(103, 85);
+    //     @include responsive-padding-top-bottom(24, 20);
+    //     // height: 47px;
+    //     @include responsive-font-size(18, 12);
+    //     @include responsive-line-height(21.6, 14);
+
+    //     &:hover {
+    //         background-color: $accent-color;
+    //         @include smoothness(background-color, .8s);
+    //     }
+    // }
+
+    &__politics-txt {
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(24, 18);
+        color: $placeholder-color;
+        width: 100%;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        text-align: right;
+    }
+
+    &__politics-link {
+        color: $placeholder-color;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+
+        &:hover {
+            color: $text-color;
+            @include smoothness(color, .8s);
+        }
+    }
+
+    &__input_phone {
+        @include responsive-margin-bottom(60, 40);
+
+    }
+
+
+}
+
+.section-form {
+
+    &__img {
+        max-width: 100%;
+        object-fit: contain;
+        align-self: flex-start;
+        // @include responsive-margin-left(-30, -20);
+        // width: 100%;
+        @include responsive-height(529, 229);
+        border-radius: 0% 25% 0% 0%;
+    }
+
+
+}
+
+
+
+.section-form {
+
+    // X-Small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in Bootstrap
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        @include responsive-padding-top(80, 60);
+
+        &__img {
+            order: -1;
+            @include responsive-margin-left(-120, -157);
+
+        }
+
+        .container {
+            padding-top: 0;
+            @include responsive-padding-left(105, 40);
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {}
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+
+
+        .container {
+            align-items: flex-start;
+            @include responsive-padding-left(0, 0);
+        }
+
+        &__img {
+            @include responsive-margin-left(0, 0);
+            @include responsive-margin-right(110, 90);
+        }
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+        @include responsive-margin-left(180, 120);
+        @include responsive-padding-bottom(70, 60);
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {}
+
+
+
+}
+
+
+// // X-Small devices (portrait phones, less than 576px)
+// // No media query for `xs` since this is the default in Bootstrap
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+
+//     // .section-form {
+//     //     flex-direction: row;
+//     //     flex-wrap: nowrap;
+//     //     @include responsive-margin-top(80, 60);
+
+//     //     &__img {
+//     //         order: -1;
+//     //         @include responsive-margin-left(-120, -157);
+
+//     //     }
+
+//     //     .container {
+//     //         padding-top: 0;
+//     //         @include responsive-padding-left(105, 40);
+//     //     }
+//     // }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {}
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {}
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {}
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) {}
+
+
+
+
+
+// / _section-FORM.scss ____________________________

@@ -1,0 +1,188 @@
+// _section-ADVANTAGES.scss ____________________________
+
+.section-FAQ {
+    position: relative;
+    @include display-flex(column, flex-start, flex-start);
+    @include responsive-padding-bottom(80, 60);
+    @include responsive-padding-top(80, 60);
+
+    .container {
+        @include display-flex(column, flex-start, flex-start);
+    }
+
+    .wave-section-FAQ {
+        position: absolute;
+        @include responsive-width(267, 120);
+        @include responsive-height(18, 9);
+        z-index: 10;
+        bottom: 34vh;
+        @include responsive-right(-57, -57);
+    }
+
+    &__img {
+        @include responsive-padding-left(15, 15);
+        border-radius: 25% 0% 0% 0%;
+    }
+
+    .card-FAQ {
+        width: 100%;
+        @include responsive-margin-bottom(40, 40);
+        border-bottom: 1px solid rgba(250, 215, 151, 0.3);
+
+
+        &__item {
+            width: 100%;
+            @include responsive-padding-top-bottom(26, 22);
+            @include responsive-padding-left-right(5, 3);
+            border-top: 1px solid rgba(250, 215, 151, 0.3);
+            // border-bottom: 1px solid rgba(250, 215, 151, 0.3);
+        }
+
+        &__title {
+            font-family: Source Sans Pro;
+            @include responsive-font-size(22, 16);
+            @include responsive-line-height(33, 24);
+            position: relative;
+            cursor: pointer;
+            margin: 0;
+            padding-right: 60px;
+        }
+
+        .card-FAQ__title:before,
+        .card-FAQ__title:after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: rgba(250, 215, 151, 0.3);
+            position: absolute;
+            top: 11px;
+            transition: all 0.3s ease 0s;
+        }
+
+        .card-FAQ__title:before {
+            transform: rotate(0deg);
+            @include responsive-right(22, 16);
+
+        }
+
+        .card-FAQ__title:after {
+            transform: rotate(-90deg);
+            @include responsive-right(22, 16);
+        }
+
+        .card-FAQ__title.active:before,
+        .card-FAQ__title.active:after {
+            background-color: $accent-color;
+        }
+
+        &__title.active:before {
+            transform: rotate(0deg);
+        }
+
+        &__title.active:after {
+            transform: rotate(0deg);
+        }
+
+        &__text {
+            @include responsive-font-size(22, 16);
+            @include responsive-line-height(33, 24);
+            border-top: 1px solid rgba(250, 215, 151, 0.3);
+            display: none;
+            @include responsive-padding-top(20, 14);
+            @include responsive-margin-top(30, 21);
+            color: #D7D5D6;
+        }
+
+        &__list {
+            display: none;
+
+        }
+    }
+
+}
+
+
+
+
+
+
+.section-FAQ {
+
+    // X-Small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in Bootstrap
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        @include responsive-margin-top(80, 60);
+
+        &__img {
+            @include responsive-height(456, 336);
+            margin-right: -225px;
+
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {}
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+
+        .heading-h2 {
+            width: 83%;
+        }
+
+        .card-FAQ {
+            width: 87%;
+        }
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+
+        .container {
+            padding-left: 10vw;
+        }
+
+        .section-FAQ__img {
+            margin-right: 21px;
+        }
+
+        .wave-section-FAQ {
+            bottom: 810px;
+        }
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {}
+
+    @media (min-width: 1800px) {
+
+        .container {
+            padding-left: 19vw;
+        }
+
+        .section-FAQ__img {
+            margin-right: 81px;
+        }
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// / _section-ADVANTAGES.scss ____________________________

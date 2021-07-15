@@ -1,0 +1,301 @@
+// _footer.scss ____________________________
+
+.footer {
+    @include display-flex(column, flex-start, center);
+    background-color: $background-footer;
+    min-height: 200px;
+    @include responsive-padding-bottom(85, 40);
+
+    &__bottom-wrap {
+        padding: 0;
+        min-height: 0;
+    }
+
+    .container {
+        @include display-flex(column, flex-start, flex-start);
+        @include responsive-padding-top(60, 40);
+        @include responsive-padding-bottom(0, 0);
+        background-color: $background-footer;
+
+    }
+
+    &__header {
+        width: 100%;
+        @include display-flex(row, space-between, flex-start);
+        @include responsive-margin-bottom(64, 64);
+    }
+
+    .logo {
+
+        &__txt {
+            color: $text-color;
+        }
+    }
+
+    .burger-menu {
+
+        &__link-wrapper {
+            @include display-flex(column, flex-start, center);
+            width: 50%;
+        }
+
+        &__nav {
+            padding: 0;
+            position: static;
+            top: 0;
+            z-index: 20;
+            @include display-flex(row, flex-start, flex-start);
+            width: 100%;
+            height: 100%;
+            background-color: $background-footer;
+            overflow-y: auto;
+            transition: 0.8s;
+        }
+
+        &__link {
+            @include responsive-margin-bottom(30, 30);
+            box-sizing: border-box;
+            -webkit-text-decoration: 1px solid underline $text-color;
+            text-decoration: 1px solid underline $background-footer;
+            // @include responsive-width(117, 78);
+            font-family: Source Sans Pro;
+            font-style: normal;
+            font-weight: normal;
+            @include responsive-font-size(18, 12);
+            @include responsive-line-height(22, 15);
+            color: $text-color;
+            text-align: center;
+
+            &:hover {
+                text-decoration: 1px solid underline $text-color;
+                @include smoothness(text-decoration, .8s);
+            }
+        }
+
+        &__horizontal-bar {
+            width: 100%;
+            height: 1px;
+            background: rgba(250, 215, 151, 0.3);
+            @include responsive-margin-top(20, 20);
+            @include responsive-margin-bottom(40, 40);
+        }
+    }
+
+    &__rights-reserved,
+    &__privacy-policy,
+    .link-developer {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(27, 18);
+        color: $text-color;
+        text-decoration: 1px solid underline $background-footer;
+    }
+
+    &__privacy-policy {
+        text-decoration: 1px solid underline transparent;
+    }
+
+    &__rights-reserved {
+        @include responsive-padding-bottom(20, 20);
+
+    }
+
+    &__privacy-policy {
+        @include responsive-padding-bottom(20, 20);
+    }
+
+    &__privacy-policy {
+        &:hover {
+            color: $text-color;
+            text-decoration: 1px solid underline $text-color;
+            @include smoothness(text-decoration, .8s);
+        }
+    }
+
+    .wrapper-developers {
+        @include display-flex(column, flex-start, center);
+    }
+
+    .link-developer {
+        &:hover {
+            text-decoration: 1px solid underline $background-footer;
+            @include smoothness(text-decoration, .8s);
+        }
+    }
+}
+
+
+
+
+
+
+
+.footer {
+
+    // X-Small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in Bootstrap
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+
+        .container {
+            max-width: 100%;
+        }
+
+        .burger-menu__nav {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .burger-menu__link {
+            margin-right: 5vw;
+            min-width: 7%;
+        }
+
+
+        .burger-menu__link-wrapper {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 47%;
+        }
+
+
+
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+
+        .burger-menu__link-wrapper {
+            width: 50%;
+        }
+
+        .burger-menu__link {
+            margin-right: 6vw;
+        }
+
+        .burger-menu__nav {
+            padding-left: 4vw;
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+        .burger-menu__nav {
+            padding-left: 9vw;
+        }
+
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+
+        .container {
+            position: relative;
+            padding-left: 10vw;
+        }
+
+        .burger-menu__nav {
+            position: absolute;
+            width: 73%;
+            padding-left: 0vw;
+            top: 65px;
+            left: 333px;
+            min-height: 28%;
+            height: 56px;
+        }
+
+        .burger-menu__link {
+            margin-right: 3vw;
+        }
+
+        .burger-menu__link-wrapper {
+            width: 38%;
+        }
+
+        .header__contacts {
+            transform: translate(-83px, 0px);
+        }
+
+        .logo,
+        .header__contacts {
+            z-index: 30;
+        }
+
+        &__bottom-wrap {
+            width: 80vw;
+            @include display-flex(row, space-between, center);
+
+        }
+
+        .footer__rights-reserved,
+        .footer__privacy-policy {
+            padding-bottom: 0;
+        }
+
+        .wrapper-developers {
+            align-items: flex-end;
+        }
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+
+        .header__contacts {
+            transform: translate(-120px, 0px);
+        }
+
+
+    }
+
+    @media (min-width: 1800px) {
+
+
+        .container {
+            padding-left: 18vw;
+        }
+
+        .burger-menu__nav {
+            width: 61%;
+            left: 452px;
+        }
+
+        .header__contacts {
+            transform: translate(-328px, 0px);
+        }
+
+        .footer__bottom-wrap {
+            width: 64vw;
+        }
+
+
+    }
+
+    @media (min-width: 2400px) {
+
+
+
+        .burger-menu__nav {
+            left: 612px;
+            top: 79px;
+        }
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// _footer.scss ____________________________

@@ -1,0 +1,95 @@
+// _section-expert.scss ____________________________
+
+.section-expert {
+    background-color: $background-color;
+    @include display-flex(column, flex-start, flex-start);
+    @include responsive-padding-bottom(80, 60);
+    @include responsive-padding-top(80, 60);
+
+    .container {
+        position: relative;
+        @include display-flex(column, flex-start, flex-start);
+        background-color: $background-color;
+    }
+
+    .ellipse {
+        top: 20px;
+        left: 10px;
+    }
+
+    // &__wrap {
+    //     @include responsive-margin-bottom(20, 20);
+
+    // }
+
+    &__text {
+        @include responsive-margin-bottom(14, 12);
+        @include responsive-font-size(20, 14);
+        @include responsive-line-height(30, 21);
+
+        &:nth-child(5) {
+            @include responsive-margin-bottom(40, 40);
+        }
+    }
+
+    &__img {
+        @include responsive-padding-right(14, 12);
+        border-radius: 0% 25% 0% 0%;
+    }
+}
+
+.img-container {
+    position: relative;
+    z-index: 3;
+}
+
+.section-expert__img {
+    z-index: 3;
+}
+
+.wave {
+    position: absolute;
+    @include responsive-top(48, 37);
+    @include responsive-left(-178, -26);
+    z-index: -2;
+    @include responsive-width(267, 120);
+    @include responsive-height(18, 9);
+}
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+    .section-expert {
+
+        .container {
+            flex-direction: row;
+        }
+
+        &__wrap {
+            @include responsive-margin-bottom(0, 0);
+            max-width: 47%;
+        }
+
+        .img-container {
+            width: 47%;
+            order: -1;
+            margin-right: 30px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}
