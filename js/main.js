@@ -1,280 +1,169 @@
 // ============================================================
 
+// ======== ЗАДАНИЯ для Домашней работы ========
+// * Некая сеть фастфуда предлагает несколько видов гамбургеров:
+// Маленький (50 рублей, 20 калорий).
+// Большой (100 рублей, 40 калорий).
+// Гамбургер может быть с одним из нескольких видов начинок (обязательно):
+// С сыром (+10 рублей, +20 калорий).
+// С салатом (+20 рублей, +5 калорий).
+// С картофелем (+15 рублей, +10 калорий).
+// Дополнительно гамбургер можно посыпать приправой (+15 рублей, +0 калорий) и полить майонезом (+20 рублей, +5 калорий). 
+// Напишите программу, рассчитывающую стоимость и калорийность гамбургера. Можно использовать примерную архитектуру класса со следующей страницы, но можно использовать и свою.
 
 
-// burger-menu (jquery) =================
-function burgerMenu(selector) {
-    let menu = $(selector);
-    let button = menu.find('.burger-menu__button', '.burger-menu__lines');
-    let links = menu.find('.burger-menu__link');
-    let overlay = menu.find('.burger-menu__overlay');
-
-    button.on('click', (e) => {
-        e.preventDefault();
-        toggleMenu();
-    });
-
-    links.on('click', () => toggleMenu());
-    overlay.on('click', () => toggleMenu());
-
-    function toggleMenu() {
-        menu.toggleClass('burger-menu_active');
-
-        // remove scrolling in the menu:
-        if (menu.hasClass('burger-menu_active') && ($(window).width() <= '767')) {
-            $('body').addClass('modal-open');
-        } else {
-            $('body').removeClass('modal-open');
+class ProductsList {
+    // конструктор есть у каждого класса
+    // конструктор - вызывается при создании объекта нашего класса
+    constructor(container = '.products') {
+        this.container = container;
+        this.goods = []; /* this.goods - массив товаров */
+        this.allProducts = []; /* this.allProducts - массив с версткой */
+        // какие МЕТОДЫ вызывать при запуске нашего конструтора:
+        this._fetchProduct(); /* _fetchProduct - получить продукт - актуален только в данном классе - генератор товаров; */
+        this.render(); /* render - отрисовка наших товаров */
+    }
+    _fetchProduct() {
+        this.goods = [{
+                id: 1,
+                title: "Мини Бургер",
+                description: "Обжаренная говяжья котлета, панированная в сухарях, со свежим салатом на булочке, заправленной специальным соусом.",
+                price: 49,
+                img: "./img/1-small-burger.png",
+                calories: 250
+            },
+            {
+                id: 2,
+                title: "Бургер",
+                description: "Сандвич с большим, рубленым бифштексом из 100% говядины на большой булочке с кунжутом. Особенный вкус сандвичу придают два кусочка сыра, два ломтика помидора, свежий салат, лук и пикантный соус",
+                price: 79,
+                img: "./img/2-medium-burger.png",
+                calories: 330
+            },
+            {
+                id: 3,
+                title: "Биг Бургер",
+                description: "Большой сандвич с двумя рублеными бифштексами из натуральной цельной говядины на специальной булочке, заправленной луком, ломтиком сыра «Чеддер», свежим салатом, и специальным соусом",
+                price: 99,
+                img: "./img/3-big-burger.png",
+                calories: 410
+            }
+        ];
+    }
+    render() {
+        const block = document.querySelector(this.container); /* const block - помещаем туда наши товары */
+        // можно сделать forEach() - НО мы пока сделаем for; for (let product of this.goods - мы хотим в цикле поработать с каждым элементом массива goods
+        // product - это каждый объект массива goods - хотим каждый наш объект обернуть в верстку 
+        for (let product of this.goods) {
+            // обходим наш массив с объектами товаров и КАЖДЫЙ ТОВАР будем ПЕРЕДАВАТЬ В КОНСТРУКТОР class ProductItem
+            // когда пишем new - вызывается конструктор - в нем есть обязательный параметр - product - его и передаем
+            const productObj = new Hamburger(product); /* productObj - каждый товар  */
+            // добавляем каждый элемент в массив с верткой allProducts
+            this.allProducts.push(productObj);
+            // теперь выводим наши товары на страничку
+            // block.innerHTML += productObj.render(); - В ВЫСОКОНАГРУЖЕННЫХ ПРОЕКТАХ ЭТА ИНСТРУКЦИЯ СЧИТАЕТСЯ ПЛОХОЙ! (каждый раз при добавлении нового элемента ПЕРЕРИСОВЫВАЮСЯ СТАРЫЕ ЭЛЕМЕНТЫ!) - поэтому это считается медленной конструкцией - можно сделать более быстро!
+            // block.innerHTML += productObj.render();
+            // insertAdjacentHTML - указываем КУДА ВСТАВЛЯЕМ - ЧТО ВСТАВЛЯЕМ!
+            block.insertAdjacentHTML('beforeend', productObj.render());
         }
     }
 }
 
-burgerMenu('.burger-menu');
-// // / burger-menu (jquery) =================
 
-
-// smooth scrolling =================
-const anchors = document.querySelectorAll('a[href^="#"]')
-// Loop through all links
-for (let anchor of anchors) {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault() // Предотвратить стандартное поведение ссылок
-        // Атрибут href у ссылки, если его нет то перейти к body (наверх не плавно)
-        const goto = anchor.hasAttribute('href') ? anchor.getAttribute('href') : 'body'
-        // Плавная прокрутка до элемента с id = href у ссылки
-        document.querySelector(goto).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        })
-    })
-}
-// smooth scrolling =================
-
-
-
-// UP button on the site =================
-
-let btnUp = $('.up-button'); //создаем переменную для кнопки
-
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 500) { //отслеживаем высоту от верха страницы в 100px
-        btnUp.addClass('up-button_show'); // присваиваем кнопке класс show для управления видимостью
-    } else {
-        btnUp.removeClass('up-button_show'); // если меньше 500px от верха страницы убираем класс show
-    }
-});
-
-btnUp.on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: 0
-    }, '500'); //при клике на кнопку плавно прокручиваем до верха body
-});
-
-
-// UP button on the site =================
-
-
-
-// https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
-$('.select').each(function () {
-    const _this = $(this),
-        selectOption = _this.find('option'),
-        selectOptionLength = selectOption.length,
-        selectedOption = selectOption.filter(':selected'),
-        duration = 450; // длительность анимации 
-
-    _this.hide();
-    _this.wrap('<div class="select"></div>');
-    $('<div>', {
-        class: 'new-select',
-        text: _this.children('option:disabled').text()
-    }).insertAfter(_this);
-
-    const selectHead = _this.next('.new-select');
-    $('<div>', {
-        class: 'new-select__list'
-    }).insertAfter(selectHead);
-
-    const selectList = selectHead.next('.new-select__list');
-    for (let i = 1; i < selectOptionLength; i++) {
-        $('<div>', {
-                class: 'new-select__item',
-                html: $('<span>', {
-                    text: selectOption.eq(i).text()
-                })
-            })
-            .attr('data-value', selectOption.eq(i).val())
-            .appendTo(selectList);
+class Hamburger {
+    // конструктор есть у каждого класса
+    // конструктор - вызывается при создании объекта нашего класса
+    // на вход будем принимать наш объект, который нужно будет обернуть в верстку 
+    // делаем ПО УМОЛЧАНИЮ переменная КАРТИНКА;
+    // constructor(product, img = "https://placehold.it/200x150") {
+    constructor(product) {
+        // на вход же принимаем ОБЪЕКТ (product), а у ОБЪЕКТА есть свойства (title, id, price ...);
+        // это ОБЩИЕ СВОЙСТВА У ВСЕХ ТОВАРОВ
+        // глобальные переменные
+        this.title = product.title;
+        this.description = product.description;
+        this.id = product.id;
+        this.img = product.img;
+        this.price = product.price;
+        this.calories = product.calories;
     }
 
-    const selectItem = selectList.find('.new-select__item');
-    selectList.slideUp(0);
-    selectHead.on('click', function () {
-        if (!$(this).hasClass('on')) {
-            $(this).addClass('on');
-            selectList.slideDown(duration);
-
-            selectItem.on('click', function () {
-                let chooseItem = $(this).data('value');
-
-                $('select').val(chooseItem).attr('selected', 'selected');
-                selectHead.text($(this).find('span').text());
-
-                selectList.slideUp(duration);
-                selectHead.removeClass('on');
-            });
-
-        } else {
-            $(this).removeClass('on');
-            selectList.slideUp(duration);
-        }
-    });
-});
-// https://computy.ru/blog/stilizacija-select-kak-budto-jeto-2019/
+    // для того, чтобы каждый товар вывести на страницу - его нужно ОБЕРНУТЬ в верстку!
+    render() {
+        return `
+        <div class="product-item">
+            <img width="200" height="300" class="product-image" src="${this.img}" alt="${this.title}">
+            <h3 class="product-name">${this.title}</h3>
+            <p class="product-description">${this.description}</p>
+            <p class="product-price">${this.price + " ₽"}</p>
+            <button class="btn buy-btn">В корзину</button>
+        </div>
+    `
+    }
 
 
 
-// код для Спойлер на HTML CSS 
-$(document).ready(function () {
-    $('.card-FAQ__title').click(function (event) {
-        if ($('.card-FAQ').hasClass('one')) {
-            $('.card-FAQ__title').not($(this)).removeClass('active');
-            $('.card-FAQ__text').not($(this).next()).slideUp(300);
-        }
-        $(this).toggleClass('active').next().slideToggle(300);
-    });
-});
-// код для Спойлер на HTML CSS 
-
-
-function toggle_show(id) {
-    document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
+    // constructor(size, stuffing) {
+    //     // ...
+    // }
+    // // Добавить добавку
+    // addTopping(topping) {}
+    // // Убрать добавку
+    // removeTopping(topping) {}
+    // // Получить список добавок
+    // getToppings(topping) {}
+    // // Узнать размер гамбургера
+    // getSize() {}
+    // // Узнать начинку гамбургера
+    // getStuffing() {}
+    // // Узнать цену
+    // calculatePrice() {}
+    // // Узнать калорийность 
+    // calculateCalories() {}
 }
 
 
-// Отложенная загрузка видео с Youtube
-
-// selector of all videos on the page
-const videos = document.querySelectorAll('.video');
-
-// generate video url
-let generateUrl = function (id) {
-    let query = '?rel=0&showinfo=0&autoplay=1';
-
-    return 'https://www.youtube.com/embed/' + id + query;
-};
-
-// creating iframe
-let createIframe = function (id) {
-    let iframe = document.createElement('iframe');
-
-    iframe.setAttribute('allowfullscreen', '');
-    iframe.setAttribute('allow', 'autoplay; encrypted-media');
-    iframe.setAttribute('src', generateUrl(id));
-
-    return iframe;
-};
-
-// main code
-videos.forEach((el) => {
-    let videoHref = el.getAttribute('data-video');
-
-    let deletedLength = 'https://youtu.be/'.length;
-
-    let videoId = videoHref.substring(deletedLength, videoHref.length);
-
-    let img = el.querySelector('img');
-    let youtubeImgSrc = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg';
-    img.setAttribute('src', youtubeImgSrc);
-
-    el.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        let iframe = createIframe(videoId);
-        el.querySelector('img').remove();
-        el.appendChild(iframe);
-        el.querySelector('button').remove();
-    });
-});
 
 
-// Отложенная загрузка видео с Youtube
+// // Чтобы верстка каждого товара была максимально эффективная и гибкая - сделаем еще один класс - (КЛАСС ДЛЯ ОФОРМЛЕНИЯ ТОВАРА) - у каждого товара есть свои собственные свойства;
+// class ProductItem {
+//     // конструктор есть у каждого класса
+//     // конструктор - вызывается при создании объекта нашего класса
+//     // на вход будем принимать наш объект, который нужно будет обернуть в верстку 
+//     // делаем ПО УМОЛЧАНИЮ переменная КАРТИНКА;
+//     // constructor(product, img = "https://placehold.it/200x150") {
+//     constructor(product) {
+//         // на вход же принимаем ОБЪЕКТ (product), а у ОБЪЕКТА есть свойства (title, id, price ...);
+//         // это ОБЩИЕ СВОЙСТВА У ВСЕХ ТОВАРОВ
+//         // глобальные переменные
+//         this.title = product.title;
+//         this.id = product.id;
+//         this.img = product.img;
+//         this.price = product.price;
+//     }
+
+//     // для того, чтобы каждый товар вывести на страницу - его нужно ОБЕРНУТЬ в верстку!
+//     render() {
+//         return `
+//         <div class="product-item">
+//             <img width="200" height="300" class="product-image" src="${this.img}" alt="${this.title}">
+//             <h3 class="product-name">${this.title}</h3>
+//             <p class="product-price">${this.price + " ₽"}</p>
+//             <button class="btn btn-comparison"><img width="40" height="40" class="img-btn-comparison" src="./img/comparison.png" alt="comparison"></button>
+//             <button class="btn buy-btn">Купить</button>
+//         </div>
+//     `
+//     }
+
+// }
 
 
 
 
 
 
-
-
-
-// JS КОД для АНИМАЦИИ ПР СКРОЛЛЕ =============================
-// ============================================================
-
-// находим и объявляем в переменную все объекты которые будут поддаваться анимации
-const animItems = document.querySelectorAll('._anim-items');
-
-// проверяем - существуют ли такие классы 
-if (animItems.length > 0) {
-	window.addEventListener('scroll', animOnScroll);
-	function animOnScroll() {
-		for (let index = 0; index < animItems.length; index++) {
-			const animItem = animItems[index];
-			const animItemHeight = animItem.offsetHeight;
-			const animItemOffset = offset(animItem).top;
-			const animStart = 4;
-
-			let animItemPoint = window.innerHeight - animItemHeight / animStart;
-			if (animItemHeight > window.innerHeight) {
-				animItemPoint = window.innerHeight - window.innerHeight / animStart;
-			}
-
-			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-				animItem.classList.add('_active');
-			} else {
-				if (!animItem.classList.contains('_anim-no-hide')) {
-					animItem.classList.remove('_active');
-				}
-			}
-		}
-	}
-	function offset(el) {
-		const rect = el.getBoundingClientRect(),
-			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-	}
-
-	// общая задержка вызова функции 
-	setTimeout(() => {
-		animOnScroll();
-	}, 300);
-}
-
-// JS КОД для АНИМАЦИИ ПР СКРОЛЛЕ =============================
-// ============================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// список товаров присваиваем класс ProductsList - вызываю наш конструктор! 
+let list = new ProductsList();
 
 
 
