@@ -1,116 +1,178 @@
-* {
-  box-sizing: border-box;
+/* Обнуление */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	font-size: 16px;
+	background-color: #0b1d26;
+	color: #fff;
+	font-family: "PT Sans";
 }
 .wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+	min-height: 100%;
 }
-.fullscreen {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 15px 25px;
-  background-image: url(../img/3-big-burger.png);
-  max-width: 100%;
-  box-shadow: inset 0px 0px 12px rgba(154, 147, 140, 0.5), 1px 1px 5px #ffffff;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  overflow: hidden;
-  filter: brightness(92%);
+/* ------------------ */
+/* ------------------ */
+/* ------------------ */
+._container {
+	max-width: 1000px;
+	margin: 0px auto;
+	padding: 50px 20px;
 }
-.fullscreen__body {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0px 20px 0;
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* ------------------ */
+.parallax {
+	min-height: 100vh;
 }
-.products {
-  margin: 0 auto;
-  width: 97%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  align-content: center;
+.parallax__body {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
-.product-item {
-  overflow: hidden;
-  width: 27%;
-  min-width: 250px;
-  min-height: 80vh;
-  max-height: 90vh;
-  margin: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  align-content: center;
+.parallax__container {
+	text-transform: uppercase;
+	position: relative;
+	z-index: 2;
 }
-.product-image {
-  object-fit: contain;
-  margin: 0 0 4px 0;
-  width: 100%;
-  max-height: 164px;
+.parallax__label {
+	color: #fbd784;
+	display: flex;
+	font-size: 18px;
+	letter-spacing: 6px;
+	margin: 0px 0px 30px 0px;
+	align-items: center;
 }
-.product-name {
-  display: flex;
-  color: #2F4F4F;
-  width: 100%;
-  align-items: center;
-  margin: 0;
-  min-height: 25px;
-  max-height: 41px;
-  font-family: 'Bellota', cursive;
-  padding: 3px 3px 3px 7px;
-  box-sizing: border-box;
-  font-size: 14px;
+.parallax__label::before {
+	flex: 0 0 70px;
+	content: "";
+	margin: 0px 30px 0px 0px;
+	background-color: #fbd784;
+	height: 1px;
 }
-.product-description {
-  display: flex;
-  color: #b69a81;
-  width: 100%;
-  align-items: center;
-  margin: 0;
-  min-height: 130px;
-  font-family: 'Bellota', cursive;
-  padding: 3px 3px 3px 7px;
-  box-sizing: border-box;
-  font-size: 14px;
+
+.parallax__title {
+	font-size: 88px;
 }
-.product-price {
-  width: 100%;
-  margin: 0 0 24px 0;
-  color: #2F4F4F;
-  text-align: right;
-  align-self: flex-end;
-  font-weight: bold;
-  font-family: 'Bellota', cursive;
-  padding: 3px 3px 3px 7px;
-  font-size: 27px;
+.parallax__images {
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	top: -10%;
+	left: -10%;
+	z-index: 1;
 }
-.buy-btn {
-  text-align: center;
-  align-self: center;
-  background-color: #ffbb0e;
-  padding: 13px 30px;
-  border: none;
-  transition: outline 0.4s linear;
+.images-parallax {
+}
+.images-parallax__item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.images-parallax__clouds,
+.images-parallax__mountains,
+.images-parallax__human {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+.images-parallax__clouds {
+	background: url("../img/clouds.jpg") top / cover no-repeat;
+	top: 0;
+}
+.images-parallax__mountains {
+	background: url("../img/mountains.png") top / cover no-repeat;
+	top: 15%;
+	z-index: 2;
+}
+.images-parallax__human {
+	background: url("../img/human.png") top / cover no-repeat;
+	top: 45%;
+	z-index: 3;
+}
+@media (max-aspect-ratio: 3/2) {
+	.images-parallax__human {
+		background-position: 20% top;
+	}
+}
+
+.content {
+	background-color: #0b1d26;
+	position: relative;
+	z-index: 2;
+}
+.content::before {
+	pointer-events: none;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	transform: translate(0px, -100%);
+	background: linear-gradient(180deg, rgba(11, 29, 38, 0) 5%, #0b1d26 100%);
+}
+
+.content__container {
+}
+.content__title {
+	font-size: 35px;
+	margin: 0px 0px 30px 0px;
+}
+.content__text {
+	font-size: 16px;
+	line-height: 150%;
+}
+.content__text p {
+	margin: 0px 0px 30px 0px;
+}
+
+@media (max-width: 767px) {
+	.parallax__title {
+		font-size: 50px;
+	}
+	.parallax__label {
+		font-size: 16px;
+		margin: 0px 0px 15px 0px;
+	}
+}
+@media (max-width: 479px) {
+	.parallax__title {
+		font-size: 36px;
+	}
+	.parallax__label::before {
+		flex: 0 0 50px;
+		margin: 0px 10px 0px 0px;
+	}
 }
