@@ -9,8 +9,7 @@
     @include responsive-margin-bottom(70, 50);
 }
 
-.container {
-}
+.container {}
 
 .header__control {
     width: 100%;
@@ -389,10 +388,14 @@
     &__svg-line {
         @include responsive-width (1587, 438);
         @include responsive-height (1536, 478);
+        // width: 438px;
+        // height: 478px;
         position: absolute;
         z-index: 9;
-        @include responsive-top (-120, -151);
-        @include responsive-right (-10, -146);
+        top: -151px;
+        right: -146px;
+        // @include responsive-top (-120, -151);
+        // @include responsive-right (-10, -146);
 
     }
 

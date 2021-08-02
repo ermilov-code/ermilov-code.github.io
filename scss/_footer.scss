@@ -2,10 +2,21 @@
 
 .footer {
     position: relative;
-    @include display(column, flex-start, center);
-    background-color: transparent;
+    @include display(column, flex-start, flex-start);
+    background-color: $accent-color-green;
     min-height: 200px;
     @include responsive-padding-bottom(85, 40);
+
+    &::after {
+        content: "";
+        width: 620px;
+        height: 300px;
+        background-color: $accent-color-green;
+        position: absolute;
+        border-radius: 50% 50% 0 0;
+        top: -60px;
+        left: -133px;
+    }
 
     .heading-h2 {
         color: $background-color;
@@ -41,7 +52,7 @@
             background-color: $accent-color !important;
         }
 
-        &__шьп {
+        &__img {
             max-width: 100%;
             object-fit: contain;
         }
@@ -72,7 +83,7 @@
     .container {
         z-index: 2;
         @include display(column, flex-start, center);
-        @include responsive-padding-top(100, 77);
+        @include responsive-padding-top(24, 24);
         @include responsive-padding-bottom(0, 0);
         background-color: transparent;
 

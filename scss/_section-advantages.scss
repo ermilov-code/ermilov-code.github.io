@@ -4,6 +4,7 @@
     @include display(column, flex-start, center);
     @include responsive-padding-bottom(70, 25);
     @include responsive-padding-top(70, 50);
+    overflow: hidden;
 
     .container {
         position: relative;
