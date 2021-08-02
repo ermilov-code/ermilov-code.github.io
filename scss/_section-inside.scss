@@ -1,0 +1,92 @@
+// _section-INSIDE.scss ____________________________
+
+.section-inside {
+    @include display(column, flex-start, center);
+    @include responsive-padding-top(60, 40);
+    @include responsive-padding-bottom(70, 50);
+
+
+    .container {
+        @include display(column, flex-start, center);
+    }
+
+    .circle-card {
+        @include display(column, center, center);
+        border: 5px solid $accent-color;
+        border-radius: 50%;
+        box-sizing: border-box;
+        @include responsive-width (342, 226);
+        @include responsive-height (342, 226);
+
+        &__txt {
+            text-align: center;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            @include responsive-font(18, 12);
+            @include responsive-line-height(27, 18);
+        }
+
+        &_orange-big {
+            align-self: flex-end;
+        }
+
+        &_green-medium {
+            border: 5px solid $accent-color-green;
+            @include responsive-width (229, 167);
+            @include responsive-height (229, 167);
+            align-self: flex-start;
+        }
+
+        &_green-small {
+            border: 5px solid $accent-color-green;
+            @include responsive-width (214, 128);
+            @include responsive-height (214, 128);
+            align-self: flex-end;
+            @include responsive-margin-top (-34, -34);
+        }
+
+        &_orange-medium {
+            border: 5px solid $accent-color;
+            @include responsive-width (296, 218);
+            @include responsive-height (296, 218);
+            align-self: flex-start;
+            @include responsive-margin-top (-14, -14);
+            @include responsive-margin-bottom (14, 14);
+        }
+
+        &_green-big {
+            border: 5px solid $accent-color-green;
+            @include responsive-width (280, 182);
+            @include responsive-height (280, 182);
+            align-self: flex-end;
+        }
+    }
+}
+
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}
+
+
+
+
+
+
+// _section-INSIDE.scss ____________________________
