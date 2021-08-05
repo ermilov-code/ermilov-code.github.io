@@ -326,13 +326,18 @@ let mySwiper1 = new Swiper(slider1, {
 })
 
 let mySwiper2 = new Swiper(slider2, {
-    slidesPerView: 0.6,
+    slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 20,
     navigation: {
-        nextEl: '.swiper-navigation__button-next',
-        prevEl: '.swiper-navigation__button-prev',
+        nextEl: '.swiper-navigation__button-next-1',
+        prevEl: '.swiper-navigation__button-prev-1',
     },
+    pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		type: 'fraction',
+	},
     // Бесконечный слайдер
     loop: true,
 

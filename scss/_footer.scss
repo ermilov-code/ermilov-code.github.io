@@ -30,7 +30,8 @@
 
         &-slide {
             object-fit: contain;
-            @include responsive-width(970, 384);
+            // @include responsive-width(970, 384);
+            max-width: 100%;
             @include responsive-height(546, 176);
             opacity: 0.5;
             // border: 1px solid $accent-color-green;
@@ -43,17 +44,17 @@
     }
 
     .swiper-navigation {
-        @include display(row, flex-end, flex-start);
+        @include display(row, center, flex-start);
 
-        &__button-prev,
-        &__button-next {
+        &__button-prev-1,
+        &__button-next-1 {
             @include display(row, center, center);
             @include responsive-width(50, 44);
             @include responsive-height(50, 44);
-            @include responsive-margin-left(30, 30);
+            margin: 0 15px 0 15px;
             @include responsive-border-radius(3, 2.3);
             background-color: transparent;
-            border: 1px solid $accent-color-green;
+            border: 1px solid $background-color;
             border-radius: 50%;
             position: static;
 
@@ -75,6 +76,21 @@
                 @include smoothness(background-color, 0.8s);
             }
         }
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -29px;
+        left: 0;
+        width: 100%;
+        color: #FEFEFE;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction span {
+        color: #FEFEFE;
     }
 
 
@@ -133,13 +149,14 @@
             @include responsive-font(15, 14);
             @include responsive-line-height(21, 16.8);
             @include responsive-margin-bottom(15, 15);
+            color: $background-color;
         }
 
 
     }
 
     .card {
-        border: 1px solid $accent-color;
+        border: none;
         padding: 10px;
         background-color: $accent-color-green;
     }
