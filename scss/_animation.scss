@@ -38,6 +38,9 @@
 }
 
 
+
+
+
 // анимация для кнопки ХОЧУ справочник
 
 // animation: buttonWant infinite 2s;
@@ -79,7 +82,7 @@
 
 // анимация для заголовков
 ._anim-show {
-    transform: translate(-120%, 0px);
+    transform: translate(120%, 0px);
     opacity: 0;
     transition: all 0.8s ease 0s;
 }
@@ -89,6 +92,21 @@
     opacity: 1;
     transform: translate(0px, 0px);
 }
+
+
+._anim-show-4 {
+    // transform: scale(0);
+    opacity: 0;
+    transition: all 1.3s ease 0.9s;
+}
+
+._anim-show-4._active,
+._active ._anim-show-4 {
+    opacity: 1;
+    // transform: scale(1);
+}
+
+
 
 
 
@@ -129,8 +147,37 @@
         opacity: 1;
         transform: scale(1);
     }
+}
+
+
+.section-advantages {
+
+    .container div {
+        opacity: 0;
+        transform: scale(0);
+        transition: all 0.3s ease 0s;
+    }
+
+    .container div:nth-child(3) {
+        transition: all 0.8s ease 0.3s;
+    }
+
+    .container div:nth-child(4) {
+        transition: all 0.8s ease 0.4s;
+    }
+
+    .container div:nth-child(5) {
+        transition: all 0.8s ease 0.5s;
+    }
+
+    .container._active div {
+        opacity: 1;
+        transform: scale(1);
+    }
 
 }
+
+
 
 
 // CSS КОД для АНИМАЦИИ ПРИ СКРОЛЛЕ =============================
