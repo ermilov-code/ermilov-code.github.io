@@ -15,9 +15,12 @@ $background-color-cards: #F2F2F2;
 // COLOR text on dark background
 $text-color: #333333;
 // COLOR of accent (arrows, buttons :)
-$accent-color: #FE900B;
+// $accent-color: #FE900B;
+// $accent-color: #ee784a;
+$accent-color: #ff924c;
 // COLOR of accent (arrows, buttons :)
-$accent-color-green: #249C63;
+$accent-color-green: #314c77;
+// $accent-color-green: #249C63;
 // COLOR menu item
 $menu-item-color: #333333;
 // COLOR menu item on :hover :focus :active
@@ -87,7 +90,6 @@ $max-width: 1920;
     $max-width: $max-width - 320;
     width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
-
 
 @mixin responsive-max-width($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;

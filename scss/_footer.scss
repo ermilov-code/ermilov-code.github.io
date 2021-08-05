@@ -18,6 +18,11 @@
         left: -133px;
     }
 
+    .logo__icon {
+        width: 69px;
+        height: 72px;
+    }
+
     .heading-h2 {
         color: $background-color;
     }
@@ -26,9 +31,9 @@
     .how-to-pay {
         @include responsive-margin-bottom(20, 20);
 
-        &__txt {
+        &__wrapper {
             @include responsive-margin-bottom(20, 20);
-
+            background-color: $accent-color-green;
         }
 
         @include responsive-width(280, 280);
@@ -44,7 +49,7 @@
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
-        @include responsive-font(15, 12);
+        @include responsive-font(15, 14);
         @include responsive-line-height(21, 16.8);
 
         &:hover,
@@ -55,10 +60,29 @@
         &__img {
             max-width: 100%;
             object-fit: contain;
+            @include responsive-margin-bottom(15, 15);
+        }
+
+        &__p {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            @include responsive-font(15, 14);
+            @include responsive-line-height(21, 16.8);
+            @include responsive-margin-bottom(15, 15);
         }
 
 
+    }
 
+    .card {
+        border: 1px solid $accent-color;
+        padding: 10px;
+        background-color: $accent-color-green;
+    }
+
+    .card-body {
+        padding: 0;
     }
 
 
@@ -184,8 +208,8 @@
     }
 
     .logo {
+        align-items: center;
         color: $background-color;
-        // position: absolute;
         @include responsive-top (114, 34);
         @include responsive-left (92, 90);
 

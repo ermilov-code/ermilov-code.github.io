@@ -124,6 +124,7 @@
         transition: 0.8s;
 
         .logo {
+            z-index: 20;
             color: $background-color;
             position: absolute;
             @include responsive-top (114, 34);
@@ -257,6 +258,7 @@
 }
 
 .logo {
+    z-index: 20;
     @include display(row, flex-start, flex-end);
 
     &__icon {
@@ -300,6 +302,8 @@
 }
 
 .header__contacts {
+
+    z-index: 20;
 
     .link-instagram {
         @include display(row, center, center);
@@ -380,6 +384,8 @@
         object-fit: contain;
         @include responsive-width (660, 179);
         @include responsive-height (762, 206);
+        width: 330px;
+        height: 218px;
         z-index: 10;
 
 
@@ -392,11 +398,13 @@
         // height: 478px;
         position: absolute;
         z-index: 9;
-        top: -151px;
-        right: -146px;
-        // @include responsive-top (-120, -151);
-        // @include responsive-right (-10, -146);
+        top: -161px;
+        right: -29vw;
+        transform: rotate(15deg);
 
+        path {
+            stroke-width: 11px;
+        }
     }
 
 }
@@ -410,6 +418,7 @@
     @include responsive-margin-bottom(30, 30);
     align-self: flex-end;
     z-index: 15;
+    animation: buttonWant infinite 4s;
 
     &__txt {
         color: $background-color;
@@ -417,6 +426,7 @@
         @include responsive-line-height(20, 14.6);
         font-style: normal;
         font-weight: 600;
+        text-align: center;
     }
 
     &:hover {
@@ -471,23 +481,183 @@
 // UP button on the site =================
 
 
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
+// adaptive =================
+.header {
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
+    @media (min-width: 576px) {
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {}
+        margin-bottom: 20px;
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
+        &__control {
+            margin-bottom: 159px;
+        }
 
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+        &__description-site {
+            @include responsive-width(421, 377);
+        }
 
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {}
+        &__svg-line {
+            width: 1159px;
+            height: 1107px;
+            top: -598px;
+            right: -460px;
+            transform: rotate(4deg);
+
+            path {
+                stroke-width: 8px;
+            }
+        }
+
+        &__img {
+            position: absolute;
+            top: -198px;
+            right: -139px;
+        }
+
+        &__image-wrapper {
+            min-height: 200px;
+            min-width: 280px;
+        }
+
+
+        .logo {
+            order: -1;
+        }
+
+        .burger-menu {
+
+            &__nav {
+                position: absolute;
+                @include display(row, space-between, flex-start);
+                height: 50px;
+                left: 0px;
+                top: 101px;
+                padding: 0 15px;
+            }
+
+            &__link {
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: normal;
+                text-transform: none;
+                margin-bottom: 0px;
+            }
+
+            &__button {
+                visibility: hidden;
+            }
+        }
+
+        .burger-menu_active .burger-menu__overlay {
+            display: none;
+        }
+
+        .button-order {
+            align-self: flex-start;
+            margin-left: 126px;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .burger-menu__nav {
+            padding: 0 24px;
+        }
+
+        &__image-wrapper {
+            min-height: 200px;
+            min-width: 444px;
+        }
+
+        &__img {
+            width: 421px;
+            height: 242px;
+        }
+
+        &__svg-line {
+            top: -681px;
+            right: -401px;
+            transform: rotate(-13deg);
+        }
+
+        .button-order {
+            margin-left: 98px;
+        }
+
+        &__image-wrapper {
+            min-height: 114px;
+        }
+    }
+
+    @media (min-width: 992px) {
+
+        .burger-menu__nav {
+            width: 716px;
+            left: 214px;
+            top: 45px;
+        }
+
+        &__svg-line {
+            width: 3059px;
+            height: 1607px;
+            top: -958px;
+            right: -1399px;
+        }
+
+        &__image-wrapper {
+            min-width: 753px;
+        }
+
+        &__img {
+            width: 564px;
+            height: 333px;
+            top: -253px;
+            right: -94px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        .burger-menu__nav {
+            width: 771px;
+            left: 323px;
+            top: 52px;
+        }
+
+        &__image-wrapper {
+            min-width: 889px;
+        }
+
+        &__img {
+            width: 671px;
+            height: 413px;
+            top: -440px;
+            right: -142px;
+        }
+
+        &__svg-line {
+            width: 7059px;
+            height: 2087px;
+            top: -1241px;
+            right: -3174px;
+            transform: rotate(5deg);
+        }
+
+
+
+    }
+
+    @media (min-width: 1400px) {}
+
+    @media (min-width: 1800px) {}
+
+    @media (min-width: 2000px) {}
+
+}
+
+// adaptive =================
+
+
 
 
 

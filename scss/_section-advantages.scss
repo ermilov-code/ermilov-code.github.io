@@ -12,13 +12,13 @@
     }
 
     .section-gallery__curved-line {
-        top: -367px;
+        top: -334px;
         left: -345px;
     }
 
     .heading-h2 {
         @include responsive-padding-right(80, 80);
-        @include responsive-margin-bottom(40, 16);
+        margin-bottom: 54px;
 
     }
 
@@ -31,6 +31,7 @@
         box-sizing: border-box;
         border-radius: 50%;
         z-index: 2;
+        padding: 8px;
 
 
         &__txt-advantages {

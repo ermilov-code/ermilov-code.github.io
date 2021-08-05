@@ -3,6 +3,7 @@
     @include display(column, flex-start, center);
     @include responsive-padding-bottom(70, 50);
     @include responsive-padding-top(60, 40);
+    overflow: hidden;
 
     &__curved-line {
         @include responsive-width(1360, 1020);

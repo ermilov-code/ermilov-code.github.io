@@ -17,6 +17,7 @@
         box-sizing: border-box;
         @include responsive-width (342, 226);
         @include responsive-height (342, 226);
+        padding: 7px;
 
         &__txt {
             text-align: center;
