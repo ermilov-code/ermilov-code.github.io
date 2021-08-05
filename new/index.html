@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- From the Freelancer template -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <!-- =================== -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- A bit of SEO -->
+  <title>Школьный справочник | Stylist kids</title>
+  <!-- <meta name="keywords"
+    content="Подборки школьный одежды всех категорий в&nbsp;разных палитрах с&nbsp;активными ссылками " /> -->
+  <meta name="description"
+    content="Подборки школьной одежды всех категорий в&nbsp;разных палитрах с&nbsp;активными ссылками" />
+  <!-- =================== -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Website Icon -->
+  <link rel="shortcut icon" href="img/favicon-min.png" type="image/png">
+</head>
+
+<body>
+  <!-- UP button on the site -->
+  <div class="up-button" id="btnUp">
+    <svg class="up-button__arrow" width="22" height="12" viewBox="0 0 22 12" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L11 11L21 1" stroke="#FFFFFF" stroke-width="0.977869" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </div>
+  <!-- UP button on the site -->
+  <!-- =================== HTML =================== -->
+  <div class="wrapper">
+
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header__control">
+          <div class="burger-menu">
+            <a href="" class="burger-menu__button">
+              <span class="burger-menu__lines"></span>
+            </a>
+            <nav class="burger-menu__nav">
+              <a href="#header" class="burger-menu__link">Главная</a>
+              <a href="#section-inside" class="burger-menu__link">Что внутри?</a>
+              <a href="#section-gallery" class="burger-menu__link">Странички</a>
+              <a href="#section-advantages" class="burger-menu__link">Зачем нужен?</a>
+              <a href="#section-reviews" class="burger-menu__link">Отзывы</a>
+              <a href="#section-prices" class="burger-menu__link">Стоимость</a>
+            </nav>
+            <div class="burger-menu__overlay"></div>
+            <!-- /.burger-menu__overlay -->
+          </div>
+          <!-- /.burger-menu -->
+          <a href="index.html" class="logo">
+            <img src="img/icon-logo-header-min.png" alt="stylist kids" class="logo__icon">
+            <div class="logo__wrapper-text">
+              <span class="logo__name">Maria</span>
+              <span class="logo__position">STYLIST KIDS</span>
+            </div>
+            <!-- /.logo__wrapper-text -->
+          </a>
+          <div class="header__contacts">
+            <a href="https://www.instagram.com/stylist__kids/" class="link-instagram">
+              <svg class="link-instagram__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                <path fill="#FEFEFE" fill-rule="evenodd"
+                  d="M15.342 1.949H5.88a3.87 3.87 0 0 0-3.87 3.87v9.105a3.87 3.87 0 0 0 3.87 3.87h9.46a3.87 3.87 0 0 0 3.871-3.87V5.82a3.87 3.87 0 0 0-3.87-3.87zM5.88.659a5.16 5.16 0 0 0-5.16 5.16v9.105a5.16 5.16 0 0 0 5.16 5.161h9.46a5.16 5.16 0 0 0 5.161-5.16V5.819a5.16 5.16 0 0 0-5.16-5.16H5.88zm4.701 13.009c1.9 0 3.394-1.501 3.394-3.296s-1.494-3.296-3.394-3.296c-1.9 0-3.393 1.501-3.393 3.296s1.493 3.296 3.393 3.296zm0 1.29c2.587 0 4.684-2.053 4.684-4.586 0-2.533-2.097-4.586-4.684-4.586-2.586 0-4.683 2.053-4.683 4.586 0 2.533 2.097 4.586 4.683 4.586zm5.8-8.917c.712 0 1.29-.568 1.29-1.267 0-.7-.578-1.267-1.29-1.267-.713 0-1.29.567-1.29 1.267s.577 1.267 1.29 1.267z"
+                  clip-rule="evenodd" /></svg>
+            </a>
+          </div>
+          <!-- /.header__contacts -->
+        </div>
+        <!-- /.header__control -->
+        <div class="header__content">
+          <h1 class="header__main-heading _anim-items _anim-no-hide">Школьный <br> справочник</h1>
+          <p class="header__description-site _anim-items _anim-no-hide">
+            Подборки школьной одежды всех категорий в&nbsp;разных палитрах с&nbsp;активными ссылками
+          </p>
+          <a href="#section-prices" class="button-order">
+            <span class="button-order__txt">Хочу <br>справочник</span>
+          </a>
+        </div>
+        <!-- /.header__content -->
+      </div>
+      <!-- /.container -->
+      <div class="header__image-wrapper">
+        <img src="img/image-section-HEADER-min.jpg" alt="Бурение скважин на воду"
+          class="header__img _anim-items _anim-no-hide">
+        <svg class="header__svg-line" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 320 480">
+          <path stroke="#314c77" stroke-linecap="round" stroke-linejoin="round" stroke-width="18"
+            d="M-91.856 295.576c9.671-39.073 30.624-52.923 69.94-23.849 61.458 45.447 104.79 37.566 157.691 12.654 86.172-40.58 185.156-219.56 155.614-85.62-29.541 133.94 28.043 72.726 69.308-12.753" />
+        </svg>
+      </div>
+      <!-- /.header__image-wrapper -->
+    </header>
+
+    <main class="main">
+      <section class="section-inside" id="section-inside">
+        <div class="container _anim-items _anim-no-hide">
+          <h2 class="heading-h2 _anim-show">Что внутри справочника?</h2>
+          <div class="circle-card circle-card_orange-big _anim-show-2">
+            <p class="circle-card__txt">Подборки школьной одежды всех категорий <br> в&nbsp;разных палитрах <br>
+              с&nbsp;активными
+              ссылками</p>
+          </div>
+          <!-- /.circle-card -->
+          <div class="circle-card circle-card_green-medium _anim-show-2">
+            <p class="circle-card__txt">Чек-листы</p>
+          </div>
+          <!-- /.circle-card -->
+          <div class="circle-card circle-card_green-small _anim-show-2">
+            <p class="circle-card__txt">Готовые капсулы</p>
+          </div>
+          <!-- /.circle-card -->
+          <div class="circle-card circle-card_orange-medium _anim-show-2">
+            <p class="circle-card__txt">Рюкзаки, обувь и&nbsp;аксессуары</p>
+          </div>
+          <!-- /.circle-card -->
+          <div class="circle-card circle-card_green-big _anim-show-2">
+            <p class="circle-card__txt">Верхняя одежда</p>
+          </div>
+          <!-- /.circle-card -->
+        </div>
+        <!-- /.container -->
+      </section>
+
+      <section class="section-gallery" id="section-gallery">
+        <div class="container _anim-items _anim-no-hide">
+          <svg class="section-gallery__curved-line" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 320 1128">
+            <path stroke="#314c77" stroke-linecap="round" stroke-linejoin="round" stroke-width="18"
+              d="M-201.518 9.791c94.291 10.307 346.66 49.627 601.816 124.448 255.156 74.822 238.016 109.37 238.016 144.108s-27.159 186.965-136.662 212.47c-61.46 14.315-208.611 16.273-260.92 33.593-471.821 156.229-116.813 292.325 136.575 396.349C481.903 969.84 632.936 1032.4 400.298 1090c-58.6 12.33-193.798 34.9-265.798 26.5" />
+          </svg>
+          <h2 class="heading-h2 _anim-show">Странички</h2>
+          <!-- Swiper -->
+          <div class="swiper">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <img class="swiper-slide" src="img/journal-1-min.jpg" alt="Летний семейный справочник журнал"
+                  class="swiper-slide">
+                <img class="swiper-slide" src="img/journal-2-min.jpg" alt="Летний семейный справочник журнал"
+                  class="swiper-slide">
+                <img class="swiper-slide" src="img/journal-3-min.jpg" alt="Летний семейный справочник журнал"
+                  class="swiper-slide">
+                <img class="swiper-slide" src="img/journal-4-min.jpg" alt="Летний семейный справочник журнал"
+                  class="swiper-slide">
+                <img class="swiper-slide" src="img/journal-5-min.jpg" alt="Летний семейный справочник журнал"
+                  class="swiper-slide">
+                <img class="swiper-slide" src="img/journal-6-min.jpg" alt="Летний семейный справочник журнал"
+                  class="swiper-slide">
+                <img class="swiper-slide" src="img/journal-7-min.jpg" alt="Летний семейный справочник журнал"
+                  class="swiper-slide">
+              </div>
+            </div>
+            <!-- /.swiper-container -->
+          </div>
+          <!-- /.swiper -->
+          <div class="container container_swiper-navigation">
+            <div class="swiper-navigation">
+              <button class="swiper-navigation__button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 13">
+                  <path stroke="#314c77" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7.007 11.757L1.809 6.56l5.198-5.198M2.53 6.56h10.54" /></svg>
+              </button>
+              <button class="swiper-navigation__button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 13">
+                  <path stroke="#314c77" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7.873 1.363l5.198 5.197-5.198 5.198M12.35 6.56H1.809" /></svg>
+              </button>
+            </div>
+            <!-- /.swiper-navigation -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.container -->
+      </section>
+
+      <section class="section-advantages" id="section-advantages">
+        <div class="container _anim-items _anim-no-hide">
+          <svg class="section-gallery__curved-line _anim-show-4" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 320 1128">
+            <path stroke="#314c77" stroke-linecap="round" stroke-linejoin="round" stroke-width="18"
+              d="M-201.518 9.791c94.291 10.307 346.66 49.627 601.816 124.448 255.156 74.822 238.016 109.37 238.016 144.108s-27.159 186.965-136.662 212.47c-61.46 14.315-208.611 16.273-260.92 33.593-471.821 156.229-116.813 292.325 136.575 396.349C481.903 969.84 632.936 1032.4 400.298 1090c-58.6 12.33-193.798 34.9-265.798 26.5" />
+          </svg>
+          <h2 class="heading-h2 _anim-show">Зачем нужен справочник?</h2>
+          <div class="circles-advantages circles-advantages__first-circle">
+            <p class="circles-advantages__txt-advantages">
+              Сэкономит Ваше время: из&nbsp;всего многообразия школьных коллекций я&nbsp;отобрала лучшие позиции
+            </p>
+          </div>
+          <!-- /.section-advantages__circles-advantages -->
+          <div class="circles-advantages circles-advantages__second-circle">
+            <p class="circles-advantages__txt-advantages">
+              Справочник поможет подготовиться к&nbsp;школе без нервов и&nbsp;суеты
+            </p>
+          </div>
+          <!-- /.section-advantages__circles-advantages -->
+          <div class="circles-advantages circles-advantages__third-circle">
+            <p class="circles-advantages__txt-advantages">
+              С&nbsp;помощью чек-листов каждый соберёт идеальную капсулу для своего школьника в&nbsp;нужной палитре
+              и&nbsp;наполнении
+            </p>
+          </div>
+          <!-- /.section-advantages__circles-advantages -->
+        </div>
+        <!-- /.container -->
+      </section>
+
+      <section class="section-reviews" id="section-reviews">
+        <div class="container _anim-items _anim-no-hide">
+          <h2 class="heading-h2 _anim-show">Отзывы <br> о&nbsp;весеннем и летнем гайде</h2>
+        </div>
+        <!-- /.container -->
+        <!-- Swiper -->
+        <div class="swiper">
+          <div class="swiper-container1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-1-1.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-1-2.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-1-3.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-1-4.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+
+
+
+
+
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-6.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-1.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-2.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-3.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-4.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-5.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-7.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-8.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-9.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-10.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-11.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-12.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-13.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+            </div>
+            <!-- /.swiper-wrapper -->
+          </div>
+          <!-- /.swiper-container -->
+        </div>
+        <!-- /.swiper -->
+        <div class="container container_swiper-navigation">
+          <div class="swiper-navigation">
+            <button class="swiper-navigation__button-prev-rev">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 13">
+                <path stroke="#314c77" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7.007 11.757L1.809 6.56l5.198-5.198M2.53 6.56h10.54" /></svg>
+            </button>
+            <button class="swiper-navigation__button-next-rev">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 13">
+                <path stroke="#314c77" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7.873 1.363l5.198 5.197-5.198 5.198M12.35 6.56H1.809" /></svg>
+            </button>
+          </div>
+          <!-- /.swiper-navigation -->
+        </div>
+        <!-- /.container -->
+      </section>
+    </main>
+
+    <footer class="footer" id="section-prices">
+      <div class="container _anim-items _anim-no-hide">
+        <!-- <div class="footer__green-circle">
+        </div> -->
+        <!-- /.footer__green-circle -->
+        <h2 class="heading-h2 _anim-show">Стоимость</h2>
+
+        <div class="footer__prices-wrapper">
+          <div class="footer__prices-txt">
+            <span class="footer__prices-heading">Стоимость:</span>
+            <span class="footer__prices-value">290&nbsp;руб.</span>
+          </div>
+          <!-- /.footer__prices-txt -->
+          <a href="https://stylist-kids.online/?add-to-cart=987" class="button-order">
+            <span class="button-order__txt">Купить <br>справочник</span>
+            <div class="link-guide__circle"></div>
+          </a>
+        </div>
+        <!-- /.footer__prices-wrapper -->
+
+
+        <button class="btn btn-primary how-to-pay" type="button" data-toggle="collapse" data-target="#collapseExample"
+          aria-expanded="false" aria-controls="collapseExample">
+          Чтобы оплатить справочник <br>
+          Apple Pay и Google Pay - ЖМИ!
+        </button>
+
+        <div class="collapse how-to-pay__wrapper" id="collapseExample">
+          <div class="card card-body">
+            <p class="how-to-pay__p">
+              1. Нажмите на три точки <b>. . .</b> <br>
+              2. Откройте сайт в своем браузере <br>
+              3. Нажмите кнопку <b>Хочу справочник</b> <br>
+              4. Нажмите кнопку <b>Купить справочник</b><br>
+              5. Вводим свои данные и выбираем способ оплаты: <br>
+              <b>Банковские карты, Apple Pay, Google Pay</b> <br>
+              6. Видим нужные способы оплаты <br>
+              <br>
+              <b>НИЖЕ ПРЕДСТАВЛЕНЫ СЛАЙДЫ ДЛЯ НАГЛЯДНОСТИ</b> <br>
+
+
+            </p>
+
+            <div class="swiper">
+              <div class="swiper-container2">
+                <div class="swiper-wrapper">
+                  <img class="swiper-slide" src="img/buy-1.jpg" alt="Летний семейный справочник журнал"
+                    class="swiper-slide">
+                  <img class="swiper-slide" src="img/buy-2.jpg" alt="Летний семейный справочник журнал"
+                    class="swiper-slide">
+                  <img class="swiper-slide" src="img/buy-3.jpg" alt="Летний семейный справочник журнал"
+                    class="swiper-slide">
+                  <img class="swiper-slide" src="img/buy-4.jpg" alt="Летний семейный справочник журнал"
+                    class="swiper-slide">
+                  <img class="swiper-slide" src="img/buy-5.jpg" alt="Летний семейный справочник журнал"
+                    class="swiper-slide">
+                  <img class="swiper-slide" src="img/buy-6.jpg" alt="Летний семейный справочник журнал"
+                    class="swiper-slide">
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+            </div>
+
+            <div class="container container_swiper-navigation">
+              <div class="swiper-navigation">
+                <button class="swiper-navigation__button-prev-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 13">
+                    <path stroke="#FEFEFE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M7.007 11.757L1.809 6.56l5.198-5.198M2.53 6.56h10.54" /></svg>
+                </button>
+                <button class="swiper-navigation__button-next-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 13">
+                    <path stroke="#FEFEFE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M7.873 1.363l5.198 5.197-5.198 5.198M12.35 6.56H1.809" /></svg>
+                </button>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="container__footer-green">
+
+          <img src="img/image-section-FOOTER-min.jpg" alt="Детский стилист Ипполитова Мария" class="footer__img">
+
+          <nav class="burger-menu__nav">
+            <a href="https://www.instagram.com/stylist__kids/" class="link-instagram">
+              <svg class="link-instagram__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                <path fill="#FEFEFE" fill-rule="evenodd"
+                  d="M15.342 1.949H5.88a3.87 3.87 0 0 0-3.87 3.87v9.105a3.87 3.87 0 0 0 3.87 3.87h9.46a3.87 3.87 0 0 0 3.871-3.87V5.82a3.87 3.87 0 0 0-3.87-3.87zM5.88.659a5.16 5.16 0 0 0-5.16 5.16v9.105a5.16 5.16 0 0 0 5.16 5.161h9.46a5.16 5.16 0 0 0 5.161-5.16V5.819a5.16 5.16 0 0 0-5.16-5.16H5.88zm4.701 13.009c1.9 0 3.394-1.501 3.394-3.296s-1.494-3.296-3.394-3.296c-1.9 0-3.393 1.501-3.393 3.296s1.493 3.296 3.393 3.296zm0 1.29c2.587 0 4.684-2.053 4.684-4.586 0-2.533-2.097-4.586-4.684-4.586-2.586 0-4.683 2.053-4.683 4.586 0 2.533 2.097 4.586 4.683 4.586zm5.8-8.917c.712 0 1.29-.568 1.29-1.267 0-.7-.578-1.267-1.29-1.267-.713 0-1.29.567-1.29 1.267s.577 1.267 1.29 1.267z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+            <a href="#header" class="burger-menu__link">Главная</a>
+            <a href="#section-inside" class="burger-menu__link">Что внутри?</a>
+            <a href="#section-gallery" class="burger-menu__link">Странички</a>
+            <a href="#section-advantages" class="burger-menu__link">Зачем нужен?</a>
+            <a href="#section-reviews" class="burger-menu__link">Отзывы</a>
+            <a href="#section-prices" class="burger-menu__link">Стоимость</a>
+          </nav>
+
+          <a href="index.html" class="logo">
+            <img src="img/icon-logo-footer-min.png" alt="stylist kids" class="logo__icon">
+            <div class="logo__wrapper-text">
+              <span class="logo__name">Maria</span>
+              <span class="logo__position">STYLIST KIDS</span>
+            </div>
+            <!-- /.logo__wrapper-text -->
+          </a>
+
+
+          <div class="burger-menu__horizontal-bar"></div>
+          <!-- /.burger-menu__horizontal-bar -->
+          <span class="footer__rights-reserved">
+            &copy;2021&nbsp;&mdash; MariaStylistKids
+          </span>
+          <span class="footer__rights-reserved">
+            По&nbsp;всем вопросам обращаться <br>
+            на&nbsp;stylist_kids@mail.ru
+          </span>
+          <!-- <a href="privacy/index.html" class="footer__privacy-policy">Политика конфиденциальности</a> -->
+          <div class="wrapper-developers">
+            <a href="https://www.behance.net/grodesgn" class="link-developer">Дизайн сайта: Громова Ольга</a>
+            <a href="https://taplink.cc/ermilov_code" class="link-developer">Верстка сайта: Ермилов Павел</a>
+          </div>
+          <!-- /.wrapper-developers -->
+
+        </div>
+
+
+
+
+      </div>
+      <!-- /.container -->
+
+    </footer>
+
+  </div>
+  <!-- /.wrapper -->
+  <!-- =================== HTML =================== -->
+
+  <!-- =================== JS =================== -->
+  <!-- connection bootstrap@4.6.0 -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+  </script>
+  <!-- connection bootstrap@4.6.0 -->
+
+  <script src="telegramform/js/telegramform.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <!-- =================== JS =================== -->
+
+</body>
+
+</html>
