@@ -48,10 +48,6 @@ body._lock {
         max-height: 70px;
     }
 
-
-
-
-
     .btn {
         // order: -1;
         position: relative;
@@ -85,17 +81,18 @@ body._lock {
 
     &__menu {
         @include display-flex(row, flex-start, center);
-        
+        flex-wrap: nowrap;
     }
 }
 
 
-
 .logo {
-    @include display-flex(row, flex-start, flex-start);
+    height: 35px;
+    @include display-flex(row, flex-start, center);
     position: relative;
     // order: -1;
     z-index: 10;
+    flex-wrap: nowrap;
 
     &__text {
         font-family: Oswald;
@@ -116,8 +113,21 @@ body._lock {
         }
     }
 
-    &_underline {
-        color: $accent-color;
+    // &_underline {
+    //     color: $accent-color;
+    // }
+
+    &__vertical-bar {
+        width: 0.5px;
+        height: 75%;
+        background-color: $text-color-white-on-black;
+        margin: 0 7px 0 7px;
+
+    }
+
+    &__img {
+        fill: $text-color-white-on-black;
+        height: 75%;
     }
 
     &:hover {
@@ -126,8 +136,9 @@ body._lock {
     }
 
     &:active {}
-}
 
+
+}
 
 .menu {
     &__icon {
@@ -144,7 +155,7 @@ body._lock {
     }
 
     &__link {
-        font-family: Russo One;
+        font-family: Roboto;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
@@ -185,6 +196,17 @@ body._lock {
 
     &__arrow {
         display: none;
+    }
+}
+
+.basket {
+    width: 24px;
+    // @include responsive-height (70, 50);
+    z-index: 10;
+    @include responsive-margin-right (25, 22);
+
+    &__img {
+        fill: $text-color-white-on-black;
     }
 }
 
@@ -273,18 +295,21 @@ body {
         left: 0;
         position: absolute;
         height: 2px;
-        width: 18.75px;
+        // width: 18.75px;
+        width: 24px;
         transition: all 0.3s ease 0s;
         background-color: #fff;
         border-radius: 7px;
     }
 
     .menu__icon::before {
-        width: 28.12px;
+        // width: 28.12px;
+        width: 24px;
     }
 
     .menu__icon::after {
-        width: 7.5px;
+        // width: 7.5px;
+        width: 24px;
     }
 
     .menu__icon::before,
@@ -324,6 +349,7 @@ body {
     .menu__body {
         position: fixed;
         top: 0;
+        // top: -100vh;
         left: -100%;
         width: 100%;
         height: 100%;
@@ -335,6 +361,7 @@ body {
 
     .menu__body._active {
         left: 0;
+        // top: 0;
     }
 
     .menu__body::before {
@@ -361,9 +388,9 @@ body {
         display: block;
     }
 
-    .menu__link {
-        font-size: 24px;
-    }
+    // .menu__link {
+    //     font-size: 24px;
+    // }
 
     .menu__sub-list {
         position: relative;
@@ -380,6 +407,8 @@ body {
 }
 
 // / header для menu
+
+
 
 
 
