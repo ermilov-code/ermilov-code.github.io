@@ -1,663 +1,411 @@
 // _header.scss ____________________________
 
 
+
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    background-color: $background-color;
+    color: #fff;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+/* ------------------ */
+/* ------------------ */
+/* ------------------ */
+
+
+
 .header {
-    @include display(column, flex-start, center);
-    min-height: 50vh;
-    background: $background-color;
-    @include responsive-padding-top(35, 20);
-    @include responsive-margin-bottom(70, 50);
-}
-
-.container {}
-
-.header__control {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    top: 0px;
-    left: 0px;
-    @include display-row-start;
-    justify-content: space-between;
-    align-items: center;
-    @include responsive-margin-bottom(51, 51);
-}
+    // min-height: 100vh;
+    // max-height: 978px;
+    z-index: 10;
+    background-color: $background-color;
 
-// styles for BURGER MENU ===============
-.burger-menu {
-    @include responsive-width(35, 35);
-    @include responsive-height(18, 18);
+    &__container {
+        max-width: 1200px;
+        margin: 0px auto;
+        display: flex;
+        padding: 0px 0px;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        max-height: 70px;
+    }
 
-    &__button {
+
+
+
+
+    .btn {
+        // order: -1;
         position: relative;
-        top: 0px;
-        left: 0px;
-        z-index: 30;
+        padding: 0;
         background-color: transparent;
-        // border-radius: 50%;
-        @include responsive-width(35, 35);
-        @include responsive-height(18, 18);
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -o-transition: 0.4s;
-        transition: 0.4s;
-    }
-
-    &__lines::before,
-    &__lines::after,
-    &__lines {
-        position: absolute;
-        @include responsive-height (2, 2);
-        background-color: $menu-item-color;
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -o-transition: 0.4s;
-        transition: 0.4s;
-
-    }
-
-    &__lines {
-        @include responsive-width (30, 30);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    &__lines::before {
-        @include responsive-width (35, 35);
-        content: '';
-        @include responsive-top (-7, -7);
-    }
-
-    &__lines::after {
-        @include responsive-width (24, 24);
-        content: '';
-        @include responsive-top (7, 7);
-    }
-
-    &_active .burger-menu__lines {
-        background-color: transparent;
-    }
-
-    &_active .burger-menu__lines::before {
-        transform: rotate(45deg);
-    }
-
-    &_active .burger-menu__lines::after {
-        transform: rotate(-45deg);
-    }
-
-    &_active {
-
-        .burger-menu__button {
-            background-color: transparent;
-        }
-
-
-        &:hover span {
-            background-color: transparent;
-        }
-
-        .burger-menu__lines::after,
-        .burger-menu__lines::before {
-            @include responsive-width (20, 20);
-            top: 0;
-            background-color: $text-color;
-        }
-    }
-
-    &__nav {
-        // padding: 127px 0 0 0;
-        position: fixed;
-        top: 0;
-        z-index: 20;
-        @include display-row-start;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 100%;
-        background-color: $background-color;
-        overflow-y: auto;
-        left: -100%;
-        -webkit-transition: 0.8s;
-        -moz-transition: 0.8s;
-        -o-transition: 0.8s;
-        transition: 0.8s;
-
-        .logo {
-            z-index: 20;
-            color: $background-color;
-            position: absolute;
-            @include responsive-top (114, 34);
-            @include responsive-left (92, 90);
-        }
-    }
-
-    &_active .burger-menu__nav {
-        left: 0;
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -o-transition: 0.4s;
-        transition: 0.4s;
-    }
-
-    &__link {
-        @include responsive-margin-bottom (40, 40);
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 800;
-        text-transform: uppercase;
-        @include responsive-font (18, 24);
-        @include responsive-line-height (27, 31);
-        color: $menu-item-color;
-        box-sizing: border-box;
-        text-decoration: 1px solid underline transparent;
-
-        &:hover,
-        &:active {
-            text-decoration: 1px solid underline $accent-color;
-            color: $menu-item-color;
-            @include smoothness(text-decoration, .8s);
-        }
-    }
-
-    &__horizontal-bar {
-        width: 100%;
-        height: 1px;
-        background: #B1B1B1;
-        @include responsive-margin-top(60, 50);
-        @include responsive-margin-bottom(24, 22);
-    }
-
-
-    &__overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+        border: none;
+        outline: none;
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: inherit;
         z-index: 10;
-    }
-
-    &_active .burger-menu__overlay {
-        display: block;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-}
-
-// / styles for BURGER MENU ===============
-
-
-.call-button,
-.mail-button,
-.whatsapp-button,
-.operating-mode {
-
-    width: 100%;
-    @include display-row-start;
-    align-items: center;
-    @include responsive-padding-left(35, 28);
-    @include responsive-margin-bottom (25, 20);
-
-
-    &__icon {
-        @include display-row-start;
-        justify-content: center;
-        align-items: center;
-        @include responsive-width(42, 35);
-        @include responsive-height(42, 35);
-        margin: 0 16px 0 0;
-        padding: 0;
-        background-color: $accent-color;
-        border-radius: 50%;
-        border: none;
-        outline: none;
-        fill: inherit;
-        stroke: inherit;
-        stroke-width: inherit;
-    }
-
-    &__svg {
-        @include responsive-width(16, 13);
-        @include responsive-height(16, 13);
-
-        &:hover,
-        &:active {
-            transform: scale(1.2);
-            transition: transform 0.8s;
-        }
-    }
-
-    &__txt {
-        font-family: Lato;
-        font-style: normal;
-        font-weight: normal;
-        @include responsive-font(18, 12);
-        @include responsive-line-height(27, 14.4);
-    }
-
-    &__whatsapp {
-        @include responsive-width(42, 35);
-        @include responsive-height(42, 35);
-    }
-
-    &:hover .call-button__txt,
-    &:active .call-button__txt,
-    &:hover .mail-button__txt,
-    &:active .mail-button__txt,
-    &:hover .whatsapp-button__txt,
-    &:active .whatsapp-button__txt {
-        color: $text-color;
-    }
-}
-
-.whatsapp-button {
-    &__icon {
-        background-color: transparent;
-    }
-}
-
-.logo {
-    z-index: 20;
-    @include display(row, flex-start, flex-end);
-
-    &__icon {
-        @include responsive-width(57, 44);
-        @include responsive-height(57, 44);
-        object-fit: contain;
-        @include responsive-margin-right(8, 6);
-    }
-
-    &__wrapper-text {
-        @include display(column, center, center);
-    }
-
-    &__name {
-        font-family: Cormorant;
-        font-style: normal;
-        font-weight: bold;
-        @include responsive-font(46, 35);
-        @include responsive-line-height(50.86, 37.66);
-        color: rgba(51, 51, 51, 0.8);
-    }
-
-    &__position {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: small-caps;
-        @include responsive-font(16, 11.85);
-        @include responsive-line-height(19.5, 14.44);
-        color: rgba(51, 51, 51, 0.8);
-        @include responsive-margin-top(-1, -4);
-    }
-
-
-
-    &:hover,
-    &:active {
-        color: $accent-color;
-        transition: color 0.8s;
-    }
-}
-
-.header__contacts {
-
-    z-index: 20;
-
-    .link-instagram {
-        @include display(row, center, center);
-        @include responsive-width(36, 44);
-        @include responsive-height(36, 44);
-        padding: 0;
-        background-color: $accent-color;
-        border-radius: 50%;
-        border: none;
-        outline: none;
-        fill: inherit;
-        stroke: inherit;
-        stroke-width: inherit;
-        border: 1px solid transparent;
-
-        &:hover {
-            background-color: $background-color !important;
-            @include smoothness(background-color, .8s);
-            border: 1px solid $accent-color;
-
-            .link-instagram__icon path {
-                fill: $accent-color;
-                @include smoothness(fill, .8s);
-            }
-
-        }
+        @include responsive-margin-right(15, 10);
 
         &__icon {
-
-            @include responsive-width(17, 20);
-            @include responsive-height(17, 20);
+            @include responsive-width(40, 24);
+            @include responsive-height(40, 24);
 
             &:hover {
+                transform: scale(1.2);
+                transition: transform 0.8s;
+
+            }
+
+            &:active {
+                transform: scale(1.2);
                 transition: transform 0.8s;
             }
-        }
-    }
-}
 
-.modal {
-    &__close {
-        @include responsive-width (18, 15);
-        @include responsive-height (18, 15);
-    }
-}
-
-// styles for header__CONTENT ===============
-.header {
-
-    &__content {
-        @include display(column, flex-start, flex-start);
-    }
-
-    &__main-heading {
-        @include responsive-font(50, 28);
-        @include responsive-line-height(50, 39.2);
-        color: $text-color;
-        @include responsive-margin-bottom(30, 20);
-        letter-spacing: 0.01em;
-        text-transform: uppercase;
-    }
-
-    &__description-site {
-        @include responsive-font(18, 14);
-        @include responsive-line-height(27, 21);
-        color: $text-color;
-        @include responsive-margin-bottom(50, 40);
-    }
-
-    &__image-wrapper {
-        max-width: 100%;
-        position: relative;
-        @include display(column, flex-start, center);
-    }
-
-    &__img {
-        max-width: 100%;
-        object-fit: contain;
-        @include responsive-width (660, 179);
-        @include responsive-height (762, 206);
-        width: 330px;
-        height: 218px;
-        z-index: 10;
-
-
-    }
-
-    &__svg-line {
-        @include responsive-width (1587, 438);
-        @include responsive-height (1536, 478);
-        // width: 438px;
-        // height: 478px;
-        position: absolute;
-        z-index: 9;
-        top: -161px;
-        right: -29vw;
-        transform: rotate(15deg);
-
-        path {
-            stroke-width: 11px;
         }
     }
 
+    &__menu {
+        @include display-flex(row, flex-start, center);
+        
+    }
 }
 
-.button-order {
-    @include responsive-width (170, 130);
-    @include responsive-height (170, 130);
-    border-radius: 50%;
-    @include display(row, center, center);
-    background-color: $accent-color;
-    @include responsive-margin-bottom(30, 30);
-    align-self: flex-end;
-    z-index: 15;
-    animation: buttonWant infinite 4s;
 
-    &__txt {
-        color: $background-color;
-        @include responsive-font(16, 15);
-        @include responsive-line-height(20, 14.6);
+
+.logo {
+    @include display-flex(row, flex-start, flex-start);
+    position: relative;
+    // order: -1;
+    z-index: 10;
+
+    &__text {
+        font-family: Oswald;
         font-style: normal;
-        font-weight: 600;
-        text-align: center;
+        font-weight: bold;
+        @include responsive-font-size(25, 21);
+        @include responsive-line-height(35, 29);
+        color: $text-color-white-on-black;
+        margin: 0;
+
+        &_color {
+            font-family: Oswald;
+            font-style: normal;
+            font-weight: bold;
+            @include responsive-font-size(25, 21);
+            @include responsive-line-height(35, 29);
+            color: $accent-color;
+        }
+    }
+
+    &_underline {
+        color: $accent-color;
     }
 
     &:hover {
-        background-color: $background-color;
-        border: 1px solid $accent-color;
-        @include smoothness(background-color, .8s);
-
-        .button-order__txt {
-            color: $accent-color;
-            @include smoothness(color, .8s);
-        }
+        color: $accent-color;
+        transition: color 0.8s;
     }
 
-
+    &:active {}
 }
 
-// / styles for header__CONTENT ===============
 
-// UP button on the site =================
-.up-button {
-    @include responsive-bottom(25, 20);
-    @include responsive-right(20, 15);
-    display: block;
-    background: $accent-color-green;
-    @include responsive-width(42, 35);
-    @include responsive-height(42, 35);
-    border-radius: 100%;
-    position: fixed;
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    z-index: 9999;
-    cursor: pointer;
-    transform: rotate(180deg);
+.menu {
+    &__icon {
+        display: none;
+    }
 
-    &_show {
-        opacity: 0.7;
+    &__body {}
+
+    &__list {}
+
+    &__list>li {
+        position: relative;
+        margin: 0px 0px 0px 20px;
+    }
+
+    &__link {
+        font-family: Russo One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: rgba(21, 31, 40, 0.6);
+    }
+
+    &__link:hover {
+        // text-decoration: underline;
+        color: $background-color;
+        transition: all 0.8s ease 0s;
+    }
+
+    &__sub-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #000;
+        padding: 15px;
+        min-width: 200px;
+    }
+
+    &__sub-list li {
+        margin: 0px 0px 10px 0px;
+    }
+
+    &__sub-list li:last-child {
+        margin: 0;
+    }
+
+    &__sub-link {
+        color: #fff;
+    }
+
+    &__sub-link:hover {
+        text-decoration: underline;
     }
 
     &__arrow {
-        position: absolute;
-        @include responsive-width(16, 14);
-        @include responsive-height(15, 13);
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        animation: upArrowAnim infinite 2s;
+        display: none;
     }
 }
 
-// UP button on the site =================
+// body для memu
+body {
+
+    ._pc .menu__list>li:hover .menu__sub-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 0px);
+        pointer-events: all;
+        transition: all 0.4s ease 0s;
+    }
+
+    ._touch .menu__list>li {
+        display: flex;
+        align-items: center;
+    }
+
+    ._touch .menu__link {
+        flex: 1 1 auto;
+    }
+
+    ._touch .menu__arrow {
+        display: block;
+        width: 0;
+        height: 0;
+        margin: 0px 0px 0px 5px;
+        transition: transform 0.3s ease 0s;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 12px solid #00E991;
+    }
+
+    ._touch .menu__list>li._active .menu__sub-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 0px);
+        pointer-events: all;
+        transition: all 0.4s ease 0s;
+    }
+
+    ._touch .menu__list>li._active .menu__arrow {
+        transform: rotate(-180deg);
+        transition: all 0.4s ease 0s;
+    }
+}
+
+// / body для memu
+
+// @media (min-width: 767px) {
+//     .menu__list {
+//         display: flex;
+//         align-items: center;
+//     }
+
+//     .menu__list>li {
+//         padding: 10px 0;
+//     }
+
+//     .menu__sub-list {
+//         transform: translate(0px, 10%);
+//         opacity: 0;
+//         visibility: hidden;
+//         pointer-events: none;
+//         transition: all 0.3s ease 0s;
+//     }
+// }
 
 
-// adaptive =================
+// header для menu
 .header {
 
-    @media (min-width: 576px) {
-
-        margin-bottom: 20px;
-
-        &__control {
-            margin-bottom: 159px;
-        }
-
-        &__description-site {
-            @include responsive-width(421, 377);
-        }
-
-        &__svg-line {
-            width: 1159px;
-            height: 1107px;
-            top: -598px;
-            right: -460px;
-            transform: rotate(4deg);
-
-            path {
-                stroke-width: 8px;
-            }
-        }
-
-        &__img {
-            position: absolute;
-            top: -198px;
-            right: -139px;
-        }
-
-        &__image-wrapper {
-            min-height: 200px;
-            min-width: 280px;
-        }
-
-
-        .logo {
-            order: -1;
-        }
-
-        .burger-menu {
-
-            &__nav {
-                position: absolute;
-                @include display(row, space-between, flex-start);
-                height: 50px;
-                left: 0px;
-                top: 101px;
-                padding: 0 15px;
-            }
-
-            &__link {
-                font-size: 16px;
-                line-height: 20px;
-                font-weight: normal;
-                text-transform: none;
-                margin-bottom: 0px;
-            }
-
-            &__button {
-                visibility: hidden;
-            }
-        }
-
-        .burger-menu_active .burger-menu__overlay {
-            display: none;
-        }
-
-        .button-order {
-            align-self: flex-start;
-            margin-left: 126px;
-        }
+    .menu__icon {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 15px;
+        cursor: pointer;
     }
 
-    @media (min-width: 768px) {
-
-        .burger-menu__nav {
-            padding: 0 24px;
-        }
-
-        &__image-wrapper {
-            min-height: 200px;
-            min-width: 444px;
-        }
-
-        &__img {
-            width: 421px;
-            height: 242px;
-        }
-
-        &__svg-line {
-            top: -681px;
-            right: -401px;
-            transform: rotate(-13deg);
-        }
-
-        .button-order {
-            margin-left: 98px;
-        }
-
-        &__image-wrapper {
-            min-height: 114px;
-        }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        left: 0;
+        position: absolute;
+        height: 2px;
+        width: 18.75px;
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+        border-radius: 7px;
     }
 
-    @media (min-width: 992px) {
-
-        .burger-menu__nav {
-            width: 716px;
-            left: 214px;
-            top: 45px;
-        }
-
-        &__svg-line {
-            width: 3059px;
-            height: 1607px;
-            top: -958px;
-            right: -1399px;
-        }
-
-        &__image-wrapper {
-            min-width: 753px;
-        }
-
-        &__img {
-            width: 564px;
-            height: 333px;
-            top: -253px;
-            right: -94px;
-        }
+    .menu__icon::before {
+        width: 28.12px;
     }
 
-    @media (min-width: 1200px) {
-
-        .burger-menu__nav {
-            width: 771px;
-            left: 323px;
-            top: 52px;
-        }
-
-        &__image-wrapper {
-            min-width: 889px;
-        }
-
-        &__img {
-            width: 671px;
-            height: 413px;
-            top: -440px;
-            right: -142px;
-        }
-
-        &__svg-line {
-            width: 7059px;
-            height: 2087px;
-            top: -1241px;
-            right: -3174px;
-            transform: rotate(5deg);
-        }
-
-
-
+    .menu__icon::after {
+        width: 7.5px;
     }
 
-    @media (min-width: 1400px) {}
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+    }
 
-    @media (min-width: 1800px) {}
+    .menu__icon::before {
+        top: 0;
+    }
 
-    @media (min-width: 2000px) {}
+    .menu__icon::after {
+        bottom: 0;
+    }
 
+    .menu__icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .menu__icon._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    .menu__icon._active::before {
+        width: 20px;
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    .menu__icon._active::after {
+        width: 20px;
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+
+    .menu__body {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $text-color;
+        padding: 103px 30px 30px 30px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+    }
+
+    .menu__body._active {
+        left: 0;
+    }
+
+    .menu__body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 70px;
+        background-color: $background-color;
+        z-index: 2;
+    }
+
+    .menu__list>li {
+        flex-wrap: wrap;
+        margin: 0px 0px 30px 0px;
+    }
+
+    .menu__list>li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu__list>li._active .menu__sub-list {
+        display: block;
+    }
+
+    .menu__link {
+        font-size: 24px;
+    }
+
+    .menu__sub-list {
+        position: relative;
+        background-color: #fff;
+        flex: 1 1 100%;
+        margin: 20px 0px 0px 0px;
+        display: none;
+    }
+
+    .menu__sub-link {
+        font-size: 20px;
+        color: #000;
+    }
 }
 
-// adaptive =================
+// / header для menu
 
 
+
+
+
+
+
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {}
 
 
 

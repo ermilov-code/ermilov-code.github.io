@@ -1,53 +1,25 @@
 // _variables.scss ____________________________
 
-/*  
-Uniform writing style for VARIABLES and CLASSES: 
-for VARIABLES - $primary-color, $font-stack
-for MIXIN - @mixin display-row-start 
-*/
-
-
 // ============= VARIABLES =============
-// COLOR background, text color on white background
-$background-color: #FEFEFE;
-// background color of cards
-$background-color-cards: #F2F2F2;
-// COLOR text on dark background
-$text-color: #333333;
-// COLOR of accent (arrows, buttons :)
-// $accent-color: #FE900B;
-// $accent-color: #ee784a;
-$accent-color: #ff924c;
-// COLOR of accent (arrows, buttons :)
-$accent-color-green: #314c77;
-// $accent-color-green: #249C63;
-// COLOR menu item
-$menu-item-color: #333333;
-// COLOR menu item on :hover :focus :active
-$menu-item-color-OnHover: #FE4445;
-// Button color on :hover :focus :active
-$button-color-OnHover: #DC3536;
-// COLOR placeholder
-$placeholder-color: #B1B1B1;
 
+$background-color: #151F28;
+$text-color-white-on-black: #F4F4F4;
+$text-color: #F4F4F4;
+$accent-color: rgb(255, 32, 138);
+
+// $menu-item-color: #FFFDFE;
+// $menu-item-color-hover: #FFFDFE;
+// $button-color-hover: #FFFDFE;
+// $placeholder-color: #B1B1B1;
+// $background-footer: #3D3E57;
 
 
 
 // ============= MIXINS =============
-// mixin call - @include display-row-start;
 // mixin call -	@include responsive-font(40, 24);
 
-// starting POSITIONING
-@mixin display-row-start {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    // align-content: flex-start;
-}
 
-@mixin display($flex-direction, $justify-content, $align-items) {
+@mixin display-flex($flex-direction, $justify-content, $align-items) {
     display: flex;
     flex-direction: $flex-direction;
     justify-content: $justify-content;
@@ -65,15 +37,12 @@ $placeholder-color: #B1B1B1;
 //     @include smoothness(background-color, .8s);
 // }
 
-// <div class="container"></div>
-// <!-- /.container -->
-
 
 // mixin for ADAPTIVE FONT
 $max-width: 1920;
 
-// ПОМЕНЯТЬ НА font-size
-@mixin responsive-font($desktop-size, $mobile-size) {
+
+@mixin responsive-font-size($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
     font-size: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
@@ -90,6 +59,7 @@ $max-width: 1920;
     $max-width: $max-width - 320;
     width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
+
 
 @mixin responsive-max-width($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
@@ -177,6 +147,13 @@ $max-width: 1920;
     margin-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
+@mixin responsive-margin-left-right($desktop-size, $mobile-size) {
+    $add-size: $desktop-size - $mobile-size;
+    $max-width: $max-width - 320;
+    margin-left: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+    margin-right: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+}
+
 @mixin responsive-top($desktop-size, $mobile-size) {
     $add-size: $desktop-size - $mobile-size;
     $max-width: $max-width - 320;
@@ -214,15 +191,11 @@ $max-width: 1920;
     border-radius: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
 }
 
-@mixin responsive-border-width($desktop-size, $mobile-size) {
-    $add-size: $desktop-size - $mobile-size;
-    $max-width: $max-width - 320;
-    border-width: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
-}
-
 
 
 // ============= ANIMATION templates =============
+// animation: upArrowAnim infinite 2s;
+
 @keyframes upArrowAnim {
     0% {
         transform: translate(-50%, -65%);
@@ -237,76 +210,68 @@ $max-width: 1920;
     }
 }
 
-@keyframes magnificationEffect {
+// animation for swipe-pointer
+@keyframes swipePointerAnim {
     0% {
-        transform: translate(-50%, -65%);
+        @include responsive-margin-right(0, 0);
+        opacity: 0.2;
     }
 
-    50% {
-        transform: translate(-50%, -25%);
+    20% {
+        @include responsive-margin-right(50, 20);
+        opacity: 0.8;
     }
 
     100% {
-        transform: translate(-50%, -65%);
+        @include responsive-margin-right(0, 0);
+        opacity: 0.2;
     }
 }
 
+// animation for swipe-pointer
 
-html,
-body {
-    position: relative;
-    height: 100%;
+
+// animation for the wave (smooth appearance)
+@keyframes waveAnim {
+    0% {
+        // @include responsive-padding-top(0, 0);
+        // opacity: 0.2;
+        transform: translate(0px, 0px);
+    }
+
+    20% {
+        // @include responsive-padding-top(20, 20);
+        // opacity: 1;
+        transform: translate(0px, -10px);
+    }
+
+    30% {
+        // @include responsive-padding-top(0, 0);
+        // opacity: 0.2;
+        transform: translate(0px, 0px);
+    }
+
+    40% {
+        // @include responsive-padding-top(20, 20);
+        // opacity: 1;
+        transform: translate(0px, -10px);
+    }
+
+    50% {
+        // @include responsive-padding-top(0, 0);
+        // opacity: 0.2;
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        // @include responsive-padding-top(0, 0);
+        // opacity: 0.2;
+        transform: translate(0px, 0px);
+    }
 }
 
-h1 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-}
-
-
-span,
-p,
-a,
-input {
-    font-family: Montserrat;
-    margin: 0;
-    color: $text-color;
-    font-style: normal;
-    font-weight: normal;
-}
-
-h2 {
-    width: 100%;
-    text-align: left;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    @include responsive-font(45, 24);
-    @include responsive-line-height(63, 33.6);
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    color: $text-color;
-    @include responsive-margin-bottom(70, 50);
-    z-index: 11;
-
-}
+// animation for the wave (smooth appearance)
 
 
 
-
-
-
-
-
-
-
-// ============= / MIXINS =============
-
-
-
-
-
-
-
-// _variables.scss ____________________________
+// ============= ANIMATION templates =============
