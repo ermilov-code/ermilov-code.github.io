@@ -312,36 +312,48 @@ body {
             }
 
         }
+
+        .btn-primary {
+            color: #fff;
+            background-color: transparent;
+            border-color: transparent;
+            padding: 0;
+        }
+
+        // // .collapse .show {
+        // //     width: 100%;
+        // //     transition: width 0.8s ease 0s;
+        // // }
+
+        // .collapse {
+        //     width: 100%;
+        //     // transition: width 0.8s ease 0s;
+        // }
+
+        // .show {
+        //     width: 100%;
+        //     // transition: width 0.8s ease 0s;
+        // }
+
+        #collapseExample {
+            width: 100%;
+        }
+
+        .card-11-11 {
+            background-color: $background-color;
+            border: 1px solid $accent-color;
+        }
+
+        // // .collapse {
+        // //     width: 100%;
+        // //     // transition: width 0.8s ease 0s;
+        // // }
+
+        // .card-body {
+        //     width: 100%;
+        // }
     }
 
-
-
-
-
-
-    .btn-primary {}
-
-    .btn__icon {}
-
-    .modal {}
-
-    .fade {}
-
-    .modal-dialog {}
-
-    .modal-content {}
-
-    .modal-header {}
-
-    .modal-title {}
-
-    .btn-close {}
-
-    .modal-body {}
-
-    .modal-footer {}
-
-    .btn-secondary {}
 
 
 
