@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../molozhonpoligraf.ru"
+		},
+		{
+			"path": "../molozhonrieltor.ru"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ermilov-code.ru__links"
+	}
+}

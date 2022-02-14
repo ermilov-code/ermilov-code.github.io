@@ -1,15 +1,15 @@
 // style.scss ____________________________
 
-// Import FONTS
-@import 'fonts';
-// Import VARIABLES
-@import 'variables';
 // importing BASE STYLES file
 @import 'my-reset';
+// Import VARIABLES
+@import 'variables';
+// Import FONTS
+@import 'fonts';
+// Import BLOCKS
 @import 'header';
 @import 'main';
-@import 'section-specification';
-@import 'section-catalog';
+@import 'slider';
 @import 'footer';
 
 // style.scss ____________________________
