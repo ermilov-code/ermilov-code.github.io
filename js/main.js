@@ -177,6 +177,60 @@ if (animItems.length > 0) {
 // ============================================================
 
 
+// ПОЯВЛЕНИЕ ЭЛЕМЕНТА ПРИ СКРОЛЛЕ
+window.onload = function () {
+    lax.init()
+
+    // Add a driver that we use to control our animations
+    lax.addDriver('scrollY', function () {
+        return window.scrollY
+    })
+
+    // Add animation bindings to elements
+    lax.addElements('.content-wrap-1-anim', {
+        scrollY: {
+            translateX: [
+                ["elInY", "elCenterY", "elOutY"],
+                ['screenWidth', 'screenHeight/15', 0],
+            ],
+        }
+    })
+
+    // Add animation bindings to elements
+    lax.addElements('.content-wrap-2-anim', {
+        scrollY: {
+            translateX: [
+                ["elInY", "elCenterY", "elOutY"],
+                ['screenWidth', 'screenHeight/15', 0],
+            ],
+        }
+    })
+}
+// ПОЯВЛЕНИЕ ЭЛЕМЕНТА ПРИ СКРОЛЛЕ
+
+// ======== ЭФФЕКТ ПЕЧАТИ ========
+new TypeIt("#heading-h3-4433", {
+    strings: "Функциональность",
+    speed: 150,
+    waitUntilVisible: true
+}).go();
+
+new TypeIt("#heading-h3-4455", {
+    strings: "Доступность",
+    speed: 150,
+    waitUntilVisible: true
+}).go();
+
+new TypeIt("#heading-h3-4466", {
+    strings: "Стиль",
+    speed: 150,
+    waitUntilVisible: true
+}).go();
+// ======== ЭФФЕКТ ПЕЧАТИ ========
+
+
+
+
 
 // ============================================================
 

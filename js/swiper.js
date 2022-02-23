@@ -1,17 +1,34 @@
 // Инициализируем Swiper
 
-const sliderReviews = document.querySelector('.swiper-reviews-container');
 
-let myImageSliderReviews = new Swiper(sliderReviews, {
+
+var swiper = new Swiper('.swiper-brands', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+    },
+    keyboard: true,
+});
+
+const slider1 = document.querySelector('.swiper-container1');
+
+let mySwiper1 = new Swiper(slider1, {
+
     // Стрелки
     navigation: {
-        nextEl: '.swiper-reviews-navigation__button-next',
-        prevEl: '.swiper-reviews-navigation__button-prev'
+        nextEl: '.swiper-navigation__button-next-rev',
+        prevEl: '.swiper-navigation__button-prev-rev'
     },
     // Навигация 
     // Буллеты, текущее положение, прогрессбар
     pagination: {
-        el: '.swiper-reviews-pagination',
+        el: '.swiper-pagination_reviews',
 
     },
 
@@ -48,12 +65,38 @@ let myImageSliderReviews = new Swiper(sliderReviews, {
         pageUpDown: false,
     },
 
+    // Брейк поинты (адаптив)
+    // Ширина экрана
+    breakpoints: {
+        200: {
+            // slidesPerView: 1,
+            spaceBetween: 12,
+        },
+        300: {
+            // slidesPerView: 1.5,
+            spaceBetween: 12,
+
+        },
+        325: {
+            // slidesPerView: 1.5,
+            spaceBetween: 12,
+
+        },
+        480: {
+            // slidesPerView: 2.5,
+            spaceBetween: 25,
+        },
+        992: {
+            spaceBetween: 65,
+        }
+    },
+
 
     // Автовысота
     autoHeight: true,
 
     // Количество слайдов для показа
-    slidesPerView: 1,
+    slidesPerView: 'auto',
 
     // Отключение функционала
     // если слайдов меньше чем нужно
@@ -89,57 +132,10 @@ let myImageSliderReviews = new Swiper(sliderReviews, {
     // Вертикальный слайдер
     direction: 'horizontal',
 
+
     // Эффекты переключения слайдов.
     // Листание
     effect: 'slide',
-
-    // Брейк поинты (адаптив)
-    // Ширина экрана
-    breakpoints: {
-        200: {
-            slidesPerView: 1,
-            // spaceBetween: 10,
-        },
-        576: {
-            slidesPerView: 1.7,
-            spaceBetween: 30,
-            centeredSlides: false,
-        },
-        768: {
-            slidesPerView: 1.7,
-            spaceBetween: 30,
-            centeredSlides: false,
-        },
-        992: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            centeredSlides: false,
-        },
-        // 1200: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30,
-        // },
-        // 1400: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 40,
-        // }
-    },
-
-    /*
-    // Брейк поинты (адаптив)
-    // Соотношение сторон
-    breakpoints: {
-        '@0.75': {
-            slidesPerView: 1,
-        },
-        '@1.00': {
-            slidesPerView: 2,
-        },
-        '@1.50': {
-            slidesPerView: 3,
-        }
-    },
-    */
 
     // Отключить предзагрузка картинок
     preloadImages: false,
@@ -158,6 +154,8 @@ let myImageSliderReviews = new Swiper(sliderReviews, {
     // Добавление класса видимым слайдам
     watchSlidesVisibility: true,
 
+
+
     // Обновить свайпер
     // при изменении элементов слайдера
     observer: true,
@@ -170,14 +168,9 @@ let myImageSliderReviews = new Swiper(sliderReviews, {
     // Обновить свайпер
     // при изменении дочерних
     // элементов слайда
-    observeSlideChildren: true,
+    observeSlideChildren: true
 
-});
-
-
-
-
-
+})
 
 
 // Инициализируем Swiper

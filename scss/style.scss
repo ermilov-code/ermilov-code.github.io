@@ -12,6 +12,15 @@
 
 @import '5.1-section-what-inside';
 @import '5.2-section-book-contents';
+@import '5.3-section-ticker';
+@import '5.4-section-brands';
+@import '5.5-section-call-to-buy';
+@import '5.6-section-for-whom';
+@import '5.7-section-reviews';
+
+
+
+
 
 
 // @import '5-main';
@@ -28,7 +37,7 @@
 .section-about-us,
 .section-advantages,
 .section-services,
-.section-reviews,
+// .section-reviews,
 .section-contacts,
 .footer {
     display: none;
