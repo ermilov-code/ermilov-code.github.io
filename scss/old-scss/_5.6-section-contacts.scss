@@ -1,0 +1,214 @@
+// ============= section-advantages =============
+
+.section-contacts {
+
+    border-bottom: 1px solid rgba(255, 253, 254, 0.1);
+
+    &__tel {
+        width: 100%;
+        font-family: Prata;
+        font-style: normal;
+        font-weight: normal;
+        text-align: center;
+        font-size: 28px;
+        line-height: 39.2px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $text-color;
+        margin-bottom: 20px;
+    }
+
+    .social-media {
+
+        margin-bottom: 23px;
+
+        &__icon {
+            fill: $text-color;
+        }
+
+        svg path {
+            fill: $text-color;
+        }
+    }
+
+    &__address-wrap {
+        width: 100%;
+        @include display-flex(column, flex-start, center);
+        margin-bottom: 30px;
+    }
+
+    &__mail {
+        width: 246px;
+        @include display-flex(row, flex-start, flex-start);
+        flex-wrap: nowrap;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__mail-svg {
+        margin-right: 11px;
+        min-width: 17px;
+        height: 17px;
+    }
+
+    &__mail-txt {
+        line-height: 18px;
+    }
+
+    &__info-txt-wrap {
+        width: 100%;
+        @include display-flex(row, center, flex-start);
+    }
+
+    &__info-txt {
+        max-width: 79%;
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        color: rgba(255, 253, 254, 0.7);
+        margin-bottom: 30px;
+
+        a {
+            color: rgba(255, 253, 254, 0.7);
+            text-decoration: underline;
+        }
+    }
+
+    &__map-wrapper {
+        width: 100%;
+        min-height: 350px;
+        max-height: 450px;
+
+        iframe {
+            height: 350px;
+        }
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {}
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+
+        &__tel {
+            font-size: 58px;
+            line-height: 81px;
+            margin-bottom: 58px;
+        }
+
+        .social-media {
+            min-height: 60px;
+            display: flex;
+            width: 24%;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 0 5% 0 0;
+
+            &__button {
+                margin: 0;
+                width: 40px;
+                height: 40px;
+                margin-right: 18px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__address-wrap {
+            width: 70%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            margin: 0;
+            min-height: 60px;
+            padding-top: 12px;
+        }
+
+        &__mail {
+            margin-right: 50px;
+            width: auto;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &__mail-txt {
+            line-height: 20px;
+        }
+
+        &__info-txt {
+            padding-top: 36px;
+            max-width: 64%;
+            font-size: 14px;
+            line-height: 21px;
+
+        }
+
+        &__mail-svg {
+            margin-right: 14px;
+            margin-top: 2px;
+        }
+
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {}
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+
+        .social-media {
+            width: 14%;
+            margin: 0 140px 0 0;
+        }
+
+        &__address-wrap {
+            width: 74%;
+            justify-content: space-between;
+        }
+
+        // &__mail {
+        //     width: auto;
+        // }
+
+        &__mail-txt {
+            line-height: 25px;
+        }
+
+        &__mail-svg {
+            margin-top: 3px;
+            min-width: 20px;
+            height: 20px;
+        }
+
+        &__info-txt {
+            max-width: 570px;
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ============= section-advantages =============

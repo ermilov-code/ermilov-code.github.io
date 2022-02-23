@@ -1,0 +1,82 @@
+// ============= section-about-us =============
+
+.section-about-us {
+    padding-top: 30px;
+}
+
+.section-about-us__content-wrapper {
+    @include display-flex(column, flex-start, flex-start);
+    margin-bottom: 40px;
+}
+
+.section-about-us__txt {
+    @include responsive-margin-bottom(16, 10);
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.section-about-us__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+    .section-about-us__content-wrapper {
+        order: 3;
+        max-width: 47%;
+    }
+
+    .section-about-us__img {
+        order: 2;
+        width: 47%;
+        margin-right: 30px;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .section-about-us__txt {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .section-about-us__img {
+        width: 46%;
+        margin-right: 57px;
+    }
+
+    .section-about-us__content-wrapper {
+        max-width: 45%;
+        padding-top: 20px;
+    }
+
+    .section-about-us__txt {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 16px;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+    .section-about-us__img {
+        width: 470px;
+        height: 496px;
+        margin-right: 96px;
+    }
+
+    .section-about-us__content-wrapper {
+        max-width: 49%;
+    }
+}
+
+// ============= section-about-us =============

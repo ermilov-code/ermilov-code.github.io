@@ -1,0 +1,173 @@
+// ============= ANIMATION =============
+
+// animation: xxxxxxxx infinite 2s;
+
+// UP BUTTON ON THE SITE @KEYFRAMES ==============
+@keyframes upArrowAnim {
+    0% {
+        transform: translate(-50%, -65%);
+    }
+
+    50% {
+        transform: translate(-50%, -25%);
+    }
+
+    100% {
+        transform: translate(-50%, -65%);
+    }
+}
+
+// UP BUTTON ON THE SITE @KEYFRAMES ==============
+
+// SWIPE-POINTER @KEYFRAMES ==============
+@keyframes swipePointerAnim {
+    0% {
+        margin-right: 0px;
+        opacity: 0.2;
+    }
+
+    20% {
+        margin-right: 20px;
+        opacity: 0.8;
+    }
+
+    100% {
+        margin-right: 0px;
+        opacity: 0.2;
+    }
+}
+
+.swipe-pointer {
+    animation: swipePointerAnim infinite 2s;
+}
+
+// SWIPE-POINTER @KEYFRAMES ==============
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // CSS КОД для АНИМАЦИИ ПРИ СКРОЛЛЕ =============================
+// // ============================================================
+
+// .header {
+
+//     .heading-h1 {
+//         overflow: hidden;
+//         transform: translate(120%, 0px);
+//         opacity: 0;
+//         transition: all 0.8s ease 0s;
+//     }
+
+//     .heading-h1._active {
+//         transform: translate(0px, 0px);
+//         opacity: 1;
+//     }
+
+//     .header-content__button-description {
+//         overflow: hidden;
+//         transform: translate(0px, 120%);
+//         opacity: 0;
+//         transition: all 1s ease 0s;
+//     }
+
+//     .header-content__button-description._active {
+//         transform: translate(0px, 0px);
+//         opacity: 1;
+//     }
+
+//     &__img-house {
+//         transform: scale(0);
+//         opacity: 0;
+//         transition: all 1.2s ease 0s;
+//     }
+
+//     &__img-house._active {
+//         transform: scale(1);
+//         opacity: 1;
+//     }
+// }
+
+// ._anim-show {
+//     transform: translate(120%, 0px);
+//     opacity: 0;
+//     transition: all 0.8s ease 0s;
+// }
+
+// ._anim-show._active,
+// ._active ._anim-show {
+//     opacity: 1;
+//     transform: translate(0px, 0px);
+// }
+
+// .section-advantages__card-number {
+//     overflow: hidden;
+//     transform: translate(120%, 0px);
+//     opacity: 0;
+//     transition: all 1.3s ease 0s;
+// }
+
+// .section-advantages__card-number._active {
+//     transform: translate(0px, 0px);
+//     opacity: 1;
+// }
+
+// // .fullscreen__title {
+// //     font-size: 70px;
+// //     margin: 0px 0px 20px 0px;
+
+// //     transform: translate(0px, 120%);
+// //     opacity: 0;
+// //     transition: all 0.8s ease 0s;
+// // }
+
+// // .fullscreen__title._active {
+// //     transform: translate(0px, 0px);
+// //     opacity: 1;
+// // }
+
+// // .fullscreen__text {
+// //     font-size: 30px;
+// //     line-height: 35px;
+// //     max-width: 50%;
+
+// //     transform: translate(0px, 120%);
+// //     opacity: 0;
+// //     transition: all 0.8s ease 0s;
+// // }
+
+// // .fullscreen__text._active {
+// //     transform: translate(0px, 0px);
+// //     opacity: 1;
+// //     transition: all 0.8s ease 0.4s;
+// // }
+
+// // CSS КОД для АНИМАЦИИ ПР СКРОЛЛЕ =============================
+// // ============================================================
+
+
+
+
+
+// ============= ANIMATION =============

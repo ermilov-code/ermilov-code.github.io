@@ -1,0 +1,366 @@
+// ============= section-form =============
+
+.g-recaptcha {
+    overflow: hidden;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.section-form {
+    width: 100%;
+    @include display-flex(column, flex-start, center);
+    background-color: $background-color;
+    background-image: url("../img/background-picture-form-house-\(tablet\).jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    background-position: 29% 0%;
+    padding: 100px 0;
+
+
+    .container {
+        @include display-flex(column, flex-start, center);
+    }
+}
+
+.heading-h3 {
+    text-transform: none;
+    letter-spacing: normal;
+    margin-bottom: 30px;
+}
+
+.contact-form__content-wrapper {
+    width: 100%;
+    @include display-flex(column, flex-start, center);
+    // overflow: hidden;
+}
+
+.contact-form {
+    position: relative;
+    width: 100%;
+    @include display-flex(column, flex-start, center);
+    padding: 30px;
+    background-color: $accent-color;
+    // box-shadow: 0 0 33px rgb(0 0 0 / 50%);
+
+    .modal {
+
+        &__close {
+            font-size: 0px;
+            @include responsive-top-right(31, 18);
+            z-index: 10;
+            border-radius: 50%;
+            // border: 1px solid rgba(86, 88, 128, 0.5);
+            position: absolute;
+            // @include responsive-width(40, 40);
+            // @include responsive-height(40, 40);
+            background: transparent;
+            opacity: 1;
+            outline: none;
+            text-shadow: none;
+
+            svg {
+                @include responsive-width(20, 16);
+                @include responsive-height(20, 16);
+
+                path {
+                    stroke: rgba(0, 5, 48, 0.5);
+                }
+            }
+        }
+
+        &-dialog-centered {
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        &__content {
+            width: 100%;
+            position: relative;
+            background: transparent;
+            border: 0px;
+        }
+
+        &-body {
+            @include display-flex(column, flex-start, center);
+            padding: 0;
+            background: #ffffff;
+            // @include responsive-min-height(500, 350);
+            width: 100%;
+            @include responsive-padding-top(90, 60);
+            // @include responsive-padding-left-right(53, 20);
+        }
+    }
+
+    &__message {
+        @include responsive-margin-bottom(90, 60);
+        font-family: Prata;
+        font-style: normal;
+        font-weight: normal;
+        @include responsive-font-size(30, 18);
+        @include responsive-line-height(42, 25);
+        text-align: center;
+        // color: $background-color;
+    }
+
+    &__input-wrapper {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &_name {
+
+            ::-webkit-input-placeholder,
+            ::-moz-placeholder,
+            :-moz-placeholder,
+            :-ms-input-placeholder {
+                text-transform: none;
+            }
+        }
+    }
+
+    &__input {
+        position: relative;
+        background-color: $accent-color;
+        margin-bottom: 15px;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 0px;
+        padding: 17px 22px;
+        font-family: PT Root UI;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: rgba(255, 253, 254, 0.5);
+
+        &_name {
+            text-transform: capitalize;
+        }
+
+        &_phone {
+            margin-bottom: 20px;
+        }
+    }
+
+    .button-order {
+        width: 100%;
+        @include display-flex(row, center, center);
+        align-self: flex-end;
+        background-color: $text-color;
+        margin-bottom: 10px;
+        padding: 16px 62px;
+
+        &__txt {
+            font-family: PT Root UI;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            color: $accent-color;
+        }
+
+        &:hover {
+
+            .button-order__arrow-icon {
+                transform: translate(10px);
+                @include smoothness(transform, .8s);
+            }
+        }
+    }
+
+    &__politics-txt {
+        @include responsive-font-size(18, 12);
+        @include responsive-line-height(24, 18);
+        color: $placeholder-color;
+        width: 100%;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 400;
+        text-align: right;
+    }
+
+    &__politics-link {
+        color: $placeholder-color;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+
+        &:hover {
+            color: $text-color;
+            @include smoothness(color, .8s);
+        }
+    }
+}
+
+
+.section-form {
+
+    // &__img {
+    //     max-width: 100%;
+    //     object-fit: contain;
+    //     align-self: flex-start;
+
+    //     @include responsive-height(529, 229);
+    //     border-radius: 0% 25% 0% 0%;
+    // }
+
+    .form-contact__politics {
+        @include display-flex(column, flex-start, center);
+        font-size: 12px;
+        line-height: 15.6px;
+        margin: 0;
+    }
+
+    .form-contact__politics-link {
+        color: $text-color;
+    }
+
+
+
+
+
+}
+
+
+.section-form {
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+
+        .contact-form__content-wrapper {
+            @include display-flex(row, space-between, flex-start);
+        }
+
+        .contact-form {
+            @include display-flex(row, space-between, flex-start);
+
+            .button-order {
+                width: 46%;
+            }
+        }
+
+        .contact-form__input-wrapper {
+            width: 46%;
+        }
+
+        .form-contact__politics {
+            width: 46%;
+            align-items: flex-start;
+            padding-top: 8px;
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+
+        .g-recaptcha {
+            @include display-flex(row, center, flex-start);
+            margin-bottom: 30px;
+        }
+
+        padding: 180px 0;
+
+        .contact-form {
+            padding: 60px;
+
+            &__input {
+                padding: 19px 22px;
+            }
+
+            .button-order {
+                margin-bottom: 0px;
+                padding: 20px 64px;
+            }
+
+            &__input {
+                margin-bottom: 30px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            .modal__content {
+                width: 442px;
+            }
+        }
+
+        .heading-h3 {
+            margin-bottom: 40px;
+        }
+
+        .form-contact__politics {
+            padding-top: 12px;
+        }
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {}
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+
+        padding: 220px 0;
+
+        .contact-form {
+            @include display-flex(row, space-between, center);
+            flex-wrap: nowrap;
+            padding: 80px;
+
+            &__input-wrapper {
+                width: 270px;
+            }
+
+            &__input {
+                padding: 18px 31px;
+                font-size: 18px;
+                line-height: 23px;
+            }
+
+            .button-order {
+                padding: 20px 48px;
+                width: 270px;
+
+                &__txt {
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+            }
+
+            .modal__content {
+                width: 550px;
+            }
+        }
+
+        .heading-h3 {
+            margin: 0;
+            // width: 45%;
+            width: 351px;
+            // padding-right: 9%;
+        }
+
+        .contact-form__content-wrapper {
+            width: 570px;
+        }
+
+        .form-contact__politics {
+            width: 270px;
+            font-size: 14px;
+            line-height: 18.2px;
+            padding-top: 13px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ============= section-form =============

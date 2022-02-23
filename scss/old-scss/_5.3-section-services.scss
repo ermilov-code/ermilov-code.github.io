@@ -1,0 +1,143 @@
+// ============= section-services =============
+
+.section-services {
+
+    // padding: 40px 0 80px 0;
+    padding-bottom: 80px;
+
+    &__service-card {
+        @include display-flex(row, flex-start, flex-start);
+        padding: 22px 0;
+        border-bottom: 1px solid rgba(188, 140, 92, 0.5);
+
+        &:first-child {
+            border-top: 1px solid rgba(188, 140, 92, 0.5);
+        }
+    }
+
+    &__service-description {
+        line-height: 19.6px;
+        width: 50%;
+
+        &_line-height {
+            line-height: 21px;
+        }
+    }
+
+    &__service-price {
+        width: 50%;
+        text-align: right;
+    }
+
+    &__property-services-list {
+        width: 83%;
+        padding-top: 6px;
+    }
+
+    &__property-services-txt {
+        position: relative;
+        line-height: 21px;
+        padding-bottom: 4px;
+        padding-left: 24px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 9px;
+            top: 10px;
+            width: 3px;
+            height: 3px;
+            background-color: $text-color;
+            border-radius: 50%;
+        }
+    }
+
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+
+        &__property-services-list {
+            width: 72%;
+        }
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+
+        padding-bottom: 120px;
+
+        &__service-card {
+            padding: 26px 0;
+        }
+
+        &__service-description {
+            line-height: 22.4px;
+            width: 62%;
+        }
+
+        &__service-price {
+            width: 38%;
+        }
+
+        &__property-services-txt {
+            font-size: 14px;
+            padding-bottom: 6px;
+        }
+
+        &__property-services-list {
+            padding-top: 8px;
+        }
+
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {}
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+
+        padding-bottom: 150px;
+
+        &__service-card {
+            padding: 30px 0;
+            justify-content: space-between;
+        }
+
+        &__service-description {
+            line-height: 28px;
+            width: 58%;
+        }
+
+        &__service-price {
+            width: 32%;
+        }
+
+        &__property-services-list {
+            width: 50%;
+            padding-top: 10px;
+        }
+
+        &__property-services-txt {
+            font-size: 18px;
+            line-height: 27px;
+            padding-bottom: 8px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ============= section-services =============

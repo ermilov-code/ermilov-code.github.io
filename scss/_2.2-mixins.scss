@@ -1,0 +1,35 @@
+// ============= MIXINS =============
+
+// mixin call -	@include responsive-font(40, 24);
+
+// @include display-flex(column, flex-start, center);
+@mixin display-flex($flex-direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: wrap;
+}
+
+// smooth EFFECT | @include smoothness(text-decoration, 0.8s |
+@mixin smoothness($property-css, $transition-delay) {
+    transition: $property-css $transition-delay;
+}
+
+// &:hover {
+//     background: $button-color-OnHover;
+//     @include smoothness(background-color, .8s);
+// }
+
+// // mixin for ADAPTIVE FONT
+// $max-width: 1920;
+
+
+// @mixin responsive-font-size($desktop-size, $mobile-size) {
+//     $add-size: $desktop-size - $mobile-size;
+//     $max-width: $max-width - 320;
+//     font-size: calc(#{$mobile-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+// }
+
+
+// ============= MIXINS =============

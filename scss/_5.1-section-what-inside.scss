@@ -1,0 +1,62 @@
+// ============= SECTION-WHAT-INSIDE =============
+
+.section-what-inside {
+
+    background-color: $accent-color;
+
+    .container {}
+
+    .heading-h2 {
+        position: relative;
+        color: #FDFDFD;
+
+        &__ellipse {
+            position: absolute;
+            top: -10px;
+            left: -26px;
+            width: 183px;
+            height: 69px;
+            transform: rotate(-3deg);
+
+            path {
+                stroke: #FDFDFD;
+            }
+        }
+    }
+
+    &__content-wrap {
+        width: 100%;
+        @include display-flex(column, flex-start, center);
+    }
+
+    &__cards {
+        @include display-flex(column, flex-start, flex-start);
+        width: 100%;
+        margin-bottom: 20px;
+        background-color: $accent-color-light;
+        border-radius: 20px;
+        padding: 20px 60px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    .heading-h3 {
+        position: relative;
+        color: #FDFDFD;
+    }
+
+    .star-svg {
+        position: absolute;
+        top: 8px;
+        left: -30px;
+    }
+
+    &__txt {
+        color: #FDFDFD;
+    }
+
+}
+
+// ============= SECTION-WHAT-INSIDE =============
