@@ -37,7 +37,7 @@
   <!-- =================== HTML =================== -->
   <div class="wrapper">
 
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__top-wrap">
         <div class="header__menu menu">
           <div class="menu__icon">
@@ -45,13 +45,15 @@
           </div>
           <nav class="menu__body">
             <ul class="menu__list">
+              </li>
               <li><a data-goto=".section-what-inside" href="#section-what-inside" class="menu__link">Что внутри?</a>
               </li>
-              <li><a data-goto=".section-advantages" href="#section-advantages" class="menu__link">Содержание</a></li>
-              <li><a data-goto=".section-services" href="#section-services" class="menu__link">Бренды</a></li>
-              <li><a data-goto=".section-reviews" href="#section-reviews" class="menu__link">Кому подойдет?</a></li>
-              <li><a data-goto=".section-contacts" href="#section-contacts" class="menu__link">Отзывы</a></li>
-              <li><a data-goto=".section-contacts" href="#section-contacts" class="menu__link">Стоимость</a></li>
+              <li><a data-goto=".section-book-contents" href="#section-book-contents" class="menu__link">Содержание</a>
+              </li>
+              <li><a data-goto=".section-brands" href="#section-brands" class="menu__link">Бренды</a></li>
+              <li><a data-goto=".section-for-whom" href="#section-for-whom" class="menu__link">Кому подойдет?</a></li>
+              <li><a data-goto=".section-reviews" href="#section-reviews" class="menu__link">Отзывы</a></li>
+              <li><a data-goto=".section-guide-price" href="#section-guide-price" class="menu__link">Стоимость</a></li>
             </ul>
             <p class="menu-copyright">&copy;2022&nbsp;&mdash; MariaStylistKids</p>
           </nav>
@@ -90,7 +92,7 @@
         </h1>
 
         <div class="header-control-wrapper">
-          <a href="#section-form" class="button-order">
+          <a href="#section-guide-price" class="button-order">
             Купить
           </a>
           <button class="apple-pay">
@@ -101,8 +103,142 @@
               <path fill="#FDFDFD"
                 d="M13.291 1.25c-.937.064-2.031.66-2.672 1.44-.581.706-1.06 1.754-.872 2.77h.075c.999 0 2.02-.601 2.618-1.372.575-.733 1.01-1.772.851-2.838z" />
             </svg>
-            <p class="apple-pay__txt">Как оплатить Apple Pay</p>
+            <p class="apple-pay__txt" data-toggle="modal" data-target="#staticBackdrop">Как оплатить Apple Pay</p>
           </button>
+          <!-- Button trigger modal -->
+
+          <div class="how-buy-apple">
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">
+                      <p class="apple-pay__txt" data-toggle="modal" data-target="#staticBackdrop">Как оплатить Apple
+                        Pay? Листай вправо
+                        &#8594;
+                      </p>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Swiper -->
+                    <div class="swiper swiper-apple-pay">
+                      <svg width="40" height="40" class="swipe-pointer swipe-pointer__gallery-licenses" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.651 490.651">
+                        <path d="M437.328 42.651h-128c-5.888 0-10.667 4.779-10.667 10.667s4.779 10.667 10.667 10.667h128c5.888 0 10.667-4.779 10.667-10.667s-4.779-10.667-10.667-10.667z"></path>
+                        <path d="M444.88 45.787L402.213 3.12c-4.16-4.16-10.923-4.16-15.083 0s-4.16 10.923 0 15.083l35.115 35.115-35.136 35.136c-4.16 4.16-4.16 10.923 0 15.083a10.716 10.716 0 0 0 15.104 0L444.88 60.87c4.16-4.161 4.16-10.923 0-15.083zM159.995 42.651h-128c-5.888 0-10.667 4.779-10.667 10.667s4.779 10.667 10.667 10.667h128c5.888 0 10.667-4.779 10.667-10.667s-4.779-10.667-10.667-10.667z"></path>
+                        <path d="M47.077 53.317l35.115-35.115c4.16-4.16 4.16-10.923 0-15.083s-10.923-4.16-15.083 0L24.443 45.787c-4.16 4.16-4.16 10.923 0 15.083l42.667 42.667a10.716 10.716 0 0 0 7.552 3.115c2.731 0 5.461-1.045 7.531-3.136 4.16-4.16 4.16-10.923 0-15.083L47.077 53.317zM426.661 213.317a42.524 42.524 0 0 0-23.723 7.211c-5.845-16.597-21.696-28.544-40.277-28.544a42.524 42.524 0 0 0-23.723 7.211c-5.845-16.597-21.696-28.544-40.277-28.544a42.321 42.321 0 0 0-21.333 5.739v-69.739c0-23.531-19.136-42.667-42.667-42.667-23.531 0-42.667 19.136-42.667 42.667v181.333l-37.077-27.797c-21.973-16.491-53.248-14.293-72.725 5.163-12.48 12.48-12.48 32.768 0 45.248l151.915 151.936c18.133 18.133 42.261 28.117 67.904 28.117h49.984c64.683 0 117.333-52.629 117.333-117.333V255.984c0-23.531-19.136-42.667-42.667-42.667zm21.334 160c0 52.928-43.072 96-96 96h-49.984c-19.968 0-38.72-7.765-52.821-21.867L97.275 295.515c-4.16-4.16-4.16-10.923 0-15.083 6.613-6.592 15.445-9.984 24.32-9.984 7.211 0 14.464 2.24 20.544 6.805l54.123 40.597a10.704 10.704 0 0 0 11.179 1.003 10.684 10.684 0 0 0 5.888-9.536V106.651c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v160c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-53.333c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v53.333c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-32c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v32c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-10.667c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v117.333z"></path>
+                      </svg>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="mobile-phone">
+                            <div class="mobile-phone__top-speaker"></div>
+                            <!-- /.mobile-phone__top-speaker -->
+                            <div class="mobile-phone__volume-plus"></div>
+                            <!-- /.mobile-phone__volume-plus -->
+                            <div class="mobile-phone__volume-minus"></div>
+                            <!-- /.mobile-phone__volume-minus -->
+                            <div class="mobile-phone__lock-button"></div>
+                            <!-- /.mobile-phone__lock-button -->
+                            <img src="img/reviews/IMG_6512-осень-1.JPEG" alt="Отзывы о весеннем справочнике"
+                              class="mobile-phone__img">
+                          </div>
+                          <!-- /.mobile-phone -->
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="mobile-phone">
+                            <div class="mobile-phone__top-speaker"></div>
+                            <!-- /.mobile-phone__top-speaker -->
+                            <div class="mobile-phone__volume-plus"></div>
+                            <!-- /.mobile-phone__volume-plus -->
+                            <div class="mobile-phone__volume-minus"></div>
+                            <!-- /.mobile-phone__volume-minus -->
+                            <div class="mobile-phone__lock-button"></div>
+                            <!-- /.mobile-phone__lock-button -->
+                            <img src="img/reviews/IMG_6512-осень-1.JPEG" alt="Отзывы о весеннем справочнике"
+                              class="mobile-phone__img">
+                          </div>
+                          <!-- /.mobile-phone -->
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="mobile-phone">
+                            <div class="mobile-phone__top-speaker"></div>
+                            <!-- /.mobile-phone__top-speaker -->
+                            <div class="mobile-phone__volume-plus"></div>
+                            <!-- /.mobile-phone__volume-plus -->
+                            <div class="mobile-phone__volume-minus"></div>
+                            <!-- /.mobile-phone__volume-minus -->
+                            <div class="mobile-phone__lock-button"></div>
+                            <!-- /.mobile-phone__lock-button -->
+                            <img src="img/reviews/IMG_6512-осень-1.JPEG" alt="Отзывы о весеннем справочнике"
+                              class="mobile-phone__img">
+                          </div>
+                          <!-- /.mobile-phone -->
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="mobile-phone">
+                            <div class="mobile-phone__top-speaker"></div>
+                            <!-- /.mobile-phone__top-speaker -->
+                            <div class="mobile-phone__volume-plus"></div>
+                            <!-- /.mobile-phone__volume-plus -->
+                            <div class="mobile-phone__volume-minus"></div>
+                            <!-- /.mobile-phone__volume-minus -->
+                            <div class="mobile-phone__lock-button"></div>
+                            <!-- /.mobile-phone__lock-button -->
+                            <img src="img/reviews/IMG_6512-осень-1.JPEG" alt="Отзывы о весеннем справочнике"
+                              class="mobile-phone__img">
+                          </div>
+                          <!-- /.mobile-phone -->
+                        </div>
+                      </div>
+                      <!-- Add Arrows -->
+                      <div class="swiper-button__wrap">
+
+                        <svg width="18" height="13" class="swiper-button-next-apple swiper-button-disabled"
+                          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14" tabIndex="-1" role="button"
+                          aria-label="Next slide" aria-controls="swiper-wrapper-3648dffb957c51a8" aria-disabled="true">
+                          <path stroke="#070707" stroke-linecap="round" stroke-linejoin="round"
+                            d="M12.708.572l6.361 6.361-6.361 6.362m5.478-6.362H1"></path>
+                        </svg>
+
+
+                        <svg width="18" height="13" class="swiper-button-prev-apple" xmlns="http://www.w3.org/2000/svg"
+                          fill="none" viewBox="0 0 20 14" tabIndex="0" role="button" aria-label="Previous slide"
+                          aria-controls="swiper-wrapper-3648dffb957c51a8" aria-disabled="false">
+                          <path stroke="#070707" stroke-linecap="round" stroke-linejoin="round"
+                            d="M7.292.572L.931 6.933l6.361 6.362M1.814 6.933H19"></path>
+                        </svg>
+
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination swiper-pagination-apple-pay"></div>
+                      </div>
+                      <!-- /.swiper-button__wrap -->
+
+                    </div>
+                  </div>
+                  <p class="how-to-pay__p">
+                    1. Нажмите на три точки <b>. . .</b> <br>
+                    2. Откройте сайт в своем браузере <br>
+                    3. Нажмите кнопку <b>Купить</b> <br>
+                    4. Выберете Гайд<br>
+                    5. Вводим свои данные и выбираем способ оплаты: <br>
+                    <b>Банковские карты, Apple Pay, Google Pay</b> <br>
+                    6. Видим нужные способы оплаты <br>
+                    <br>
+                    <b>ВЫШЕ ПРЕДСТАВЛЕНЫ СЛАЙДЫ ДЛЯ НАГЛЯДНОСТИ (листай)</b> <br>
+
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.how-buy-apple -->
+
         </div>
         <!-- /.header-control-wrapper -->
 
@@ -190,7 +326,7 @@
         <!-- /.container -->
       </section>
 
-      <section class="section-book-contents">
+      <section class="section-book-contents" id="section-book-contents">
         <div class="container">
 
           <h2 class="heading-h2">
@@ -303,7 +439,7 @@
         <!-- /.container -->
       </section>
 
-      <section class="section-ticker">
+      <section class="section-ticker" id="section-ticker">
 
         <div class="container">
 
@@ -413,7 +549,7 @@
 
       </section>
 
-      <section class="section-brands">
+      <section class="section-brands" id="section-brands">
 
         <div class="container">
 
@@ -425,20 +561,20 @@
           <div class="swiper swiper-brands">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img width="81" height="38" src="img/1-zara.png" alt="zara" class="swiper-slide__img">
-                <img width="81" height="38" src="img/1-zara.png" alt="zara" class="swiper-slide__img">
+                <img width="81" height="38" src="img/zara-w.png" alt="zara" class="swiper-slide__img">
+                <img width="81" height="38" src="img/mango-w.png" alt="zara" class="swiper-slide__img">
               </div>
               <div class="swiper-slide">
-                <img width="81" height="38" src="img/1-zara.png" alt="zara" class="swiper-slide__img">
-                <img width="81" height="38" src="img/1-zara.png" alt="zara" class="swiper-slide__img">
+                <img width="81" height="38" src="img/reser.png" alt="zara" class="swiper-slide__img">
+                <img width="81" height="38" src="img/hm-w.png" alt="zara" class="swiper-slide__img">
               </div>
               <div class="swiper-slide">
-                <img width="81" height="38" src="img/1-zara.png" alt="zara" class="swiper-slide__img">
-                <img width="81" height="38" src="img/1-zara.png" alt="zara" class="swiper-slide__img">
+                <img width="81" height="38" src="img/bungly.png" alt="zara" class="swiper-slide__img">
+                <img width="81" height="38" src="img/minid-ww.png" alt="zara" class="swiper-slide__img">
               </div>
               <div class="swiper-slide">
-                <img width="81" height="38" src="img/1-zara.png" alt="zara" class="swiper-slide__img">
-                <img width="81" height="38" src="img/1-zara.png" alt="zara" class="swiper-slide__img">
+                <img width="81" height="38" src="img/reima-w.png" alt="zara" class="swiper-slide__img">
+                <img width="81" height="38" src="img/sela-www.png" alt="zara" class="swiper-slide__img">
               </div>
             </div>
 
@@ -466,7 +602,7 @@
 
       </section>
 
-      <section class="section-call-to-buy">
+      <section class="section-call-to-buy" id="section-call-to-buy">
 
         <div class="container">
 
@@ -478,7 +614,7 @@
                 еще на&nbsp;полках</i>
             </h3>
 
-            <a href="#section-form" class="button-order">
+            <a href="#section-guide-price" class="button-order">
               Купить
             </a>
 
@@ -490,7 +626,7 @@
                 <path fill="#FDFDFD"
                   d="M13.291 1.25c-.937.064-2.031.66-2.672 1.44-.581.706-1.06 1.754-.872 2.77h.075c.999 0 2.02-.601 2.618-1.372.575-.733 1.01-1.772.851-2.838z" />
               </svg>
-              <p class="apple-pay__txt">Как оплатить Apple Pay</p>
+              <p class="apple-pay__txt" data-toggle="modal" data-target="#staticBackdrop">Как оплатить Apple Pay</p>
             </button>
 
           </div>
@@ -500,7 +636,7 @@
 
       </section>
 
-      <section class="section-for-whom">
+      <section class="section-for-whom" id="section-for-whom">
 
         <div class="container">
 
@@ -579,13 +715,86 @@
 
       <section class="section-reviews" id="section-reviews">
         <div class="container _anim-items _anim-no-hide">
-          <h2 class="heading-h2 _anim-show">Отзывы</h2>
+          <h2 class="heading-h2">
+            Отзывы
+            <svg width="157" height="52" class="heading-h2__ellipse" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 152 69">
+              <path stroke="#E52976" stroke-width=".5"
+                d="M150.502 11.937c1.018 3.328-.037 7.159-2.906 11.266-2.866 4.103-7.519 8.443-13.611 12.76-12.183 8.634-30.073 17.145-50.785 23.477-20.711 6.332-40.303 9.28-55.23 8.936-7.465-.173-13.75-1.17-18.42-2.969-4.675-1.8-7.692-4.386-8.71-7.714-1.017-3.328.038-7.159 2.907-11.265 2.867-4.104 7.52-8.444 13.611-12.761 12.183-8.634 30.073-17.145 50.785-23.477 20.712-6.332 40.303-9.28 55.23-8.935 7.465.172 13.749 1.169 18.42 2.968 4.675 1.8 7.692 4.386 8.709 7.714z" />
+            </svg>
+          </h2>
         </div>
         <!-- /.container -->
         <!-- Swiper -->
         <div class="swiper">
           <div class="swiper-container1">
             <div class="swiper-wrapper">
+
+
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/IMG_6512-осень-1.JPEG" alt="Отзывы о весеннем справочнике"
+                  class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/IMG_6517-осень-3.JPEG" alt="Отзывы о весеннем справочнике"
+                  class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-1-1.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-1-2.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
+              <div class="swiper-slide mobile-phone">
+                <div class="mobile-phone__top-speaker"></div>
+                <!-- /.mobile-phone__top-speaker -->
+                <div class="mobile-phone__volume-plus"></div>
+                <!-- /.mobile-phone__volume-plus -->
+                <div class="mobile-phone__volume-minus"></div>
+                <!-- /.mobile-phone__volume-minus -->
+                <div class="mobile-phone__lock-button"></div>
+                <!-- /.mobile-phone__lock-button -->
+                <img src="img/reviews/review-1-3.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
+              </div>
+              <!-- /.mobile-phone -->
 
               <div class="swiper-slide mobile-phone">
                 <div class="mobile-phone__top-speaker"></div>
@@ -629,74 +838,6 @@
               </div>
               <!-- /.mobile-phone -->
 
-              <div class="swiper-slide mobile-phone">
-                <div class="mobile-phone__top-speaker"></div>
-                <!-- /.mobile-phone__top-speaker -->
-                <div class="mobile-phone__volume-plus"></div>
-                <!-- /.mobile-phone__volume-plus -->
-                <div class="mobile-phone__volume-minus"></div>
-                <!-- /.mobile-phone__volume-minus -->
-                <div class="mobile-phone__lock-button"></div>
-                <!-- /.mobile-phone__lock-button -->
-                <img src="img/reviews/IMG_6512-осень-1.JPEG" alt="Отзывы о весеннем справочнике"
-                  class="mobile-phone__img">
-              </div>
-              <!-- /.mobile-phone -->
-
-              <div class="swiper-slide mobile-phone">
-                <div class="mobile-phone__top-speaker"></div>
-                <!-- /.mobile-phone__top-speaker -->
-                <div class="mobile-phone__volume-plus"></div>
-                <!-- /.mobile-phone__volume-plus -->
-                <div class="mobile-phone__volume-minus"></div>
-                <!-- /.mobile-phone__volume-minus -->
-                <div class="mobile-phone__lock-button"></div>
-                <!-- /.mobile-phone__lock-button -->
-                <img src="img/reviews/IMG_6517-осень-3.JPEG" alt="Отзывы о весеннем справочнике"
-                  class="mobile-phone__img">
-              </div>
-              <!-- /.mobile-phone -->
-
-
-
-
-
-              <div class="swiper-slide mobile-phone">
-                <div class="mobile-phone__top-speaker"></div>
-                <!-- /.mobile-phone__top-speaker -->
-                <div class="mobile-phone__volume-plus"></div>
-                <!-- /.mobile-phone__volume-plus -->
-                <div class="mobile-phone__volume-minus"></div>
-                <!-- /.mobile-phone__volume-minus -->
-                <div class="mobile-phone__lock-button"></div>
-                <!-- /.mobile-phone__lock-button -->
-                <img src="img/reviews/review-1-1.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
-              </div>
-              <!-- /.mobile-phone -->
-              <div class="swiper-slide mobile-phone">
-                <div class="mobile-phone__top-speaker"></div>
-                <!-- /.mobile-phone__top-speaker -->
-                <div class="mobile-phone__volume-plus"></div>
-                <!-- /.mobile-phone__volume-plus -->
-                <div class="mobile-phone__volume-minus"></div>
-                <!-- /.mobile-phone__volume-minus -->
-                <div class="mobile-phone__lock-button"></div>
-                <!-- /.mobile-phone__lock-button -->
-                <img src="img/reviews/review-1-2.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
-              </div>
-              <!-- /.mobile-phone -->
-              <div class="swiper-slide mobile-phone">
-                <div class="mobile-phone__top-speaker"></div>
-                <!-- /.mobile-phone__top-speaker -->
-                <div class="mobile-phone__volume-plus"></div>
-                <!-- /.mobile-phone__volume-plus -->
-                <div class="mobile-phone__volume-minus"></div>
-                <!-- /.mobile-phone__volume-minus -->
-                <div class="mobile-phone__lock-button"></div>
-                <!-- /.mobile-phone__lock-button -->
-                <img src="img/reviews/review-1-3.jpeg" alt="Отзывы о весеннем справочнике" class="mobile-phone__img">
-              </div>
-              <!-- /.mobile-phone -->
               <div class="swiper-slide mobile-phone">
                 <div class="mobile-phone__top-speaker"></div>
                 <!-- /.mobile-phone__top-speaker -->
@@ -900,550 +1041,115 @@
         <!-- /.container -->
       </section>
 
+      <section class="section-guide-price" id="section-guide-price">
 
+        <div class="container">
 
-
-
-
-
-      <div class="container">
-        <p class="lorem3000">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptate ex nam, temporibus officia quasi,
-          minus eius vitae cum blanditiis rerum ea aliquid praesentium libero voluptates, ad quo omnis repudiandae
-          explicabo. Ut odit eligendi dolores, perferendis doloremque incidunt, soluta reprehenderit alias deserunt
-          suscipit voluptatibus itaque tempora qui vero iusto sequi rerum laudantium modi expedita natus distinctio
-          vel nisi fugit? Minus odit porro magni corrupti. Expedita laudantium delectus animi aut. Autem ea optio,
-          doloremque placeat doloribus ipsa reprehenderit fugit explicabo? Qui blanditiis ut voluptatum facilis illum
-          est corporis ipsam magni, culpa dolor ipsum expedita labore necessitatibus nihil delectus ducimus veniam
-          reprehenderit.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, soluta. Minima corrupti quisquam
-          sapiente, modi exercitationem ut nesciunt ea, accusantium quae itaque ipsum fuga cumque, placeat eaque quos?
-          Recusandae tempora pariatur in ea neque quasi, reprehenderit necessitatibus illo sunt eaque quis repudiandae
-          officia provident eligendi atque voluptas blanditiis nisi placeat distinctio dolorum tempore autem ab. Velit
-          alias eos iste cum voluptas nobis enim nulla voluptate corrupti cupiditate quibusdam pariatur provident,
-          minima vitae consectetur architecto praesentium dignissimos aperiam consequuntur quisquam autem sunt error!
-          Perferendis, dicta? Atque reprehenderit excepturi nostrum iusto tempore inventore repellat, ratione
-          provident vitae ab modi quibusdam. Optio, doloremque fugit esse blanditiis eius quis quae, ex vero id libero
-          sint rerum voluptates. Hic accusamus quisquam corporis culpa dolore dolorum natus enim quibusdam tempore,
-          quod mollitia asperiores! Tempore, est cupiditate natus suscipit molestias maiores nisi voluptatum esse
-          sequi! Enim rerum facilis atque dolorum libero aliquam at laborum hic magnam, earum iusto. Tempora, nisi
-          nam? Numquam, in. Quam necessitatibus corporis voluptatem. Enim quibusdam sed impedit quasi, magnam delectus
-          quod molestiae hic, cumque a eum quo fugit molestias. Architecto, sunt itaque repudiandae inventore nam est
-          eaque neque sequi magni modi rerum rem quis quaerat recusandae? Suscipit iusto, a, hic cum nesciunt delectus
-          asperiores provident non ex ipsum maiores eligendi quisquam ea ad ratione illo sunt assumenda consequatur
-          inventore aut repudiandae veritatis fuga enim. Magnam eius laborum quia assumenda minima aspernatur
-          dignissimos aliquid sint ducimus, autem numquam similique dolorum ad deleniti tenetur, harum eos et
-          necessitatibus? Delectus, quia atque mollitia autem harum sit doloremque doloribus modi libero qui sapiente
-          cumque dolorem, quis perspiciatis quisquam accusamus aperiam unde expedita, repellat esse! Optio saepe eos
-          cupiditate, ipsam aspernatur iste voluptatem eveniet et delectus a soluta earum veritatis obcaecati
-          praesentium explicabo sapiente accusamus commodi alias sit. Dignissimos exercitationem ratione minus
-          accusantium nihil, suscipit consequatur omnis inventore aperiam fugiat dolorum sapiente facere doloremque
-          nemo temporibus natus vero dolore. Aut veniam, inventore aperiam eligendi ratione pariatur nihil vero fugit
-          dolore labore? Quibusdam illum maiores repudiandae, corrupti sequi reiciendis dignissimos quam ex adipisci
-          nisi consequatur quos corporis inventore laudantium! Nostrum, molestiae? Doloremque dolore ipsa
-          reprehenderit nobis. Libero nemo architecto quod! Reprehenderit odit quis, quasi at quia itaque. Rerum
-          doloribus esse fuga. Illo accusamus reiciendis corrupti ea cum libero adipisci rerum soluta esse alias
-          perferendis, commodi provident iusto velit officia expedita consequatur voluptates temporibus cumque, nobis,
-          quam error nemo impedit! Obcaecati pariatur eos officia eligendi libero aspernatur magni excepturi eaque!
-          Excepturi provident repellat atque incidunt nam? Assumenda explicabo, placeat possimus inventore distinctio
-          qui neque voluptatum repellat. Consequatur nesciunt animi rerum minima inventore, tempora nisi itaque
-          ducimus adipisci iure non magnam, vero nobis. Obcaecati iure, porro non ullam perspiciatis fugiat saepe
-          adipisci ea fuga voluptate ut delectus? Iusto consequatur a sapiente reprehenderit. Minus placeat enim est
-          saepe accusamus? Labore ea veniam, repellat quo corporis quaerat corrupti ducimus. Error nobis et vero ad
-          nihil fugit, a possimus voluptates sunt non saepe adipisci dolor aliquid animi beatae ullam, repellendus
-          inventore aut. Molestiae commodi corporis voluptatem, atque asperiores quibusdam animi quidem iusto
-          recusandae dolores incidunt ipsam quasi cupiditate laudantium quisquam accusantium rem dolor molestias
-          voluptas modi error dignissimos aperiam tempora reiciendis. Iste numquam inventore facere ipsum magnam
-          provident neque aperiam, velit saepe voluptate, veniam sunt. Dolor, nemo aliquid? Quod dicta, expedita
-          corrupti quo molestiae animi assumenda commodi accusamus facilis voluptas accusantium corporis itaque minima
-          magni sed ad est tempora quidem consequatur esse adipisci incidunt fugit quae ex? Necessitatibus, delectus
-          laboriosam ut quo corporis, quaerat provident dolores nisi suscipit ad perspiciatis dolorum soluta?
-          Voluptatum sint officia labore necessitatibus dignissimos. Corporis tempore sequi, sint vel consectetur nisi
-          voluptatibus laborum itaque omnis laboriosam est odit quibusdam minus exercitationem accusamus voluptate
-          delectus possimus sed in nam suscipit aliquid alias explicabo libero? Perferendis assumenda accusamus maxime
-          error illum repudiandae fugiat laboriosam qui veniam quisquam corporis voluptates quidem quod in aperiam,
-          incidunt similique accusantium iusto veritatis odio dolor laborum esse? Aspernatur, dignissimos autem sunt
-          doloribus dolorum reprehenderit excepturi maiores nostrum modi amet qui delectus quisquam, porro, odit unde
-          blanditiis distinctio saepe illo similique rerum quam quasi? Reprehenderit eos sed consequuntur perspiciatis
-          veritatis exercitationem magnam cupiditate qui distinctio sint voluptate voluptatibus laborum, cumque
-          aliquam repudiandae porro autem quibusdam ipsum illo. Error, aliquam et delectus reprehenderit veritatis
-          eveniet sunt architecto amet deleniti debitis soluta placeat, obcaecati autem quod ullam quae? Error, cumque
-          libero, esse accusantium nobis, quidem odio quas porro illum dolorem fugiat asperiores minus id amet
-          dignissimos aliquam rerum ut earum! Porro optio doloremque impedit, quasi eum illum laudantium alias
-          assumenda asperiores temporibus numquam modi ex recusandae unde? Quia minus magnam labore distinctio sunt
-          cum. Tempore repellat unde quisquam hic nemo asperiores, a dignissimos qui quas, at cupiditate id ipsum
-          nostrum cum harum ipsam. Reiciendis, iure culpa recusandae odio corporis necessitatibus quis, minus ratione
-          eos voluptas eveniet animi ea! In nobis veritatis, quasi magni nihil fugiat sint? Quidem ducimus minus
-          minima deleniti culpa autem dignissimos, cumque vitae facilis quo saepe atque praesentium nemo maiores
-          repudiandae corporis hic, iusto voluptate provident libero! Consequuntur adipisci temporibus iste, quae
-          aliquid hic ut vel error facilis quidem illum corporis ipsum nulla itaque. Veritatis, sequi incidunt fugiat,
-          vero atque voluptate odit impedit nisi accusamus cum ipsam labore voluptatem quidem ducimus modi, distinctio
-          ut. Natus illo, quia soluta, maxime vero officiis blanditiis quae porro quos dignissimos minima cum facilis,
-          ex reprehenderit distinctio corporis asperiores placeat sunt tempora nemo esse unde nobis. Suscipit impedit
-          at, nesciunt cumque sed, nihil fugit architecto veniam molestiae rerum nulla, vitae minus quae minima
-          commodi? Quod eos amet quidem perferendis voluptatum consectetur deleniti perspiciatis, minima illo,
-          excepturi quisquam nesciunt expedita vel autem nam earum? Eligendi non molestias consequuntur dolorem, nam,
-          nisi quod error cum ad, id animi dolor iste maxime neque dolores. Explicabo sed doloribus fuga fugiat quos,
-          veniam corporis dicta esse necessitatibus qui magni ipsam laborum officiis iste blanditiis! Nisi minima
-          eaque quasi iusto mollitia modi deleniti laudantium, dicta accusantium quo nemo eligendi at necessitatibus.
-          Minus expedita quos, odio obcaecati beatae voluptates debitis dolore consequatur, nostrum corrupti fugiat
-          ratione ipsam illum delectus aliquid tenetur recusandae maxime et. Libero atque minus quos dolore?
-        </p>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <section class="section-about-us" id="section-about-us">
-        <div class="container _anim-items _anim-no-hide">
-          <h2 class="heading-h2 _anim-show">
-            О нас
+          <h2 class="heading-h2">
+            <i>Стоимость</i> гайда
           </h2>
-          <div class="section-about-us__content-wrapper">
-            <p class="section-about-us__txt">
-              Агентство &laquo;Правовой эксперт&raquo; проводит сделки с&nbsp;любыми объектами: новым и&nbsp;вторичным
-              жильем (квартирами, комнатами домами, дачами), коммерческим зданиями и&nbsp;помещениями, земельными
-              участками.
+
+          <div class="section-guide-price__wrap-content">
+            <img width="213" height="277" src="img/picture-main-unit-1.jpeg" alt="журнал-1" class="swiper-price__img">
+            <p class="guide-price-txt">
+              490 рублей
             </p>
-            <p class="section-about-us__txt">
-              В&nbsp;первую очередь мы&nbsp;помогаем в&nbsp;покупке и&nbsp;продаже, аренде. Но&nbsp;также наши риэлторы
-              готовы по&nbsp;закону оформить обмен или раздел имущества и&nbsp;его приватизацию, узаконить
-              перепланировку, провести оценку.
-            </p>
-            <p class="section-about-us__txt">
-              С&nbsp;какой&nbsp;бы задачей вы&nbsp;к&nbsp;нам не&nbsp;обратились, мы&nbsp;ответственно подойдем
-              к&nbsp;ее&nbsp;решению и&nbsp;предоставим вам 100%-ные гарантии безопасности. Наши риэлторы прекрасно
-              знают специфику Орехово-Зуево и&nbsp;умеют подстраиваться под пожелания и&nbsp;бюджет клиента.
-            </p>
-          </div>
-          <!-- /.section-about-us__content-wrapper -->
-          <!-- <img src="img/main-picture-house.jpg" alt="About us photography" class="section-about-us__img" width="290"
-            height="306"> -->
-        </div>
-        <!-- /.container -->
-      </section>
 
-      <section class="section-advantages" id="section-advantages">
-        <div class="container _anim-items _anim-no-hide">
-          <h2 class="heading-h2 _anim-show">
-            Выгоды от&nbsp;работы <br> с&nbsp;нами
-          </h2>
-          <div class="section-advantages__content-wrapper">
-            <div class="section-advantages__card-wrapper">
-              <span class="section-advantages__card-number _anim-items _anim-no-hide">
-                01
-              </span>
-              <p class="section-advantages__card-text">
-                Ведем собственную базу <br>предложений от&nbsp;проверенных <br>продавцов и&nbsp;арендодателей.
-              </p>
-            </div>
-            <!-- /.section-advantages__card-wrapper -->
-            <div class="section-advantages__card-wrapper">
-              <span class="section-advantages__card-number _anim-items _anim-no-hide">
-                02
-              </span>
-              <p class="section-advantages__card-text">
-                Проверяем все объекты <br>и&nbsp;документы на&nbsp;юридическую <br> чистоту.
-              </p>
-            </div>
-            <!-- /.section-advantages__card-wrapper -->
-            <div class="section-advantages__card-wrapper">
-              <span class="section-advantages__card-number _anim-items _anim-no-hide">
-                03
-              </span>
-              <p class="section-advantages__card-text">
-                Оформляем сделки по&nbsp;требованиям <br> закона с&nbsp;заключением официальных <br> договоров.
-              </p>
-            </div>
-            <!-- /.section-advantages__card-wrapper -->
-            <div class="section-advantages__card-wrapper">
-              <span class="section-advantages__card-number _anim-items _anim-no-hide">
-                04
-              </span>
-              <p class="section-advantages__card-text">
-                Помогаем клиентам быстро <br> подобрать новый вариант,<br> если сделка сорвется.
-              </p>
-            </div>
-            <!-- /.section-advantages__card-wrapper -->
-            <div class="section-advantages__card-wrapper">
-              <span class="section-advantages__card-number _anim-items _anim-no-hide">
-                05
-              </span>
-              <p class="section-advantages__card-text">
-                Сотрудничаем с&nbsp;банками-партнерами <br> и&nbsp;помогаем получить ипотеку со&nbsp; <br>скидкой
-                до&nbsp;1% от&nbsp;базовых ставок.
-              </p>
-            </div>
-            <!-- /.section-advantages__card-wrapper -->
-          </div>
-          <!-- /.section-advantages__content-wrapper -->
-        </div>
-        <!-- /.container -->
-      </section>
+            <a href="#section-form" class="button-order">
+              Купить
+            </a>
 
-      <section class="section-services" id="section-services">
-        <div class="container _anim-items _anim-no-hide">
-          <h2 class="heading-h2 _anim-show">
-            Услуги
-          </h2>
-          <div class="section-services__content-wrapper">
-            <div class="section-services__service-card">
-              <p class="section-services__service-description">
-                Cоставление договора купли-продажи любой сложности
-              </p>
-              <!-- /.section-services__service-description -->
-              <p class="section-services__service-price">
-                5&nbsp;000&nbsp;руб.
-              </p>
-              <!-- /.section-services__service-price -->
-            </div>
-            <!-- /.section-services__service-card -->
-            <div class="section-services__service-card">
-              <p class="section-services__service-description">
-                Эксклюзивный договор по&nbsp;продаже недвижимости
-              </p>
-              <!-- /.section-services__service-description -->
-              <p class="section-services__service-price">
-                3%&nbsp;от&nbsp;окончательной стоимости (не&nbsp;менее 70&nbsp;000&nbsp;руб.)
-              </p>
-              <!-- /.section-services__service-price -->
-            </div>
-            <!-- /.section-services__service-card -->
-          </div>
-          <!-- /.section-services__content-wrapper -->
-        </div>
-        <!-- /.container -->
-      </section>
+            <button class="apple-pay">
+              <svg width="20" height="20" class="apple-pay__svg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 20 20">
+                <path fill="#FDFDFD"
+                  d="M13.638 5.346c-1.575 0-2.24.752-3.338.752-1.124 0-1.982-.746-3.347-.746-1.336 0-2.76.816-3.665 2.205-1.27 1.96-1.055 5.65 1.003 8.793.736 1.126 1.718 2.388 3.007 2.401h.024c1.12 0 1.453-.733 2.995-.742h.023c1.519 0 1.824.738 2.94.738h.023c1.289-.014 2.324-1.412 3.06-2.533.53-.806.727-1.21 1.133-2.123-2.976-1.13-3.454-5.349-.51-6.966-.9-1.125-2.162-1.777-3.352-1.777l.004-.002z" />
+                <path fill="#FDFDFD"
+                  d="M13.291 1.25c-.937.064-2.031.66-2.672 1.44-.581.706-1.06 1.754-.872 2.77h.075c.999 0 2.02-.601 2.618-1.372.575-.733 1.01-1.772.851-2.838z" />
+              </svg>
+              <p class="apple-pay__txt" data-toggle="modal" data-target="#staticBackdrop">Как оплатить Apple Pay</p>
+            </button>
 
-      <section class="section-reviews" id="section-reviews">
-        <div class="container _anim-items _anim-no-hide">
-          <h2 class="heading-h2 _anim-show">
-            Отзывы
-          </h2>
-          <div class="swiper-container swiper-reviews-container">
-            <!-- swipe pointer element -->
-            <svg width="40" height="40" class="swipe-pointer swipe-pointer__gallery-licenses"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490.651 490.651">
-              <path
-                d="M437.328 42.651h-128c-5.888 0-10.667 4.779-10.667 10.667s4.779 10.667 10.667 10.667h128c5.888 0 10.667-4.779 10.667-10.667s-4.779-10.667-10.667-10.667z" />
-              <path
-                d="M444.88 45.787L402.213 3.12c-4.16-4.16-10.923-4.16-15.083 0s-4.16 10.923 0 15.083l35.115 35.115-35.136 35.136c-4.16 4.16-4.16 10.923 0 15.083a10.716 10.716 0 0 0 15.104 0L444.88 60.87c4.16-4.161 4.16-10.923 0-15.083zM159.995 42.651h-128c-5.888 0-10.667 4.779-10.667 10.667s4.779 10.667 10.667 10.667h128c5.888 0 10.667-4.779 10.667-10.667s-4.779-10.667-10.667-10.667z" />
-              <path
-                d="M47.077 53.317l35.115-35.115c4.16-4.16 4.16-10.923 0-15.083s-10.923-4.16-15.083 0L24.443 45.787c-4.16 4.16-4.16 10.923 0 15.083l42.667 42.667a10.716 10.716 0 0 0 7.552 3.115c2.731 0 5.461-1.045 7.531-3.136 4.16-4.16 4.16-10.923 0-15.083L47.077 53.317zM426.661 213.317a42.524 42.524 0 0 0-23.723 7.211c-5.845-16.597-21.696-28.544-40.277-28.544a42.524 42.524 0 0 0-23.723 7.211c-5.845-16.597-21.696-28.544-40.277-28.544a42.321 42.321 0 0 0-21.333 5.739v-69.739c0-23.531-19.136-42.667-42.667-42.667-23.531 0-42.667 19.136-42.667 42.667v181.333l-37.077-27.797c-21.973-16.491-53.248-14.293-72.725 5.163-12.48 12.48-12.48 32.768 0 45.248l151.915 151.936c18.133 18.133 42.261 28.117 67.904 28.117h49.984c64.683 0 117.333-52.629 117.333-117.333V255.984c0-23.531-19.136-42.667-42.667-42.667zm21.334 160c0 52.928-43.072 96-96 96h-49.984c-19.968 0-38.72-7.765-52.821-21.867L97.275 295.515c-4.16-4.16-4.16-10.923 0-15.083 6.613-6.592 15.445-9.984 24.32-9.984 7.211 0 14.464 2.24 20.544 6.805l54.123 40.597a10.704 10.704 0 0 0 11.179 1.003 10.684 10.684 0 0 0 5.888-9.536V106.651c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v160c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-53.333c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v53.333c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-32c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v32c0 5.888 4.779 10.667 10.667 10.667s10.667-4.779 10.667-10.667v-10.667c0-11.755 9.557-21.333 21.333-21.333s21.333 9.579 21.333 21.333v117.333z" />
-            </svg>
-            <!-- swipe pointer element -->
+          </div>
+          <!-- /.section-guide-price__wrap-content -->
+
+          <div class="swiper swiper-price">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="review-card">
-                  <div class="review-card__top-wrap">
-                    <img width="70" height="70" src="img/photo-reviews-1.png" alt="Клиент 1 - покупка недвижимости"
-                      class="review-card__img">
-                    <div class="review-card__top-wrap_tw">
-                      <p class="review-card__name">
-                        Мария и&nbsp;Андрей
-                      </p>
-                      <p class="review-card__type-service">
-                        Покупка и&nbsp;продажа жилья
-                      </p>
-                    </div>
-                    <!-- /.review-card__top-wrap_tw -->
-                  </div>
-                  <!-- /.review-card__top-wrap -->
-                  <p class="review-card__review-text">
-                    Благодарим Елену за&nbsp;проделанную работу в&nbsp;организации продажи и&nbsp;покупки жилья. Честная
-                    работа, позитивный настрой, четкий план действий, умение просто и&nbsp;доходчиво объяснить сложные
-                    тонкости нашего законодательства&nbsp;&mdash; все это присуще Елене. Еще хочется поблагодарить
-                    секретаря Екатерину: очень признательны за&nbsp;участие и&nbsp;помощь в&nbsp;оформлении документов.
-                  </p>
-                </div>
-                <!-- /.review-card -->
-              </div>
-              <div class="swiper-slide">
-                <div class="review-card">
-                  <div class="review-card__top-wrap">
-                    <img width="70" height="70" src="img/photo-reviews-2.jpeg" alt="Клиент 2 - покупка недвижимости"
-                      class="review-card__img">
-                    <div class="review-card__top-wrap_tw">
-                      <p class="review-card__name">
-                        Нина
-                      </p>
-                      <p class="review-card__type-service">
-                        Покупка и&nbsp;продажа жилья
-                      </p>
-                    </div>
-                    <!-- /.review-card__top-wrap_tw -->
-                  </div>
-                  <!-- /.review-card__top-wrap -->
-                  <p class="review-card__review-text">
-                    У&nbsp;меня было много волнений и&nbsp;переживаний по&nbsp;поводу продажи и&nbsp;покупки квартры,
-                    но&nbsp;все, что зависило от&nbsp;Елены, было выполнено в&nbsp;установленные сроки. И&nbsp;ура!
-                    Мы&nbsp;нашли жилье, о&nbsp;котором я&nbsp;так мечтала. Спасибо за&nbsp;профессионализм, позтив,
-                    грамотное оформление документов и&nbsp;проведение сделки! Удачи вам!
-                  </p>
-                </div>
-                <!-- /.review-card -->
-              </div>
-              <div class="swiper-slide">
-                <div class="review-card">
-                  <div class="review-card__top-wrap">
-                    <img width="70" height="70" src="img/photo-reviews-1.png" alt="Клиент 1 - покупка недвижимости"
-                      class="review-card__img">
-                    <div class="review-card__top-wrap_tw">
-                      <p class="review-card__name">
-                        Мария и&nbsp;Андрей
-                      </p>
-                      <p class="review-card__type-service">
-                        Покупка и&nbsp;продажа жилья
-                      </p>
-                    </div>
-                    <!-- /.review-card__top-wrap_tw -->
-                  </div>
-                  <!-- /.review-card__top-wrap -->
-                  <p class="review-card__review-text">
-                    Благодарим Елену за&nbsp;проделанную работу в&nbsp;организации продажи и&nbsp;покупки жилья. Честная
-                    работа, позитивный настрой, четкий план действий, умение просто и&nbsp;доходчиво объяснить сложные
-                    тонкости нашего законодательства&nbsp;&mdash; все это присуще Елене. Еще хочется поблагодарить
-                    секретаря Екатерину: очень признательны за&nbsp;участие и&nbsp;помощь в&nbsp;оформлении документов.
-                  </p>
-                </div>
-                <!-- /.review-card -->
-              </div>
-              <div class="swiper-slide">
-                <div class="review-card">
-                  <div class="review-card__top-wrap">
-                    <img width="70" height="70" src="img/photo-reviews-2.jpeg" alt="Клиент 2 - покупка недвижимости"
-                      class="review-card__img">
-                    <div class="review-card__top-wrap_tw">
-                      <p class="review-card__name">
-                        Нина
-                      </p>
-                      <p class="review-card__type-service">
-                        Покупка и&nbsp;продажа жилья
-                      </p>
-                    </div>
-                    <!-- /.review-card__top-wrap_tw -->
-                  </div>
-                  <!-- /.review-card__top-wrap -->
-                  <p class="review-card__review-text">
-                    У&nbsp;меня было много волнений и&nbsp;переживаний по&nbsp;поводу продажи и&nbsp;покупки квартры,
-                    но&nbsp;все, что зависило от&nbsp;Елены, было выполнено в&nbsp;установленные сроки. И&nbsp;ура!
-                    Мы&nbsp;нашли жилье, о&nbsp;котором я&nbsp;так мечтала. Спасибо за&nbsp;профессионализм, позтив,
-                    грамотное оформление документов и&nbsp;проведение сделки! Удачи вам!
-                  </p>
-                </div>
-                <!-- /.review-card -->
-              </div>
-            </div>
+                <img width="213" height="277" src="img/picture-main-unit-1.jpeg" alt="журнал-1"
+                  class="swiper-price__img">
 
-            <div class="container_swiper-navigation">
-              <div class="swiper-reviews-navigation">
-                <button class="swiper-reviews-navigation__button-prev">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 57 15">
-                    <path stroke="#FAD797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M56 7.5H1m0 0L7.5 14M1 7.5L7.5 1" /></svg>
-                </button>
-                <button class="swiper-reviews-navigation__button-next">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 57 15">
-                    <path stroke="#FAD797" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                      d="M1 7.5h55m0 0L49.5 1M56 7.5L49.5 14" /></svg>
-                </button>
               </div>
-              <!-- /.swiper-navigation -->
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+              <div class="swiper-slide">Slide 10</div>
             </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-price"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-next-price"></div>
+            <div class="swiper-button-prev swiper-button-prev-price"></div>
           </div>
+
         </div>
         <!-- /.container -->
-      </section>
 
-      <section class="section-contacts" id="section-contacts">
-        <div class="container _anim-items _anim-no-hide">
-          <a href="tel:+79652585957" class="section-contacts__tel _anim-show">
-            8&nbsp;965&nbsp;258 59&nbsp;57
-          </a>
-
-          <div class="social-media">
-            <a href="https://wa.me/79165512615" class="social-media__button">
-              <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path fill="#BC8C5C" fill-rule="evenodd"
-                  d="M15.2 2.793A8.678 8.678 0 0 0 9.037.25C4.234.25.325 4.14.323 8.922a8.618 8.618 0 0 0 1.163 4.336L.25 17.75l4.62-1.206A8.735 8.735 0 0 0 9.032 17.6h.004c4.802 0 8.71-3.89 8.713-8.672a8.601 8.601 0 0 0-2.55-6.134zM9.037 16.135h-.003a7.255 7.255 0 0 1-3.686-1.005l-.265-.156-2.74.716.73-2.66-.171-.273a7.166 7.166 0 0 1-1.108-3.835c0-3.974 3.25-7.207 7.245-7.207a7.227 7.227 0 0 1 7.24 7.212c-.002 3.975-3.25 7.208-7.242 7.208zm3.972-5.398c-.218-.108-1.29-.633-1.488-.705-.198-.072-.344-.109-.49.109-.144.217-.562.703-.689.85-.127.146-.254.162-.471.053-.218-.108-.92-.337-1.751-1.075-.648-.575-1.084-1.284-1.211-1.501-.127-.217-.014-.334.095-.442.098-.097.217-.253.326-.38.11-.126.146-.217.218-.362.072-.144.036-.27-.018-.379-.054-.108-.49-1.175-.671-1.609-.177-.423-.356-.365-.49-.372a8.842 8.842 0 0 0-.417-.008.802.802 0 0 0-.58.272c-.2.217-.763.742-.763 1.807 0 1.066.781 2.097.89 2.242.107.144 1.534 2.333 3.718 3.272.406.173.82.326 1.242.456.521.165.996.142 1.37.086.419-.062 1.29-.524 1.47-1.03.181-.507.182-.94.128-1.03-.055-.091-.2-.146-.418-.254z"
-                  clip-rule="evenodd" /></svg>
-            </a>
-            <a href="https://viber.click/79165512615" class="social-media__button">
-              <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  d="M23.155 13.893c.716-6.027-.344-9.832-2.256-11.553l.001-.001C17.814-.6 7.392-1.035 3.7 2.471 2.042 4.186 1.458 6.703 1.394 9.819c-.064 3.117-.14 8.956 5.301 10.54H6.7l-.005 2.419s-.037.98.589 1.177c.716.232 1.04-.223 3.267-2.883 3.724.323 6.584-.417 6.909-.525.752-.252 5.007-.815 5.695-6.654zM10.918 19.37s-2.357 2.939-3.09 3.702c-.24.248-.503.225-.499-.267 0-.323.018-4.016.018-4.016-4.613-1.322-4.341-6.294-4.291-8.895.05-2.602.526-4.733 1.93-6.168C8.225.689 17.362 1.368 19.69 3.556c2.846 2.523 1.833 9.651 1.839 9.894-.585 4.874-4.033 5.183-4.667 5.394-.271.09-2.786.737-5.944.526z" />
-                <path
-                  d="M12.222 4.297c-.385 0-.385.6 0 .605 2.987.023 5.447 2.105 5.474 5.924 0 .403.59.398.585-.005h-.001c-.032-4.115-2.718-6.501-6.058-6.524z" />
-                <path
-                  d="M16.151 10.193c-.009.398.58.417.585.014.049-2.269-1.35-4.138-3.979-4.335-.385-.028-.425.577-.041.605 2.28.173 3.481 1.729 3.435 3.716zM15.521 12.774c-.494-.286-.997-.108-1.205.173l-.435.563c-.221.286-.634.248-.634.248-3.014-.797-3.82-3.951-3.82-3.951s-.037-.427.239-.656l.544-.45c.272-.216.444-.736.167-1.247-.74-1.337-1.237-1.798-1.49-2.152-.266-.333-.666-.408-1.082-.183h-.009c-.865.506-1.812 1.453-1.509 2.428.517 1.028 1.467 4.305 4.495 6.781 1.423 1.171 3.675 2.371 4.631 2.648l.009.014c.942.314 1.858-.67 2.347-1.561v-.007c.217-.431.145-.839-.172-1.106-.562-.548-1.41-1.153-2.076-1.542z" />
-                <path
-                  d="M13.169 8.104c.961.056 1.427.558 1.477 1.589.018.403.603.375.585-.028-.064-1.346-.766-2.096-2.03-2.166-.385-.023-.421.582-.032.605z" />
-              </svg>
-            </a>
-            <a href="https://instagram.com/molozhonpoligraf?utm_medium=copy_link" class="social-media__button">
-              <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511 511.9">
-                <path
-                  d="M510.95 150.5c-1.2-27.2-5.598-45.898-11.9-62.102-6.5-17.199-16.5-32.597-29.6-45.398-12.802-13-28.302-23.102-45.302-29.5-16.296-6.3-34.898-10.7-62.097-11.898C334.648.3 325.949 0 256.449 0s-78.199.3-105.5 1.5c-27.199 1.2-45.898 5.602-62.097 11.898-17.204 6.5-32.602 16.5-45.403 29.602-13 12.8-23.097 28.3-29.5 45.3-6.3 16.302-10.699 34.9-11.898 62.098C.75 177.801.449 186.5.449 256s.301 78.2 1.5 105.5c1.2 27.2 5.602 45.898 11.903 62.102 6.5 17.199 16.597 32.597 29.597 45.398 12.801 13 28.301 23.102 45.301 29.5 16.3 6.3 34.898 10.7 62.102 11.898 27.296 1.204 36 1.5 105.5 1.5s78.199-.296 105.5-1.5c27.199-1.199 45.898-5.597 62.097-11.898a130.934 130.934 0 0 0 74.903-74.898c6.296-16.301 10.699-34.903 11.898-62.102 1.2-27.3 1.5-36 1.5-105.5s-.102-78.2-1.3-105.5zm-46.098 209c-1.102 25-5.301 38.5-8.801 47.5-8.602 22.3-26.301 40-48.602 48.602-9 3.5-22.597 7.699-47.5 8.796-27 1.204-35.097 1.5-103.398 1.5s-76.5-.296-103.403-1.5c-25-1.097-38.5-5.296-47.5-8.796C94.551 451.5 84.45 445 76.25 436.5c-8.5-8.3-15-18.3-19.102-29.398-3.5-9-7.699-22.602-8.796-47.5-1.204-27-1.5-35.102-1.5-103.403s.296-76.5 1.5-103.398c1.097-25 5.296-38.5 8.796-47.5C61.25 94.199 67.75 84.1 76.352 75.898c8.296-8.5 18.296-15 29.398-19.097 9-3.5 22.602-7.7 47.5-8.801 27-1.2 35.102-1.5 103.398-1.5 68.403 0 76.5.3 103.403 1.5 25 1.102 38.5 5.3 47.5 8.8 11.097 4.098 21.199 10.598 29.398 19.098 8.5 8.301 15 18.301 19.102 29.403 3.5 9 7.699 22.597 8.8 47.5 1.2 27 1.5 35.097 1.5 103.398s-.3 76.301-1.5 103.301zm0 0" />
-                <path
-                  d="M256.45 124.5c-72.598 0-131.5 58.898-131.5 131.5s58.902 131.5 131.5 131.5c72.6 0 131.5-58.898 131.5-131.5s-58.9-131.5-131.5-131.5zm0 216.8c-47.098 0-85.302-38.198-85.302-85.3s38.204-85.3 85.301-85.3c47.102 0 85.301 38.198 85.301 85.3s-38.2 85.3-85.3 85.3zm0 0M423.852 119.3c0 16.954-13.747 30.7-30.704 30.7-16.953 0-30.699-13.746-30.699-30.7 0-16.956 13.746-30.698 30.7-30.698 16.956 0 30.703 13.742 30.703 30.699zm0 0" />
-              </svg>
-            </a>
-          </div>
-          <!-- /.social-media -->
-          <div class="section-contacts__address-wrap">
-            <a target="_blank" class="section-contacts__mail" href="mailto:molozhon.elena@yandex.ru">
-              <svg width="17" height="17" class="section-contacts__mail-svg" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 20 20">
-                <path stroke="#BC8C5C" stroke-linecap="round" stroke-linejoin="round"
-                  d="M16.563 3.75H3.438c-.863 0-1.563.7-1.563 1.563v9.375c0 .863.7 1.562 1.563 1.562h13.124c.863 0 1.563-.7 1.563-1.562V5.313c0-.863-.7-1.563-1.563-1.563z" />
-                <path stroke="#BC8C5C" stroke-linecap="round" stroke-linejoin="round"
-                  d="M4.375 6.25L10 10.625l5.625-4.375" /></svg>
-              <p class="section-contacts__mail-txt">
-                molozhon.elena@yandex.ru
-              </p>
-            </a>
-            <a target="_blank" class="section-contacts__mail"
-              href="https://yandex.ru/maps/?pt=38.975740,55.797183&z=18&l=map">
-              <svg width="17" height="17" class="section-contacts__mail-svg" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 20 20">
-                <path stroke="#BC8C5C" stroke-linecap="round" stroke-linejoin="round"
-                  d="M10 1.875c-3.105 0-5.625 2.398-5.625 5.352 0 3.398 3.75 8.784 5.127 10.644a.617.617 0 0 0 .996 0c1.377-1.86 5.127-7.243 5.127-10.644 0-2.954-2.52-5.352-5.625-5.352z" />
-                <path stroke="#BC8C5C" stroke-linecap="round" stroke-linejoin="round"
-                  d="M10 9.375a1.875 1.875 0 1 0 0-3.75 1.875 1.875 0 0 0 0 3.75z" /></svg>
-              <p class="section-contacts__mail-txt">
-                г. Орехово-Зуево, ул. Ленина, 20, этаж&nbsp;2, офис 9&nbsp;А
-              </p>
-            </a>
-          </div>
-          <!-- /.section-contacts__address-wrap -->
-
-          <div class="section-contacts__info-txt-wrap">
-            <p class="section-contacts__info-txt">
-              Если вам нужны услуги <a class="section-contacts__al" target="_blank"
-                href="https://molozhonpoligraf.ru/">полиграфолога</a> или <a class="section-contacts__al"
-                target="_blank" href="#">юридические услуги</a>, также можете обращаться в&nbsp;нашу компанию.
-            </p>
-          </div>
-          <!-- /.section-contacts__info-txt-wrap -->
-          <div class="section-contacts__map-wrapper">
-            <script type="text/javascript" charset="utf-8" async
-              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad88890fe6f6603da887f6532cc53e87fdac7a61531ed7ed73ccc3cfc3659c938&amp;width=100%25&amp;height=397&amp;lang=ru_RU&amp;scroll=true">
-            </script>
-          </div>
-          <!-- /.section-contacts__map-wrapper -->
-        </div>
-        <!-- /.container -->
       </section>
 
     </main>
 
-    <footer class="footer" id="section-form">
-      <div class="container">
-        <div class="header__container">
-          <div class="header__menu menu">
-            <div class="menu__icon">
-              <span></span>
-            </div>
-            <nav class="menu__body">
-              <ul class="menu__list">
-                <li><a data-goto=".section-about-us" href="#section-about-us" class="menu__link">О нас</a></li>
-                <li><a data-goto=".section-advantages" href="#section-advantages" class="menu__link">Преимущества</a>
-                </li>
-                <li><a data-goto=".section-services" href="#section-services" class="menu__link">Услуги</a></li>
-                <li><a data-goto=".section-reviews" href="#section-reviews" class="menu__link">Отзывы</a></li>
-                <li><a data-goto=".section-contacts" href="#section-contacts" class="menu__link">Контакты</a></li>
-              </ul>
-              <div class="social-media">
-                <a href="https://wa.me/79165512615" class="social-media__button">
-                  <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                    <path fill="#BC8C5C" fill-rule="evenodd"
-                      d="M15.2 2.793A8.678 8.678 0 0 0 9.037.25C4.234.25.325 4.14.323 8.922a8.618 8.618 0 0 0 1.163 4.336L.25 17.75l4.62-1.206A8.735 8.735 0 0 0 9.032 17.6h.004c4.802 0 8.71-3.89 8.713-8.672a8.601 8.601 0 0 0-2.55-6.134zM9.037 16.135h-.003a7.255 7.255 0 0 1-3.686-1.005l-.265-.156-2.74.716.73-2.66-.171-.273a7.166 7.166 0 0 1-1.108-3.835c0-3.974 3.25-7.207 7.245-7.207a7.227 7.227 0 0 1 7.24 7.212c-.002 3.975-3.25 7.208-7.242 7.208zm3.972-5.398c-.218-.108-1.29-.633-1.488-.705-.198-.072-.344-.109-.49.109-.144.217-.562.703-.689.85-.127.146-.254.162-.471.053-.218-.108-.92-.337-1.751-1.075-.648-.575-1.084-1.284-1.211-1.501-.127-.217-.014-.334.095-.442.098-.097.217-.253.326-.38.11-.126.146-.217.218-.362.072-.144.036-.27-.018-.379-.054-.108-.49-1.175-.671-1.609-.177-.423-.356-.365-.49-.372a8.842 8.842 0 0 0-.417-.008.802.802 0 0 0-.58.272c-.2.217-.763.742-.763 1.807 0 1.066.781 2.097.89 2.242.107.144 1.534 2.333 3.718 3.272.406.173.82.326 1.242.456.521.165.996.142 1.37.086.419-.062 1.29-.524 1.47-1.03.181-.507.182-.94.128-1.03-.055-.091-.2-.146-.418-.254z"
-                      clip-rule="evenodd" /></svg>
-                </a>
-                <a href="https://viber.click/79165512615" class="social-media__button">
-                  <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                      d="M23.155 13.893c.716-6.027-.344-9.832-2.256-11.553l.001-.001C17.814-.6 7.392-1.035 3.7 2.471 2.042 4.186 1.458 6.703 1.394 9.819c-.064 3.117-.14 8.956 5.301 10.54H6.7l-.005 2.419s-.037.98.589 1.177c.716.232 1.04-.223 3.267-2.883 3.724.323 6.584-.417 6.909-.525.752-.252 5.007-.815 5.695-6.654zM10.918 19.37s-2.357 2.939-3.09 3.702c-.24.248-.503.225-.499-.267 0-.323.018-4.016.018-4.016-4.613-1.322-4.341-6.294-4.291-8.895.05-2.602.526-4.733 1.93-6.168C8.225.689 17.362 1.368 19.69 3.556c2.846 2.523 1.833 9.651 1.839 9.894-.585 4.874-4.033 5.183-4.667 5.394-.271.09-2.786.737-5.944.526z" />
-                    <path
-                      d="M12.222 4.297c-.385 0-.385.6 0 .605 2.987.023 5.447 2.105 5.474 5.924 0 .403.59.398.585-.005h-.001c-.032-4.115-2.718-6.501-6.058-6.524z" />
-                    <path
-                      d="M16.151 10.193c-.009.398.58.417.585.014.049-2.269-1.35-4.138-3.979-4.335-.385-.028-.425.577-.041.605 2.28.173 3.481 1.729 3.435 3.716zM15.521 12.774c-.494-.286-.997-.108-1.205.173l-.435.563c-.221.286-.634.248-.634.248-3.014-.797-3.82-3.951-3.82-3.951s-.037-.427.239-.656l.544-.45c.272-.216.444-.736.167-1.247-.74-1.337-1.237-1.798-1.49-2.152-.266-.333-.666-.408-1.082-.183h-.009c-.865.506-1.812 1.453-1.509 2.428.517 1.028 1.467 4.305 4.495 6.781 1.423 1.171 3.675 2.371 4.631 2.648l.009.014c.942.314 1.858-.67 2.347-1.561v-.007c.217-.431.145-.839-.172-1.106-.562-.548-1.41-1.153-2.076-1.542z" />
-                    <path
-                      d="M13.169 8.104c.961.056 1.427.558 1.477 1.589.018.403.603.375.585-.028-.064-1.346-.766-2.096-2.03-2.166-.385-.023-.421.582-.032.605z" />
-                  </svg>
-                </a>
-                <a href="https://instagram.com/molozhonpoligraf?utm_medium=copy_link" class="social-media__button">
-                  <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511 511.9">
-                    <path
-                      d="M510.95 150.5c-1.2-27.2-5.598-45.898-11.9-62.102-6.5-17.199-16.5-32.597-29.6-45.398-12.802-13-28.302-23.102-45.302-29.5-16.296-6.3-34.898-10.7-62.097-11.898C334.648.3 325.949 0 256.449 0s-78.199.3-105.5 1.5c-27.199 1.2-45.898 5.602-62.097 11.898-17.204 6.5-32.602 16.5-45.403 29.602-13 12.8-23.097 28.3-29.5 45.3-6.3 16.302-10.699 34.9-11.898 62.098C.75 177.801.449 186.5.449 256s.301 78.2 1.5 105.5c1.2 27.2 5.602 45.898 11.903 62.102 6.5 17.199 16.597 32.597 29.597 45.398 12.801 13 28.301 23.102 45.301 29.5 16.3 6.3 34.898 10.7 62.102 11.898 27.296 1.204 36 1.5 105.5 1.5s78.199-.296 105.5-1.5c27.199-1.199 45.898-5.597 62.097-11.898a130.934 130.934 0 0 0 74.903-74.898c6.296-16.301 10.699-34.903 11.898-62.102 1.2-27.3 1.5-36 1.5-105.5s-.102-78.2-1.3-105.5zm-46.098 209c-1.102 25-5.301 38.5-8.801 47.5-8.602 22.3-26.301 40-48.602 48.602-9 3.5-22.597 7.699-47.5 8.796-27 1.204-35.097 1.5-103.398 1.5s-76.5-.296-103.403-1.5c-25-1.097-38.5-5.296-47.5-8.796C94.551 451.5 84.45 445 76.25 436.5c-8.5-8.3-15-18.3-19.102-29.398-3.5-9-7.699-22.602-8.796-47.5-1.204-27-1.5-35.102-1.5-103.403s.296-76.5 1.5-103.398c1.097-25 5.296-38.5 8.796-47.5C61.25 94.199 67.75 84.1 76.352 75.898c8.296-8.5 18.296-15 29.398-19.097 9-3.5 22.602-7.7 47.5-8.801 27-1.2 35.102-1.5 103.398-1.5 68.403 0 76.5.3 103.403 1.5 25 1.102 38.5 5.3 47.5 8.8 11.097 4.098 21.199 10.598 29.398 19.098 8.5 8.301 15 18.301 19.102 29.403 3.5 9 7.699 22.597 8.8 47.5 1.2 27 1.5 35.097 1.5 103.398s-.3 76.301-1.5 103.301zm0 0" />
-                    <path
-                      d="M256.45 124.5c-72.598 0-131.5 58.898-131.5 131.5s58.902 131.5 131.5 131.5c72.6 0 131.5-58.898 131.5-131.5s-58.9-131.5-131.5-131.5zm0 216.8c-47.098 0-85.302-38.198-85.302-85.3s38.204-85.3 85.301-85.3c47.102 0 85.301 38.198 85.301 85.3s-38.2 85.3-85.3 85.3zm0 0M423.852 119.3c0 16.954-13.747 30.7-30.704 30.7-16.953 0-30.699-13.746-30.699-30.7 0-16.956 13.746-30.698 30.7-30.698 16.956 0 30.703 13.742 30.703 30.699zm0 0" />
-                  </svg>
-                </a>
-              </div>
-              <!-- /.social-media -->
-            </nav>
+    <footer class="footer" id="footer">
+
+      <div class="header__top-wrap">
+        <div class="header__menu menu">
+          <div class="menu__icon">
+            <span></span>
           </div>
-          <a href="index.html" class="header__logo logo">
-            <svg class="logo__img" width="30" height="30" xmlns="http://www.w3.org/2000/svg" fill="none"
-              viewBox="0 0 31 31">
-              <path fill="#BC8C5C"
-                d="M19.45 29.322a.408.408 0 0 1-.297-.128L17.2 27.109a.407.407 0 0 1-.11-.279v-.988a.407.407 0 0 1 .143-.31l.692-.591-.638-.677a.407.407 0 0 1-.008-.55l.67-.757-.565-.609a.407.407 0 0 1-.011-.542l.604-.705-.74-.61a.407.407 0 0 1-.148-.315V17.73a5.11 5.11 0 1 1 4.487.071v8.932c0 .091-.03.18-.087.251l-1.717 2.184a.408.408 0 0 1-.304.155h-.016zm-1.547-2.653l1.521 1.622 1.338-1.7v-9.058a.406.406 0 0 1 .254-.377 4.301 4.301 0 1 0-3.356-.057.407.407 0 0 1 .245.372v2.514l.91.752a.41.41 0 0 1 .05.58l-.637.743.57.613a.408.408 0 0 1 .007.547l-.669.756.676.718a.408.408 0 0 1-.033.589l-.875.747-.001.639z" />
-              <path fill="#BC8C5C"
-                d="M21.167 17.939a.407.407 0 0 1-.408-.405v-.005a.408.408 0 1 1 .408.41zM19.401 13.932a1.992 1.992 0 1 1 0-3.984 1.992 1.992 0 0 1 0 3.984zm0-3.169a1.177 1.177 0 1 0 0 2.355 1.177 1.177 0 0 0 0-2.355zM6.637 26.777a.407.407 0 0 1-.399-.32l-.605-2.795a.407.407 0 0 1 .05-.297l.512-.848a.407.407 0 0 1 .282-.192l.896-.148-.195-.911a.407.407 0 0 1 .276-.474l.963-.303-.169-.815a.407.407 0 0 1 .272-.47l.878-.288-.317-.907a.407.407 0 0 1 .035-.344l1.259-2.098a5.111 5.111 0 0 1 6.975-7.089l.058.036c.05.03.099.06.148.092a.406.406 0 0 1 .002.678.407.407 0 0 1-.453.002 2.919 2.919 0 0 0-.122-.075l-.06-.037a4.297 4.297 0 0 0-5.733 6.15.407.407 0 0 1 .016.443L9.914 17.92l.392 1.117a.407.407 0 0 1-.257.522l-.927.306.17.818a.407.407 0 0 1-.277.471l-.962.303.208.967a.407.407 0 0 1-.332.489l-1.134.186-.332.55.471 2.171 2.023-.765 4.666-7.762a.404.404 0 0 1 .412-.192c.291.046.656.192 1.128.09a.407.407 0 1 1 .362.729c-.457.162-1.13.09-1.34.02l-4.602 7.657a.407.407 0 0 1-.204.17l-2.597.984a.397.397 0 0 1-.145.026z" />
-              <path fill="#BC8C5C"
-                d="M13.974 17.909a.408.408 0 0 1-.348-.617l.003-.004a.408.408 0 1 1 .345.621zM19.417 12.662a.407.407 0 0 1-.192-.768c.803-.545 2.944-2.058 3.337-2.945a5.198 5.198 0 1 0-9.656-.392.408.408 0 1 1-.767.271 6.015 6.015 0 1 1 11.156.49c-.464 1.025-2.714 2.653-3.651 3.277a.405.405 0 0 1-.227.067z" />
-            </svg>
-            <p class="logo__txt">Правовой <br> эксперт</p>
-          </a>
-          <a href="tel:+79652585957" class="telephone">
-            <div class="telephone__wrapper-icons">
-              <svg class="telephone__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                <path stroke="#FFFDFE" stroke-miterlimit="10"
-                  d="M16.617 13.61c-.62-.626-2.122-1.538-2.851-1.905-.95-.478-1.028-.518-1.774.037-.497.37-.828.7-1.41.576-.583-.124-1.849-.825-2.957-1.93-1.108-1.104-1.85-2.406-1.974-2.987-.124-.58.212-.907.578-1.406.516-.703.477-.82.036-1.77C5.92 3.487 4.982 2 4.355 1.382 3.684.719 3.684.836 3.25 1.016c-.352.148-.69.328-1.009.538-.625.415-.972.76-1.214 1.278-.243.518-.352 1.734.9 4.01 1.254 2.275 2.133 3.439 3.952 5.253s3.218 2.79 5.263 3.936c2.53 1.417 3.5 1.14 4.02.899.52-.242.866-.586 1.282-1.211.21-.319.39-.656.539-1.008.18-.43.297-.43-.367-1.102z" />
-              </svg>
-            </div>
-            <!-- /.telephone__wrapper-icons -->
-            <span class="telephone__txt">8&nbsp;965&nbsp;258 59&nbsp;57</span>
-          </a>
+          <nav class="menu__body">
+            <ul class="menu__list">
+              </li>
+              <li><a data-goto=".section-what-inside" href="#section-what-inside" class="menu__link">Что внутри?</a>
+              </li>
+              <li><a data-goto=".section-book-contents" href="#section-book-contents" class="menu__link">Содержание</a>
+              </li>
+              <li><a data-goto=".section-brands" href="#section-brands" class="menu__link">Бренды</a></li>
+              <li><a data-goto=".section-for-whom" href="#section-for-whom" class="menu__link">Кому подойдет?</a></li>
+              <li><a data-goto=".section-reviews" href="#section-reviews" class="menu__link">Отзывы</a></li>
+              <li><a data-goto=".section-guide-price" href="#section-guide-price" class="menu__link">Стоимость</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="footer__bottom-wrap">
-          <p class="copyright">
-            Все права защищены
-          </p>
-          <a href="privacy" class="privacy-policy">
-            Политика конфиденциальности
-          </a>
-          <div class="developers">
-            <a href="https://www.behance.net/grodesgn" class="developers-link">
-              Дизайн сайта: Громова Ольга
-            </a>
-            <a href="https://www.instagram.com/ermilov_code/" class="developers-link">
-              Верстка сайта: Ермилов Павел
-            </a>
+        <!-- class="header__menu menu" -->
+
+        <a href="index.html" class="logo">
+          <img src="img/icon-logo-footer-min.png" alt="stylist kids" class="logo__icon">
+          <div class="logo__wrapper-text">
+            <span class="logo__name">Maria</span>
+            <span class="logo__position">STYLIST KIDS</span>
           </div>
-          <!-- /.developers-wrapper -->
-        </div>
-        <!-- /.footer__bottom-wrap -->
+          <!-- /.logo__wrapper-text -->
+        </a>
+
+        <a href="https://www.instagram.com/stylist__kids/" class="link-instagram">
+          <svg class="link-instagram__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+            <path fill="#FDFDFD" fill-rule="evenodd"
+              d="M15.342 1.949H5.88a3.87 3.87 0 0 0-3.87 3.87v9.105a3.87 3.87 0 0 0 3.87 3.87h9.46a3.87 3.87 0 0 0 3.871-3.87V5.82a3.87 3.87 0 0 0-3.87-3.87zM5.88.659a5.16 5.16 0 0 0-5.16 5.16v9.105a5.16 5.16 0 0 0 5.16 5.161h9.46a5.16 5.16 0 0 0 5.161-5.16V5.819a5.16 5.16 0 0 0-5.16-5.16H5.88zm4.701 13.009c1.9 0 3.394-1.501 3.394-3.296s-1.494-3.296-3.394-3.296c-1.9 0-3.393 1.501-3.393 3.296s1.493 3.296 3.393 3.296zm0 1.29c2.587 0 4.684-2.053 4.684-4.586 0-2.533-2.097-4.586-4.684-4.586-2.586 0-4.683 2.053-4.683 4.586 0 2.533 2.097 4.586 4.683 4.586zm5.8-8.917c.712 0 1.29-.568 1.29-1.267 0-.7-.578-1.267-1.29-1.267-.713 0-1.29.567-1.29 1.267s.577 1.267 1.29 1.267z"
+              clip-rule="evenodd" /></svg>
+        </a>
+
       </div>
-      <!-- /.container -->
+      <!-- class="header__top-wrap" -->
+
+
+
     </footer>
+
 
   </div>
   <!-- /.wrapper -->

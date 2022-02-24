@@ -172,5 +172,30 @@ let mySwiper1 = new Swiper(slider1, {
 
 })
 
+var swiper3 = new Swiper('.swiper-price', {
+    pagination: {
+        el: '.swiper-pagination-price',
+        type: 'fraction',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next-price',
+        prevEl: '.swiper-button-prev-price',
+    },
+});
+
+
+let swiper6 = new Swiper('.swiper-apple-pay', {
+    cssMode: true,
+    navigation: {
+        nextEl: '.swiper-button-next-apple',
+        prevEl: '.swiper-button-prev-apple',
+    },
+    pagination: {
+        el: '.swiper-pagination-apple-pay'
+    },
+    // mousewheel: false,
+    // keyboard: true,
+});
+
 
 // Инициализируем Swiper

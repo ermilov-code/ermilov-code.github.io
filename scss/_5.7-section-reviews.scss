@@ -3,6 +3,24 @@
 .section-reviews {
     @include display-flex(column, flex-start, center);
     flex-wrap: nowrap;
+    padding-bottom: 20px;
+
+    .heading-h2 {
+        position: relative;
+
+        &__ellipse {
+            position: absolute;
+            top: -4px;
+            left: 7px;
+            width: 183px;
+            height: 69px;
+            transform: rotate(-3deg);
+
+            path {
+                stroke: #E52976;
+            }
+        }
+    }
 
     .container {
         @include display-flex(column, flex-start, center);
@@ -24,13 +42,8 @@
         height: 390px;
         padding-top: 45px;
         border-radius: 22px;
-        // @include responsive-width(301.5, 187);
-        // @include responsive-height(630, 390);
-        // @include responsive-padding-top(79, 45);
-        // @include responsive-border-radius(33, 22);
         border: 1px solid $accent-color;
         border-width: 6.8px;
-        // @include responsive-border-width(10.98, 6.8);
 
         &__top-speaker {
             position: absolute;
@@ -39,13 +52,7 @@
             border-radius: 8px;
             top: -6px;
             left: 44px;
-
-            // @include responsive-width(152, 90);
-            // @include responsive-height(33, 20);
             background-color: $accent-color;
-            // @include responsive-border-radius(12, 8);
-            // @include responsive-top(-11, -6);
-            // @include responsive-left(66, 44);
         }
 
         &__volume-plus,
@@ -54,15 +61,10 @@
             position: absolute;
             width: 4.3px;
             height: 32px;
-            // @include responsive-width(6.99, 4.33);
-            // @include responsive-height(52, 32.19);
             background-color: $accent-color;
             border-radius: 75px;
             top: 50px;
             left: -9px;
-            // @include responsive-border-radius(75, 75);
-            // @include responsive-top(96, 50);
-            // @include responsive-left(-15, -9);
         }
 
         &__volume-minus {
@@ -73,8 +75,6 @@
         &__lock-button {
             top: 69px;
             left: 178px;
-            // @include responsive-top(114, 69);
-            // @include responsive-left(287, 178);
         }
 
         &__img {
@@ -88,7 +88,6 @@
         position: relative;
 
         &-container1 {
-            // @include responsive-margin-bottom(50, 40); 
             margin-bottom: 40px;
             overflow: hidden;
 
@@ -102,25 +101,21 @@
             height: 100%;
             width: 187px;
             height: 390px;
-            // @include responsive-width(301.5, 187);
-            // @include responsive-height(630, 390);
             object-fit: contain;
             // opacity: 0.5;
             transform: scale(0.8);
-            // @include smoothness(transform, .8s);
             transition: transform 0.8s ease 0s;
-            // @include responsive-margin-right(67, 11);
 
             &-active {
                 // opacity: 1;
                 transform: scale(1);
                 transition: transform 0.8s ease 0s;
-                // @include smoothness(transform, .8s);
             }
         }
     }
 
     .swiper-navigation {
+        position: relative;
         @include display-flex(row, flex-end, flex-start);
 
         &__button-prev-rev,
@@ -128,35 +123,25 @@
             @include display-flex(row, center, center);
             width: 44px;
             height: 44px;
-            margin-left: 30px;
+            margin-left: 0px;
             border-radius: 2.3px;
-            // @include responsive-width(50, 44);
-            // @include responsive-height(50, 44);
-            // @include responsive-margin-left(30, 30);
-            // @include responsive-border-radius(3, 2.3);
             background-color: transparent;
-            // border: 1px solid $accent-color;
             border-radius: 50%;
             position: static;
 
 
 
             svg {
-                width: 12px;
-                height: 11px;
-                // @include responsive-width(13, 12);
-                // @include responsive-height(12, 11);
+                width: 20px;
+                height: 13px;
             }
 
             &:hover {
 
                 svg path {
-                    stroke: $background-color;
+                    // stroke: $background-color;
                     // @include smoothness(stroke, .8s);
                 }
-
-                // background-color: $accent-color-green;
-                // @include smoothness(background-color, 0.8s);
             }
         }
     }

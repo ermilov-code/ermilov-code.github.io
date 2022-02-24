@@ -351,4 +351,171 @@ body._touch .menu__list>li._active .menu__arrow {
     z-index: 1;
 }
 
+// .HOW-BUY-APPLE ==========
+.how-buy-apple {
+
+    .how-to-pay__p {
+        padding: 15px;
+    }
+
+    .modal {}
+
+    .fade {}
+
+    .modal-dialog {
+        height: 100%;
+        @include display-flex(column, center, center);
+        margin: 0;
+    }
+
+    .apple-pay__txt {
+        font-size: 15px;
+    }
+
+    .modal-content {
+        // background-color: transparent;
+        border: none;
+        border-radius: 0px;
+    }
+
+    .modal-header {
+        background-color: #FDFDFD;
+        border-radius: 0px;
+        @include display-flex(row, space-between, center);
+    }
+
+    .modal-title {}
+
+    .close {
+        span {
+            font-size: 33px;
+            color: $accent-color;
+        }
+
+    }
+
+    .modal-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .swiper {
+        // width: 100%;
+        // height: 100%;
+    }
+
+    .swiper-apple-pay {
+        position: relative;
+        @include display-flex(column, flex-start, center);
+    }
+
+    .swiper-button__wrap {
+        position: relative;
+        @include display-flex(row, flex-start, flex-start);
+        width: 100%;
+        display: none;
+    }
+
+    .swiper-wrapper {}
+
+    .swiper-slide {
+        min-height: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        // @include display-flex(column, flex-start, center);
+    }
+
+    .swiper-button-next {}
+
+    .swiper-button-next-apple-pay {
+        position: static;
+        // z-index: 10;
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-button-prev {}
+
+    .swiper-button-prev-apple-pay {
+        position: static;
+        // z-index: 10;
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-pagination {}
+
+    .swiper-pagination-apple-pay {
+        position: static;
+    }
+
+
+    .mobile-phone {
+        position: relative;
+        @include display-flex(column, flex-start, flex-start);
+        background-color: #000000;
+        background-image: url(../img/reviews/phone-background-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 187px;
+        height: 390px;
+        padding-top: 45px;
+        border-radius: 22px;
+        border: 1px solid $accent-color;
+        border-width: 6.8px;
+
+        &__top-speaker {
+            position: absolute;
+            width: 90px;
+            height: 20px;
+            border-radius: 8px;
+            top: -6px;
+            left: 44px;
+            background-color: $accent-color;
+        }
+
+        &__volume-plus,
+        &__volume-minus,
+        &__lock-button {
+            position: absolute;
+            width: 4.3px;
+            height: 32px;
+            background-color: $accent-color;
+            border-radius: 75px;
+            top: 50px;
+            left: -9px;
+        }
+
+        &__volume-minus {
+            // @include responsive-top(161, 91);
+            top: 91px;
+        }
+
+        &__lock-button {
+            top: 69px;
+            left: 178px;
+        }
+
+        &__img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+
+
+// .HOW-BUY-APPLE ==========
+
 // ============= HEADER =============
