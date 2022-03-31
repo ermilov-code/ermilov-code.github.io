@@ -1,0 +1,133 @@
+// ============= SECTION-BUSINESS.SCSS =============
+
+.order-form {
+
+    min-height: 500px;
+    background-image: url(../img/BG-section-order-form-min.jpeg);
+    background-color: rgba(255, 255, 255, 0.85);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+    padding: 80px 0 80px 0;
+
+    &__title {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 43px;
+        text-align: center;
+        color: $text-color-1;
+        margin-bottom: 30px;
+
+        span {
+            color: $accent-color;
+            margin: 0;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 43px;
+        }
+    }
+
+    &__subtitle {
+        width: 100%;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #BBBBBB;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .scheme-work {
+        &__wrap {
+            width: 100%;
+            @include display-flex(column, flex-start, center);
+            margin-bottom: 50px;
+        }
+
+        &__card {
+            width: 188px;
+            @include display-flex(column, flex-start, center);
+            margin-bottom: 50px;
+        }
+
+        &__picture {
+            position: relative;
+            background-color: $accent-color;
+            @include display-flex(column, center, center);
+            width: 100px;
+            height: 100px;
+            border: 5px solid #286690;
+            border-radius: 50%;
+            margin-bottom: 20px;
+
+            svg {
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        &__txt {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: $text-color-1;
+        }
+
+    }
+
+
+    @media (min-width: 576px) {}
+
+    @media (min-width: 768px) {}
+
+    @media (min-width: 992px) {
+        padding: 150px 0 150px 0;
+
+        .scheme-work__wrap {
+            @include display-flex(row, space-between, flex-start);
+        }
+
+        .scheme-work__card {
+            padding: 0px 5px;
+        }
+
+        .scheme-work__picture:before {
+            content: "";
+            background-image: url("../img/pseudo-circles.svg");
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 110px;
+            height: 6px;
+            position: absolute;
+            left: 113px;
+            top: 43px;
+        }
+
+        .scheme-work__card:last-child .scheme-work__picture::before {
+            content: "";
+            width: 0px;
+            height: 0px;
+        }
+
+    }
+
+    @media (min-width: 1200px) {}
+
+    @media (min-width: 1400px) {}
+
+}
+
+
+
+// ============= SECTION-BUSINESS.SCSS =============
