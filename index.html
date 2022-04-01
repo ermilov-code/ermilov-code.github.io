@@ -27,10 +27,10 @@
             </div>
             <nav class="menu__body">
               <ul class="menu__list">
-                <li><a data-goto=".section-form" href="#" class="menu__link menu__link_active">Бизнес</a></li>
-                <li><a data-goto=".section-form" href="#" class="menu__link">О нас</a></li>
-                <li><a data-goto=".section-form" href="#" class="menu__link">Цены</a></li>
-                <li><a data-goto=".section-form" href="#" class="menu__link">Оформить заказ</a></li>
+                <li><a data-goto=".header" href="#" class="menu__link menu__link_active">Бизнес</a></li>
+                <li><a data-goto=".order-form" href="#" class="menu__link">О нас</a></li>
+                <li><a data-goto=".order-form" href="#" class="menu__link">Цены</a></li>
+                <li><a data-goto=".order-form" href="#" class="menu__link">Оформить заказ</a></li>
               </ul>
             </nav>
           </div>
@@ -167,6 +167,75 @@
 
           </article>
           <!-- /.scheme-work__wrap -->
+
+          <form action="#" class="product-form" id="product-form" autocomplete="off" enctype="multipart/form-data"
+            novalidate>
+
+            <div class="product-form__input-wrap">
+              <div class="select" data-state="">
+                <div class="select__title" data-default="Option 0">Выберите тип системы</div>
+                <div class="select__content">
+                  <input id="singleSelect0" class="select__input" type="radio" name="singleSelect" checked />
+                  <label for="singleSelect0" class="select__label"> </label>
+                  <input id="singleSelect1" class="select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect1" class="select__label">Sed ut&nbsp;perspiciatis</label>
+                  <input id="singleSelect2" class="select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect2" class="select__label">Nemo enim ipsam</label>
+                  <input id="singleSelect3" class="select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect3" class="select__label">Et&nbsp;harum quidem</label>
+                  <input id="singleSelect4" class="select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect4" class="select__label">Et&nbsp;harum quidem</label>
+                  <input id="singleSelect5" class="select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect5" class="select__label">Itaque earum rerum</label>
+                  <input id="singleSelect6" class="select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect6" class="select__label">Sed ut&nbsp;perspiciatis</label>
+                  <input id="singleSelect7" class="select__input" type="radio" name="singleSelect" />
+                  <label for="singleSelect7" class="select__label">Nemo enim ipsam</label>
+                </div>
+              </div>
+              <div class="product-form__field">
+                <input type="text" class="product-form__input" id="name" name="name" placeholder="Ваше имя">
+              </div>
+              <!-- /.product-form__field -->
+              <div class="product-form__field">
+                <input type="text" class="product-form__input" id="mail" name="mail" placeholder="Ваш e-mail">
+              </div>
+              <!-- /.product-form__field -->
+            </div>
+            <!-- /.product-form__input-wrap -->
+
+            <div class="product-form__control-wrap">
+              <div class="product-form__field product-form__range">
+                <div class="product-form__range-content">
+                  <p class="product-form__range-text">
+                    Sed ut perspiciatis, unde omnis iste natus
+                  </p>
+                  <span class="product-form__range-result"><span id="rangeValue">50</span> %</span>
+                </div>
+                <!-- /.product-form__range-content -->
+                <input class="range" type="range" step="1" min="0" max="100" list="rangeList"
+                  onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+
+              </div>
+              <!-- /.product-form__field -->
+
+              <div class="product-form__field product-form__file">
+                <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                <label for="input__file" class="input__file-button">
+                  <span class="input__file-icon-wrapper"><img class="input__file-icon" src="img/attach-document.svg"
+                      alt="Выбрать файл" width="17"></span>
+                  <span class="input__file-button-text">Прикрепить файл</span>
+                </label>
+              </div>
+              <!-- /.product-form__field -->
+            </div>
+            <!-- /.product-form__control-wrap -->
+
+
+
+            <button type="button" id="button10" class="product-form__button">Отправить</button>
+          </form>
+          <!-- /.product-form -->
 
         </div>
         <!-- /.container -->

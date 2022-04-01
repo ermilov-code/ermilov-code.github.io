@@ -11,6 +11,9 @@
         },
         {
             "path": "../ap-store"
+        },
+        {
+            "path": "../HH-test-task-idaproject"
         }
     ],
     "settings": {
