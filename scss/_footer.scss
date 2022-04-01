@@ -1,0 +1,148 @@
+// ============= FOOTER =============
+
+.footer {
+
+    .container {
+        @include display-flex(column, flex-start, center);
+    }
+
+    @include display-flex(column, flex-start, center);
+    min-height: 80px;
+    background: #3D4050;
+    padding: 31px 31px;
+    width: 100%;
+
+    &__copyright {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+    &__payment-systems {
+        min-width: 100%;
+        @include display-flex(column, flex-start, center);
+    }
+
+    &__payment-systems_btn {
+        min-width: 100%;
+        @include display-flex(row, center, center);
+        background-color: transparent;
+        margin-bottom: 20px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    &__payment-systems_txt {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: #C3C3C3;
+        margin: 0;
+
+    }
+
+    &__contacts {
+        min-width: 100%;
+        @include display-flex(row, center, center);
+    }
+
+    &__contacts-links {
+
+        min-width: 100%;
+        @include display-flex(row, center, center);
+        background-color: transparent;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    &__contacts-txt {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: #FFFFFF;
+        margin: 0;
+    }
+
+
+    @media (min-width: 576px) {}
+
+    @media (min-width: 768px) {}
+
+    @media (min-width: 992px) {
+
+        @include display-flex(row, space-between, center);
+
+        .container {
+            @include display-flex(row, space-between, center);
+            flex-wrap: nowrap;
+        }
+
+
+        &__copyright {
+            max-width: 33%;
+            margin: 0;
+        }
+
+        &__payment-systems {
+            @include display-flex(row, center, center);
+            min-width: 20%;
+            border-right: 1px solid #C3C3C3;
+            border-left: 1px solid #C3C3C3;
+        }
+
+        &__payment-systems_btn {
+            min-width: 20%;
+            padding: 0px 20px;
+            margin: 0;
+        }
+
+        &__contacts {
+            min-width: 20%;
+            padding: 0px 10px;
+        }
+
+        &__contacts-links {
+            min-width: 20%;
+            margin: 0;
+            margin-right: 40px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+        }
+
+    }
+
+    @media (min-width: 1200px) {}
+
+    @media (min-width: 1400px) {}
+}
+
+
+
+
+
+
+// ============= FOOTER =============
